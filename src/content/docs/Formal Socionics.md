@@ -1,0 +1,299 @@
+---
+title: Formal Socionics
+description: Formal Socionics
+---
+
+**
+
+Fundamental questions
+
+  
+
+matter energy information (MEI)
+
+MEI are considered as inseparable and indefinible basic concept 
+
+  
+
+fractal properties of information
+
+information seems to have intrinsic fractal properties which is also apparent in fractal structure of socionics
+
+  
+
+philosophical semantics of the categories
+
+while being fundamental science about general information semantics socionics also describes fundamental philosophical categories
+
+  
+  
+
+the 2 fundamental philosophical and semantic properties of socionics objects are described by 2 axiomatical elements
+
+  
+
+Identity fractal  - trivial object - identity - existence - idea - information
+
+Duality fractal - elementary symmetry - outer and inner dichotomy - ying yan - metabolism
+
+  
+
+which manifest itself in every socionics object giving it meaning and symmetrical structure
+
+  
+  
+
+to construct all the socionics
+
+  
+  
+  
+
+The whole structure of Z1 x C2 available to be projected - System of Informacions (Fracton?)
+
+Fracton consists of 4 levels which are four iterations of x C2 direct product.
+
+  
+
+lvl - name - order - symmetry
+
+Inf0 - Singleton - 1 - Z1
+
+Inf1 - Duon - 2 - C2
+
+Inf2 - Metabon - 4 - K4
+
+Inf3 - Aspecton/Funcion - 8 - E8 (C2xC2xC2)
+
+Inf4 - Socion - 16 - E16 (C2xC2xC2xC2) or D8xC2 for ITR
+
+  
+
+initial topology
+
+strictly ordered set (Fracton is 1st; Infs go after)
+
+pairs element-dichotomy
+
+polysemanticity of the IEs principle
+
+conformal invariant
+
+-fractal patterning + vector models
+
+projection of the fractal
+
+  
+  
+
+scaling of IM - 4 lvls
+
+rhythm, pace and direction
+
+  
+
+Inf1 (Informacion of the 1st lvl) - Duon - 2 information spaces required for IM
+
+  
+
+1. External space
+    
+2. Internal space
+    
+
+  
+
+![](https://lh7-us.googleusercontent.com/z1kKrzUdZcaySB0dF8ZY5Ogb0AHo7yMqeKHDeYrg8tbBTK-pvpVoi1yjA1rEVN-uu-8woFzNY7gGXrvEbBhBOUTPCgofmtzfN8di8pKS38bmAXwzNELoi-XObb3ULiM-08Ovnm9lIkwzM9m9cAiIkA)
+
+  
+  
+  
+  
+  
+
+Inf2 - Metabon - 4 information flows required for IM
+
+  
+
+Metabon adds input/output dichotomies, which make its element directed flows of information
+
+  
+
+1. perception of external
+    
+2. perception of internal
+    
+3. reaction towards outer space
+    
+4. reaction towards inner space
+    
+
+  
+  
+  
+
+![](https://lh7-us.googleusercontent.com/FMYjLUf7ygh5asJ4AHnKXVibAk6umt4b6VZjgOoROePjjGo5iurll2jeg38MSXRjw6Fm0RNhZAWRi0jKGy1NiGQ1LAM2JezIdjtAiwscLQKXcoYpna-YxfI1vt6Mic0-dk8NhZkeeiL8cOfOwAX8Lw)
+
+  
+
+the 4th element has this Ni semantic: subconcious, consistent, rhytmic, paced, hidden
+
+  
+
+the dichotomies are:
+
+1. existence
+    
+2. extra/intro
+    
+3. irra/ra
+    
+4. mental/vital (its ancestor)
+    
+
+  
+  
+  
+
+Inf3 - Aspecton - Funccion 
+
+- 8 functions and information elements
+
+  
+
+![](https://lh7-us.googleusercontent.com/euGjxjWG5lrJLUJ5-Qdq3UPGYs7JaR811roKUuFuWyXoVPXaOWZ1wHfeNFALuUNwK2diCiLxMztDWHQE2DWW16ojo2y1WGjUrifsf72XB0OHCyPs5nBM7zfyPKWzVtbHkLTmJiCFyp2IOy6SI-SUow)
+
+  
+  
+
+1. I ~ Ne ~ Leading fn ~ existence
+    
+2. s ~ Si ~ Suggestive fn ~ extra/intro (bold//cautious) ~  black/white
+    
+3. E ~ Fe ~ Mobolizing fn ~ eval/sit - delta/beta
+    
+4. l ~ Ti ~ Creative fn ~ strong/weak ~ abstract/involved
+    
+5. L ~ Te ~ Demostrative ~ valuedl/subdued ~ alpha/gamma
+    
+6. e ~ Fi ~ Vulnerable ~ inert/cotact ~ inernal/exteral
+    
+7. S ~ Se ~ Role ~ acceptive/producing ~ irrational/rational
+    
+8. i ~ Ni ~ Ignorative ~ menta/vital ~ static/dynamic
+    
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+Inf4 - Socion - 16
+
+![](https://lh7-us.googleusercontent.com/sK5nrlORBUwmMG9RcEWiW9J6xIfPXSd8kB540wBIxE_FgE7Ke2X6DR2HBk-T-21TAxLicXk3ZOTni-8fH_23vOmfViSYUPDLNJVbSR9mOyK7tGg_OYWv58woGHdXvpDyfXp2IRtETuL2uPNHrmUbZg)
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ILE - Identity  - Existence (neutral element of dichotomies set) - Cognition  
+SEI - Duality - Extra/Intro - Balance  
+ESE - Activation - carefree/farsighted - Activization (Energy Tone)  
+LII - Mirror - Intuitive/Sensory - Invention  
+EIE - Beneficiary - Democrat/Aristocrat - Ideology  
+LSI - Supervisee - Positivist/Negativist - Order  
+SLE - Business - Yielding/obstinate - Authority  
+IEI - Illusionary - Logic/Ethic - Freedom  
+LIE - Quasi - Merry/Serious - Enterprise  
+ESI - Conflict - Constructivist/Emotivist - Perseverence  
+SEE - superego - process/result - Influence  
+ILI - Contraty - asking/Declaring - Doubt  
+IEE - Kindred - judicious/decisive -  Familiarity  
+SLI - semiduality - Tactical/Strategic - Mastery  
+LSE - benefactor - irrational/rational - Technology  
+EII - supervisor - static/dynamic - Humanism
+
+  
+
+![](https://lh7-us.googleusercontent.com/_LXc5LCbELNu8U298Q2oeFZEOJMQBM63sIK5Ku8YfnZ2DI-XXRuH6i7dRw8JyDCktGJp5mKqsHuJdTNT-TzekWxKhfTTzreLnBm9MgF5dimFdwFq0zkLqCnHmsw50QyjIq4Gfy38hPQ6_2w-BT-hdA)
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+Fractal properties
+
+  
+
+All the levels are generated by single recursive algorithm of constructing the Hadamard matrix
+
+  
+
+Each level manifest the same structure with gets more detailed with the amount of iterations
+
+  
+  
+  
+  
+  
+  
+
+![](https://lh7-us.googleusercontent.com/aOHygXMe_vAszvbwOfKjhqU6I1wCz7_1n8GFjk1swQmr3S4e7ZY3GtzVaqbXfpa5WgXfOJGclQXCPyvxPWsKvK88BE4aPx6IOXkFUaYZ661qh6tVz1hjefTUpmORv7Wui3BKLp10ZGmn36aP4bQ7TV0)
+
+credit for image: Andrew Joyton and Kimani White
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+**
