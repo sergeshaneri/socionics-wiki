@@ -61,12 +61,14 @@ This project is configured for automatic deployment to GitHub Pages. The deploym
 2. **Enable GitHub Pages**:
    - Go to your repository on GitHub
    - Navigate to **Settings** > **Pages**
-   - Under **Source**, select **GitHub Actions**
+   - Under **Source**, select **Deploy from a branch**
+   - Select **gh-pages** branch and **/ (root)** folder
    - Save the settings
 
 3. **Automatic Deployment**:
-   - Every push to the `main` branch will automatically trigger a build and deployment
+   - Every push to the `main` branch will automatically trigger a build and deployment to gh-pages branch
    - Your site will be available at: `https://sergeshaneri.github.io/socionics-wiki`
+   - Wait 1-2 minutes after push for the deployment to complete
 
 ### Manual Deployment
 
