@@ -4,23 +4,35 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://sergeshaneri.github.io/socionics-wiki',
+	base: '/socionics-wiki',
+	output: 'static',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Socionics Wiki',
+			description: 'Wiki about socionics',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Introduction',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'About Socionics', slug: 'index' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Types',
+					autogenerate: { directory: 'types' },
+				},
+				{
+					label: 'Concepts',
+					autogenerate: { directory: 'concepts' },
+				},
+				{
+					label: 'Relations',
+					autogenerate: { directory: 'relations' },
 				},
 			],
+			lastUpdated: true,
 		}),
 	],
 });
