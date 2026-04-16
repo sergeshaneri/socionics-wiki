@@ -1,3 +1,7 @@
+---
+title: "Churiumov's Correspondence"
+---
+
 **
 
 Duality Principle (Churiumov)
