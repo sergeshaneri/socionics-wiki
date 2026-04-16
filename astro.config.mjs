@@ -24,15 +24,15 @@ export default defineConfig({
 					autogenerate: { directory: 'articles' },
 				},
 				{
-					label: 'Types',
+					label: 'Типы',
 					autogenerate: { directory: 'types' },
 				},
 				{
-					label: 'Concepts',
+					label: 'Концепты',
 					autogenerate: { directory: 'concepts' },
 				},
 				{
-					label: 'Relations',
+					label: 'Отношения',
 					autogenerate: { directory: 'relations' },
 				},
 				{
@@ -41,7 +41,21 @@ export default defineConfig({
 				},
 				{
 					label: 'Книги Чурюмова',
-					autogenerate: { directory: 'books' },
+					items: [
+						{ label: 'О книгах', slug: 'books/index' },
+						{
+							label: 'БЛИН — Том 1',
+							autogenerate: { directory: 'books/blin-1' },
+						},
+						{
+							label: 'БЛИН — Том 2',
+							autogenerate: { directory: 'books/blin-2' },
+						},
+						{
+							label: 'Улыбка',
+							autogenerate: { directory: 'books/ulybka' },
+						},
+					],
 				},
 			],
 			lastUpdated: true,
