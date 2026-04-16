@@ -14,10 +14,14 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			sidebar: [
 				{
-					label: 'Introduction',
+					label: 'Главная',
 					items: [
-						{ label: 'About Socionics', slug: 'index' },
+						{ label: 'О Вики', slug: 'index' },
 					],
+				},
+				{
+					label: 'Все статьи',
+					autogenerate: { directory: '.' },
 				},
 				{
 					label: 'Types',
