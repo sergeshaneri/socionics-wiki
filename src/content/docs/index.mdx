@@ -16,7 +16,7 @@ hero:
       icon: seti:plan
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## О себе
 
@@ -29,6 +29,16 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 В практике для меня важны уникальность каждого человека и возможность комбинировать соционику с давно зарекомендовавшими себя инструментами из прикладной психологии, психотерапии и коучинга.
 
 **Я приглашаю вас в путешествие самопознания :)**
+
+---
+
+<CardGrid stagger>
+	<LinkCard title="Типы" href="./categories/tipy/" description="16 типов личности - описания, характеристики и особенности" />
+	<LinkCard title="Метасоционика" href="./categories/metasocionika/" description="Фундаментальные основы соционики - аксиоматика и философия" />
+	<LinkCard title="Формальная Соционика" href="./categories/formalnaya-socionika/" description="Формальные модели, математика и структура соционики" />
+	<LinkCard title="Семантическая соционика" href="./categories/semanticheskaya-socionika/" description="Смыслы и значения в соционике - семантика аспектов и функций" />
+	<LinkCard title="Прикладная соционика" href="./categories/prikladnaya-socionika/" description="Практическое применение - типирование, консультации, развитие" />
+</CardGrid>
 
 ---
 
@@ -133,18 +143,3 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 - **Обучение психологии:** учился у Екатерины Самойловой
 
 ---
-
-<CardGrid stagger>
-	<Card title="16 типов личности" icon="user">
-		Описания всех соционических типов в разделе Types
-	</Card>
-	<Card title="Интертипные отношения" icon="heart">
-		Как разные типы взаимодействуют друг с другом
-	</Card>
-	<Card title="Методология" icon="book">
-		Методы типирования и подходы Шанэри
-	</Card>
-	<Card title="Фрактальная соционика" icon="layers">
-		Формальные модели и математика соционики
-	</Card>
-</CardGrid>
