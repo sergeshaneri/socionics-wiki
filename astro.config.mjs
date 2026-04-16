@@ -40,6 +40,10 @@ export default defineConfig({
 					autogenerate: { directory: 'english' },
 				},
 				{
+					label: 'Видео',
+					autogenerate: { directory: 'video' },
+				},
+				{
 					label: 'Книги Чурюмова',
 					items: [
 						{ label: 'О книгах', slug: 'books' },
