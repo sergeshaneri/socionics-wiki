@@ -36,7 +36,7 @@ export default defineConfig({
 					autogenerate: { directory: 'relations' },
 				},
 				{
-					label: 'Материалы учителя',
+					label: 'Книги Чурюмова',
 					autogenerate: { directory: 'materials' },
 				},
 			],
