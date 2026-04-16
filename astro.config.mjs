@@ -9,12 +9,12 @@ export default defineConfig({
 	output: 'static',
 	integrations: [
 		starlight({
-			title: 'Socionics Wiki',
+			title: 'Фрактальная Соционика Вики',
 			description: 'Wiki about socionics',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			sidebar: [
 				{
-					label: 'Главная',
+					label: 'Фрактальная Соционика Вики',
 					items: [
 						{ label: 'О Вики', slug: 'index' },
 					],

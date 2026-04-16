@@ -1,8 +1,9 @@
-/* Obsidian Violet Premium Theme */
+/* Obsidian Violet Premium Theme - Dual Mode Support */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&family=Space+Mono&display=swap');
 
+/* ============ DARK MODE (default) ============ */
 :root {
-  /* Palette */
+  /* Dark Palette */
   --obsidian-black: #0A0A0F;
   --midnight-violet: #1a1a2e;
   --muted-purple: #4a0080;
@@ -10,20 +11,20 @@
   --electric-violet: #7b2cbf;
   --lunar-white: #e6e1ff;
   
-  /* Starlight overrides */
+  /* Starlight dark overrides */
   --sl-color-bg: var(--obsidian-black);
   --sl-color-bg-nav: var(--midnight-violet);
   --sl-color-bg-sidebar: var(--obsidian-black);
   --sl-color-bg-inline-code: var(--midnight-violet);
-  --sl-color-text: rgba(230, 225, 255, 0.72);
-  --sl-color-text-strong: rgba(230, 225, 255, 0.92);
-  --sl-color-text-weak: rgba(230, 225, 255, 0.50);
+  --sl-color-text: rgba(230, 225, 255, 0.85);
+  --sl-color-text-strong: #ffffff;
+  --sl-color-text-weak: rgba(230, 225, 255, 0.60);
   --sl-color-text-invert: var(--obsidian-black);
   --sl-color-link: var(--cold-neon);
   --sl-color-link-hover: var(--electric-violet);
   --sl-color-accent: var(--electric-violet);
   --sl-color-accent-high: var(--cold-neon);
-  --sl-color-border: rgba(230, 225, 255, 0.15);
+  --sl-color-border: rgba(230, 225, 255, 0.20);
   
   /* Typography */
   --font-heading: 'Cormorant Garamond', serif;
@@ -31,12 +32,31 @@
   --font-mono: 'Space Mono', monospace;
 }
 
-/* Base */
+/* ============ LIGHT MODE ============ */
+:root[data-theme='light'] {
+  /* Light Palette */
+  --sl-color-bg: #fafafa;
+  --sl-color-bg-nav: #f0f0f5;
+  --sl-color-bg-sidebar: #ffffff;
+  --sl-color-bg-inline-code: #f0f0f5;
+  --sl-color-text: #2d2d3a;
+  --sl-color-text-strong: #1a1a2e;
+  --sl-color-text-weak: #5a5a6e;
+  --sl-color-text-invert: #ffffff;
+  --sl-color-link: #7b2cbf;
+  --sl-color-link-hover: #4a0080;
+  --sl-color-accent: #7b2cbf;
+  --sl-color-accent-high: #9d4edd;
+  --sl-color-border: rgba(123, 44, 191, 0.25);
+}
+
+/* ============ BASE STYLES ============ */
 body {
   font-family: var(--font-body);
-  background: var(--obsidian-black);
+  background: var(--sl-color-bg);
   color: var(--sl-color-text);
   line-height: 1.85;
+  font-size: 1.08rem;
 }
 
 /* Headings */
@@ -48,35 +68,42 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-h1 { font-size: 2.4rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.4rem; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.5rem; }
 
 /* Links */
 a {
-  color: var(--cold-neon);
+  color: var(--sl-color-link);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--electric-violet);
-  text-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+  color: var(--sl-color-link-hover);
 }
 
-/* Sidebar */
+/* ============ SIDEBAR ============ */
 .sidebar {
-  background: var(--obsidian-black);
-  border-right: 1px solid rgba(74, 0, 128, 0.3);
+  background: var(--sl-color-bg-sidebar);
+  border-right: 1px solid var(--sl-color-border);
 }
 
-.sidebar-content {
-  padding: 2rem 1.5rem;
+/* Sidebar section labels (folder headers) */
+.sidebar-group-label,
+.sidebar-content .group-label,
+.sidebar-label {
+  color: var(--sl-color-text-strong) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 1 !important;
 }
 
-/* Navigation links */
+/* Sidebar navigation links */
 .sidebar a {
-  color: rgba(230, 225, 255, 0.72);
+  color: var(--sl-color-text);
   font-size: 0.95rem;
   padding: 0.5rem 0;
   border-left: 2px solid transparent;
@@ -85,22 +112,22 @@ a:hover {
 }
 
 .sidebar a:hover {
-  color: var(--lunar-white);
-  border-left-color: var(--muted-purple);
+  color: var(--sl-color-link);
+  border-left-color: var(--sl-color-accent);
 }
 
-/* Cards (Starlight CardGrid) */
+/* ============ CARDS ============ */
 .card {
-  background: var(--midnight-violet);
-  border: 1px solid rgba(74, 0, 128, 0.2);
-  border-radius: 4px;
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-border);
+  border-radius: 6px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  border-color: var(--cold-neon);
-  box-shadow: 0 4px 30px rgba(157, 78, 221, 0.15);
+  border-color: var(--sl-color-accent);
+  box-shadow: 0 4px 20px rgba(123, 44, 191, 0.15);
 }
 
 .card-title {
@@ -109,10 +136,10 @@ a:hover {
   font-size: 1.3rem;
 }
 
-/* Code */
+/* ============ CODE ============ */
 code, pre {
   font-family: var(--font-mono);
-  background: var(--midnight-violet);
+  background: var(--sl-color-bg-inline-code);
   border-radius: 4px;
 }
 
@@ -123,73 +150,169 @@ code {
 
 pre {
   padding: 1.5rem;
-  border-left: 2px solid var(--muted-purple);
+  border-left: 2px solid var(--sl-color-accent);
 }
 
-/* Hero section */
+/* ============ HERO ============ */
 .hero {
-  background: linear-gradient(135deg, var(--obsidian-black) 0%, var(--midnight-violet) 100%);
-  border-bottom: 1px solid rgba(74, 0, 128, 0.3);
+  background: var(--sl-color-bg);
+  border-bottom: 1px solid var(--sl-color-border);
+  padding: 4rem 2rem;
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: var(--sl-color-text-strong);
-  text-shadow: 0 0 40px rgba(157, 78, 221, 0.2);
+  margin-bottom: 1.5rem;
 }
 
-/* Buttons */
-button, .button {
-  background: transparent;
-  border: 1px solid var(--electric-violet);
-  color: var(--electric-violet);
-  padding: 0.75rem 1.5rem;
-  font-family: var(--font-body);
-  font-weight: 500;
-  border-radius: 4px;
+:root[data-theme='dark'] .hero-title {
+  text-shadow: 0 0 60px rgba(157, 78, 221, 0.25);
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: var(--sl-color-text);
+  max-width: 600px;
+}
+
+/* ============ BUTTONS ============ */
+button, .button, .sl-button,
+.sl-link-button,
+.hero .sl-button,
+.hero-actions a {
+  background: var(--sl-color-accent) !important;
+  border: 1px solid var(--sl-color-accent) !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  padding: 0.9rem 2rem !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3) !important;
+}
+
+button:hover, .button:hover, .sl-button:hover,
+.sl-link-button:hover,
+.hero .sl-button:hover,
+.hero-actions a:hover {
+  background: var(--sl-color-accent-high) !important;
+  border-color: var(--sl-color-accent-high) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+:root[data-theme='dark'] button,
+:root[data-theme='dark'] .button,
+:root[data-theme='dark'] .sl-button {
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.4) !important;
+}
+
+:root[data-theme='dark'] button:hover,
+:root[data-theme='dark'] .button:hover {
+  box-shadow: 0 0 25px rgba(157, 78, 221, 0.6) !important;
+}
+
+/* ============ PAGINATION (Prev/Next) ============ */
+.pagination-links {
+  border-top: 1px solid var(--sl-color-border);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+.pagination-links a {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: var(--sl-color-text-strong);
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-button:hover, .button:hover {
-  background: var(--electric-violet);
-  color: var(--obsidian-black);
-  box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+.pagination-links a:hover {
+  background: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* Dividers */
+.pagination-links .link-title {
+  color: var(--sl-color-text-strong);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pagination-links a:hover .link-title {
+  color: #ffffff;
+}
+
+.pagination-links .link-subtitle {
+  color: var(--sl-color-text-weak);
+  font-size: 0.85rem;
+}
+
+.pagination-links a:hover .link-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Russian labels for pagination */
+.pagination-links [rel='prev'] .link-subtitle::before {
+  content: '← Предыдущая страница';
+  display: block;
+}
+
+.pagination-links [rel='next'] .link-subtitle::before {
+  content: 'Следующая страница →';
+  display: block;
+}
+
+/* Hide original English text */
+.pagination-links .link-subtitle {
+  font-size: 0;
+}
+
+.pagination-links .link-subtitle::before {
+  font-size: 0.85rem;
+}
+
+/* ============ DIVIDERS ============ */
 hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(230, 225, 255, 0.28), transparent);
+  background: linear-gradient(90deg, transparent, var(--sl-color-border), transparent);
   margin: 3rem 0;
 }
 
-/* Selection */
+/* ============ SELECTION ============ */
 ::selection {
-  background: rgba(157, 78, 221, 0.3);
-  color: var(--lunar-white);
+  background: rgba(123, 44, 191, 0.3);
+  color: var(--sl-color-text-strong);
 }
 
-/* Scrollbar */
+/* ============ SCROLLBAR ============ */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--obsidian-black);
+  background: var(--sl-color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--muted-purple);
+  background: var(--sl-color-accent);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cold-neon);
+  background: var(--sl-color-accent-high);
 }
 
-/* Mobile adjustments */
+/* ============ MOBILE ============ */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
@@ -203,11 +326,15 @@ hr {
   }
 }
 
-/* Glow effects for special elements */
-.glow-violet {
-  box-shadow: 0 0 30px rgba(157, 78, 221, 0.2);
+/* ============ THEME TOGGLE ============ */
+.theme-toggle {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-border);
+  border-radius: 6px;
+  color: var(--sl-color-text);
 }
 
-.text-glow {
-  text-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+.theme-toggle:hover {
+  background: var(--sl-color-accent);
+  color: #ffffff;
 }
