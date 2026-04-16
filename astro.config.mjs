@@ -20,8 +20,8 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Все статьи',
-					autogenerate: { directory: '.' },
+					label: 'Статьи',
+					autogenerate: { directory: 'articles' },
 				},
 				{
 					label: 'Types',
