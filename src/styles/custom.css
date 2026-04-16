@@ -1,0 +1,213 @@
+/* Obsidian Violet Premium Theme */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&family=Space+Mono&display=swap');
+
+:root {
+  /* Palette */
+  --obsidian-black: #0A0A0F;
+  --midnight-violet: #1a1a2e;
+  --muted-purple: #4a0080;
+  --cold-neon: #9d4edd;
+  --electric-violet: #7b2cbf;
+  --lunar-white: #e6e1ff;
+  
+  /* Starlight overrides */
+  --sl-color-bg: var(--obsidian-black);
+  --sl-color-bg-nav: var(--midnight-violet);
+  --sl-color-bg-sidebar: var(--obsidian-black);
+  --sl-color-bg-inline-code: var(--midnight-violet);
+  --sl-color-text: rgba(230, 225, 255, 0.72);
+  --sl-color-text-strong: rgba(230, 225, 255, 0.92);
+  --sl-color-text-weak: rgba(230, 225, 255, 0.50);
+  --sl-color-text-invert: var(--obsidian-black);
+  --sl-color-link: var(--cold-neon);
+  --sl-color-link-hover: var(--electric-violet);
+  --sl-color-accent: var(--electric-violet);
+  --sl-color-accent-high: var(--cold-neon);
+  --sl-color-border: rgba(230, 225, 255, 0.15);
+  
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+/* Base */
+body {
+  font-family: var(--font-body);
+  background: var(--obsidian-black);
+  color: var(--sl-color-text);
+  line-height: 1.85;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--sl-color-text-strong);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+/* Links */
+a {
+  color: var(--cold-neon);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--electric-violet);
+  text-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--obsidian-black);
+  border-right: 1px solid rgba(74, 0, 128, 0.3);
+}
+
+.sidebar-content {
+  padding: 2rem 1.5rem;
+}
+
+/* Navigation links */
+.sidebar a {
+  color: rgba(230, 225, 255, 0.72);
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  border-left: 2px solid transparent;
+  padding-left: 1rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: var(--lunar-white);
+  border-left-color: var(--muted-purple);
+}
+
+/* Cards (Starlight CardGrid) */
+.card {
+  background: var(--midnight-violet);
+  border: 1px solid rgba(74, 0, 128, 0.2);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--cold-neon);
+  box-shadow: 0 4px 30px rgba(157, 78, 221, 0.15);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  color: var(--sl-color-text-strong);
+  font-size: 1.3rem;
+}
+
+/* Code */
+code, pre {
+  font-family: var(--font-mono);
+  background: var(--midnight-violet);
+  border-radius: 4px;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+pre {
+  padding: 1.5rem;
+  border-left: 2px solid var(--muted-purple);
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, var(--obsidian-black) 0%, var(--midnight-violet) 100%);
+  border-bottom: 1px solid rgba(74, 0, 128, 0.3);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--sl-color-text-strong);
+  text-shadow: 0 0 40px rgba(157, 78, 221, 0.2);
+}
+
+/* Buttons */
+button, .button {
+  background: transparent;
+  border: 1px solid var(--electric-violet);
+  color: var(--electric-violet);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background: var(--electric-violet);
+  color: var(--obsidian-black);
+  box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+}
+
+/* Dividers */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230, 225, 255, 0.28), transparent);
+  margin: 3rem 0;
+}
+
+/* Selection */
+::selection {
+  background: rgba(157, 78, 221, 0.3);
+  color: var(--lunar-white);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--obsidian-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cold-neon);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+/* Glow effects for special elements */
+.glow-violet {
+  box-shadow: 0 0 30px rgba(157, 78, 221, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+}

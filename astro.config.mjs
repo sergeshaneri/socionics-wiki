@@ -37,6 +37,7 @@ export default defineConfig({
 				},
 			],
 			lastUpdated: true,
+			customCss: ['./src/styles/custom.css'],
 		}),
 	],
 });
