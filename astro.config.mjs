@@ -42,7 +42,7 @@ export default defineConfig({
 				{
 					label: 'Книги Чурюмова',
 					items: [
-						{ label: 'О книгах', slug: 'books/index' },
+						{ label: 'О книгах', slug: 'books' },
 						{
 							label: 'БЛИН — Том 1',
 							autogenerate: { directory: 'books/blin-1' },
