@@ -5,6 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://sergeshaneri.github.io/socionics-wiki',
+	base: '/socionics-wiki',
 	output: 'static',
 	integrations: [
 		starlight({
