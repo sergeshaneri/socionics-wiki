@@ -1,3 +1,8 @@
+---
+title: Formal Socionics
+description: Formal Socionics
+---
+
 **
 
 Fundamental questions

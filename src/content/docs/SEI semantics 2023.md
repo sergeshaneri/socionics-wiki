@@ -1,3 +1,8 @@
+---
+title: SEI semantics 2023
+description: SEI semantics 2023
+---
+
 **  
 
 [Ego block 1](https://docs.google.com/document/d/1acC_5KKhB-WCY4m5E5VWlaK1ZWY7RW_feacsaOLx2o0/edit#heading=h.tibri58vw2nh)

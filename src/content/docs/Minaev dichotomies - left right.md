@@ -1,3 +1,8 @@
+---
+title: Minaev dichotomies - left right
+description: Minaev dichotomies - left right
+---
+
 1. left/right metadichotomy
 2. left/right ITR cosets
 3. left/right formula direction

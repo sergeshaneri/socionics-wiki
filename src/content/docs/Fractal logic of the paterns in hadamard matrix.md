@@ -1,3 +1,8 @@
+---
+title: Fractal logic of the paterns in hadamard matrix
+description: Fractal logic of the paterns in hadamard matrix
+---
+
 
 **
 

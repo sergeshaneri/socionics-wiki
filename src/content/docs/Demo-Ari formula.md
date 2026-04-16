@@ -1,3 +1,8 @@
+---
+title: Demo-Ari formula
+description: Demo-Ari formula
+---
+
 **
 
 1. Democratic/Aristocratic this is the first superlocal dichotomy, which connect acceptive and productive functions the simplest way to express the formula is: democrats have 2 abstract or 2 involved elements in horizontal blocks aristocrats have 2 inner or 2 outer elements in horizontal blocks im gonna make the rule more complete and precise

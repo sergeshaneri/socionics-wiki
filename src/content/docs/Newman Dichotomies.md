@@ -1,3 +1,8 @@
+---
+title: Newman Dichotomies
+description: Newman Dichotomies
+---
+
 https://docs.google.com/document/d/1HPdpX0U34nNawfiZKrlxvCaVgIsOS0uC6_RUd7LXPRE/edit
 
 **

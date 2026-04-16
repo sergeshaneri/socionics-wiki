@@ -1,3 +1,8 @@
+---
+title: Fractal Socionics basics
+description: Fractal Socionics basics
+---
+
 **  
 
 – Basic Fractal stuff

@@ -1,3 +1,8 @@
+---
+title: Tetrachotomies classes (2023)
+description: Tetrachotomies classes (2023)
+---
+
 
 **
 

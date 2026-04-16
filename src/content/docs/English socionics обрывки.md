@@ -1,3 +1,8 @@
+---
+title: English socionics обрывки
+description: English socionics обрывки
+---
+
 **
 
 About undestanding IEs as part of "thinking"
