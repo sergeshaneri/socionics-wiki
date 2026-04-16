@@ -32,8 +32,12 @@ export default defineConfig({
 					autogenerate: { directory: 'concepts' },
 				},
 				{
-					label: 'Relations',
+					label: 'Отношения',
 					autogenerate: { directory: 'relations' },
+				},
+				{
+					label: 'Материалы учителя',
+					autogenerate: { directory: 'materials' },
 				},
 			],
 			lastUpdated: true,
