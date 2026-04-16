@@ -35,10 +35,6 @@ export default defineConfig({
 					label: 'Отношения',
 					autogenerate: { directory: 'relations' },
 				},
-				{
-					label: 'Книги Чурюмова',
-					autogenerate: { directory: 'materials' },
-				},
 			],
 			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
