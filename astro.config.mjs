@@ -39,6 +39,10 @@ export default defineConfig({
 					label: 'English',
 					autogenerate: { directory: 'english' },
 				},
+				{
+					label: 'Книги Чурюмова',
+					autogenerate: { directory: 'books' },
+				},
 			],
 			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
