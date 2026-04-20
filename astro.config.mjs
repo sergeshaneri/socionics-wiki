@@ -60,6 +60,11 @@ export default defineConfig({
 					autogenerate: { directory: 'audio' },
 				},
 				{
+					label: 'Новое',
+					collapsed: true,
+					autogenerate: { directory: 'новое' },
+				},
+				{
 					label: 'Книги Чурюмова',
 					collapsed: true,
 					items: [
