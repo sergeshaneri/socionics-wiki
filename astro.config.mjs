@@ -55,6 +55,11 @@ export default defineConfig({
 					autogenerate: { directory: 'video' },
 				},
 				{
+					label: 'Аудио',
+					collapsed: true,
+					autogenerate: { directory: 'audio' },
+				},
+				{
 					label: 'Книги Чурюмова',
 					collapsed: true,
 					items: [
