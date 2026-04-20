@@ -1,4 +1,7 @@
 // @ts-check
+try {
+	process.env.NODE_NO_WARNINGS = '1';
+} catch (e) {}
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
@@ -12,6 +15,8 @@ export default defineConfig({
 			title: 'Фрактальная Соционика Вики',
 			description: 'Wiki about socionics',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
+			lastUpdated: true,
+			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
 					label: 'Фрактальная Соционика Вики',
@@ -21,49 +26,57 @@ export default defineConfig({
 				},
 				{
 					label: 'Статьи',
+					collapsed: true,
 					autogenerate: { directory: 'articles' },
 				},
 				{
 					label: 'Типы',
+					collapsed: true,
 					autogenerate: { directory: 'types' },
 				},
 				{
 					label: 'Концепты',
+					collapsed: true,
 					autogenerate: { directory: 'concepts' },
 				},
 				{
 					label: 'Отношения',
+					collapsed: true,
 					autogenerate: { directory: 'relations' },
 				},
 				{
 					label: 'English',
+					collapsed: true,
 					autogenerate: { directory: 'english' },
 				},
 				{
 					label: 'Видео',
+					collapsed: true,
 					autogenerate: { directory: 'video' },
 				},
 				{
 					label: 'Книги Чурюмова',
+					collapsed: true,
 					items: [
 						{ label: 'О книгах', slug: 'books' },
 						{
 							label: 'БЛИН — Том 1',
+							collapsed: true,
 							autogenerate: { directory: 'books/blin-1' },
 						},
 						{
 							label: 'БЛИН — Том 2',
+							collapsed: true,
 							autogenerate: { directory: 'books/blin-2' },
 						},
 						{
 							label: 'Улыбка',
+							collapsed: true,
 							autogenerate: { directory: 'books/ulybka' },
 						},
 					],
 				},
 			],
-			lastUpdated: true,
-			customCss: ['./src/styles/custom.css'],
 		}),
 	],
 });
