@@ -1,6 +1,6 @@
 ---
-title: Newman Dichotomies
-description: Newman Dichotomies
+title: "Newman Dichotomies"
+description: "Newman Dichotomies"
 ---
 
 ***\+/-***
@@ -222,5 +222,4 @@ U
 |  |  |
 |  |  |
 |  |  |
-
 

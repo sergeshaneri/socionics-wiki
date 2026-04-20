@@ -1,6 +1,6 @@
 ---
-title: markdown tables
-description: markdown tables
+title: "Markdown tables"
+description: "Markdown tables"
 ---
 
 | | exist | extravert | carefree | intuitive | democratic | positivist | yielding | logical | merry | constructivist | right | asking| judicious | tactical | irrational | static |  
@@ -143,5 +143,4 @@ This table describes the 8 Model A functions (rows) and their properties accordi
 \[**ЧИ ЧЛ \~ ЧЭ ЧС \~ БС БЛ \~ БЭ БИ**\] → (**1 6 \~ 2 7 \~ 3 8 \~ 4 5**)
 
 ---
-
 

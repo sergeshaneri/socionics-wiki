@@ -1,6 +1,6 @@
 ---
-title: Fractal Socionics
-description: Fractal Socionics
+title: "Fractal Socionics"
+description: "Fractal Socionics"
 ---
 
 

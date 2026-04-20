@@ -1,6 +1,6 @@
 ---
-title: Generations Therory (Gemini translation)
-description: Generations Therory (Gemini translation)
+title: "Generations Therory (Gemini translation)"
+description: "Generations Therory (Gemini translation)"
 ---
 
 ### **Chapter 1: The Foundational Problem and a New Approach to Socionics**

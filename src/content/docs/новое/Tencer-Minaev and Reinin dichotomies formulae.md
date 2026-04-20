@@ -1,6 +1,6 @@
 ---
-title: Tencer-Minaev and Reinin dichotomies formulae
-description: Tencer-Minaev and Reinin dichotomies formulae
+title: "Tencer Minaev and Reinin dichotomies formulae"
+description: "Tencer Minaev and Reinin dichotomies formulae"
 ---
 
 
@@ -182,5 +182,4 @@ Bijection IME ↔ Model A function dichotomies
 **1-explicit**  
 (**3 5** | weak contact accepting) → \[**Ne Ni Fe Fi** | implicit\]  
 (**1 7** | strong inert accepting) → \[**Te Ti Se Si** | explicit\]
-
 

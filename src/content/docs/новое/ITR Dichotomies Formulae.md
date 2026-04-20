@@ -1,6 +1,6 @@
 ---
-title: ITR Dichotomies Formulae
-description: ITR Dichotomies Formulae
+title: "ITR Dichotomies Formulae"
+description: "ITR Dichotomies Formulae"
 ---
 
 ## 1st generation
@@ -136,4 +136,3 @@ supralocal are more complex here i guess xD
 
  (1 8 \~ 2 7 \~ 3 6 \~ 4 5 | dimension) → (1 6 \~ 2 5 \~ 3 8 \~ 4 6 | long vertical)   
 (1 6 \~ 2 5 \~ 3 8 \~ 4 6 | long vertical) → (1 8 \~ 2 7 \~ 3 6 \~ 4 5 | dimension)  
-

@@ -1,6 +1,6 @@
 ---
-title: Ti Te language
-description: Ti Te language
+title: "Ti Te language"
+description: "Ti Te language"
 ---
 
 * The Differences Between Ti and Te Language In my socionics chat group today, we had a conversation about how to use Ti and Te language at work to be better understood. So, I decided to provide an example from my professional experience: I've been practicing therapy for 7 years, 2 of which I've spent training therapists. I decided to give an example of how I would explain a therapeutic method using Ti and Te language. Case Scenario: A client comes to us with a request: "I can't seem to \[do a certain difficult thing\], and I feel \[anger, powerlessness, apathy\] about it." General Socionics Context First and foremost, it's important to understand: the therapeutic work itself—dealing with feelings, states, internal conflicts, and the subconscious—occurs within the Ethical-Intuitive field. We are dealing with Fi (the client's relationship with themselves, their feelings), Fe (their emotional state), Ni (their inner world, subconscious, past experiences), and Ne (their self-perception, their programs, and the potential for a new solution). However, when we, as specialists, analyze this process or teach it to others, we shift into the Logical field. We use logic to structure, explain, and convey the methodology. And here, the key difference between the two types of logic becomes apparent: Introverted Logic (Ti) is responsible for the educational aspect: we explain why it works, what the causes and effects are, and what the structure of the process is. This is the perspective for a student-apprentice who wants to understand the system. Extraverted Logic (Te) is responsible for the professional-methodological aspect: we provide a clear algorithm of actions, how to do it, why each step is necessary, and what result we will achieve. This is the perspective for a specialist who wants to learn how to solve the problem. Now, let's see how these two styles of explanation look in practice. (изменено)  
@@ -60,5 +60,4 @@ description: Ti Te language
   * Action: Give them a specific homework assignment: "Within 48 hours, take \[a simple action\] to resolve your situation, drawing on that resourceful feeling you anchored." Ask them to write down the insights from the session.  
   * ,  
   * Purpose: This is essential so that the insight doesn't just stay in the office but turns into a real-life skill. The ROI of the therapy increases exponentially."
-
 

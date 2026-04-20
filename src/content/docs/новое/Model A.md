@@ -1,6 +1,6 @@
 ---
-title: Model A
-description: Model A
+title: "Model A"
+description: "Model A"
 ---
 
   
@@ -57,4 +57,3 @@ This function imperatively, inevitably, automatically (and) immerses TIM in the 
 Realization-Technological Function \- Extraverted Thinking (L). This is the function by which the type provides its product (A), its labor (L). When the social order is felt, the subject can independently perform the work (L) or give a specific methodical (L) advice that will lead to a productive (L) result.
 
 It is extrovert (outward), productive (from itself outstanding), contact (directly to the external environment), estimated (sets the criterion of the goal), vital (automatic), strong (confident, necessary), labor (practice oriented, not Discussion) function. This is the type activity. He issues a product for this function as a result of his program, automatically and results-oriented.  
-

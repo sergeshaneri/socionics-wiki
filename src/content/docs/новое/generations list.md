@@ -1,6 +1,6 @@
 ---
-title: generations list
-description: generations list
+title: "Generations list"
+description: "Generations list"
 ---
 
 1st gen:  
@@ -35,4 +35,3 @@ demo/ari
 \+/-  
 process/result  
 ?/\!  
-

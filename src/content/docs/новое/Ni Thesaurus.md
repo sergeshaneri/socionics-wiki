@@ -1,6 +1,6 @@
 ---
-title: Ni Thesaurus
-description: Ni Thesaurus
+title: "Ni Thesaurus"
+description: "Ni Thesaurus"
 ---
 
 # This is a machine translated list of words and definitions that are related to Ni semantic field. (BI is Ni abbreviation is russian) 

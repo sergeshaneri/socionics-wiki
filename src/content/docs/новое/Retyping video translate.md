@@ -1,6 +1,6 @@
 ---
-title: Retyping video translate
-description: Retyping video translate
+title: "Retyping video translate"
+description: "Retyping video translate"
 ---
 
 Happy holiday, friends. My name is Sergey Shanri. I’m a psychologist, I lead therapeutic meditation sessions, and I’ve been researching Socionics for 12 years. Welcome to my new Socionics video—today we’re talking about retyping.
@@ -124,4 +124,3 @@ So, write to me and subscribe to the channels. I’ll be very glad if you take t
 And it would be great if you wrote in the comments the most impactful insight you had while watching this video.
 
 That’s all for today. Much love to everyone.  
-

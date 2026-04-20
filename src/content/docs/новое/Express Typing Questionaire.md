@@ -1,6 +1,6 @@
 ---
-title: Express Typing Questionaire
-description: Express Typing Questionaire
+title: "Express Typing Questionaire"
+description: "Express Typing Questionaire"
 ---
 
 
@@ -612,5 +612,4 @@ Based on the synthesis of all these factors, we make a decision on a working tem
 
 * **Abstract ideas and possibilities**? How to look at a situation from different angles to see the essence and the big picture? (LII, EII)  
 * **Real facts, goals**, and the application of your will and strength? What obstacles exist and where to apply effort to overcome them? (LSI, ESI)
-
 

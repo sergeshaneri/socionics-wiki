@@ -1,6 +1,6 @@
 ---
-title: Octa chotomies _8
-description: Octa chotomies _8
+title: "Octa chotomies 8"
+description: "Octa chotomies 8"
 ---
 
  \\Inf 3 \- Aspecton \- H8 matrix is a prototype of octotomies

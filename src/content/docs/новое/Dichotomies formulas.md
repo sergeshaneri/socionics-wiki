@@ -1,6 +1,6 @@
 ---
-title: Dichotomies formulas
-description: Classification of Reinin dichotomies, formulas and generations
+title: "Dichotomies formulas"
+description: "Dichotomies formulas"
 ---
 
 Classification of Reinin dichotomies.  

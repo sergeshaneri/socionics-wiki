@@ -1,6 +1,6 @@
 ---
-title: Tetrachotomies Classes (v2)
-description: Tetrachotomies Classes (v2)
+title: "Tetrachotomies Classes (v2)"
+description: "Tetrachotomies Classes (v2)"
 ---
 
 Tetrachotomies Classes (v2)
@@ -50,5 +50,4 @@ Tetrachotomies List
 33. **logic/ethic constructivist/emotivist  Nalility**  
 34. **logic/ethic**  **Process/Result  tactical/strategic**  
 35. **logic/ethic ?/\!  judicious/decisive**
-
 

@@ -1,6 +1,6 @@
 ---
-title: Formal Socionics 2022
-description: Formal Socionics 2022
+title: "Formal Socionics 2022"
+description: "Formal Socionics 2022"
 ---
 
 Fundamental questions
