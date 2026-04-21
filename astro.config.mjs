@@ -12,6 +12,11 @@ export default defineConfig({
 	site: 'https://sergeshaneri.github.io/socionics-wiki',
 	base: '/socionics-wiki',
 	output: 'static',
+	vite: {
+		define: {
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+		},
+	},
 	integrations: [
 		starlight({
 			title: 'Фрактальная Соционика Вики',

@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node patch-plugin.js && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
+  },
+  "overrides": {
+    "picomatch": "^4.0.3"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.38.3",
