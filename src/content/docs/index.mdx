@@ -23,11 +23,15 @@ hero:
 ---
 
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
-import { Graph } from 'starlight-site-graph/components';
+import { Graph, PageGraph } from 'starlight-site-graph/components';
 
 ## Граф знаний
 
-<Graph />
+<Graph client:load />
+
+## Граф этой страницы
+
+<PageGraph client:load />
 
 ## О себе
 
