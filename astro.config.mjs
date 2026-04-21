@@ -25,9 +25,7 @@ export default defineConfig({
 				},
 			},
 			plugins: [
-				starlightSiteGraph({
-					debug: true,
-				}),
+				starlightSiteGraph(),
 			],
 			customCss: ['./src/styles/custom.css'],
 			markdown: {
