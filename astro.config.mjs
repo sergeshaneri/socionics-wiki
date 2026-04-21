@@ -24,7 +24,11 @@ export default defineConfig({
 					lang: 'ru',
 				},
 			},
-			plugins: [starlightSiteGraph()],
+			plugins: [
+				starlightSiteGraph({
+					debug: true,
+				}),
+			],
 			customCss: ['./src/styles/custom.css'],
 			markdown: {
 				remarkPlugins: [

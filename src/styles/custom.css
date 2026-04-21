@@ -839,15 +839,15 @@ img {
 }
 
 /* Русская подпись для правого сайдбара (Оглавление) */
-.right-sidebar .sl-container > h2:not(.slsg-graph-component h2),
-.page-sidebar .sl-container > h2:not(.slsg-graph-component h2),
-[data-has-toc] .right-sidebar h2:not(.slsg-graph-component h2) {
+.right-sidebar .sl-container > h2,
+.page-sidebar .sl-container > h2,
+[data-has-toc] .right-sidebar h2 {
   font-size: 0 !important;
 }
 
-.right-sidebar .sl-container > h2:not(.slsg-graph-component h2)::before,
-.page-sidebar .sl-container > h2:not(.slsg-graph-component h2)::before,
-[data-has-toc] .right-sidebar h2:not(.slsg-graph-component h2)::before {
+.right-sidebar .sl-container > h2::before,
+.page-sidebar .sl-container > h2::before,
+[data-has-toc] .right-sidebar h2::before {
   content: 'Оглавление';
   font-size: 0.9rem;
   font-weight: 600;
@@ -855,12 +855,23 @@ img {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-:root[data-theme='light'] .right-sidebar .sl-container > h2:not(.slsg-graph-component h2)::before,
-:root[data-theme='light'] .page-sidebar .sl-container > h2:not(.slsg-graph-component h2)::before,
-:root[data-theme='light'] [data-has-toc] .right-sidebar h2:not(.slsg-graph-component h2)::before {
+:root[data-theme='light'] .right-sidebar .sl-container > h2::before,
+:root[data-theme='light'] .page-sidebar .sl-container > h2::before,
+:root[data-theme='light'] [data-has-toc] .right-sidebar h2::before {
   color: #2d0a4e;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Фикс для заголовков плагина графа, чтобы они не заменялись на "Оглавление" */
+.right-sidebar .slsg-graph-panel h2,
+.right-sidebar .slsg-backlinks-panel h2 {
+  font-size: var(--sl-text-h2) !important;
+}
+
+.right-sidebar .slsg-graph-panel h2::before,
+.right-sidebar .slsg-backlinks-panel h2::before {
+  content: none !important;
 }
 
 /* Замена Overview на Обзор */
