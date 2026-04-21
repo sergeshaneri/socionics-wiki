@@ -4,6 +4,7 @@ try {
 } catch (e) {}
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightSiteGraph from 'starlight-site-graph';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
 			description: 'Wiki about socionics',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			lastUpdated: true,
+			plugins: [starlightSiteGraph()],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
