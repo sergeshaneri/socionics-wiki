@@ -17,14 +17,18 @@ export default defineConfig({
 			description: 'Wiki about socionics',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			lastUpdated: true,
+			locales: {
+				root: {
+					label: 'Русский',
+					lang: 'ru',
+				},
+			},
 			plugins: [starlightSiteGraph()],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
 					label: 'Фрактальная Соционика Вики',
-					items: [
-						{ label: 'О Вики', slug: 'index' },
-					],
+					items: [{ label: 'О Вики', slug: 'index' }],
 				},
 				{
 					label: 'Статьи',

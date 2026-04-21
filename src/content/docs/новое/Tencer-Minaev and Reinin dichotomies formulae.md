@@ -1,6 +1,9 @@
 ---
 title: "Tencer Minaev and Reinin dichotomies formulae"
 description: "Tencer Minaev and Reinin dichotomies formulae"
+links:
+  - "/socionics-wiki/concepts/"
+  - "/socionics-wiki/articles/дихотомии-справочник/"
 ---
 
 
