@@ -5,6 +5,7 @@ try {
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightSiteGraph from 'starlight-site-graph';
+import remarkWikiLink from 'remark-wiki-link';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +26,18 @@ export default defineConfig({
 			},
 			plugins: [starlightSiteGraph()],
 			customCss: ['./src/styles/custom.css'],
+			markdown: {
+				remarkPlugins: [
+					[
+						remarkWikiLink,
+						{
+							aliasDivider: '|',
+							wikiLinkClassName: 'internal-link',
+							hrefTemplate: (permalink) => `/socionics-wiki/types/${permalink.toLowerCase().replace(/\s+/g, '-')}/`,
+						},
+					],
+				],
+			},
 			sidebar: [
 				{
 					label: 'Фрактальная Соционика Вики',
