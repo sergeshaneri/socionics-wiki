@@ -1,0 +1,121 @@
+---
+/**
+ * Editorial-карточка: tagline italic Cormorant + hairline + bullet-список.
+ * Ссылка-обёртка целиком кликабельна. 3D-hover применяется через общие
+ * правила .sl-link-card (селекторы совпадают).
+ */
+interface Props {
+  title: string;
+  href: string;
+  lead?: string;
+  items?: string[];
+}
+
+const { title, href, lead, items } = Astro.props;
+---
+
+<article class="sl-link-card noir-card">
+  <a class="noir-card__link" href={href}>
+    <span class="noir-card__title title">{title}</span>
+    {lead && <span class="noir-card__lead">{lead}</span>}
+    {items && items.length > 0 && (
+      <ul class="noir-card__list">
+        {items.map((item) => <li>{item}</li>)}
+      </ul>
+    )}
+  </a>
+</article>
+
+<style>
+  .noir-card {
+    position: relative;
+  }
+
+  .noir-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .noir-card__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--sl-color-white);
+    line-height: 1.2;
+  }
+
+  .noir-card__lead {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.98rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--sl-color-text-strong);
+    padding-bottom: 0.75rem;
+    border-bottom: 0.5px solid var(--sl-color-hairline);
+  }
+
+  .noir-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--sl-color-text-weak);
+  }
+
+  .noir-card__list li {
+    position: relative;
+    padding-left: 0.9rem;
+  }
+
+  .noir-card__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 0.4rem;
+    height: 0.5px;
+    background: var(--sl-color-accent-high, #c7a0ff);
+    opacity: 0.7;
+  }
+
+  .noir-card:hover .noir-card__title,
+  .noir-card:focus-within .noir-card__title {
+    color: rgba(245, 242, 255, 0.98);
+  }
+
+  .noir-card:hover .noir-card__list,
+  .noir-card:focus-within .noir-card__list {
+    color: var(--sl-color-text);
+  }
+
+  :global(:root[data-theme='light']) .noir-card__title {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .noir-card__lead {
+    color: rgba(26, 22, 39, 0.88);
+  }
+
+  :global(:root[data-theme='light']) .noir-card__list {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :global(:root[data-theme='light']) .noir-card__list li::before {
+    background: #6a1b9a;
+  }
+
+  :global(:root[data-theme='light']) .noir-card:hover .noir-card__title,
+  :global(:root[data-theme='light']) .noir-card:focus-within .noir-card__title {
+    color: #1a1627;
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+/**
+ * Override Starlight PageTitle: добавляет breadcrumbs над заголовком
+ * и reading-time под заголовком (для страниц с контентом ≥ ~2 минут).
+ */
+import Breadcrumbs from './Breadcrumbs.astro';
+import CategoryTags from './CategoryTags.astro';
+import HeadingAnchors from './HeadingAnchors.astro';
+
+const { starlightRoute } = Astro.locals;
+const { entry } = starlightRoute;
+const pageTitle = entry.data.title;
+
+const isHome = entry.id === '' || entry.id === 'index' || entry.slug === '';
+const hasHero = Boolean(entry.data.hero);
+
+const body = entry.body ?? '';
+// Простая оценка: слов / 180 (русский язык читается чуть медленнее английского)
+const words = body.trim().split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 180));
+const showReadingTime = !hasHero && !isHome && words >= 350;
+const readingTimeLabel = `${minutes} мин чтения`;
+
+const categories = entry.data.categories;
+const hasCategories = !hasHero && !isHome && categories && categories.length > 0;
+---
+
+{!hasHero && <Breadcrumbs />}
+
+<h1 id="_top">{pageTitle}</h1>
+
+{(showReadingTime || hasCategories) && (
+  <div class="page-meta">
+    {showReadingTime && (
+      <span class="reading-time" aria-label={`Время чтения: ${readingTimeLabel}`}>
+        {readingTimeLabel}
+      </span>
+    )}
+    {hasCategories && <CategoryTags categories={categories} />}
+  </div>
+)}
+
+<HeadingAnchors />
+
+
+<style>
+  @layer starlight.core {
+    h1 {
+      margin-top: 1rem;
+      font-size: var(--sl-text-h1);
+      line-height: var(--sl-line-height-headings);
+      font-weight: 600;
+      color: var(--sl-color-white);
+    }
+  }
+</style>

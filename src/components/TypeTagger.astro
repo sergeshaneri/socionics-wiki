@@ -1,0 +1,123 @@
+---
+/**
+ * После упоминаний соционических типов по псевдониму добавляет моно-тег
+ * с аббревиатурой: «Бальзак [ИЛИ]», «Достоевский [ЭИИ]».
+ * Работает только внутри .sl-markdown-content, не трогает code/pre/ссылки
+ * и пропускает слова, после которых тег уже стоит.
+ */
+---
+
+<script>
+  // Псевдоним → аббревиатура на русском.
+  // Ключ — именительный падеж; regex ниже обрабатывает и склонения
+  // типа «Бальзака», «Есенину» через расширенное окончание.
+  const TYPES: Array<[string, string]> = [
+    ['Дон Кихот', 'ИЛЭ'],
+    ['Дюма', 'СЭИ'],
+    ['Гюго', 'ЭСЭ'],
+    ['Робеспьер', 'ЛИИ'],
+    ['Гамлет', 'ЭИЭ'],
+    ['Максим Горький', 'ЛСИ'],
+    ['Максим', 'ЛСИ'],
+    ['Жуков', 'СЛЭ'],
+    ['Есенин', 'ИЭИ'],
+    ['Наполеон', 'СЭЭ'],
+    ['Бальзак', 'ИЛИ'],
+    ['Джек Лондон', 'ЛИЭ'],
+    ['Джек', 'ЛИЭ'],
+    ['Драйзер', 'ЭСИ'],
+    ['Штирлиц', 'ЛСЭ'],
+    ['Достоевский', 'ЭИИ'],
+    ['Гексли', 'ИЭЭ'],
+    ['Габен', 'СЛИ'],
+  ];
+
+  // Склонения: допускаем 0–3 кириллических символов после корня.
+  // «Бальзак», «Бальзака», «Бальзаку», «Бальзаком»…
+  function makeRegex() {
+    const alts = TYPES
+      .map(([name]) => name.replace(/ /g, '\\s+'))
+      .sort((a, b) => b.length - a.length) // более длинные первыми
+      .join('|');
+    return new RegExp(`(?<![\\p{L}\\-])(${alts})([а-яё]{0,3})(?![\\p{L}\\-])`, 'gu');
+  }
+
+  function resolveAbbr(match: string): string | null {
+    for (const [name, abbr] of TYPES) {
+      if (match.startsWith(name)) return abbr;
+    }
+    return null;
+  }
+
+  // Не трогаем внутри этих элементов
+  const SKIP = new Set(['CODE', 'PRE', 'KBD', 'SCRIPT', 'STYLE', 'A', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+
+  function shouldSkip(node: Node): boolean {
+    let p: Node | null = node.parentNode;
+    while (p && p instanceof Element) {
+      if (SKIP.has(p.tagName)) return true;
+      if (p.classList.contains('type-tag')) return true;
+      p = p.parentNode;
+    }
+    return false;
+  }
+
+  function processNode(textNode: Text, rx: RegExp) {
+    const text = textNode.nodeValue ?? '';
+    rx.lastIndex = 0;
+    if (!rx.test(text)) return;
+    rx.lastIndex = 0;
+
+    const frag = document.createDocumentFragment();
+    let lastIdx = 0;
+    let m: RegExpExecArray | null;
+    while ((m = rx.exec(text)) !== null) {
+      const base = m[1];
+      const suffix = m[2] ?? '';
+      const abbr = resolveAbbr(base);
+      if (!abbr) continue;
+
+      // Если после match уже стоит [АББР] — пропускаем
+      const tail = text.slice(m.index + m[0].length, m.index + m[0].length + 10);
+      if (tail.startsWith(` [${abbr}]`) || tail.startsWith(`[${abbr}]`)) continue;
+
+      frag.appendChild(document.createTextNode(text.slice(lastIdx, m.index)));
+      frag.appendChild(document.createTextNode(base + suffix));
+      const tag = document.createElement('span');
+      tag.className = 'type-tag';
+      tag.textContent = `[${abbr}]`;
+      tag.setAttribute('aria-label', `Соционический тип: ${abbr}`);
+      frag.appendChild(tag);
+      lastIdx = m.index + m[0].length;
+    }
+    if (lastIdx === 0) return;
+    frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+    textNode.parentNode?.replaceChild(frag, textNode);
+  }
+
+  function walk(root: Element) {
+    const rx = makeRegex();
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(n) {
+        if (shouldSkip(n)) return NodeFilter.FILTER_REJECT;
+        if (!n.nodeValue || n.nodeValue.trim().length < 4) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      },
+    });
+    const nodes: Text[] = [];
+    let cur: Node | null;
+    while ((cur = walker.nextNode())) nodes.push(cur as Text);
+    for (const n of nodes) processNode(n, rx);
+  }
+
+  function run() {
+    const content = document.querySelector<HTMLElement>('.sl-markdown-content');
+    if (!content) return;
+    if (content.dataset.typeTagged) return;
+    content.dataset.typeTagged = '1';
+    walk(content);
+  }
+
+  run();
+  document.addEventListener('astro:page-load', run);
+</script>

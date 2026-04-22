@@ -1,0 +1,101 @@
+/* Вариант A — Architectural Minimalism.
+   Буквальная реализация style guide: headings 1.8–2.4rem, линии 0.28,
+   gaps 2–3rem, hero без декоративных рамок. */
+
+:root {
+  --midnight-violet: #1a1a2e;
+  --lunar-body: rgba(230, 225, 255, 0.72);
+  --line-soft: rgba(230, 225, 255, 0.18);
+  --line-strong: rgba(230, 225, 255, 0.28);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2vw, 1.9rem) !important;
+  line-height: 1.2 !important;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
+}
+
+/* Divider lines — ровно 0.28 opacity, 0.5px */
+.sl-markdown-content > h2::after,
+.sl-markdown-content > h3::after {
+  background: linear-gradient(90deg, rgba(230, 225, 255, 0.28), rgba(157, 78, 221, 0.2), transparent) !important;
+  height: 0.5px !important;
+  width: min(8rem, 32%) !important;
+}
+
+hr {
+  background: linear-gradient(90deg, transparent, rgba(230, 225, 255, 0.28), transparent) !important;
+  margin: 5rem 0 !important;
+}
+
+/* Card grid — щедрые gaps */
+.card-grid,
+.sl-card-grid {
+  gap: 2.5rem !important;
+}
+
+/* Hero — убираем двойной border и radial-gradients, матовая поверхность */
+.hero {
+  padding-block: clamp(5rem, 10vw, 8rem) !important;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(123, 44, 191, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(26, 26, 46, 0.6) 0%, rgba(10, 10, 15, 1) 100%) !important;
+  border-bottom: 1px solid rgba(230, 225, 255, 0.18) !important;
+}
+
+.hero::before {
+  display: none !important;
+}
+
+/* Кнопки hero — угловатые, тонкий контур */
+.hero .sl-link-button,
+.hero .sl-button,
+.hero-actions a {
+  border-radius: 4px !important;
+  border: 1px solid rgba(230, 225, 255, 0.28) !important;
+  background: rgba(26, 26, 46, 0.4) !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+.hero .sl-link-button:hover,
+.hero .sl-button:hover,
+.hero-actions a:hover {
+  border-color: rgba(157, 78, 221, 0.5) !important;
+  background: rgba(74, 0, 128, 0.2) !important;
+  transform: none !important;
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.15) !important;
+}
+
+/* Link cards — matte, thin border */
+.sl-link-card {
+  border-radius: 6px !important;
+  border: 1px solid rgba(230, 225, 255, 0.18) !important;
+  background: rgba(26, 26, 46, 0.35) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.sl-link-card:hover {
+  border-color: rgba(157, 78, 221, 0.4) !important;
+  background: rgba(26, 26, 46, 0.55) !important;
+  box-shadow: 0 0 16px rgba(157, 78, 221, 0.1) !important;
+}
+
+/* Body — убираем лишние градиенты */
+body {
+  background:
+    radial-gradient(circle at 85% 5%, rgba(123, 44, 191, 0.04), transparent 30%),
+    #0a0a0f !important;
+}

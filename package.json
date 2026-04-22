@@ -13,11 +13,14 @@
     "picomatch": "^4.0.3"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@astrojs/starlight": "^0.38.3",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/space-mono": "^5.2.9",
     "astro": "^6.0.1",
     "remark-wiki-link": "^2.0.1",
     "sharp": "^0.34.2",
-    "starlight-site-graph": "^0.5.0",
-    "starlight-theme-obsidian": "^0.4.1"
+    "starlight-site-graph": "^0.5.0"
   }
 }

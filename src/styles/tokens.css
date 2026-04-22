@@ -1,0 +1,45 @@
+/* Дизайн-токены: цветовая палитра, шрифты, тени */
+
+:root {
+  --obsidian-black: #0a0a0f;
+  --void-black: #07070b;
+  --midnight-violet: #161625;
+  --velvet-panel: rgba(17, 17, 25, 0.86);
+  --gunmetal: #232534;
+  --muted-purple: #4a0080;
+  --electric-violet: #7b2cbf;
+  --cold-neon: #9d4edd;
+  --lunar-white: #e6e1ff;
+  --lunar-strong: rgba(240, 236, 255, 0.94);
+  --lunar-body: rgba(230, 225, 255, 0.74);
+  --lunar-muted: rgba(230, 225, 255, 0.54);
+  --line-soft: rgba(230, 225, 255, 0.1);
+  --line-strong: rgba(230, 225, 255, 0.2);
+  --panel-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+  --violet-shadow: 0 18px 42px rgba(53, 23, 90, 0.22);
+
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Starlight overrides — тёмная тема */
+  --sl-color-bg: var(--obsidian-black);
+  --sl-color-bg-nav: rgba(12, 12, 18, 0.9);
+  --sl-color-bg-sidebar: rgba(10, 10, 16, 0.92);
+  --sl-color-bg-inline-code: rgba(29, 27, 43, 0.9);
+  --sl-color-bg-accent: rgba(123, 44, 191, 0.12);
+  --sl-color-hairline-light: rgba(230, 225, 255, 0.04);
+  --sl-color-hairline: rgba(230, 225, 255, 0.08);
+  --sl-color-text: var(--lunar-body);
+  --sl-color-text-strong: var(--lunar-strong);
+  --sl-color-text-weak: var(--lunar-muted);
+  --sl-color-text-invert: var(--void-black);
+  --sl-color-white: rgba(245, 242, 255, 0.98);
+  --sl-color-black: var(--void-black);
+  --sl-color-link: #c3a2ff;
+  --sl-color-link-hover: #e3d5ff;
+  --sl-color-accent-low: rgba(123, 44, 191, 0.12);
+  --sl-color-accent: var(--electric-violet);
+  --sl-color-accent-high: #c7a0ff;
+  --sl-color-border: var(--line-soft);
+}

@@ -1,0 +1,74 @@
+/* Левый и правый сайдбары + граф */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: var(--sl-nav-height);
+  height: calc(100vh - var(--sl-nav-height));
+  width: var(--sl-sidebar-width);
+  z-index: 10;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
+    rgba(10, 10, 16, 0.84);
+  border-right: 1px solid rgba(230, 225, 255, 0.06);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.sidebar-pane {
+  --sl-sidebar-visibility: visible;
+  visibility: visible;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+.sidebar-group-label,
+.sidebar-content .group-label,
+.sidebar-label {
+  color: rgba(240, 236, 255, 0.76) !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  border-left: 1px solid transparent;
+  border-radius: 0 12px 12px 0;
+  margin: 0.16rem 0;
+  padding-block: 0.58rem;
+  padding-inline: 1rem 0.85rem;
+  color: var(--sl-color-text);
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.sidebar a:hover,
+.sidebar a[aria-current='page'] {
+  color: var(--sl-color-white);
+  border-left-color: rgba(199, 160, 255, 0.7);
+  background: linear-gradient(90deg, rgba(123, 44, 191, 0.14), transparent 72%);
+}
+
+.sidebar-toggle {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Правый сайдбар с графом */
+.page-sidebar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
+    rgba(10, 10, 16, 0.84);
+  border-left: 1px solid rgba(230, 225, 255, 0.06);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+page-graph {
+  --graph-bg: rgba(10, 10, 16, 0.5);
+  --graph-node-color: var(--sl-color-accent);
+  --graph-link-color: rgba(157, 78, 221, 0.5);
+  --graph-text-color: var(--sl-color-text);
+}

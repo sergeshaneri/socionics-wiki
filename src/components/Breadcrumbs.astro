@@ -1,0 +1,59 @@
+---
+/**
+ * Хлебные крошки на основе id маршрута Starlight.
+ * Использует sidebar Starlight для построения пути от корня до текущей страницы.
+ * Если sidebar найти не удаётся, выпадаем на сегменты URL.
+ */
+const { starlightRoute } = Astro.locals;
+const { entry, sidebar } = starlightRoute;
+const pageTitle = entry.data.title;
+const pageId = entry.id;
+
+type SidebarEntry = {
+  type: 'link' | 'group';
+  label: string;
+  href?: string;
+  isCurrent?: boolean;
+  entries?: SidebarEntry[];
+};
+
+function findTrail(items: SidebarEntry[], trail: SidebarEntry[] = []): SidebarEntry[] | null {
+  for (const item of items) {
+    if (item.type === 'link' && item.isCurrent) {
+      return [...trail, item];
+    }
+    if (item.type === 'group' && item.entries) {
+      const found = findTrail(item.entries, [...trail, item]);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+const trail = (sidebar && findTrail(sidebar as SidebarEntry[])) ?? [];
+// Убираем последний элемент (сама страница — отображается как h1)
+const crumbs = trail.slice(0, -1);
+const homeHref = import.meta.env.BASE_URL || '/';
+---
+
+{crumbs.length > 0 && (
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol>
+      <li>
+        <a href={homeHref}>Главная</a>
+      </li>
+      {crumbs.map((crumb) => (
+        <li>
+          {crumb.type === 'link' && crumb.href ? (
+            <a href={crumb.href}>{crumb.label}</a>
+          ) : (
+            <span>{crumb.label}</span>
+          )}
+        </li>
+      ))}
+      <li>
+        <span aria-current="page">{pageTitle}</span>
+      </li>
+    </ol>
+  </nav>
+)}

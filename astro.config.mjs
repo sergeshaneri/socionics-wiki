@@ -1,23 +1,43 @@
 // @ts-check
-try {
-	process.env.NODE_NO_WARNINGS = '1';
-} catch (e) {}
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 import starlightSiteGraph from 'starlight-site-graph';
 import remarkWikiLink from 'remark-wiki-link';
+import { readFileSync } from 'node:fs';
+import { buildPermalinkMap, normalizeSlug } from './src/lib/wiki-links.mjs';
+
+const permalinkMap = buildPermalinkMap();
+
+// Редиректы со старых путей (articles/, новое/) на новые. См. migration-redirects.json
+const migrationRedirects = JSON.parse(
+	readFileSync(new URL('./migration-redirects.json', import.meta.url), 'utf8'),
+);
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://sergeshaneri.github.io/socionics-wiki',
 	base: '/socionics-wiki',
 	output: 'static',
-	vite: {
-		define: {
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-		},
+	redirects: migrationRedirects,
+	markdown: {
+		remarkPlugins: [
+			[
+				remarkWikiLink,
+				{
+					aliasDivider: '|',
+					wikiLinkClassName: 'internal-link',
+					newClassName: 'is-broken',
+					permalinks: [...permalinkMap.keys()],
+					pageResolver: (name) => [normalizeSlug(name)],
+					hrefTemplate: (permalink) =>
+						permalinkMap.get(permalink) ?? `/socionics-wiki/${permalink}/`,
+				},
+			],
+		],
 	},
 	integrations: [
+		sitemap(),
 		starlight({
 			title: 'Фрактальная Соционика Вики',
 			description: 'Wiki about socionics',
@@ -32,28 +52,17 @@ export default defineConfig({
 			plugins: [
 				starlightSiteGraph(),
 			],
-			customCss: ['./src/styles/custom.css'],
-			markdown: {
-				remarkPlugins: [
-					[
-						remarkWikiLink,
-						{
-							aliasDivider: '|',
-							wikiLinkClassName: 'internal-link',
-							hrefTemplate: (permalink) => `/socionics-wiki/types/${permalink.toLowerCase().replace(/\s+/g, '-')}/`,
-						},
-					],
-				],
+			components: {
+				Head: './src/components/Head.astro',
+				PageTitle: './src/components/PageTitle.astro',
 			},
+			customCss: ['./src/styles/fonts.css', './src/styles/custom.css'],
 			sidebar: [
+				{ label: 'О Вики', slug: 'index' },
 				{
-					label: 'Фрактальная Соционика Вики',
-					items: [{ label: 'О Вики', slug: 'index' }],
-				},
-				{
-					label: 'Статьи',
+					label: 'Для начинающих',
 					collapsed: true,
-					autogenerate: { directory: 'articles' },
+					autogenerate: { directory: 'beginners' },
 				},
 				{
 					label: 'Типы',
@@ -61,14 +70,45 @@ export default defineConfig({
 					autogenerate: { directory: 'types' },
 				},
 				{
-					label: 'Концепты',
+					label: 'Теория',
 					collapsed: true,
-					autogenerate: { directory: 'concepts' },
+					items: [
+						{
+							label: 'Метасоционика',
+							collapsed: true,
+							autogenerate: { directory: 'theory/meta' },
+						},
+						{
+							label: 'Формальная соционика',
+							collapsed: true,
+							autogenerate: { directory: 'theory/formal' },
+						},
+					],
+				},
+				{
+					label: 'Информационные аспекты',
+					collapsed: true,
+					autogenerate: { directory: 'information-elements' },
+				},
+				{
+					label: 'Функции',
+					collapsed: true,
+					autogenerate: { directory: 'functions' },
+				},
+				{
+					label: 'Признаки',
+					collapsed: true,
+					autogenerate: { directory: 'signs' },
 				},
 				{
 					label: 'Отношения',
 					collapsed: true,
 					autogenerate: { directory: 'relations' },
+				},
+				{
+					label: 'Прикладное',
+					collapsed: true,
+					autogenerate: { directory: 'applied' },
 				},
 				{
 					label: 'English',
@@ -84,11 +124,6 @@ export default defineConfig({
 					label: 'Аудио',
 					collapsed: true,
 					autogenerate: { directory: 'audio' },
-				},
-				{
-					label: 'Новое',
-					collapsed: true,
-					autogenerate: { directory: 'новое' },
 				},
 				{
 					label: 'Книги Чурюмова',

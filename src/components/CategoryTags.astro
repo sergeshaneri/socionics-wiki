@@ -1,0 +1,35 @@
+---
+/**
+ * Рендерит теги категорий соционики под заголовком статьи.
+ * Данные берутся из frontmatter: `categories: [meta, formal, ...]`.
+ * Каждый тег — ссылка на соответствующий landing-раздел в /categories/.
+ */
+import type { SocionicsCategory } from '../content.config';
+
+interface Props {
+  categories?: SocionicsCategory[];
+}
+
+const { categories } = Astro.props;
+
+const LABELS: Record<SocionicsCategory, { label: string; href: string }> = {
+  meta: { label: 'Метасоционика', href: '/socionics-wiki/categories/metasocionika/' },
+  formal: { label: 'Формальная', href: '/socionics-wiki/categories/formalnaya-socionika/' },
+  semantic: { label: 'Семантическая', href: '/socionics-wiki/categories/semanticheskaya-socionika/' },
+  applied: { label: 'Прикладная', href: '/socionics-wiki/categories/prikladnaya-socionika/' },
+};
+---
+
+{categories && categories.length > 0 && (
+  <ul class="category-tags" aria-label="Категории соционики">
+    {categories.map((cat) => {
+      const entry = LABELS[cat];
+      if (!entry) return null;
+      return (
+        <li>
+          <a class={`category-tag category-tag--${cat}`} href={entry.href}>{entry.label}</a>
+        </li>
+      );
+    })}
+  </ul>
+)}

@@ -1,0 +1,83 @@
+/* Header и поиск */
+
+header {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: linear-gradient(180deg, rgba(11, 11, 18, 0.84), rgba(11, 11, 18, 0.72));
+  border-bottom: 1px solid rgba(230, 225, 255, 0.06);
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--sl-color-white);
+  text-transform: uppercase;
+}
+
+.site-title:hover {
+  color: var(--sl-color-accent-high);
+}
+
+.site-title span {
+  max-width: 28rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+site-search button[data-open-modal] {
+  border: 1px solid rgba(230, 225, 255, 0.1);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    rgba(18, 18, 28, 0.7);
+  color: var(--lunar-body);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+site-search button[data-open-modal]:hover {
+  border-color: rgba(199, 160, 255, 0.28);
+  color: var(--sl-color-white);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    rgba(24, 20, 38, 0.84);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 28px rgba(20, 12, 34, 0.22);
+}
+
+site-search button[data-open-modal] kbd {
+  border: 1px solid rgba(230, 225, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--lunar-muted);
+  font-family: var(--font-mono);
+}
+
+dialog {
+  border-radius: 22px;
+}
+
+#starlight__search {
+  --pagefind-ui-primary: var(--sl-color-text-strong);
+  --pagefind-ui-text: var(--sl-color-text);
+  --pagefind-ui-font: var(--font-body);
+  --pagefind-ui-background: rgba(10, 10, 16, 0.96);
+  --pagefind-ui-border: rgba(230, 225, 255, 0.1);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-tag: rgba(255, 255, 255, 0.05);
+}
+
+.theme-toggle {
+  border: 1px solid rgba(230, 225, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(18, 18, 30, 0.72);
+}
+
+.theme-toggle:hover {
+  border-color: rgba(199, 160, 255, 0.26);
+  box-shadow: 0 10px 24px rgba(20, 12, 34, 0.16);
+}

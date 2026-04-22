@@ -1,0 +1,39 @@
+---
+/**
+ * Override Starlight Head: добавляет og:image, twitter:image, theme-color
+ * и подключает клиентские noir-скрипты (reading progress, scroll-darken,
+ * wiki hover-preview), чтобы они работали и на splash-шаблоне тоже.
+ */
+import ReadingProgress from './ReadingProgress.astro';
+import NoirEnhancements from './NoirEnhancements.astro';
+import TypeTagger from './TypeTagger.astro';
+// FractalBackground — отключён (идея отложена).
+// Файл сохранён в src/components/FractalBackground.astro, чтобы
+// вернуть его позже: достаточно восстановить импорт и рендер ниже.
+
+const { head } = Astro.locals.starlightRoute;
+// Astro.site = 'https://.../socionics-wiki' без trailing slash —
+// при resolve нужно добавить '/', иначе base теряется.
+const siteBase = Astro.site
+  ? Astro.site.toString().replace(/\/?$/, '/')
+  : `${Astro.url.origin}${import.meta.env.BASE_URL}`;
+const imageUrl = new URL('shaneri.jpg', siteBase).toString();
+---
+
+{head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+
+{/* Социальные превью */}
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:image" content={imageUrl} />
+
+{/* Цвет тулбара мобильных браузеров — совпадает с основным фоном темы */}
+<meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6f3fa" media="(prefers-color-scheme: light)" />
+
+{/* Minimal Noir: клиентские эффекты. Компонент вставляет <script> — Astro
+    выносит его из <head> в нужное место автоматически. */}
+<ReadingProgress />
+<NoirEnhancements />
+<TypeTagger />

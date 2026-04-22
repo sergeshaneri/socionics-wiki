@@ -1,0 +1,398 @@
+/* Светлая тема в духе Minimal Noir.
+   Инвертированный obsidian: светлая лавандовая база, фиолетовый текст,
+   строгие hairlines без радиальных свечений и декоративных рамок. */
+
+:root[data-theme='light'] {
+  /* База — холодный светло-лавандовый, не белый */
+  --sl-color-bg: #f6f3fa;
+  --sl-color-bg-nav: rgba(246, 243, 250, 0.94);
+  --sl-color-bg-sidebar: rgba(246, 243, 250, 0.96);
+  --sl-color-bg-inline-code: rgba(26, 22, 39, 0.04);
+  --sl-color-bg-accent: rgba(90, 30, 148, 0.1);
+
+  /* Hairlines — opacity 0.18/0.28 как в тёмной, но на тёмном фиолете */
+  --sl-color-hairline-light: rgba(26, 22, 39, 0.12);
+  --sl-color-hairline: rgba(26, 22, 39, 0.18);
+
+  /* Текст: тёмный фиолет, соответствует body opacity 0.72 */
+  --sl-color-text: rgba(26, 22, 39, 0.78);
+  --sl-color-text-strong: #1a1627;
+  --sl-color-text-weak: rgba(26, 22, 39, 0.55);
+  --sl-color-text-invert: #f6f3fa;
+  --sl-color-white: #1a1627;
+  --sl-color-black: #f6f3fa;
+
+  /* Акценты — muted/electric violet, тёмные для контраста на светлом */
+  --sl-color-link: #5a1e94;
+  --sl-color-link-hover: #3d0f6b;
+  --sl-color-accent-low: rgba(90, 30, 148, 0.08);
+  --sl-color-accent: #6a1b9a;
+  --sl-color-accent-high: #8e24aa;
+  --sl-color-border: rgba(26, 22, 39, 0.14);
+
+  --panel-shadow: none;
+  --violet-shadow: none;
+
+  /* Локальные noir-переменные: hairline opacity инвертированы */
+  --line-soft: rgba(26, 22, 39, 0.12);
+  --line-strong: rgba(26, 22, 39, 0.28);
+}
+
+/* Светлая глубина + едва заметный violet haze в углах */
+:root[data-theme='light'] body {
+  background:
+    radial-gradient(ellipse 55% 40% at 0% 0%, rgba(123, 44, 191, 0.05), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(106, 27, 154, 0.035), transparent 60%),
+    linear-gradient(180deg, #f6f3fa 0%, #f1edf6 55%, #ebe5f1 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Scroll-darken overlay в светлой теме — наоборот, осветляет */
+:root[data-theme='light'] body::before {
+  background: #ffffff !important;
+}
+
+/* Header — матовый, hairline снизу */
+:root[data-theme='light'] header {
+  background: rgba(246, 243, 250, 0.92) !important;
+  border-bottom: 0.5px solid rgba(26, 22, 39, 0.12) !important;
+  backdrop-filter: blur(12px);
+}
+
+:root[data-theme='light'] .site-title {
+  color: #1a1627;
+}
+
+:root[data-theme='light'] .site-title:hover {
+  color: #6a1b9a;
+}
+
+/* Broken wiki-link */
+:root[data-theme='light'] a.internal-link.is-broken {
+  color: #b71c1c;
+  border-bottom-color: rgba(183, 28, 28, 0.5);
+}
+
+:root[data-theme='light'] a.internal-link.is-broken:hover {
+  color: #8e0000;
+}
+
+/* Sidebar — плоский, hairline */
+:root[data-theme='light'] .sidebar {
+  background: rgba(246, 243, 250, 0.96) !important;
+  border-right: 0.5px solid rgba(26, 22, 39, 0.12) !important;
+  backdrop-filter: none !important;
+}
+
+:root[data-theme='light'] .sidebar .sidebar-group-label,
+:root[data-theme='light'] .sidebar .sidebar-content .group-label,
+:root[data-theme='light'] .sidebar .sidebar-label,
+:root[data-theme='light'] .sidebar .group-label,
+:root[data-theme='light'] .sidebar-group-label span {
+  color: #2d0a4e !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+}
+
+:root[data-theme='light'] .sidebar a {
+  color: rgba(26, 22, 39, 0.82);
+}
+
+:root[data-theme='light'] .sidebar a:hover,
+:root[data-theme='light'] .sidebar a[aria-current='page'] {
+  color: #1a1627;
+  background: linear-gradient(90deg, rgba(123, 44, 191, 0.08), transparent 72%);
+  border-left-color: rgba(106, 27, 154, 0.6);
+}
+
+/* Page-sidebar (граф) */
+:root[data-theme='light'] .page-sidebar {
+  background: rgba(246, 243, 250, 0.96) !important;
+  border-left: 0.5px solid rgba(26, 22, 39, 0.12) !important;
+  backdrop-filter: none !important;
+}
+
+:root[data-theme='light'] page-graph {
+  --graph-bg: rgba(255, 255, 255, 0.6);
+  --graph-node-color: #6a1b9a;
+  --graph-link-color: rgba(106, 27, 154, 0.4);
+  --graph-text-color: #1a1627;
+}
+
+/* Поиск */
+:root[data-theme='light'] site-search button[data-open-modal] {
+  background: rgba(26, 22, 39, 0.04) !important;
+  border: 0.5px solid rgba(26, 22, 39, 0.18) !important;
+  color: rgba(26, 22, 39, 0.72);
+  box-shadow: none;
+}
+
+:root[data-theme='light'] site-search button[data-open-modal]:hover {
+  border-color: rgba(106, 27, 154, 0.4) !important;
+  background: rgba(26, 22, 39, 0.06) !important;
+}
+
+:root[data-theme='light'] site-search button[data-open-modal] kbd {
+  background: rgba(26, 22, 39, 0.06);
+  border: 0.5px solid rgba(26, 22, 39, 0.14);
+  color: rgba(26, 22, 39, 0.6);
+}
+
+/* Hero — прозрачный: пусть градиент body просвечивает. */
+:root[data-theme='light'] .hero {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 0.5px solid rgba(26, 22, 39, 0.18) !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme='light'] .hero::before,
+:root[data-theme='light'] .hero::after {
+  display: none !important;
+}
+
+:root[data-theme='light'] .hero-title,
+:root[data-theme='light'] [data-has-hero] h1 {
+  color: #1a1627 !important;
+  text-shadow: none !important;
+  font-weight: 300 !important;
+}
+
+:root[data-theme='light'] .hero .tagline {
+  color: rgba(26, 22, 39, 0.72) !important;
+  -webkit-text-fill-color: rgba(26, 22, 39, 0.72) !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Фото в hero — рамка, ambient-glow cold violet */
+:root[data-theme='light'] .hero img,
+:root[data-theme='light'] .hero picture img {
+  border: 0.5px solid rgba(26, 22, 39, 0.18) !important;
+  border-radius: 2px !important;
+  box-shadow:
+    0 0 1px rgba(106, 27, 154, 0.2),
+    0 0 40px rgba(123, 44, 191, 0.08),
+    0 20px 40px rgba(26, 22, 39, 0.1) !important;
+}
+
+/* Hero кнопки — base underline, 3D hover (см. variant-c.css) */
+:root[data-theme='light'] .hero .sl-link-button,
+:root[data-theme='light'] .hero .sl-button,
+:root[data-theme='light'] .hero .actions a,
+:root[data-theme='light'] .hero-actions a {
+  border: 0.5px solid transparent !important;
+  border-bottom: 0.5px solid rgba(26, 22, 39, 0.28) !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(26, 22, 39, 0.82) !important;
+}
+
+:root[data-theme='light'] .hero .sl-link-button:hover,
+:root[data-theme='light'] .hero .sl-button:hover,
+:root[data-theme='light'] .hero .actions a:hover,
+:root[data-theme='light'] .hero-actions a:hover,
+:root[data-theme='light'] .hero .sl-link-button:focus-visible,
+:root[data-theme='light'] .hero .sl-button:focus-visible,
+:root[data-theme='light'] .hero .actions a:focus-visible,
+:root[data-theme='light'] .hero-actions a:focus-visible {
+  border-color: rgba(106, 27, 154, 0.35) !important;
+  background: linear-gradient(180deg, rgba(123, 44, 191, 0.08), rgba(90, 30, 148, 0.04)) !important;
+  color: #1a1627 !important;
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 2px 0 rgba(26, 22, 39, 0.1),
+    0 4px 0 rgba(26, 22, 39, 0.06),
+    0 12px 28px rgba(106, 27, 154, 0.16),
+    0 0 1px rgba(106, 27, 154, 0.25) !important;
+}
+
+/* Link cards — base: hairlines, hover: 3D (см. variant-c.css). */
+:root[data-theme='light'] .sl-link-card {
+  border: 0.5px solid transparent !important;
+  border-left: 0.5px solid rgba(26, 22, 39, 0.18) !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+:root[data-theme='light'] .sl-link-card:hover,
+:root[data-theme='light'] .sl-link-card:focus-within {
+  border-color: rgba(106, 27, 154, 0.35) !important;
+  border-left-color: rgba(106, 27, 154, 0.7) !important;
+  background: linear-gradient(180deg, rgba(123, 44, 191, 0.06), rgba(90, 30, 148, 0.03)) !important;
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 2px 0 rgba(26, 22, 39, 0.08),
+    0 4px 0 rgba(26, 22, 39, 0.05),
+    0 12px 28px rgba(106, 27, 154, 0.14),
+    0 0 1px rgba(106, 27, 154, 0.2) !important;
+}
+
+:root[data-theme='light'] .sl-link-card:active {
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 1px 0 rgba(26, 22, 39, 0.08),
+    0 6px 16px rgba(106, 27, 154, 0.12) !important;
+}
+
+:root[data-theme='light'] .sl-link-card:hover .title,
+:root[data-theme='light'] .sl-link-card:hover .icon {
+  color: #1a1627 !important;
+}
+
+:root[data-theme='light'] .sl-link-card .title {
+  color: #1a1627 !important;
+  font-weight: 500 !important;
+}
+
+:root[data-theme='light'] .sl-link-card .description {
+  color: rgba(26, 22, 39, 0.65) !important;
+}
+
+:root[data-theme='light'] .sl-link-card .icon {
+  color: #6a1b9a !important;
+}
+
+/* Пагинация prev/next — Noir base, 3D hover */
+:root[data-theme='light'] .pagination-links a {
+  border: 0.5px solid transparent !important;
+  border-bottom: 0.5px solid rgba(26, 22, 39, 0.28) !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme='light'] .pagination-links a:hover,
+:root[data-theme='light'] .pagination-links a:focus-visible {
+  border-color: rgba(106, 27, 154, 0.35) !important;
+  background: linear-gradient(180deg, rgba(123, 44, 191, 0.06), rgba(90, 30, 148, 0.03)) !important;
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 2px 0 rgba(26, 22, 39, 0.08),
+    0 4px 0 rgba(26, 22, 39, 0.05),
+    0 12px 28px rgba(106, 27, 154, 0.14),
+    0 0 1px rgba(106, 27, 154, 0.2) !important;
+}
+
+:root[data-theme='light'] .pagination-links a:active {
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 1px 0 rgba(26, 22, 39, 0.08),
+    0 6px 16px rgba(106, 27, 154, 0.12) !important;
+}
+
+:root[data-theme='light'] .pagination-links .link-label {
+  color: rgba(26, 22, 39, 0.55) !important;
+}
+
+:root[data-theme='light'] .pagination-links a:hover .link-label {
+  color: #6a1b9a !important;
+}
+
+:root[data-theme='light'] .pagination-links .link-title {
+  color: rgba(26, 22, 39, 0.85) !important;
+}
+
+:root[data-theme='light'] .pagination-links a:hover .link-title {
+  color: #1a1627 !important;
+}
+
+/* Pre/blockquote — левая фиолетовая */
+:root[data-theme='light'] .sl-markdown-content blockquote,
+:root[data-theme='light'] pre,
+:root[data-theme='light'] .expressive-code {
+  background: transparent !important;
+  border: none !important;
+  border-left: 1px solid rgba(123, 44, 191, 0.4) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Code inline */
+:root[data-theme='light'] code {
+  background: rgba(26, 22, 39, 0.05);
+  border-color: rgba(26, 22, 39, 0.08);
+  color: #3d0f6b;
+}
+
+/* Breadcrumbs */
+:root[data-theme='light'] .breadcrumbs a {
+  color: rgba(26, 22, 39, 0.6);
+}
+
+:root[data-theme='light'] .breadcrumbs a:hover {
+  color: #6a1b9a;
+  border-bottom-color: rgba(106, 27, 154, 0.4);
+}
+
+/* Reading time */
+:root[data-theme='light'] .reading-time {
+  color: #4a148c;
+  background: rgba(123, 44, 191, 0.06);
+  border-color: rgba(123, 44, 191, 0.16);
+}
+
+/* Category tags */
+:root[data-theme='light'] a.category-tag {
+  color: rgba(26, 22, 39, 0.72);
+  background: rgba(26, 22, 39, 0.03);
+  border-color: rgba(26, 22, 39, 0.12);
+}
+
+:root[data-theme='light'] a.category-tag:hover,
+:root[data-theme='light'] a.category-tag:focus-visible {
+  color: #1a1627;
+  border-color: rgba(106, 27, 154, 0.4);
+  background: rgba(123, 44, 191, 0.08);
+}
+
+:root[data-theme='light'] .category-tag.category-tag--meta { border-left-color: rgba(106, 27, 154, 0.7); }
+:root[data-theme='light'] .category-tag.category-tag--formal { border-left-color: rgba(30, 110, 200, 0.7); }
+:root[data-theme='light'] .category-tag.category-tag--semantic { border-left-color: rgba(200, 120, 30, 0.7); }
+:root[data-theme='light'] .category-tag.category-tag--applied { border-left-color: rgba(40, 160, 90, 0.7); }
+
+/* Wiki-preview tooltip в светлой теме */
+:root[data-theme='light'] .wiki-preview {
+  background: rgba(246, 243, 250, 0.98);
+  border-color: rgba(26, 22, 39, 0.28);
+  color: rgba(26, 22, 39, 0.8);
+  box-shadow:
+    0 0 24px rgba(106, 27, 154, 0.08),
+    0 20px 40px rgba(26, 22, 39, 0.1);
+}
+
+:root[data-theme='light'] .wiki-preview__title {
+  color: #1a1627;
+}
+
+:root[data-theme='light'] .wiki-preview__excerpt {
+  color: rgba(26, 22, 39, 0.65);
+}
+
+/* Reading-progress в светлой теме */
+:root[data-theme='light'] .reading-progress__fill {
+  background: linear-gradient(90deg, rgba(106, 27, 154, 0.9), rgba(90, 30, 148, 0.6));
+  box-shadow: 0 0 8px rgba(106, 27, 154, 0.25);
+}
+
+/* Numeric data в светлой теме */
+:root[data-theme='light'] .sl-markdown-content .num,
+:root[data-theme='light'] .sl-markdown-content time {
+  color: rgba(26, 22, 39, 0.92);
+}
+
+/* Mono-тег типа в светлой теме */
+:root[data-theme='light'] .type-tag {
+  color: rgba(26, 22, 39, 0.55);
+  border-color: rgba(26, 22, 39, 0.22);
+}

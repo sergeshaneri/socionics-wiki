@@ -19,3 +19,10 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Claude Code local tooling
+.claude/
+
+# Intermediate migration artifacts (scripts can regenerate)
+migration-plan.md
+migration-plan.json

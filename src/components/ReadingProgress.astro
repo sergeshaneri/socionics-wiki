@@ -1,0 +1,81 @@
+---
+/**
+ * Тонкая фиолетовая линия под header, заполняющаяся по мере скролла
+ * внутри .sl-markdown-content. На страницах без контента (hero, index)
+ * прячется через `data-has-hero`.
+ */
+---
+
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress__fill"></div>
+</div>
+
+<style>
+  .reading-progress {
+    position: fixed;
+    top: var(--sl-nav-height, 60px);
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .reading-progress__fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(157, 78, 221, 0.9), rgba(123, 44, 191, 0.6));
+    box-shadow: 0 0 8px rgba(157, 78, 221, 0.4);
+    transition: width 60ms linear;
+    will-change: width;
+  }
+
+  /* Прячем на hero-страницах — там прогресс бессмысленный */
+  :global([data-has-hero]) .reading-progress {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reading-progress__fill { transition: none; }
+  }
+</style>
+
+<script>
+  const fill = document.querySelector<HTMLElement>('.reading-progress__fill');
+  const bar = document.querySelector<HTMLElement>('.reading-progress');
+
+  function update() {
+    if (!fill || !bar) return;
+    const content = document.querySelector<HTMLElement>('.sl-markdown-content');
+    if (!content) {
+      bar.style.display = 'none';
+      return;
+    }
+    bar.style.display = '';
+    const rect = content.getBoundingClientRect();
+    const total = rect.height - window.innerHeight;
+    if (total <= 0) {
+      fill.style.width = '0%';
+      return;
+    }
+    const scrolled = Math.min(Math.max(-rect.top, 0), total);
+    const pct = (scrolled / total) * 100;
+    fill.style.width = pct + '%';
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      update();
+      ticking = false;
+    });
+  }
+
+  update();
+  document.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  document.addEventListener('astro:page-load', update);
+</script>

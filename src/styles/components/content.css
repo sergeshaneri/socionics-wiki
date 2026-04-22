@@ -1,0 +1,217 @@
+/* Markdown контент: blockquote, pre, пагинация, heading anchors */
+
+.sl-markdown-content blockquote,
+pre,
+.expressive-code {
+  border: 1px solid rgba(230, 225, 255, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.016), rgba(255, 255, 255, 0)),
+    rgba(15, 15, 23, 0.74);
+  box-shadow: var(--panel-shadow);
+}
+
+.sl-markdown-content blockquote {
+  padding: 1.2rem 1.4rem 1.2rem 1.6rem;
+}
+
+.sl-markdown-content blockquote::before {
+  background: linear-gradient(180deg, rgba(230, 225, 255, 0.28), rgba(157, 78, 221, 0.22));
+}
+
+/* Пагинация prev/next — Noir + 3D hover (как hero-кнопки и cards) */
+.pagination-links {
+  gap: 1.5rem !important;
+}
+
+.pagination-links a {
+  border: 0.5px solid transparent !important;
+  border-bottom: 0.5px solid rgba(230, 225, 255, 0.28) !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 1rem 1.25rem !important;
+  transition:
+    transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 240ms ease-out,
+    background 240ms ease-out,
+    box-shadow 240ms cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  will-change: transform, box-shadow;
+}
+
+.pagination-links a:hover,
+.pagination-links a:focus-visible {
+  border-color: rgba(199, 160, 255, 0.4) !important;
+  background: linear-gradient(180deg, rgba(123, 44, 191, 0.14), rgba(74, 0, 128, 0.08)) !important;
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 2px 0 rgba(26, 10, 49, 0.6),
+    0 4px 0 rgba(26, 10, 49, 0.4),
+    0 12px 28px rgba(157, 78, 221, 0.22),
+    0 0 1px rgba(199, 160, 255, 0.4) !important;
+}
+
+.pagination-links a:active {
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 1px 0 rgba(26, 10, 49, 0.6),
+    0 6px 16px rgba(157, 78, 221, 0.18) !important;
+}
+
+/* Label «← Назад» / «Вперёд →» — мелкий, моноширинный, сдержанный */
+.pagination-links .link-label {
+  color: var(--lunar-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.35rem !important;
+  transition: color 240ms ease-out;
+}
+
+.pagination-links a:hover .link-label {
+  color: var(--sl-color-accent-high) !important;
+}
+
+.pagination-links .link-title {
+  color: var(--lunar-body) !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.3;
+  transition: color 240ms ease-out;
+}
+
+.pagination-links a:hover .link-title {
+  color: var(--sl-color-white) !important;
+}
+
+/* Heading anchor copy-link (прогрессивное улучшение) */
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  scroll-margin-top: calc(var(--sl-nav-height) + 1.5rem);
+}
+
+.heading-anchor {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.1em 0.3em;
+  font-size: 0.6em;
+  line-height: 1;
+  vertical-align: middle;
+  color: var(--sl-color-text-weak);
+  opacity: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  transition: opacity 160ms ease, color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.sl-markdown-content :is(h2, h3, h4):hover .heading-anchor,
+.heading-anchor:focus-visible {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: var(--sl-color-accent-high);
+  background: rgba(123, 44, 191, 0.1);
+  border-color: rgba(199, 160, 255, 0.2);
+}
+
+.heading-anchor.copied {
+  color: var(--sl-color-accent-high);
+  opacity: 1;
+}
+
+/* Мета-строка под H1: reading-time + category-tags */
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Reading time badge */
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--sl-color-text-weak);
+  background: rgba(123, 44, 191, 0.08);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.reading-time::before {
+  content: '⏱';
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Category tags — одного стиля с reading-time, но кликабельные и цветные */
+.category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a.category-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--sl-color-text-weak);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line-soft);
+  border-left-width: 2px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+a.category-tag:hover,
+a.category-tag:focus-visible {
+  color: var(--sl-color-white);
+  border-color: rgba(199, 160, 255, 0.35);
+  background: rgba(123, 44, 191, 0.12);
+}
+
+/* Акценты по типу категории — малозаметные, чтобы не визуально шумно */
+.category-tag.category-tag--meta { border-left-color: rgba(199, 160, 255, 0.7); }
+.category-tag.category-tag--formal { border-left-color: rgba(130, 190, 255, 0.7); }
+.category-tag.category-tag--semantic { border-left-color: rgba(255, 190, 140, 0.7); }
+.category-tag.category-tag--applied { border-left-color: rgba(150, 230, 170, 0.7); }
+
+/* Исправление пустого первого экрана */
+.sl-container {
+  margin-top: 0 !important;
+  padding-top: 1rem;
+}
+
+.sl-markdown-content > h1:first-child,
+.sl-markdown-content > h2:first-child,
+.sl-markdown-content > p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
