@@ -1,26 +1,43 @@
 /* Левый и правый сайдбары + граф */
 
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: var(--sl-nav-height);
-  height: calc(100vh - var(--sl-nav-height));
-  width: var(--sl-sidebar-width);
-  z-index: 10;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
-    rgba(10, 10, 16, 0.84);
-  border-right: 1px solid rgba(230, 225, 255, 0.06);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+/* Фон/блюр/фикс-позиционирование — только на десктопе (≥ 50rem).
+   На мобильных оставляем поведение Starlight по-умолчанию: сайдбар скрыт
+   и открывается через гамбургер-кнопку. */
+@media (min-width: 50rem) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--sl-nav-height);
+    height: calc(100vh - var(--sl-nav-height));
+    width: var(--sl-sidebar-width);
+    z-index: 10;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
+      rgba(10, 10, 16, 0.84);
+    border-right: 1px solid rgba(230, 225, 255, 0.06);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  .sidebar-pane {
+    --sl-sidebar-visibility: visible;
+    visibility: visible;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
 }
 
-.sidebar-pane {
-  --sl-sidebar-visibility: visible;
-  visibility: visible;
-  position: absolute;
-  inset: 0;
-  width: 100%;
+/* Мобильный сайдбар — Noir-оформление, но поведение (раскрытие) управляется
+   кнопкой в шапке через aria-expanded, как у Starlight. */
+@media (max-width: 49.9999rem) {
+  .sidebar {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
+      rgba(10, 10, 16, 0.94);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
 }
 
 .sidebar-group-label,
@@ -50,11 +67,7 @@
   background: linear-gradient(90deg, rgba(123, 44, 191, 0.14), transparent 72%);
 }
 
-.sidebar-toggle {
-  display: flex;
-  visibility: visible;
-  opacity: 1;
-}
+/* Starlight-кнопка-гамбургер на мобильных — видна и работает по-умолчанию. */
 
 /* Правый сайдбар с графом */
 .page-sidebar {

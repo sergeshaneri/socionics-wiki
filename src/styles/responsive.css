@@ -10,11 +10,6 @@
     max-width: none;
   }
 
-  .sidebar {
-    width: 100%;
-    min-height: auto;
-  }
-
   .hero-actions {
     grid-template-columns: 1fr !important;
     max-width: 100% !important;
