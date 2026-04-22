@@ -215,3 +215,12 @@ main {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
+
+/* Центрирование контента статьи между левым и правым сайдбарами на десктопе.
+   По-умолчанию Starlight ставит margin-inline: auto 0 (прижимает к правому
+   краю main-pane, т.е. к TOC-сайдбару). Возвращаем симметричные auto auto. */
+@media (min-width: 72rem) {
+  [data-has-sidebar][data-has-toc] .main-pane {
+    --sl-content-margin-inline: auto;
+  }
+}
