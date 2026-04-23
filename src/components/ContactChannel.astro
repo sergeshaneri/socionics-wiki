@@ -1,0 +1,147 @@
+---
+/**
+ * Карточка канала связи: иконка (SVG или эмодзи), название, handle/адрес,
+ * шеврон affordance. Внешняя ссылка с rel=noopener.
+ */
+interface Props {
+  name: string;
+  handle: string;
+  href: string;
+  description?: string;
+  icon?: string;
+  external?: boolean;
+}
+
+const {
+  name,
+  handle,
+  href,
+  description,
+  icon,
+  external = true,
+} = Astro.props;
+---
+
+<a
+  class="contact-channel"
+  href={href}
+  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+>
+  {icon && <span class="contact-channel__icon" aria-hidden="true" set:html={icon} />}
+
+  <div class="contact-channel__body">
+    <span class="contact-channel__name">
+      {name}
+      <span class="contact-channel__shevron" aria-hidden="true">›</span>
+    </span>
+    <span class="contact-channel__handle">{handle}</span>
+    {description && <span class="contact-channel__desc">{description}</span>}
+  </div>
+</a>
+
+<style>
+  .contact-channel {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 1.3rem;
+    border: 1px solid rgba(230, 225, 255, 0.08);
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+      rgba(14, 14, 22, 0.68);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  }
+
+  .contact-channel:hover {
+    border-color: rgba(199, 160, 255, 0.28);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+      rgba(20, 18, 30, 0.78);
+    box-shadow:
+      var(--panel-shadow),
+      0 4px 14px rgba(123, 44, 191, 0.12);
+  }
+
+  .contact-channel__icon {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--sl-color-accent-high, #c7a0ff);
+    opacity: 0.85;
+  }
+
+  .contact-channel__icon :global(svg) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .contact-channel__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contact-channel__name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--sl-color-white);
+  }
+
+  .contact-channel__shevron {
+    display: inline-block;
+    margin-left: 0.35em;
+    font-weight: 300;
+    color: var(--sl-color-text-weak);
+    opacity: 0.5;
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .contact-channel:hover .contact-channel__shevron {
+    opacity: 0.85;
+    transform: translateX(0.15em);
+  }
+
+  .contact-channel__handle {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--sl-color-text-weak);
+    word-break: break-word;
+  }
+
+  .contact-channel__desc {
+    font-size: 0.82rem;
+    color: var(--sl-color-text-weak);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin-top: 0.15rem;
+  }
+
+  /* Светлая тема */
+  :global(:root[data-theme='light']) .contact-channel__name {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .contact-channel__handle {
+    color: rgba(26, 22, 39, 0.7);
+  }
+
+  :global(:root[data-theme='light']) .contact-channel__desc {
+    color: rgba(26, 22, 39, 0.6);
+  }
+
+  :global(:root[data-theme='light']) .contact-channel__icon {
+    color: #6a1b9a;
+  }
+</style>

@@ -1,0 +1,281 @@
+---
+/**
+ * Editorial-тариф: название, цена Cormorant italic, hairline,
+ * bullet-dash список, CTA с шевроном. Поддерживает featured-вариант
+ * (акцент фиолетовой рамкой и лейбл "Оптимально").
+ */
+interface Props {
+  name: string;
+  price: string;
+  priceNote?: string;
+  href: string;
+  ctaLabel: string;
+  lead?: string;
+  items: string[];
+  featured?: boolean;
+  featuredLabel?: string;
+}
+
+const {
+  name,
+  price,
+  priceNote,
+  href,
+  ctaLabel,
+  lead,
+  items,
+  featured = false,
+  featuredLabel = 'Оптимально',
+} = Astro.props;
+---
+
+<article class={`pricing-card${featured ? ' pricing-card--featured' : ''}`}>
+  {featured && <span class="pricing-card__badge">{featuredLabel}</span>}
+
+  <header class="pricing-card__head">
+    <h3 class="pricing-card__name">{name}</h3>
+    <div class="pricing-card__price-row">
+      <span class="pricing-card__price">{price}</span>
+      {priceNote && <span class="pricing-card__price-note">{priceNote}</span>}
+    </div>
+  </header>
+
+  {lead && <p class="pricing-card__lead">{lead}</p>}
+
+  <ul class="pricing-card__list">
+    {items.map((item) => <li>{item}</li>)}
+  </ul>
+
+  <a class="pricing-card__cta" href={href}>
+    <span>{ctaLabel}</span>
+    <span class="pricing-card__shevron" aria-hidden="true">›</span>
+  </a>
+</article>
+
+<style>
+  .pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.75rem 1.6rem 1.6rem;
+    border: 1px solid rgba(230, 225, 255, 0.08);
+    border-radius: 22px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+      rgba(14, 14, 22, 0.76);
+    box-shadow: var(--panel-shadow);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  }
+
+  .pricing-card:hover {
+    border-color: rgba(199, 160, 255, 0.2);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0)),
+      rgba(18, 17, 27, 0.82);
+    box-shadow:
+      var(--panel-shadow),
+      var(--violet-shadow),
+      0 4px 12px rgba(123, 44, 191, 0.15);
+  }
+
+  .pricing-card--featured {
+    border-color: rgba(199, 160, 255, 0.28);
+    box-shadow:
+      var(--panel-shadow),
+      var(--violet-shadow);
+  }
+
+  .pricing-card--featured:hover {
+    border-color: rgba(199, 160, 255, 0.45);
+  }
+
+  .pricing-card__badge {
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.28rem 0.85rem;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sl-color-white);
+    background: rgba(28, 24, 48, 0.96);
+    border: 1px solid rgba(199, 160, 255, 0.32);
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .pricing-card__head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 0.5px solid var(--sl-color-hairline);
+  }
+
+  .pricing-card__name {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.5vw, 1.38rem);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--sl-color-white);
+    line-height: 1.2;
+  }
+
+  .pricing-card__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pricing-card__price {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.85rem, 2.6vw, 2.3rem);
+    letter-spacing: 0.005em;
+    color: var(--sl-color-text-strong);
+    line-height: 1;
+  }
+
+  .pricing-card__price-note {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--sl-color-text-weak);
+  }
+
+  .pricing-card__lead {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--sl-color-text-strong);
+  }
+
+  .pricing-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--sl-color-text-weak);
+    flex: 1;
+  }
+
+  .pricing-card__list li {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .pricing-card__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.5rem;
+    height: 0.5px;
+    background: var(--sl-color-accent-high, #c7a0ff);
+    opacity: 0.7;
+  }
+
+  .pricing-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35em;
+    padding: 0.75rem 1.1rem;
+    margin-top: 0.3rem;
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--sl-color-white);
+    background: rgba(28, 24, 48, 0.5);
+    border: 0.5px solid rgba(199, 160, 255, 0.22);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 200ms ease, border-color 200ms ease;
+  }
+
+  .pricing-card__cta:hover {
+    background: rgba(38, 30, 68, 0.7);
+    border-color: rgba(199, 160, 255, 0.42);
+  }
+
+  .pricing-card--featured .pricing-card__cta {
+    background: rgba(60, 38, 108, 0.55);
+    border-color: rgba(199, 160, 255, 0.38);
+  }
+
+  .pricing-card--featured .pricing-card__cta:hover {
+    background: rgba(80, 50, 140, 0.72);
+    border-color: rgba(199, 160, 255, 0.6);
+  }
+
+  .pricing-card__shevron {
+    font-weight: 300;
+    opacity: 0.75;
+    transform: translateY(-0.05em);
+    transition: transform 200ms ease;
+  }
+
+  .pricing-card__cta:hover .pricing-card__shevron {
+    transform: translate(0.18em, -0.05em);
+  }
+
+  /* Светлая тема */
+  :global(:root[data-theme='light']) .pricing-card__name {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__price {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__price-note {
+    color: rgba(26, 22, 39, 0.6);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__lead {
+    color: rgba(26, 22, 39, 0.88);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__list {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__list li::before {
+    background: #6a1b9a;
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__badge {
+    color: #1a1627;
+    background: rgba(245, 242, 255, 0.95);
+    border-color: rgba(106, 27, 154, 0.32);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__cta {
+    color: #1a1627;
+    background: rgba(245, 242, 255, 0.7);
+    border-color: rgba(106, 27, 154, 0.28);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card__cta:hover {
+    background: rgba(235, 225, 255, 0.9);
+    border-color: rgba(106, 27, 154, 0.5);
+  }
+</style>

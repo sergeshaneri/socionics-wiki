@@ -1,0 +1,121 @@
+---
+title: Связаться со мной
+description: Telegram, VK, YouTube, email и телефон Сергея Шанэри
+template: splash
+---
+
+import ContactChannel from '../../components/ContactChannel.astro';
+
+<div class="contact-hero">
+  <span class="contact-hero__eyebrow">Связаться</span>
+  <h1 class="contact-hero__title">Выберите удобный способ</h1>
+  <p class="contact-hero__lead">
+    Пишите в любой из каналов — отвечу при первой возможности.
+    Для записи на типирование удобнее всего Telegram.
+  </p>
+</div>
+
+<div class="contact-grid">
+  <ContactChannel
+    name="Telegram"
+    handle="@SergeyShaneri"
+    href="https://t.me/SergeyShaneri"
+    description="Самый быстрый способ связи"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="VK"
+    handle="vk.com/shaneri"
+    href="https://vk.com/shaneri"
+    description="Посты, анонсы, отзывы"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.785 16.241s.288-.032.435-.193c.136-.148.131-.427.131-.427s-.019-1.301.582-1.495c.593-.19 1.355 1.267 2.163 1.828.611.424 1.075.331 1.075.331l2.16-.03s1.131-.07.595-.968c-.043-.073-.311-.661-1.608-1.877-1.356-1.277-1.173-1.07.46-3.267.995-1.334 1.393-2.15 1.269-2.502-.119-.334-.858-.246-.858-.246l-2.459.016s-.182-.025-.317.056c-.133.081-.217.267-.217.267s-.384 1.029-.896 1.904c-1.081 1.846-1.514 1.944-1.69 1.83-.411-.267-.309-1.078-.309-1.655 0-1.799.273-2.55-.531-2.744-.267-.065-.463-.108-1.143-.115-.874-.009-1.614.003-2.033.208-.279.137-.494.442-.363.459.162.022.529.099.723.365.252.343.243 1.115.243 1.115s.145 2.125-.337 2.389c-.331.181-.785-.188-1.749-1.862-.494-.857-.867-1.804-.867-1.804s-.072-.177-.202-.271c-.16-.116-.381-.152-.381-.152l-2.336.015s-.351.01-.481.163c-.114.135-.008.416-.008.416s1.83 4.278 3.902 6.434c1.9 1.977 4.057 1.847 4.057 1.847h.977z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="YouTube"
+    handle="@SergeyShaneri"
+    href="https://www.youtube.com/@SergeyShaneri"
+    description="Лекции, доклады, разборы"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Почта"
+    handle="shaneri.ser@gmail.com"
+    href="mailto:shaneri.ser@gmail.com"
+    description="Для развёрнутых вопросов и файлов"
+    external={false}
+    icon={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Телефон"
+    handle="+7 952 511-59-37"
+    href="tel:+79525115937"
+    description="Звонок или WhatsApp"
+    external={false}
+    icon={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`}
+  />
+</div>
+
+<style>{`
+  .contact-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1rem auto 2.4rem;
+    max-width: 42rem;
+    text-align: center;
+  }
+
+  .contact-hero__eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+  }
+
+  .contact-hero__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+    color: var(--sl-color-white);
+  }
+
+  .contact-hero__lead {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1rem, 1.35vw, 1.15rem);
+    line-height: 1.55;
+    color: var(--sl-color-text-weak);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 52rem;
+    margin: 0 auto 3rem;
+  }
+
+  :root[data-theme='light'] .contact-hero__title {
+    color: #1a1627;
+  }
+
+  :root[data-theme='light'] .contact-hero__lead {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :root[data-theme='light'] .contact-hero__eyebrow {
+    color: rgba(26, 22, 39, 0.55);
+  }
+`}</style>
