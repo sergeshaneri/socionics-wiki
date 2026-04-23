@@ -39,7 +39,7 @@ export default defineConfig({
 	integrations: [
 		sitemap(),
 		starlight({
-			title: 'Фрактальная Соционика Вики',
+			title: 'Фрактальная Соционика',
 			description: 'Wiki about socionics',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sergeshaneri/socionics-wiki' }],
 			lastUpdated: true,

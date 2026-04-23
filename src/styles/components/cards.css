@@ -1,3 +1,37 @@
+/* Call-to-action над сеткой карточек — призыв + тонкая стрелка вниз.
+   Editorial-стиль, italic Cormorant, 1px hairline стрелка. Без hover. */
+.cards-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 2rem 0 1.4rem;
+  color: var(--sl-color-text-weak);
+}
+
+.cards-intro__text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  letter-spacing: 0.005em;
+  text-align: center;
+}
+
+.cards-intro__arrow {
+  width: 22px;
+  height: 22px;
+  opacity: 0.55;
+}
+
+:root[data-theme='light'] .cards-intro {
+  color: rgba(26, 22, 39, 0.66);
+}
+
+:root[data-theme='light'] .cards-intro__arrow {
+  opacity: 0.7;
+}
+
 /* LinkCard и CardGrid */
 
 .sl-link-card {

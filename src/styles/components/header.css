@@ -50,11 +50,12 @@ site-search button[data-open-modal]:hover {
     0 12px 28px rgba(20, 12, 34, 0.22);
 }
 
-site-search button[data-open-modal] kbd {
-  border: 1px solid rgba(230, 225, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--lunar-muted);
-  font-family: var(--font-mono);
+/* Ctrl/K-подсказку в кнопке поиска прячем — пользоваться ей почти никто не
+   будет, а визуальный «двойной бокс» (две kbd-пилюли) смотрится шумно. */
+site-search button[data-open-modal] kbd,
+site-search button[data-open-modal] .sl-hotkey,
+site-search button[data-open-modal] .astro-k0ok4lw2 kbd {
+  display: none !important;
 }
 
 dialog {

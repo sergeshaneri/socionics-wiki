@@ -16,7 +16,10 @@ const { title, href, lead, items } = Astro.props;
 
 <article class="sl-link-card noir-card">
   <a class="noir-card__link" href={href}>
-    <span class="noir-card__title title">{title}</span>
+    <span class="noir-card__title title">
+      {title}
+      <span class="noir-card__shevron" aria-hidden="true">›</span>
+    </span>
     {lead && <span class="noir-card__lead">{lead}</span>}
     {items && items.length > 0 && (
       <ul class="noir-card__list">
@@ -47,6 +50,28 @@ const { title, href, lead, items } = Astro.props;
     letter-spacing: 0.01em;
     color: var(--sl-color-white);
     line-height: 1.2;
+  }
+
+  /* Editorial-шеврон: тонкий, приглушённый, без hover-зависимости.
+     Намёк на переход, не отвлекает в покое. */
+  .noir-card__shevron {
+    display: inline-block;
+    margin-left: 0.35em;
+    font-weight: 300;
+    color: var(--sl-color-text-weak);
+    opacity: 0.5;
+    transform: translateY(-0.04em);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .noir-card:hover .noir-card__shevron,
+  .noir-card:focus-within .noir-card__shevron {
+    opacity: 0.85;
+    transform: translate(0.15em, -0.04em);
+  }
+
+  :global(:root[data-theme='light']) .noir-card__shevron {
+    color: rgba(26, 22, 39, 0.55);
   }
 
   .noir-card__lead {

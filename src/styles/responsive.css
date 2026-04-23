@@ -2,7 +2,10 @@
 
 @media (max-width: 768px) {
   .site-title span {
-    max-width: 12rem;
+    /* Достаточно для "Фрактальная Соционика" без многоточия. */
+    max-width: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
   }
 
   .hero-title,
