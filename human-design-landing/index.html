@@ -1,0 +1,820 @@
+<!DOCTYPE html><html lang="ru" dir="ltr" data-theme="dark" class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Интегральный Дизайн Человека | Фрактальная Соционика</title><link rel="canonical" href="https://sergeshaneri.github.io/socionics-wiki/human-design-landing/"/><link rel="sitemap" href="/socionics-wiki/sitemap-index.xml"/><link rel="shortcut icon" href="/socionics-wiki/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v6.1.7"/><meta name="generator" content="Starlight v0.38.3"/><meta property="og:title" content="Интегральный Дизайн Человека"/><meta property="og:type" content="article"/><meta property="og:url" content="https://sergeshaneri.github.io/socionics-wiki/human-design-landing/"/><meta property="og:locale" content="ru"/><meta property="og:description" content="Консультации по Дизайну Человека и Генным Ключам в подходе духовной психотерапии — Сергей Шанэри"/><meta property="og:site_name" content="Фрактальная Соционика"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Консультации по Дизайну Человека и Генным Ключам в подходе духовной психотерапии — Сергей Шанэри"/><meta property="og:image" content="https://sergeshaneri.github.io/socionics-wiki/shaneri.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://sergeshaneri.github.io/socionics-wiki/shaneri.jpg"><meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f3fa" media="(prefers-color-scheme: light)"><div class="reading-progress astro-mu6cnre2" aria-hidden="true"> <div class="reading-progress__fill astro-mu6cnre2"></div> </div>  <script type="module">const t=document.querySelector(".reading-progress__fill"),n=document.querySelector(".reading-progress");function o(){if(!t||!n)return;const i=document.querySelector(".sl-markdown-content");if(!i){n.style.display="none";return}n.style.display="";const s=i.getBoundingClientRect(),e=s.height-window.innerHeight;if(e<=0){t.style.width="0%";return}const c=Math.min(Math.max(-s.top,0),e)/e*100;t.style.width=c+"%"}let r=!1;function l(){r||(r=!0,requestAnimationFrame(()=>{o(),r=!1}))}o();document.addEventListener("scroll",l,{passive:!0});window.addEventListener("resize",l);document.addEventListener("astro:page-load",o);</script><script type="module">let m=!1;function p(){const t=Math.min(window.scrollY/1800,1);document.documentElement.style.setProperty("--scroll-depth",String(t)),m=!1}function v(){m||(m=!0,requestAnimationFrame(p))}p();document.addEventListener("scroll",v,{passive:!0});document.addEventListener("astro:page-load",p);const d=new Map;async function g(t){if(d.has(t))return d.get(t);const n=(async()=>{try{const o=await fetch(t,{headers:{Accept:"text/html"}});if(!o.ok)return null;const s=await o.text(),i=new DOMParser().parseFromString(s,"text/html"),c=i.querySelector("#_top")?.textContent?.trim()??"";let r=i.querySelector(".sl-markdown-content p")?.textContent?.trim()??"";return r.length>220&&(r=r.slice(0,220).trimEnd()+"…"),c?{title:c,excerpt:r}:null}catch{return null}})();return d.set(t,n),n}let e=null,l=null,u=null;function x(){return e||(e=document.createElement("div"),e.className="wiki-preview",e.setAttribute("role","tooltip"),e.innerHTML='<h4 class="wiki-preview__title"></h4><p class="wiki-preview__excerpt"></p>',document.body.appendChild(e),e)}function f(t,n){const s=window.innerWidth,i=window.innerHeight,c=n.getBoundingClientRect();let a=t.clientX+14,r=t.clientY+14;a+c.width+20>s&&(a=t.clientX-c.width-14),r+c.height+20>i&&(r=t.clientY-c.height-14),n.style.left=Math.max(8,a)+"px",n.style.top=Math.max(8,r)+"px"}function h(){l&&(clearTimeout(l),l=null),e&&e.classList.remove("is-visible"),u=null}function y(t){t.dataset.wikiPreviewBound||(t.dataset.wikiPreviewBound="1",t.addEventListener("mouseenter",n=>{if(t.classList.contains("is-broken"))return;const o=t.getAttribute("href");!o||o.startsWith("#")||(u=t,l&&clearTimeout(l),l=window.setTimeout(async()=>{const s=await g(o);if(u!==t||!s)return;const i=x();i.querySelector(".wiki-preview__title").textContent=s.title,i.querySelector(".wiki-preview__excerpt").textContent=s.excerpt||"…",f(n,i),i.classList.add("is-visible")},380))}),t.addEventListener("mousemove",n=>{e&&e.classList.contains("is-visible")&&u===t&&f(n,e)}),t.addEventListener("mouseleave",h),t.addEventListener("blur",h))}function w(){document.querySelectorAll("a.internal-link").forEach(y)}w();document.addEventListener("astro:page-load",w);const L=new MutationObserver(w);L.observe(document.body,{childList:!0,subtree:!0});</script><script type="module">const d=[["Дон Кихот","ИЛЭ"],["Дюма","СЭИ"],["Гюго","ЭСЭ"],["Робеспьер","ЛИИ"],["Гамлет","ЭИЭ"],["Максим Горький","ЛСИ"],["Максим","ЛСИ"],["Жуков","СЛЭ"],["Есенин","ИЭИ"],["Наполеон","СЭЭ"],["Бальзак","ИЛИ"],["Джек Лондон","ЛИЭ"],["Джек","ЛИЭ"],["Драйзер","ЭСИ"],["Штирлиц","ЛСЭ"],["Достоевский","ЭИИ"],["Гексли","ИЭЭ"],["Габен","СЛИ"]];function f(){const t=d.map(([e])=>e.replace(/ /g,"\\s+")).sort((e,r)=>r.length-e.length).join("|");return new RegExp(`(?<![\\p{L}\\-])(${t})([а-яё]{0,3})(?![\\p{L}\\-])`,"gu")}function g(t){for(const[e,r]of d)if(t.startsWith(e))return r;return null}const h=new Set(["CODE","PRE","KBD","SCRIPT","STYLE","A","H1","H2","H3","H4","H5","H6"]);function m(t){let e=t.parentNode;for(;e&&e instanceof Element;){if(h.has(e.tagName)||e.classList.contains("type-tag"))return!0;e=e.parentNode}return!1}function E(t,e){const r=t.nodeValue??"";if(e.lastIndex=0,!e.test(r))return;e.lastIndex=0;const o=document.createDocumentFragment();let a=0,n;for(;(n=e.exec(r))!==null;){const l=n[1],p=n[2]??"",c=g(l);if(!c)continue;const i=r.slice(n.index+n[0].length,n.index+n[0].length+10);if(i.startsWith(` [${c}]`)||i.startsWith(`[${c}]`))continue;o.appendChild(document.createTextNode(r.slice(a,n.index))),o.appendChild(document.createTextNode(l+p));const s=document.createElement("span");s.className="type-tag",s.textContent=`[${c}]`,s.setAttribute("aria-label",`Соционический тип: ${c}`),o.appendChild(s),a=n.index+n[0].length}a!==0&&(o.appendChild(document.createTextNode(r.slice(a))),t.parentNode?.replaceChild(o,t))}function T(t){const e=f(),r=document.createTreeWalker(t,NodeFilter.SHOW_TEXT,{acceptNode(n){return m(n)||!n.nodeValue||n.nodeValue.trim().length<4?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),o=[];let a;for(;a=r.nextNode();)o.push(a);for(const n of o)E(n,e)}function u(){const t=document.querySelector(".sl-markdown-content");t&&(t.dataset.typeTagged||(t.dataset.typeTagged="1",T(t)))}u();document.addEventListener("astro:page-load",u);</script><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/socionics-wiki/_astro/print.DNXP8c50.css" media="print"><link rel="stylesheet" href="/socionics-wiki/_astro/common.kVK--WEM.css">
+<link rel="stylesheet" href="/socionics-wiki/_astro/Code.3GXCdK6h.css"><script type="module" src="/socionics-wiki/_astro/page.RHAf6H3l.js"></script><link rel="stylesheet" href="/socionics-wiki/_astro/TestimonialQuote.CqPmnTGG.css"></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Перейти к содержимому</a> <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/socionics-wiki/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3" translate="no"> Фрактальная Соционика </span> </a> </div> <div class="sl-flex print:hidden astro-kmkmnagf"> <site-search class="astro-kmkmnagf astro-v37mnknz" data-translations="{&#34;placeholder&#34;:&#34;Поиск&#34;}"> <button data-open-modal disabled aria-label="Поиск" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg> <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Поиск</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="Поиск" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Отменить </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/socionics-wiki/_astro/Search.astro_astro_type_script_index_0_lang.PWJZ9IQg.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <nav class="top-nav astro-bvukr3bo" aria-label="Основная навигация"> <a class="top-nav__link astro-bvukr3bo" href="/socionics-wiki/services/">Услуги</a> <a class="top-nav__link astro-bvukr3bo" href="/socionics-wiki/contact/">Контакты</a> </nav> <a href="https://github.com/sergeshaneri/socionics-wiki" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Выберите тему</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Тёмная</option><option value="light" class="astro-4yphtoen">Светлая</option><option value="auto" selected class="astro-4yphtoen">Авто</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script> <script type="module">const r="starlight-theme",o=e=>e==="auto"||e==="dark"||e==="light"?e:"auto",c=()=>o(typeof localStorage<"u"&&localStorage.getItem(r));function n(e){typeof localStorage<"u"&&localStorage.setItem(r,e==="light"||e==="dark"?e:"")}const l=()=>matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";function t(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e==="auto"?l():e,n(e)}matchMedia("(prefers-color-scheme: light)").addEventListener("change",()=>{c()==="auto"&&t("auto")});class s extends HTMLElement{constructor(){super(),t(c()),this.querySelector("select")?.addEventListener("change",a=>{a.currentTarget instanceof HTMLSelectElement&&t(o(a.currentTarget.value))})}}customElements.define("starlight-theme-select",s);</script> <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div></header>  <div class="main-frame astro-vrdttmbt">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-67yu43on">  <div class="main-pane astro-67yu43on">  <main data-pagefind-body class="astro-bguv2lll" lang="ru" dir="ltr">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-guvttfii">Интегральный Дизайн Человека</h1>  <script type="module">const i=".sl-markdown-content :is(h2, h3, h4)[id]";function n(){document.querySelectorAll(i).forEach(e=>{if(e.querySelector(".heading-anchor"))return;const t=document.createElement("button");t.type="button",t.className="heading-anchor",t.setAttribute("aria-label",`Скопировать ссылку на «${e.textContent?.trim()??""}»`),t.textContent="#",t.addEventListener("click",async o=>{o.preventDefault();const a=`${window.location.origin}${window.location.pathname}#${e.id}`;try{await navigator.clipboard.writeText(a),t.classList.add("copied"),t.textContent="✓",setTimeout(()=>{t.classList.remove("copied"),t.textContent="#"},1200)}catch{}}),e.appendChild(t)})}n();document.addEventListener("astro:page-load",n);</script> </div> </div> <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> 
+<section class="hd-hero"><span class="hd-hero__eyebrow">Консультации с Сергеем Шанэри</span><h1 class="hd-hero__title"><p>Интегральный Дизайн Человека.<br>
+<em>Духовная психотерапия.</em></p></h1><div class="hd-hero__lead"><p>Помогу воспользоваться выводами из систем самопознания —
+без погружения в теорию.</p></div><div class="hd-hero__actions"><a class="hd-hero__cta hd-hero__cta--primary" href="/socionics-wiki/contact/"><p>Записаться
+<span aria-hidden="true" class="hd-hero__shevron">›</span></p></a><a class="hd-hero__cta hd-hero__cta--ghost" href="#pricing"><p>Что входит</p></a></div><svg class="hd-hero__divider" viewBox="0 0 200 12" fill="none" stroke="currentColor" stroke-width="0.5" aria-hidden="true"><line x1="0" y1="6" x2="90" y2="6"></line><circle cx="100" cy="6" r="2" fill="currentColor" stroke="none" opacity="0.55"></circle><line x1="110" y1="6" x2="200" y2="6"></line></svg></section>
+
+<section class="hd-intro not-content"><span class="hd-section__eyebrow">Введение</span><h2 class="hd-section__title">Как работать с Дизайном Человека и Генными Ключами</h2><div class="hd-intro__video-frame"><iframe src="https://www.youtube.com/embed/MfoToyRdsaM" title="Интегральный Дизайн Человека — введение" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" class="hd-intro__video-iframe"></iframe></div><p class="hd-intro__video-caption"><em>Короткое введение в подход: что такое Интегральный Дизайн Человека и зачем.</em></p><div class="hd-intro__text"><p>Интегральный Дизайн Человека — это инструмент передовой духовной психотерапии.
+ИДЧ — совокупность систем самопознания, которые помогают работать с предназначением,
+сильными сторонами, осознанностью, а также эмоциями, личными травмами и отношениями.</p></div><blockquote class="hd-pullquote"><p>На своих консультациях я варьирую методы под запрос, клиента и состояние —
+работаю по потоку.</p></blockquote><div class="hd-intro__text hd-intro__text--tight"><p>Интегральный Дизайн Человека объединяет идеи из:</p></div><div class="hd-intro__cards not-content"><div class="hd-intro__card">Астрология</div><div class="hd-intro__card">Чакры</div><div class="hd-intro__card"><p>И-Цзин
+<span class="hd-intro__card-sub">Книга Перемен</span></p></div><div class="hd-intro__card"><p>Нью-Эйдж
+<span class="hd-intro__card-sub">и эзотерика</span></p></div><div class="hd-intro__card">Психотерапия</div><div class="hd-intro__card">Уроки Души</div></div><div class="hd-intro__text hd-intro__text--closing"><p>Я помогаю воспользоваться выводами из этих систем, не погружаясь глубоко в теорию.
+Запись консультации всегда поможет освежить выводы — даже так информации и инсайтов
+очень много. Для новичков я вижу пользу в том, чтобы понять, как принимать решения,
+что в себе слушать и чего не делать.</p></div><a class="hd-intro__more" href="/socionics-wiki/podcast-human-design/"><p>Подробный подкаст про Дизайн Человека и Генные Ключи
+<span aria-hidden="true" class="hd-intro__shevron">›</span></p></a></section>
+
+<section id="pricing" class="hd-pricing"><span class="hd-section__eyebrow">Форматы работы</span><h2 class="hd-section__title">Стоимость</h2><div class="hd-pricing__grid not-content"><article class="pricing-card astro-5mb67dfd">  <header class="pricing-card__head astro-5mb67dfd"> <h3 class="pricing-card__name astro-5mb67dfd">Начало самопознания</h3> <div class="pricing-card__price-row astro-5mb67dfd"> <span class="pricing-card__price astro-5mb67dfd">3 000 ₽</span> <span class="pricing-card__price-note astro-5mb67dfd">40 минут</span> </div> </header> <p class="pricing-card__lead astro-5mb67dfd">Первичная информация и ответы на готовые вопросы.</p> <ul class="pricing-card__list astro-5mb67dfd"> <li class="astro-5mb67dfd">Сессия-знакомство 40 минут онлайн</li><li class="astro-5mb67dfd">Стратегия и внутренний авторитет</li><li class="astro-5mb67dfd">Ответы на ваши готовые вопросы</li><li class="astro-5mb67dfd">Запись встречи</li> </ul> <a class="pricing-card__cta astro-5mb67dfd" href="/socionics-wiki/contact/"> <span class="astro-5mb67dfd">Записаться</span> <span class="pricing-card__shevron astro-5mb67dfd" aria-hidden="true">›</span> </a> </article><article class="pricing-card pricing-card--featured astro-5mb67dfd">  <header class="pricing-card__head astro-5mb67dfd"> <h3 class="pricing-card__name astro-5mb67dfd">Полный разбор</h3> <div class="pricing-card__price-row astro-5mb67dfd"> <span class="pricing-card__price astro-5mb67dfd">14 000 ₽</span> <span class="pricing-card__price-note astro-5mb67dfd">2 × 1 час</span> </div> </header> <p class="pricing-card__lead astro-5mb67dfd">Две часовых консультации с полным разбором карты и профиля.</p> <ul class="pricing-card__list astro-5mb67dfd"> <li class="astro-5mb67dfd">Две часовых консультации онлайн</li><li class="astro-5mb67dfd">Информация обо всех центрах (чакрах)</li><li class="astro-5mb67dfd">Порядок проработок Генных Ключей</li><li class="astro-5mb67dfd">Чтение бодиграфа</li><li class="astro-5mb67dfd">Хологенетический профиль</li><li class="astro-5mb67dfd">Интегральный Дизайн Человека</li><li class="astro-5mb67dfd">Запись встреч</li> </ul> <a class="pricing-card__cta astro-5mb67dfd" href="/socionics-wiki/contact/"> <span class="astro-5mb67dfd">Записаться</span> <span class="pricing-card__shevron astro-5mb67dfd" aria-hidden="true">›</span> </a> </article><article class="pricing-card astro-5mb67dfd">  <header class="pricing-card__head astro-5mb67dfd"> <h3 class="pricing-card__name astro-5mb67dfd">Индивидуальное погружение</h3> <div class="pricing-card__price-row astro-5mb67dfd"> <span class="pricing-card__price astro-5mb67dfd">60 000 ₽</span> <span class="pricing-card__price-note astro-5mb67dfd">2 месяца</span> </div> </header> <p class="pricing-card__lead astro-5mb67dfd">Авторские практики, терапевтические медитации и освоение ИДЧ в повседневной жизни.</p> <ul class="pricing-card__list astro-5mb67dfd"> <li class="astro-5mb67dfd">Два месяца теории и практики</li><li class="astro-5mb67dfd">5 часовых консультаций</li><li class="astro-5mb67dfd">2 большие встречи (2+ часа) с медитациями</li><li class="astro-5mb67dfd">Работа с запросами даже вне Дизайна Человека</li><li class="astro-5mb67dfd">Хологенетический профиль, бодиграф и все центры</li><li class="astro-5mb67dfd">Терапевтические медитации под запрос</li><li class="astro-5mb67dfd">Запись всех встреч</li> </ul> <a class="pricing-card__cta astro-5mb67dfd" href="/socionics-wiki/contact/"> <span class="astro-5mb67dfd">Записаться</span> <span class="pricing-card__shevron astro-5mb67dfd" aria-hidden="true">›</span> </a> </article></div></section>
+
+<section class="hd-reviews"><span class="hd-section__eyebrow">Отзывы</span><h2 class="hd-section__title">Что говорят клиенты</h2><div class="hd-reviews__grid not-content"><figure class="testimonial astro-ljm7xlsk"> <span class="testimonial__mark astro-ljm7xlsk" aria-hidden="true">«</span> <blockquote class="testimonial__text astro-ljm7xlsk">Я благодарю Серёжу за такую качественную, глубокую и объёмную консультацию по Дизайну Человека и Генным Ключам. Изучив мой бодиграф и хологенетический профиль, он структурированно, без лишней воды, передал мне всю необходимую информацию и знания, дал ответы на все мои вопросы. Приходило понимание и осознание своей природы — как и где себя лучше проявлять, появилось больше принятия. Могу точно сказать, что Серёжа профессионал в своём деле! Во время нашей работы было ощущение полного понимания и доверия. Я очень рада нашему взаимодействию — и вообще, что встретила такого человека, чудесную душу!</blockquote> <figcaption class="testimonial__caption astro-ljm7xlsk"> <span class="testimonial__author astro-ljm7xlsk">Александра Иванова</span>  </figcaption> </figure></div></section>
+
+<section class="hd-faq"><span class="hd-section__eyebrow">Частые вопросы</span><h2 class="hd-section__title">FAQ</h2><div class="hd-faq-list not-content"><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Что делать, если не знаю точное время рождения?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Зависит от того, насколько известен промежуток. Если это несколько часов — можно посмотреть, возможно изменения будут минимальны и это не повлияет на консультацию. Если известна только дата — есть смысл задуматься о ректификации времени рождения (процедуре уточнения). Ректификацию можно сделать разными способами: заказать у астролога; воспользоваться инструментами для сонастройки с интуицией (маятник, карты, мускульный тест); или запросить ответ у Высшего Я (Души). В некоторых ситуациях я могу проконсультировать и не зная времени — это решается индивидуально. Обращайтесь — обсудим.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Получу ли я свою карту с бодиграфом и хологенетическим профилем?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Да, вы получите ссылки на все необходимые сайты, где можно посмотреть бодиграф, активные центры и каналы, хологенетический профиль, последовательности и сферы Золотого Пути.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Узнаю ли я своё предназначение? В чём моя миссия? Какое у меня призвание?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Предназначение — в каждом моменте жизни, в каждом вдохе и действии. Интегральный Дизайн Человека помогает сонастроиться с собой и с ощущением, что идёшь по своему пути, а также подсвечивает темы, которые нужно проработать для реализации в социуме. Для реализации предназначения важно понимать свои интересы и уметь освобождаться от эмоциональных блоков. ИДЧ не говорит, на какую пойти работу — скорее показывает энергии, которые необходимо проявлять, чтобы быть собой в любом месте и притягивать единомышленников по миссии в этом воплощении.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Что делать, если я уже немного понимаю Дизайн Человека и у меня есть один-два конкретных вопроса?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Вам подойдёт 45-минутная консультация. Напишите мне вопрос, познакомимся — и я уточню вашу тему своим пониманием Генных Ключей, Интегрального Дизайна Человека и духовной психологии.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Поможет ли мне Интегральный Дизайн Человека обрести вдохновение?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Согласно Дизайну Человека у каждого есть свой уникальный способ принятия решения и навигации в этом мире. На консультациях я показываю, как сонастроиться с собственным вкусом вдохновения. Генные Ключи помогают поднять вибрации своих энергий и проявлять те же качества, больше испытывая открытость, любовь, желание сотворять и служить.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Поможет ли мне Интегральный Дизайн Человека нащупать источник счастья?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Работа с Генными Ключами направлена на исцеление сердца — то есть духовную психотерапию. Самый главный источник счастья у нас внутри, и чтобы полноценно им пользоваться, нужно взять ответственность за своё исцеление. Золотой Путь показывает ключевые темы, которые нужно проработать для открытия внутреннего источника любви и исцеления травмы (сферы Духовный Интеллект и Ядро Сакральной Раны в Хологенетическом Профиле).</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Интегральный Дизайн Человека расскажет о моих взаимоотношениях с противоположным полом?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Дизайн Человека рассказывает, какие энергии взаимно притягивают партнёров, как они усиливают друг друга и где могут друг друга подавлять. В Генных Ключах активации Луны, Венеры и Марса показывают темы, необходимые для исцеления кармы через отношения: что нужно в себе осознать, чтобы стабильнее чувствовать себя в отношениях и притягивать партнёра, наиболее полезного для духовного пути. Большое внимание уделяется Сакральной Ране — она актуальна для исцеления любых травм.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Я узнаю свои сильные и слабые стороны? В чём моя уникальность?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>У каждого могут быть любые сильные и слабые стороны, зависящие от многих факторов: наработок Рода, опыта Души, культуры, в которой человек вырос. Генные Ключи показывают постоянно свойственные вам энергии (темы в жизни), как они проявляются на низких вибрациях и что делать, чтобы переходить на высокие — другими словами, как свои слабые стороны перевести в сильные. Дизайн Человека показывает, на каких темах не нужно слишком много заморачиваться (Ложное Я), а на что в себе полагаться как на приоритетные качества личности (Внутренний Авторитет).</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Как лучше себя узнать и понять?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Дизайн Человека показывает грани, на которые можно в себе всегда положиться (Внутренний Авторитет). Через эти темы происходит сонастройка с телом, а тело — благодаря контакту с подсознанием — чувствует нашу судьбу и помогает идти по ней наиболее гармоничным образом. Генные Ключи показывают темы, которые вы «не можете не делать». Развитие основных качеств гарантирует рост и усиление — через них проще всего начать самопознание.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Поможет ли ИДЧ понять, какие принять решения?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Во время консультации я рассказываю, на какой из внутренних голосов полагаться в принятии решений, и лучшую стратегию для сонастройки с телом и Высшим Я. В разных ситуациях нужно пользоваться разными своими гранями, чем-то вроде внутренних голосов. Согласно Интегральному Дизайну Человека, мы можем развить в себе их все — потому что по своей природе мы целостны. Отличать один голос (энергетический центр) от другого и сонастраиваться с ними вы сможете, пройдя погружение в ИДЧ.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Поможет ли ИДЧ принять и полюбить себя?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Последовательность Венеры — это специальные активации, темы, прорабатывая которые вы открываете своё сердце. Генные Ключи хорошо согласуются с современными методами психотерапии и направлены на самостоятельное глубинное исцеление.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Что проработать, чтобы были деньги? Что мешает процветанию?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Интегральный Дизайн Человека показывает «племенные» активации в карте — это темы, проработка которых актуальна в этом воплощении. Их энергии направлены на взаимодействие с людьми в команде, взаимное сотрудничество, заработок денег и процветание. Они также показывают подходящие роли в команде. В Генных Ключах Жемчужная Последовательность показывает, как активации Юпитера увеличивают социальную энергию (деньги!) и дают нужные знакомства. На полном разборе я рассказываю обо всех этих темах, а также о Сакральной Ране — кульминации Золотого Пути, — чтобы травма не остановила вас от служения и реализации.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Как мне подавать, продавать, транслировать себя?</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>Интегральный Дизайн Человека показывает стратегию принятия решений и роль в обществе (профиль и линии). В Генных Ключах «Бренд» указывает ваш способ самопрезентации, чтобы общество воспринимало вас аутентично. Активации Меркурия показывают идеи, которые вам естественно транслировать в обществе.</p></div></details><details class="hd-faq-item"><summary class="hd-faq-item__summary"><span class="hd-faq-item__question">Я уже пытался разобраться в Дизайне Человека или Генных Ключах, но у меня нет ясной картинки.</span><svg class="hd-faq-item__icon" viewBox="0 0 16 16" aria-hidden="true"><line class="hd-faq-item__icon-h" x1="3" y1="8" x2="13" y2="8"></line><line class="hd-faq-item__icon-v" x1="8" y1="3" x2="8" y2="13"></line></svg></summary><div class="hd-faq-item__answer"><p>На полном разборе за 2 встречи я помогаю осознать все свои активации и даю обратную связь по вашим примерам — чтобы вы могли соотнести эти абстракции со своим конкретным опытом.</p></div></details></div></section>
+
+<section class="hd-final"><p class="hd-final__pullline"><em>Исцеление личности и раскрытие духовного потенциала — залог счастливой жизни в своём предназначении.</em></p><a class="hd-final__cta" href="/socionics-wiki/contact/"><p>Записаться на консультацию
+<span aria-hidden="true" class="hd-final__shevron">›</span></p></a><svg class="hd-final__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></section>
+
+<section class="hd-bio not-content"><div class="hd-bio__photo-col"><img src="/socionics-wiki/shaneri.jpg" alt="Сергей Шанэри" class="hd-bio__photo" loading="lazy"/></div><div class="hd-bio__content"><h2 class="hd-section__title hd-bio__name">Сергей Шанэри</h2><p class="hd-bio__lead"><em>Духовный психолог, целитель, исследователь соционики.</em></p><ul class="hd-bio__list"><li><strong>Работа с Дизайном Человека и Генными Ключами:</strong> 7 лет</li><li><strong>Ведущий терапевтических медитаций</strong></li><li><strong>Опыт в психотерапии:</strong> 8 лет</li><li><strong>Обучался психологии</strong> у Екатерины Самойловой</li><li><strong>Опыт в соционике:</strong> 12 лет</li><li><strong>Ученик Семёна Чурюмова</strong></li><li><strong>Более 2 000 типирований</strong></li><li><strong>Более 20 докладов</strong> на соционических конференциях</li></ul><p class="hd-bio__closing"><em>Консультирую в подходе Интегральный Дизайн Человека — совмещающем ДЧ, Генные Ключи, духовность и терапию.</em></p></div></section>
+<style>
+/* ─── Общие элементы секций ─── */
+.hd-section__eyebrow {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-weak);
+  opacity: 0.75;
+  margin-bottom: 0.6rem;
+}
+
+.hd-section__title {
+  margin: 0 0 1.8rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  line-height: 1.2;
+  color: var(--sl-color-white);
+}
+
+:root[data-theme='light'] .hd-section__eyebrow {
+  color: rgba(26, 22, 39, 0.55);
+}
+
+:root[data-theme='light'] .hd-section__title {
+  color: #1a1627;
+}
+
+/* ─── 1. Hero ─── */
+.hd-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 46rem;
+  margin: 1rem auto 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.hd-hero__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-weak);
+  opacity: 0.75;
+}
+
+.hd-hero__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  line-height: 1.12;
+  color: var(--sl-color-white);
+}
+
+.hd-hero__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sl-color-text-strong);
+}
+
+.hd-hero__lead {
+  margin: 0.4rem 0 0.3rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--sl-color-text-weak);
+  max-width: 36rem;
+}
+
+.hd-hero__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.hd-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.hd-hero__cta--primary {
+  color: var(--sl-color-white);
+  background: rgba(60, 38, 108, 0.55);
+  border: 0.5px solid rgba(199, 160, 255, 0.4);
+  box-shadow: var(--violet-shadow);
+}
+
+.hd-hero__cta--primary:hover {
+  background: rgba(80, 50, 140, 0.72);
+  border-color: rgba(199, 160, 255, 0.65);
+}
+
+.hd-hero__cta--ghost {
+  color: var(--sl-color-text-strong);
+  background: transparent;
+  border: 0.5px solid var(--sl-color-hairline);
+}
+
+.hd-hero__cta--ghost:hover {
+  border-color: rgba(199, 160, 255, 0.35);
+  color: var(--sl-color-white);
+}
+
+.hd-hero__shevron {
+  font-weight: 300;
+  opacity: 0.85;
+  transition: transform 200ms ease;
+}
+
+.hd-hero__cta:hover .hd-hero__shevron {
+  transform: translateX(0.18em);
+}
+
+.hd-hero__divider {
+  width: 220px;
+  height: 12px;
+  margin-top: 2rem;
+  color: var(--sl-color-text-weak);
+  opacity: 0.45;
+}
+
+:root[data-theme='light'] .hd-hero__title,
+:root[data-theme='light'] .hd-hero__title em {
+  color: #1a1627;
+}
+
+:root[data-theme='light'] .hd-hero__lead {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-hero__cta--primary {
+  color: #1a1627;
+  background: rgba(235, 225, 255, 0.85);
+  border-color: rgba(106, 27, 154, 0.45);
+}
+
+:root[data-theme='light'] .hd-hero__cta--primary:hover {
+  background: rgba(225, 210, 255, 0.95);
+  border-color: rgba(106, 27, 154, 0.7);
+}
+
+:root[data-theme='light'] .hd-hero__cta--ghost {
+  color: rgba(26, 22, 39, 0.85);
+  border-color: rgba(106, 27, 154, 0.25);
+}
+
+:root[data-theme='light'] .hd-hero__cta--ghost:hover {
+  color: #1a1627;
+  border-color: rgba(106, 27, 154, 0.5);
+}
+
+/* ─── 2. Intro (с видео) ─── */
+.hd-intro {
+  max-width: 56rem;
+  margin: 0 auto 4rem;
+  text-align: left;
+}
+
+.hd-intro > .hd-section__eyebrow,
+.hd-intro > .hd-section__title {
+  text-align: center;
+}
+
+.hd-intro__video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(230, 225, 255, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(14, 14, 22, 0.82);
+  box-shadow: var(--panel-shadow), 0 10px 30px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.1rem;
+}
+
+.hd-intro__video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.hd-intro__video-caption {
+  margin: 0 auto 2.5rem;
+  max-width: 42rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--sl-color-text-weak);
+  text-align: center;
+}
+
+.hd-intro__text {
+  margin: 0 auto 1.8rem;
+  max-width: 42rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--sl-color-text);
+}
+
+.hd-intro__text--tight {
+  margin-bottom: 0.8rem;
+}
+
+.hd-intro__text--closing {
+  margin-top: 2.2rem;
+  color: var(--sl-color-text-weak);
+}
+
+.hd-pullquote {
+  max-width: 42rem;
+  margin: 2.2rem auto;
+  padding: 0.3rem 0 0.3rem 1.4rem;
+  border-left: 1px solid var(--sl-color-accent-high, #c7a0ff);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.08rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--sl-color-text-strong);
+}
+
+.hd-intro__list {
+  list-style: none;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--sl-color-text-weak);
+}
+
+.hd-intro__list li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.hd-intro__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.55rem;
+  height: 0.5px;
+  background: var(--sl-color-accent-high, #c7a0ff);
+  opacity: 0.75;
+}
+
+/* ─── Editorial-карточки связанных систем ─── */
+.hd-intro__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0;
+  max-width: 48rem;
+  margin: 1.2rem auto 0;
+  border-top: 0.5px solid var(--sl-color-hairline);
+  border-left: 0.5px solid var(--sl-color-hairline);
+}
+
+@media (min-width: 720px) {
+  .hd-intro__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Editorial-сетка: hairline-границы между ячейками, без «кнопочного» фона
+   и теней. Как в типографской шапке журнала — разделы встык. */
+.hd-intro__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 76px;
+  padding: 1.1rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--sl-color-text-strong);
+  background: transparent;
+  border-right: 0.5px solid var(--sl-color-hairline);
+  border-bottom: 0.5px solid var(--sl-color-hairline);
+}
+
+.hd-intro__card-sub {
+  display: block;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--sl-color-text-weak);
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+
+:root[data-theme='light'] .hd-intro__card {
+  color: rgba(26, 22, 39, 0.88);
+}
+
+:root[data-theme='light'] .hd-intro__card-sub {
+  color: rgba(26, 22, 39, 0.55);
+}
+
+.hd-intro__more {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--sl-color-text-weak);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.hd-intro__more:hover {
+  color: var(--sl-color-accent-high, #c7a0ff);
+}
+
+.hd-intro__shevron {
+  display: inline-block;
+  margin-left: 0.35em;
+  font-weight: 300;
+  transition: transform 200ms ease;
+}
+
+.hd-intro__more:hover .hd-intro__shevron {
+  transform: translateX(0.2em);
+}
+
+:root[data-theme='light'] .hd-pullquote {
+  color: rgba(26, 22, 39, 0.92);
+  border-left-color: #6a1b9a;
+}
+
+:root[data-theme='light'] .hd-intro__list {
+  color: rgba(26, 22, 39, 0.75);
+}
+
+:root[data-theme='light'] .hd-intro__list li::before {
+  background: #6a1b9a;
+}
+
+:root[data-theme='light'] .hd-intro__video-caption {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-intro__text--closing {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-intro__more {
+  color: rgba(26, 22, 39, 0.68);
+}
+
+:root[data-theme='light'] .hd-intro__more:hover {
+  color: #6a1b9a;
+}
+
+/* ─── 3. Pricing ─── */
+.hd-pricing {
+  max-width: 72rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.hd-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 0.5rem;
+  align-items: stretch;
+  text-align: left;
+}
+
+@media (min-width: 980px) {
+  .hd-pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── 4. Reviews ─── */
+.hd-reviews {
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.hd-reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  text-align: left;
+}
+
+/* ─── 5. FAQ (editorial-аккордеон) ─── */
+.hd-faq {
+  max-width: 46rem;
+  margin: 0 auto 4rem;
+}
+
+.hd-faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.5px solid var(--sl-color-hairline);
+}
+
+.hd-faq-item {
+  border-bottom: 0.5px solid var(--sl-color-hairline);
+  transition: background 220ms ease;
+}
+
+.hd-faq-item[open] {
+  background: rgba(199, 160, 255, 0.025);
+}
+
+.hd-faq-item__summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.3rem 0.4rem 1.3rem 0.1rem;
+}
+
+.hd-faq-item__summary::-webkit-details-marker {
+  display: none;
+}
+
+.hd-faq-item__question {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--sl-color-text-strong);
+  transition: color 220ms ease;
+  flex: 1;
+}
+
+.hd-faq-item__summary:hover .hd-faq-item__question,
+.hd-faq-item[open] .hd-faq-item__question {
+  color: var(--sl-color-white);
+}
+
+.hd-faq-item__icon {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  color: var(--sl-color-text-weak);
+  opacity: 0.55;
+  transition: opacity 220ms ease, color 220ms ease, transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hd-faq-item__icon line {
+  stroke: currentColor;
+  stroke-width: 0.75;
+  stroke-linecap: round;
+}
+
+.hd-faq-item__icon-v {
+  transform-origin: center;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms ease;
+}
+
+.hd-faq-item__summary:hover .hd-faq-item__icon,
+.hd-faq-item[open] .hd-faq-item__icon {
+  opacity: 1;
+  color: var(--sl-color-accent-high, #c7a0ff);
+}
+
+.hd-faq-item[open] .hd-faq-item__icon-v {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.hd-faq-item[open] .hd-faq-item__icon {
+  transform: rotate(180deg);
+}
+
+.hd-faq-item__answer {
+  padding: 0 0.1rem 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--sl-color-text-weak);
+  animation: hd-faq-reveal 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hd-faq-item__answer > p {
+  margin: 0;
+  max-width: 44rem;
+}
+
+@keyframes hd-faq-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hd-faq-item__answer,
+  .hd-faq-item__icon,
+  .hd-faq-item__icon-v {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+:root[data-theme='light'] .hd-faq-item[open] {
+  background: rgba(106, 27, 154, 0.04);
+}
+
+:root[data-theme='light'] .hd-faq-item__question {
+  color: rgba(26, 22, 39, 0.78);
+}
+
+:root[data-theme='light'] .hd-faq-item__summary:hover .hd-faq-item__question,
+:root[data-theme='light'] .hd-faq-item[open] .hd-faq-item__question {
+  color: #1a1627;
+}
+
+:root[data-theme='light'] .hd-faq-item__answer {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-faq-item__summary:hover .hd-faq-item__icon,
+:root[data-theme='light'] .hd-faq-item[open] .hd-faq-item__icon {
+  color: #6a1b9a;
+}
+
+/* ─── 6. Final CTA ─── */
+.hd-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 3rem auto 4rem;
+  max-width: 42rem;
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-top: 0.5px solid var(--sl-color-hairline);
+  border-bottom: 0.5px solid var(--sl-color-hairline);
+}
+
+.hd-final__pullline {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--sl-color-text-strong);
+}
+
+.hd-final__pullline em {
+  font-style: italic;
+}
+
+.hd-final__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--sl-color-white);
+  background: rgba(60, 38, 108, 0.6);
+  border: 0.5px solid rgba(199, 160, 255, 0.42);
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: var(--violet-shadow);
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.hd-final__cta:hover {
+  background: rgba(80, 50, 140, 0.78);
+  border-color: rgba(199, 160, 255, 0.7);
+}
+
+.hd-final__shevron {
+  font-weight: 300;
+  transition: transform 200ms ease;
+}
+
+.hd-final__cta:hover .hd-final__shevron {
+  transform: translateX(0.2em);
+}
+
+.hd-final__arrow {
+  width: 22px;
+  height: 22px;
+  opacity: 0.45;
+  color: var(--sl-color-text-weak);
+}
+
+:root[data-theme='light'] .hd-final__pullline {
+  color: rgba(26, 22, 39, 0.88);
+}
+
+:root[data-theme='light'] .hd-final__cta {
+  color: #1a1627;
+  background: rgba(235, 225, 255, 0.88);
+  border-color: rgba(106, 27, 154, 0.5);
+}
+
+:root[data-theme='light'] .hd-final__cta:hover {
+  background: rgba(225, 210, 255, 0.98);
+  border-color: rgba(106, 27, 154, 0.75);
+}
+
+/* ─── 7. Bio ─── */
+.hd-bio {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2.2rem;
+  max-width: 56rem;
+  margin: 0 auto 2rem;
+  padding: 2.4rem 0 1rem;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .hd-bio {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    text-align: center;
+  }
+  .hd-bio__photo-col {
+    justify-self: center;
+  }
+}
+
+.hd-bio__photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 0.5px solid var(--sl-color-hairline);
+}
+
+.hd-bio__name {
+  margin-bottom: 0.4rem !important;
+}
+
+.hd-bio__lead {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  color: var(--sl-color-text-weak);
+}
+
+.hd-bio__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--sl-color-text-weak);
+}
+
+.hd-bio__list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.hd-bio__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.5rem;
+  height: 0.5px;
+  background: var(--sl-color-accent-high, #c7a0ff);
+  opacity: 0.65;
+}
+
+.hd-bio__list strong {
+  font-weight: 500;
+  color: var(--sl-color-text-strong);
+}
+
+:root[data-theme='light'] .hd-bio__list strong {
+  color: #1a1627;
+}
+
+.hd-bio__closing {
+  margin: 1.3rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 0.5px solid var(--sl-color-hairline);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--sl-color-text-weak);
+}
+
+:root[data-theme='light'] .hd-bio__lead {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-bio__list {
+  color: rgba(26, 22, 39, 0.72);
+}
+
+:root[data-theme='light'] .hd-bio__list li::before {
+  background: #6a1b9a;
+}
+
+:root[data-theme='light'] .hd-bio__closing {
+  color: rgba(26, 22, 39, 0.7);
+}
+</style> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">  <p>Последнее обновление: <time datetime="2026-04-23T10:14:43.000Z">23 апр. 2026 г.</time></p> </div> <div class="pagination-links print:hidden astro-u2l5gyhi" dir="ltr">   </div>  </footer> </div> </div>  </main> </div> </div> </div> </div> </body></html>
