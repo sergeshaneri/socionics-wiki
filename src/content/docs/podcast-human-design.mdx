@@ -1,0 +1,206 @@
+---
+title: Подкаст — Дизайн Человека и Генные Ключи
+description: Подробный подкаст-беседа про Интегральный Дизайн Человека и Генные Ключи — Сергей Шанэри
+template: splash
+---
+
+<div class="podcast-hero">
+  <span class="podcast-hero__eyebrow">Подкаст</span>
+  <h1 class="podcast-hero__title">
+    Подробный разговор про Дизайн Человека<br />
+    <em>и Генные Ключи</em>
+  </h1>
+  <div class="podcast-hero__lead">
+    Глубокая беседа о том, как работают эти системы,
+    как сонастроиться с собой и для чего это нужно.
+  </div>
+</div>
+
+<div class="podcast-frame not-content">
+  <iframe
+    src="https://www.youtube.com/embed/_fewoM9rl5o"
+    title="Подкаст про Дизайн Человека и Генные Ключи — Сергей Шанэри"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy"
+    class="podcast-frame__iframe"
+  ></iframe>
+</div>
+
+<div class="podcast-actions not-content">
+  <a
+    class="podcast-actions__link podcast-actions__link--ghost"
+    href="https://www.youtube.com/watch?v=_fewoM9rl5o"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Открыть на YouTube
+    <span aria-hidden="true">↗</span>
+  </a>
+  <a
+    class="podcast-actions__link podcast-actions__link--primary"
+    href="/socionics-wiki/human-design-landing/"
+  >
+    Вернуться к консультациям
+    <span aria-hidden="true" class="podcast-actions__shevron">›</span>
+  </a>
+</div>
+
+<style>{`
+  .podcast-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 46rem;
+    margin: 1rem auto 2.4rem;
+    text-align: center;
+  }
+
+  .podcast-hero__eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+  }
+
+  .podcast-hero__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.85rem, 4.2vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1.18;
+    color: var(--sl-color-white);
+  }
+
+  .podcast-hero__title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--sl-color-text-strong);
+  }
+
+  .podcast-hero__lead {
+    margin: 0;
+    max-width: 36rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.55;
+    color: var(--sl-color-text-weak);
+  }
+
+  .podcast-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 60rem;
+    margin: 0 auto 1.6rem;
+    border: 1px solid rgba(230, 225, 255, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(14, 14, 22, 0.82);
+    box-shadow: var(--panel-shadow), 0 10px 30px rgba(0, 0, 0, 0.28);
+  }
+
+  .podcast-frame__iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .podcast-actions {
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 3rem;
+    max-width: 46rem;
+  }
+
+  .podcast-actions__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.8rem 1.4rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 200ms ease, border-color 200ms ease;
+  }
+
+  .podcast-actions__link--primary {
+    color: var(--sl-color-white);
+    background: rgba(60, 38, 108, 0.55);
+    border: 0.5px solid rgba(199, 160, 255, 0.4);
+    box-shadow: var(--violet-shadow);
+  }
+
+  .podcast-actions__link--primary:hover {
+    background: rgba(80, 50, 140, 0.72);
+    border-color: rgba(199, 160, 255, 0.65);
+  }
+
+  .podcast-actions__link--ghost {
+    color: var(--sl-color-text-strong);
+    background: transparent;
+    border: 0.5px solid var(--sl-color-hairline);
+  }
+
+  .podcast-actions__link--ghost:hover {
+    color: var(--sl-color-white);
+    border-color: rgba(199, 160, 255, 0.35);
+  }
+
+  .podcast-actions__shevron {
+    font-weight: 300;
+    opacity: 0.85;
+    transition: transform 200ms ease;
+  }
+
+  .podcast-actions__link--primary:hover .podcast-actions__shevron {
+    transform: translateX(0.2em);
+  }
+
+  :root[data-theme='light'] .podcast-hero__title,
+  :root[data-theme='light'] .podcast-hero__title em {
+    color: #1a1627;
+  }
+
+  :root[data-theme='light'] .podcast-hero__eyebrow {
+    color: rgba(26, 22, 39, 0.55);
+  }
+
+  :root[data-theme='light'] .podcast-hero__lead {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :root[data-theme='light'] .podcast-actions__link--primary {
+    color: #1a1627;
+    background: rgba(235, 225, 255, 0.88);
+    border-color: rgba(106, 27, 154, 0.5);
+  }
+
+  :root[data-theme='light'] .podcast-actions__link--primary:hover {
+    background: rgba(225, 210, 255, 0.98);
+    border-color: rgba(106, 27, 154, 0.75);
+  }
+
+  :root[data-theme='light'] .podcast-actions__link--ghost {
+    color: rgba(26, 22, 39, 0.85);
+    border-color: rgba(106, 27, 154, 0.25);
+  }
+
+  :root[data-theme='light'] .podcast-actions__link--ghost:hover {
+    color: #1a1627;
+    border-color: rgba(106, 27, 154, 0.5);
+  }
+`}</style>

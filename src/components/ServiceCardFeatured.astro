@@ -1,0 +1,252 @@
+---
+/**
+ * Большая editorial-карточка услуги для проработанных направлений
+ * на странице /services/. Вся карточка — ссылка, акцент на
+ * издательском стиле: eyebrow с ценой, крупный заголовок,
+ * italic-лид, bullet-список и CTA-шеврон.
+ */
+interface Props {
+  title: string;
+  href: string;
+  eyebrow?: string;
+  lead: string;
+  items: string[];
+  ctaLabel?: string;
+}
+
+const {
+  title,
+  href,
+  eyebrow,
+  lead,
+  items,
+  ctaLabel = 'Подробнее',
+} = Astro.props;
+---
+
+<article class="service-featured">
+  <a class="service-featured__link" href={href}>
+    {eyebrow && <span class="service-featured__eyebrow">{eyebrow}</span>}
+    <h3 class="service-featured__title">
+      {title}
+      <span class="service-featured__title-shevron" aria-hidden="true">›</span>
+    </h3>
+    <p class="service-featured__lead"><em>{lead}</em></p>
+    <ul class="service-featured__list">
+      {items.map((item) => <li>{item}</li>)}
+    </ul>
+    <span class="service-featured__cta">
+      {ctaLabel}
+      <span class="service-featured__shevron" aria-hidden="true">›</span>
+    </span>
+  </a>
+</article>
+
+<style>
+  .service-featured {
+    position: relative;
+    height: 100%;
+    border: 1px solid rgba(199, 160, 255, 0.16);
+    border-radius: 22px;
+    background:
+      radial-gradient(120% 60% at 50% -10%, rgba(199, 160, 255, 0.12), rgba(199, 160, 255, 0) 60%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.008)),
+      rgba(24, 20, 38, 0.88);
+    box-shadow:
+      var(--panel-shadow),
+      0 10px 32px rgba(123, 44, 191, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: border-color 220ms ease, box-shadow 220ms ease, background 220ms ease, transform 220ms ease;
+  }
+
+  .service-featured:hover {
+    border-color: rgba(199, 160, 255, 0.4);
+    transform: translateY(-2px);
+    background:
+      radial-gradient(120% 60% at 50% -10%, rgba(199, 160, 255, 0.18), rgba(199, 160, 255, 0) 60%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+      rgba(30, 24, 48, 0.92);
+    box-shadow:
+      var(--panel-shadow),
+      var(--violet-shadow),
+      0 14px 40px rgba(160, 100, 255, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .service-featured__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    height: 100%;
+    padding: 2.2rem 2rem 1.9rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .service-featured__eyebrow {
+    align-self: flex-start;
+    padding: 0.3rem 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(236, 220, 255, 0.86);
+    background: rgba(80, 50, 140, 0.3);
+    border: 0.5px solid rgba(199, 160, 255, 0.32);
+    border-radius: 999px;
+  }
+
+  .service-featured__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2vw, 1.85rem);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1.15;
+    color: var(--sl-color-white);
+    display: flex;
+    align-items: baseline;
+    gap: 0.25em;
+  }
+
+  .service-featured__title-shevron {
+    display: inline-block;
+    font-weight: 300;
+    color: var(--sl-color-text-weak);
+    opacity: 0.5;
+    transform: translateY(-0.04em);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .service-featured:hover .service-featured__title-shevron {
+    opacity: 0.9;
+    transform: translate(0.18em, -0.04em);
+  }
+
+  .service-featured__lead {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.02rem, 1.4vw, 1.16rem);
+    line-height: 1.5;
+    color: var(--sl-color-text-strong);
+    border-bottom: 0.5px solid var(--sl-color-hairline);
+  }
+
+  .service-featured__lead em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .service-featured__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--sl-color-text-weak);
+    flex: 1;
+  }
+
+  .service-featured__list li {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+
+  .service-featured__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.55rem;
+    height: 0.5px;
+    background: var(--sl-color-accent-high, #c7a0ff);
+    opacity: 0.7;
+  }
+
+  .service-featured__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    margin-top: 0.8rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--sl-color-text-strong);
+    opacity: 0.85;
+    transition: opacity 200ms ease, color 200ms ease;
+  }
+
+  .service-featured__shevron {
+    font-weight: 300;
+    transition: transform 200ms ease;
+  }
+
+  .service-featured:hover .service-featured__cta {
+    opacity: 1;
+    color: var(--sl-color-white);
+  }
+
+  .service-featured:hover .service-featured__shevron {
+    transform: translateX(0.2em);
+  }
+
+  /* Светлая тема */
+  :global(:root[data-theme='light']) .service-featured {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.8)),
+      rgba(245, 242, 255, 0.5);
+    border-color: rgba(106, 27, 154, 0.18);
+    box-shadow: 0 3px 22px rgba(26, 22, 39, 0.07);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  :global(:root[data-theme='light']) .service-featured:hover {
+    border-color: rgba(106, 27, 154, 0.42);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 248, 255, 0.88)),
+      rgba(245, 238, 255, 0.6);
+    box-shadow: 0 8px 28px rgba(106, 27, 154, 0.14);
+  }
+
+  :global(:root[data-theme='light']) .service-featured__eyebrow {
+    color: #3a1f6b;
+    background: rgba(235, 225, 255, 0.8);
+    border-color: rgba(106, 27, 154, 0.28);
+  }
+
+  :global(:root[data-theme='light']) .service-featured__title {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .service-featured__title-shevron {
+    color: rgba(26, 22, 39, 0.55);
+  }
+
+  :global(:root[data-theme='light']) .service-featured__lead {
+    color: rgba(26, 22, 39, 0.88);
+  }
+
+  :global(:root[data-theme='light']) .service-featured__list {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :global(:root[data-theme='light']) .service-featured__list li::before {
+    background: #6a1b9a;
+  }
+
+  :global(:root[data-theme='light']) .service-featured__cta {
+    color: rgba(26, 22, 39, 0.85);
+  }
+
+  :global(:root[data-theme='light']) .service-featured:hover .service-featured__cta {
+    color: #1a1627;
+  }
+</style>

@@ -13,12 +13,20 @@ const pageTitle = entry.data.title;
 
 const isHome = entry.id === '' || entry.id === 'index' || entry.slug === '';
 const hasHero = Boolean(entry.data.hero);
+const isSplash = entry.data.template === 'splash';
+// Категории / hub-страницы: src/content/docs/categories/*.mdx
+const isCategoryHub =
+  (entry.slug ?? '').startsWith('categories/') ||
+  (entry.id ?? '').startsWith('categories/');
 
 const body = entry.body ?? '';
 // Простая оценка: слов / 180 (русский язык читается чуть медленнее английского)
 const words = body.trim().split(/\s+/).filter(Boolean).length;
 const minutes = Math.max(1, Math.round(words / 180));
-const showReadingTime = !hasHero && !isHome && words >= 350;
+// Reading-time показываем только на настоящих статьях: не на главной,
+// не на splash-лендингах, не на hero-страницах, не на category-хабах.
+const showReadingTime =
+  !hasHero && !isHome && !isSplash && !isCategoryHub && words >= 350;
 const readingTimeLabel = `${minutes} мин чтения`;
 
 const categories = entry.data.categories;

@@ -5,44 +5,60 @@ template: splash
 ---
 
 import NoirCard from '../../components/NoirCard.astro';
+import ServiceCardFeatured from '../../components/ServiceCardFeatured.astro';
 import { CardGrid } from '@astrojs/starlight/components';
 
 <div class="services-hero">
   <span class="services-hero__eyebrow">Работа с Сергеем Шанэри</span>
   <h1 class="services-hero__title">Услуги</h1>
-  <p class="services-hero__lead">
+  <div class="services-hero__lead">
     Выберите, что резонирует — или напишите в мессенджер, если нужна помощь с выбором.
-  </p>
+  </div>
+</div>
+
+<div class="services-featured not-content">
+  <ServiceCardFeatured
+    title="Типирование"
+    href="/socionics-wiki/typing-landing/"
+    eyebrow="От 3 000 ₽"
+    lead="Авторская методика: интервью с диагностикой ТИМа и обучение соционической осознанности."
+    items={[
+      'Три формата: проверка ТИМа, полное интервью, месячное погружение',
+      'Вопросы на признаки Рейнина с перекрёстной проверкой',
+      'Вопросы на аспекты и позицию функций в модели А',
+      'Разбор проявлений интертипных отношений',
+      'Запись встречи и развёрнутая обратная связь',
+    ]}
+    ctaLabel="Открыть лендинг"
+  />
+  <ServiceCardFeatured
+    title="Дизайн Человека"
+    href="/socionics-wiki/human-design-landing/"
+    eyebrow="От 3 000 ₽"
+    lead="Интегральный разбор в подходе духовной психотерапии — ИДЧ и Генные Ключи."
+    items={[
+      'Три формата: знакомство, полный разбор, 2-месячное погружение',
+      'Чтение бодиграфа и хологенетического профиля',
+      'Порядок проработок Генных Ключей',
+      'Терапевтические медитации под запрос',
+      '7 лет практики в Интегральном Дизайне Человека',
+    ]}
+    ctaLabel="Открыть лендинг"
+  />
+</div>
+
+<div class="services-divider">
+  <span class="services-divider__label">Ещё направления</span>
 </div>
 
 <CardGrid>
-  <NoirCard
-    title="Типирование"
-    href="/socionics-wiki/typing-landing/"
-    lead="Интервью, диагностика ТИМа и обучение соционической осознанности"
-    items={[
-      'Три формата работы — от проверки до погружения',
-      'Авторская методика с опросом по признакам Рейнина',
-      'Запись встречи и развёрнутая обратная связь',
-    ]}
-  />
-  <NoirCard
-    title="Консультация по Дизайну Человека"
-    href="/socionics-wiki/contact/"
-    lead="Интегральный разбор бодиграфа и хологенетического профиля"
-    items={[
-      'Тип, стратегия, авторитет и внутренняя природа',
-      'Генные ключи и жизненное предназначение',
-      '7 лет практики в подходе Интегральный Дизайн Человека',
-    ]}
-  />
   <NoirCard
     title="Терапевтические сессии"
     href="/socionics-wiki/contact/"
     lead="Индивидуальная психотерапия — работа с травмами и саморегуляцией"
     items={[
       'Духовно-психологический подход',
-      'Обучение у Екатерины Самойловой, опыт 5+ лет',
+      'Обучение у Екатерины Самойловой, опыт 8+ лет',
       'Комбинация психотерапии, коучинга и соционики',
     ]}
   />
@@ -89,9 +105,9 @@ import { CardGrid } from '@astrojs/starlight/components';
 </CardGrid>
 
 <div class="services-footer">
-  <p class="services-footer__text">
+  <div class="services-footer__text">
     <em>Не уверены, что выбрать?</em> Напишите — помогу сориентироваться.
-  </p>
+  </div>
   <a class="services-footer__cta" href="/socionics-wiki/contact/">
     Связаться
     <span aria-hidden="true" class="services-footer__shevron">›</span>
@@ -136,6 +152,54 @@ import { CardGrid } from '@astrojs/starlight/components';
     font-size: clamp(1.02rem, 1.4vw, 1.18rem);
     line-height: 1.55;
     color: var(--sl-color-text-weak);
+  }
+
+  /* ─── Featured-сетка (проработанные направления) ─── */
+  .services-featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+  }
+
+  @media (min-width: 760px) {
+    .services-featured {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+  }
+
+  /* ─── Разделитель перед остальными направлениями ─── */
+  .services-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 60rem;
+    margin: 0 auto 1.8rem;
+    padding-top: 0.5rem;
+  }
+
+  .services-divider::before,
+  .services-divider::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--sl-color-hairline);
+  }
+
+  .services-divider__label {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+  }
+
+  :root[data-theme='light'] .services-divider__label {
+    color: rgba(26, 22, 39, 0.6);
   }
 
   .services-footer {
