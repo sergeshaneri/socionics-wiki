@@ -7,6 +7,53 @@ template: splash
 import PricingCard from '../../components/PricingCard.astro';
 import TestimonialQuote from '../../components/TestimonialQuote.astro';
 
+export const faqs = [
+  {
+    q: 'Типирование происходит на основе опросника? Какие используются вопросы?',
+    a: 'Да. Я в ходе личной практики и изучения соционики составил собственные вопросы. Сначала я спрашиваю по признакам Рейнина — вопросы устроены так, чтобы признаки перепроверяли друг друга благодаря линейной зависимости. Если ответы не сходятся, я знаю где искать ошибку. После признаков задаю вопросы на информационные аспекты и функции в модели А. Порядок вопросов подстраивается под ответы и то, насколько они сходятся.',
+  },
+  {
+    q: 'Я уже много типировался и получил разные результаты. Что делать, если запутался в противоречивых аргументах?',
+    a: 'Вам нужно самостоятельно хорошо разобраться. На индивидуальном погружении в соционику я помогаю прочувствовать и осознать свой ТИМ — где какая функция, где какие аспекты. Помогаю разобраться в семантике ситуаций и «настроить» слух на соционическую семантику.',
+  },
+  {
+    q: 'Узнаю ли я своё предназначение? В чём моя миссия? Какое у меня призвание?',
+    a: 'Соционика помогает осознать себя, сонастроиться с собой, соединиться с собой. Всё это — залог ощущения своего предназначения. На самом деле мы всегда его выполняем, задача достаточно сонастроиться с собой, чтобы это ощутить и более искусно пользоваться.',
+  },
+  {
+    q: 'Что я получу в результате типирования?',
+    a: 'Информацию о себе, обратную связь. Материал и инструменты для изучения себя и поддержку в этом пути. Для меня важно научить навыку соционической осознанности и соединения со своим ТИМом. Умение понимать, в чём смысл ситуаций, помогает как в саморегуляции, так и в отношениях с людьми. Соционика — это психологическая грамота.',
+  },
+  {
+    q: 'Поможет ли мне соционика обрести вдохновение?',
+    a: 'Соционическая осознанность — когда понимаешь своё мышление, его особенности, начинаешь более ловко и от того творчески, вдохновлённо пользоваться собой.',
+  },
+  {
+    q: 'Поможет ли мне типирование нащупать источник счастья?',
+    a: 'Счастье — это естественное состояние целостного человека. Так случилось, что сейчас большинство людей травмировано и не может позволить себе быть полноценно счастливыми. Каждый сам ответственен за своё счастье. Психотерапия и духовные практики — отличные подходы для того, чтобы восстановить психологическую целостность и стать счастливым. Соционика может подсветить сферы, в которых работа более актуальна, и в принципе помогает лучше понимать такие абстрактные явления.',
+  },
+  {
+    q: 'Соционика расскажет о моих взаимоотношениях с противоположным полом?',
+    a: 'Отношения именно с противоположным полом особенно сильно связаны с семейной историей, и здесь полезнее семейная психология и психотерапия. На погружении в соционику есть большая встреча для ответов на вопросы или терапевтической практики по запросу. Соционика объясняет динамику любых отношений — с роднёй, коллегами любого пола. У каждых отношений есть их главная тема, аттрактор, и если уметь ими пользоваться, то можно проживать их удобно, ловко и эмоционально комфортно. Есть миф, что в партнёры нужно выбирать себе только дуала. Лучше не мешать такими ограничивающими убеждениями своему сердцу. Любые отношения могут быть счастливыми или не очень, слушать и выбирать нужно в согласии с собой.',
+  },
+  {
+    q: 'Я узнаю свои сильные и слабые стороны? В чём моя уникальность?',
+    a: 'Соционика помогает увидеть жизнь с разных граней и примерить их все к себе. На погружении в соционику я даю задания и практики на осознание себя с разных сторон. Помогаю осознать, какие из них более уверенные, а какие нет. Важно, что как психолог я подсвечиваю индивидуальное — то, что связано не с соционикой.',
+  },
+  {
+    q: 'Как лучше себя узнать и понять?',
+    a: 'Чтобы себя лучше понять, нужно за собой наблюдать и быть честным с собой, доверять себе. Это навыки, которые нужно восстанавливать и поддерживать. Соционическая осознанность, умение наблюдать за разными аспектами себя — отличный инструмент для самопознания.',
+  },
+  {
+    q: 'Соционика поможет мне принять и полюбить себя?',
+    a: 'Такими вопросами более специализированно занимается психотерапия. Соционика поможет найти более удобный подход к терапевтическим проработкам.',
+  },
+  {
+    q: 'Используется ли анализ семантики при типировании?',
+    a: 'Да, кроме специальной методики вопросов, я, конечно, использую семантический анализ, а также анализ интертипных отношений.',
+  },
+];
+
 {/* ─────────────────── 1. HERO ─────────────────── */}
 
 <section class="typing-hero">
@@ -36,9 +83,24 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
 
 {/* ─────────────────── 2. ЧТО ТАКОЕ ТИПИРОВАНИЕ ─────────────────── */}
 
-<section class="typing-intro">
-  <span class="typing-section__eyebrow">О методике</span>
+<section class="typing-intro not-content">
+  <span class="typing-section__eyebrow">Введение</span>
   <h2 class="typing-section__title">Что такое типирование</h2>
+
+  <div class="typing-intro__video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/miyAQBsdlVI"
+      title="Соционическое типирование — введение"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      class="typing-intro__video-iframe"
+    ></iframe>
+  </div>
+
+  <p class="typing-intro__video-caption">
+    <em>Если не знаете, что такое типирование — вот введение: что это, как и зачем.</em>
+  </p>
 
   <p class="typing-intro__text">
     Типирование — это психологическое общение на тему соционики с целью определить ТИМ
@@ -56,6 +118,14 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
     <li>Мини-обучение и погружение в соционику</li>
     <li>Цель — повысить психологическую осознанность</li>
   </ul>
+
+  <a
+    class="typing-intro__more"
+    href="/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie/"
+  >
+    Подробнее о методике — доклад и конспект
+    <span aria-hidden="true" class="typing-intro__shevron">›</span>
+  </a>
 </section>
 
 {/* ─────────────────── 3. ТАРИФЫ ─────────────────── */}
@@ -64,7 +134,7 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
   <span class="typing-section__eyebrow">Форматы работы</span>
   <h2 class="typing-section__title">Тарифы</h2>
 
-  <div class="typing-pricing__grid">
+  <div class="typing-pricing__grid not-content">
     <PricingCard
       name="Проверка ТИМа"
       price="3 000 ₽"
@@ -86,7 +156,7 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
       price="7 000 ₽"
       priceNote="1 час"
       featured
-      featuredLabel="Оптимально"
+      featuredLabel=""
       lead="Полноценное интервью с диагностикой ТИМа и аргументацией."
       items={[
         'Консультация-интервью 1 час',
@@ -105,16 +175,13 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
       name="Индивидуальное погружение"
       price="40 000 ₽"
       priceNote="месяц"
-      lead="Авторское обучение, помощь в освоении базовых знаний и развитие соционической осознанности."
+      lead="Авторское обучение и развитие соционической осознанности за месяц."
       items={[
         'Месяц теории и практики',
-        '4 полуторачасовые консультации (по одной функции)',
-        '1 двухчасовая встреча: вопросы и психологические упражнения',
-        'Материалы и поддержка в изучении соционики',
+        '4 консультации по функциям (1,5 ч) + большая встреча (2 ч)',
+        'Материалы, домашние задания и поддержка в обучении',
         'Психологические беседы и индивидуальные рекомендации',
-        'Дополнительные вопросы для осознания ТИМа',
         'Соционическая обратная связь по вашим ситуациям',
-        'Домашние задания для осознания своего ТИМа',
         'Запись всех встреч',
       ]}
       href="/socionics-wiki/contact/"
@@ -160,7 +227,7 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
   <span class="typing-section__eyebrow">Отзывы</span>
   <h2 class="typing-section__title">Что говорят клиенты</h2>
 
-  <div class="typing-reviews__grid">
+  <div class="typing-reviews__grid not-content">
     <TestimonialQuote
       author="Екатерина Антипова"
       text="Типирование прошло замечательно. Во-первых, человек располагает. Во-вторых, во время типирования на все поставленные вопросы давались довольно развёрнутые ответы. В-третьих, отличное знание теории и применение её, также смотрит на человека с разных сторон, не зацикливается только на одном признаке. Разъясняет признаки и по Модели А, и по Рейнину. В общем, типирование понравилось, желаю успехов!"
@@ -186,114 +253,21 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
   <span class="typing-section__eyebrow">Частые вопросы</span>
   <h2 class="typing-section__title">FAQ</h2>
 
-  <div class="typing-faq__list">
-    <details class="typing-faq__item">
-      <summary>Типирование происходит на основе опросника? Какие используются вопросы?</summary>
-      <p>
-        Да. Я в ходе личной практики и изучения соционики составил собственные вопросы.
-        Сначала я спрашиваю по признакам Рейнина — вопросы устроены так, чтобы признаки
-        перепроверяли друг друга благодаря линейной зависимости. Если ответы не сходятся,
-        я знаю где искать ошибку. После признаков задаю вопросы на информационные аспекты
-        и функции в модели А. Порядок вопросов подстраивается под ответы и то, насколько они сходятся.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Я уже много типировался и получил разные результаты. Что делать, если запутался в противоречивых аргументах?</summary>
-      <p>
-        Вам нужно самостоятельно хорошо разобраться. На индивидуальном погружении в соционику
-        я помогаю прочувствовать и осознать свой ТИМ — где какая функция, где какие аспекты.
-        Помогаю разобраться в семантике ситуаций и «настроить» слух на соционическую семантику.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Узнаю ли я своё предназначение? В чём моя миссия? Какое у меня призвание?</summary>
-      <p>
-        Соционика помогает осознать себя, сонастроиться с собой, соединиться с собой.
-        Всё это — залог ощущения своего предназначения. На самом деле мы всегда его выполняем,
-        задача достаточно сонастроиться с собой, чтобы это ощутить и более искусно пользоваться.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Что я получу в результате типирования?</summary>
-      <p>
-        Информацию о себе, обратную связь. Материал и инструменты для изучения себя и поддержку
-        в этом пути. Для меня важно научить навыку соционической осознанности и соединения со своим ТИМом.
-        Умение понимать, в чём смысл ситуаций, помогает как в саморегуляции, так и в отношениях с людьми.
-        Соционика — это психологическая грамота.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Поможет ли мне соционика обрести вдохновение?</summary>
-      <p>
-        Соционическая осознанность — когда понимаешь своё мышление, его особенности,
-        начинаешь более ловко и от того творчески, вдохновлённо пользоваться собой.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Поможет ли мне типирование нащупать источник счастья?</summary>
-      <p>
-        Счастье — это естественное состояние целостного человека. Так случилось, что сейчас
-        большинство людей травмировано и не может позволить себе быть полноценно счастливыми.
-        Каждый сам ответственен за своё счастье. Психотерапия и духовные практики — отличные подходы
-        для того, чтобы восстановить психологическую целостность и стать счастливым. Соционика может
-        подсветить сферы, в которых работа более актуальна, и в принципе помогает лучше понимать
-        такие абстрактные явления.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Соционика расскажет о моих взаимоотношениях с противоположным полом?</summary>
-      <p>
-        Отношения именно с противоположным полом особенно сильно связаны с семейной историей,
-        и здесь полезнее семейная психология и психотерапия. На погружении в соционику есть большая
-        встреча для ответов на вопросы или терапевтической практики по запросу. Соционика объясняет
-        динамику любых отношений — с роднёй, коллегами любого пола. У каждых отношений есть их главная
-        тема, аттрактор, и если уметь ими пользоваться, то можно проживать их удобно, ловко и
-        эмоционально комфортно. Есть миф, что в партнёры нужно выбирать себе только дуала.
-        Лучше не мешать такими ограничивающими убеждениями своему сердцу. Любые отношения могут быть
-        счастливыми или не очень, слушать и выбирать нужно в согласии с собой.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Я узнаю свои сильные и слабые стороны? В чём моя уникальность?</summary>
-      <p>
-        Соционика помогает увидеть жизнь с разных граней и примерить их все к себе.
-        На погружении в соционику я даю задания и практики на осознание себя с разных сторон.
-        Помогаю осознать, какие из них более уверенные, а какие нет. Важно, что как психолог
-        я подсвечиваю индивидуальное — то, что связано не с соционикой.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Как лучше себя узнать и понять?</summary>
-      <p>
-        Чтобы себя лучше понять, нужно за собой наблюдать и быть честным с собой, доверять себе.
-        Это навыки, которые нужно восстанавливать и поддерживать. Соционическая осознанность,
-        умение наблюдать за разными аспектами себя — отличный инструмент для самопознания.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Соционика поможет мне принять и полюбить себя?</summary>
-      <p>
-        Такими вопросами более специализированно занимается психотерапия. Соционика поможет
-        найти более удобный подход к терапевтическим проработкам.
-      </p>
-    </details>
-
-    <details class="typing-faq__item">
-      <summary>Используется ли анализ семантики при типировании?</summary>
-      <p>
-        Да, кроме специальной методики вопросов, я, конечно, использую семантический анализ,
-        а также анализ интертипных отношений.
-      </p>
-    </details>
+  <div class="faq-list not-content">
+    {faqs.map((item) => (
+      <details class="faq-item">
+        <summary class="faq-item__summary">
+          <span class="faq-item__question">{item.q}</span>
+          <svg class="faq-item__icon" viewBox="0 0 16 16" aria-hidden="true">
+            <line class="faq-item__icon-h" x1="3" y1="8" x2="13" y2="8" />
+            <line class="faq-item__icon-v" x1="8" y1="3" x2="8" y2="13" />
+          </svg>
+        </summary>
+        <div class="faq-item__answer">
+          <p>{item.a}</p>
+        </div>
+      </details>
+    ))}
   </div>
 </section>
 
@@ -314,7 +288,7 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
 
 {/* ─────────────────── 8. БИО ─────────────────── */}
 
-<section class="typing-bio">
+<section class="typing-bio not-content">
   <div class="typing-bio__photo-col">
     <img
       src="/socionics-wiki/shaneri.jpg"
@@ -514,22 +488,60 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
     border-color: rgba(106, 27, 154, 0.5);
   }
 
-  /* ─── 2. Intro ─── */
+  /* ─── 2. Intro (с видео) ─── */
   .typing-intro {
-    max-width: 42rem;
+    max-width: 56rem;
     margin: 0 auto 4rem;
     text-align: left;
   }
 
+  .typing-intro > .typing-section__eyebrow,
+  .typing-intro > .typing-section__title {
+    text-align: center;
+  }
+
+  .typing-intro__video-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(230, 225, 255, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(14, 14, 22, 0.82);
+    box-shadow: var(--panel-shadow), 0 10px 30px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1.1rem;
+  }
+
+  .typing-intro__video-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .typing-intro__video-caption {
+    margin: 0 auto 2.5rem;
+    max-width: 42rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: var(--sl-color-text-weak);
+    text-align: center;
+  }
+
   .typing-intro__text {
-    margin: 0 0 1.8rem;
+    margin: 0 auto 1.8rem;
+    max-width: 42rem;
     font-size: 1.05rem;
     line-height: 1.65;
     color: var(--sl-color-text);
   }
 
   .typing-pullquote {
-    margin: 2.2rem 0;
+    max-width: 42rem;
+    margin: 2.2rem auto;
     padding: 0.3rem 0 0.3rem 1.4rem;
     border-left: 1px solid var(--sl-color-accent-high, #c7a0ff);
     font-family: var(--font-heading);
@@ -542,7 +554,8 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
 
   .typing-intro__list {
     list-style: none;
-    margin: 2rem 0 0;
+    max-width: 42rem;
+    margin: 2rem auto 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -568,6 +581,34 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
     opacity: 0.75;
   }
 
+  .typing-intro__more {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--sl-color-text-weak);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  .typing-intro__more:hover {
+    color: var(--sl-color-accent-high, #c7a0ff);
+  }
+
+  .typing-intro__shevron {
+    display: inline-block;
+    margin-left: 0.35em;
+    font-weight: 300;
+    transition: transform 200ms ease;
+  }
+
+  .typing-intro__more:hover .typing-intro__shevron {
+    transform: translateX(0.2em);
+  }
+
   :root[data-theme='light'] .typing-pullquote {
     color: rgba(26, 22, 39, 0.92);
     border-left-color: #6a1b9a;
@@ -579,6 +620,18 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
 
   :root[data-theme='light'] .typing-intro__list li::before {
     background: #6a1b9a;
+  }
+
+  :root[data-theme='light'] .typing-intro__video-caption {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :root[data-theme='light'] .typing-intro__more {
+    color: rgba(26, 22, 39, 0.68);
+  }
+
+  :root[data-theme='light'] .typing-intro__more:hover {
+    color: #6a1b9a;
   }
 
   /* ─── 3. Pricing ─── */
@@ -700,84 +753,147 @@ import TestimonialQuote from '../../components/TestimonialQuote.astro';
     transform: translateX(0.18em);
   }
 
-  /* ─── 6. FAQ ─── */
+  /* ─── 6. FAQ (editorial-аккордеон) ─── */
   .typing-faq {
     max-width: 46rem;
     margin: 0 auto 4rem;
   }
 
-  .typing-faq__list {
+  .faq-list {
     display: flex;
     flex-direction: column;
     border-top: 0.5px solid var(--sl-color-hairline);
   }
 
-  .typing-faq__item {
+  .faq-item {
     border-bottom: 0.5px solid var(--sl-color-hairline);
-    padding: 1.15rem 0;
+    transition: background 220ms ease;
   }
 
-  .typing-faq__item > summary {
+  .faq-item[open] {
+    background: rgba(199, 160, 255, 0.025);
+  }
+
+  .faq-item__summary {
     list-style: none;
     cursor: pointer;
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 1.08rem;
-    font-weight: 400;
-    line-height: 1.4;
-    color: var(--sl-color-text-strong);
-    position: relative;
-    padding-right: 2.2rem;
-    transition: color 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 1.3rem 0.4rem 1.3rem 0.1rem;
   }
 
-  .typing-faq__item > summary::-webkit-details-marker {
+  .faq-item__summary::-webkit-details-marker {
     display: none;
   }
 
-  .typing-faq__item > summary::after {
-    content: '';
-    position: absolute;
-    right: 0.4rem;
-    top: 50%;
-    width: 0.85rem;
-    height: 0.85rem;
-    transform: translateY(-50%);
-    background:
-      linear-gradient(currentColor, currentColor) center/100% 0.5px no-repeat,
-      linear-gradient(currentColor, currentColor) center/0.5px 100% no-repeat;
-    opacity: 0.55;
-    transition: transform 220ms ease, opacity 220ms ease;
+  .faq-item__question {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--sl-color-text-strong);
+    transition: color 220ms ease;
+    flex: 1;
   }
 
-  .typing-faq__item[open] > summary::after {
-    transform: translateY(-50%) rotate(90deg);
-    background:
-      linear-gradient(currentColor, currentColor) center/100% 0.5px no-repeat;
-    opacity: 0.85;
-  }
-
-  .typing-faq__item[open] > summary {
+  .faq-item__summary:hover .faq-item__question,
+  .faq-item[open] .faq-item__question {
     color: var(--sl-color-white);
   }
 
-  .typing-faq__item > p {
-    margin: 0.85rem 0 0;
-    font-size: 0.97rem;
-    line-height: 1.65;
+  /* SVG-иконка + / − : горизонтальная линия всегда видна,
+     вертикальная исчезает при открытии через scaleY. */
+  .faq-item__icon {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
     color: var(--sl-color-text-weak);
+    opacity: 0.55;
+    transition: opacity 220ms ease, color 220ms ease, transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  :root[data-theme='light'] .typing-faq__item > summary {
-    color: rgba(26, 22, 39, 0.82);
+  .faq-item__icon line {
+    stroke: currentColor;
+    stroke-width: 0.75;
+    stroke-linecap: round;
   }
 
-  :root[data-theme='light'] .typing-faq__item[open] > summary {
+  .faq-item__icon-v {
+    transform-origin: center;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms ease;
+  }
+
+  .faq-item__summary:hover .faq-item__icon,
+  .faq-item[open] .faq-item__icon {
+    opacity: 1;
+    color: var(--sl-color-accent-high, #c7a0ff);
+  }
+
+  .faq-item[open] .faq-item__icon-v {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .faq-item[open] .faq-item__icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-item__answer {
+    padding: 0 0.1rem 1.5rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--sl-color-text-weak);
+    animation: faq-reveal 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-item__answer > p {
+    margin: 0;
+    max-width: 44rem;
+  }
+
+  @keyframes faq-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item__answer,
+    .faq-item__icon,
+    .faq-item__icon-v {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  :root[data-theme='light'] .faq-item[open] {
+    background: rgba(106, 27, 154, 0.04);
+  }
+
+  :root[data-theme='light'] .faq-item__question {
+    color: rgba(26, 22, 39, 0.78);
+  }
+
+  :root[data-theme='light'] .faq-item__summary:hover .faq-item__question,
+  :root[data-theme='light'] .faq-item[open] .faq-item__question {
     color: #1a1627;
   }
 
-  :root[data-theme='light'] .typing-faq__item > p {
+  :root[data-theme='light'] .faq-item__answer {
     color: rgba(26, 22, 39, 0.72);
+  }
+
+  :root[data-theme='light'] .faq-item__summary:hover .faq-item__icon,
+  :root[data-theme='light'] .faq-item[open] .faq-item__icon {
+    color: #6a1b9a;
   }
 
   /* ─── 7. Final CTA ─── */

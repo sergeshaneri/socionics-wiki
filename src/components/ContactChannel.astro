@@ -129,6 +129,22 @@ const {
   }
 
   /* Светлая тема */
+  :global(:root[data-theme='light']) .contact-channel {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+      rgba(245, 242, 255, 0.5);
+    border-color: rgba(106, 27, 154, 0.14);
+    box-shadow: 0 2px 14px rgba(26, 22, 39, 0.05);
+  }
+
+  :global(:root[data-theme='light']) .contact-channel:hover {
+    border-color: rgba(106, 27, 154, 0.34);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.85)),
+      rgba(245, 238, 255, 0.6);
+    box-shadow: 0 4px 18px rgba(106, 27, 154, 0.11);
+  }
+
   :global(:root[data-theme='light']) .contact-channel__name {
     color: #1a1627;
   }

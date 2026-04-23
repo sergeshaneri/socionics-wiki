@@ -1,0 +1,223 @@
+---
+title: Услуги
+description: Типирование, Дизайн Человека, психотерапия, групповые практики и обучение — Сергей Шанэри
+template: splash
+---
+
+import NoirCard from '../../components/NoirCard.astro';
+import { CardGrid } from '@astrojs/starlight/components';
+
+<div class="services-hero">
+  <span class="services-hero__eyebrow">Работа с Сергеем Шанэри</span>
+  <h1 class="services-hero__title">Услуги</h1>
+  <p class="services-hero__lead">
+    Выберите, что резонирует — или напишите в мессенджер, если нужна помощь с выбором.
+  </p>
+</div>
+
+<CardGrid>
+  <NoirCard
+    title="Типирование"
+    href="/socionics-wiki/typing-landing/"
+    lead="Интервью, диагностика ТИМа и обучение соционической осознанности"
+    items={[
+      'Три формата работы — от проверки до погружения',
+      'Авторская методика с опросом по признакам Рейнина',
+      'Запись встречи и развёрнутая обратная связь',
+    ]}
+  />
+  <NoirCard
+    title="Консультация по Дизайну Человека"
+    href="/socionics-wiki/contact/"
+    lead="Интегральный разбор бодиграфа и хологенетического профиля"
+    items={[
+      'Тип, стратегия, авторитет и внутренняя природа',
+      'Генные ключи и жизненное предназначение',
+      '7 лет практики в подходе Интегральный Дизайн Человека',
+    ]}
+  />
+  <NoirCard
+    title="Терапевтические сессии"
+    href="/socionics-wiki/contact/"
+    lead="Индивидуальная психотерапия — работа с травмами и саморегуляцией"
+    items={[
+      'Духовно-психологический подход',
+      'Обучение у Екатерины Самойловой, опыт 5+ лет',
+      'Комбинация психотерапии, коучинга и соционики',
+    ]}
+  />
+  <NoirCard
+    title="Групповая практика «ТЭО»"
+    href="/socionics-wiki/contact/"
+    lead="Техника эмоциональной осознанности — групповой терапевтический формат"
+    items={[
+      'Работа с эмоциями в поддерживающем кругу',
+      'Авторская методика',
+      'Онлайн-встречи',
+    ]}
+  />
+  <NoirCard
+    title="Генные Ключи — Золотой Путь"
+    href="/socionics-wiki/contact/"
+    lead="Ступень 1 «Последовательность активации» — авторское обучение"
+    items={[
+      'Раскрытие активационной последовательности',
+      'Практики для углубления понимания',
+      'Сопровождение в процессе изучения',
+    ]}
+  />
+  <NoirCard
+    title="Курс по методике типирования"
+    href="/socionics-wiki/contact/"
+    lead="Научу типировать по моей авторской методике"
+    items={[
+      'Признаки Рейнина и их взаимные проверки',
+      'Модель А: аспекты и функции',
+      'Практика на реальных кейсах',
+    ]}
+  />
+  <NoirCard
+    title="Соционическое колесо баланса"
+    href="/socionics-wiki/contact/"
+    lead="Коучинговый курс с использованием соционики"
+    items={[
+      'Баланс жизненных сфер через призму ТИМа',
+      'Индивидуальный разбор колеса',
+      'Практические инструменты саморегуляции',
+    ]}
+  />
+</CardGrid>
+
+<div class="services-footer">
+  <p class="services-footer__text">
+    <em>Не уверены, что выбрать?</em> Напишите — помогу сориентироваться.
+  </p>
+  <a class="services-footer__cta" href="/socionics-wiki/contact/">
+    Связаться
+    <span aria-hidden="true" class="services-footer__shevron">›</span>
+  </a>
+</div>
+
+<style>{`
+  .services-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1rem auto 2.8rem;
+    max-width: 44rem;
+    text-align: center;
+  }
+
+  .services-hero__eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+  }
+
+  .services-hero__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1.15;
+    color: var(--sl-color-white);
+  }
+
+  .services-hero__lead {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+    line-height: 1.55;
+    color: var(--sl-color-text-weak);
+  }
+
+  .services-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 40rem;
+    margin: 3.5rem auto 2rem;
+    padding: 2.5rem 1rem 0;
+    border-top: 0.5px solid var(--sl-color-hairline);
+    text-align: center;
+  }
+
+  .services-footer__text {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+    line-height: 1.4;
+    color: var(--sl-color-text-strong);
+  }
+
+  .services-footer__text em {
+    font-style: italic;
+  }
+
+  .services-footer__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.85rem 1.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.02rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--sl-color-white);
+    background: rgba(60, 38, 108, 0.55);
+    border: 0.5px solid rgba(199, 160, 255, 0.4);
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: var(--violet-shadow);
+    transition: background 200ms ease, border-color 200ms ease;
+  }
+
+  .services-footer__cta:hover {
+    background: rgba(80, 50, 140, 0.72);
+    border-color: rgba(199, 160, 255, 0.65);
+  }
+
+  .services-footer__shevron {
+    font-weight: 300;
+    transition: transform 200ms ease;
+  }
+
+  .services-footer__cta:hover .services-footer__shevron {
+    transform: translateX(0.2em);
+  }
+
+  :root[data-theme='light'] .services-hero__title {
+    color: #1a1627;
+  }
+
+  :root[data-theme='light'] .services-hero__eyebrow {
+    color: rgba(26, 22, 39, 0.55);
+  }
+
+  :root[data-theme='light'] .services-hero__lead {
+    color: rgba(26, 22, 39, 0.72);
+  }
+
+  :root[data-theme='light'] .services-footer__text {
+    color: rgba(26, 22, 39, 0.88);
+  }
+
+  :root[data-theme='light'] .services-footer__cta {
+    color: #1a1627;
+    background: rgba(235, 225, 255, 0.88);
+    border-color: rgba(106, 27, 154, 0.45);
+  }
+
+  :root[data-theme='light'] .services-footer__cta:hover {
+    background: rgba(225, 210, 255, 0.98);
+    border-color: rgba(106, 27, 154, 0.7);
+  }
+`}</style>

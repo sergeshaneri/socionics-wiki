@@ -1,0 +1,76 @@
+---
+/**
+ * Override для Starlight-хедера: добавляем editorial top-nav
+ * (Услуги / Контакты) рядом со стандартными иконками соцсетей.
+ * На мобильных скрывается — туда же ведут записи в сайдбаре.
+ */
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+---
+
+<nav class="top-nav" aria-label="Основная навигация">
+  <a class="top-nav__link" href="/socionics-wiki/services/">Услуги</a>
+  <a class="top-nav__link" href="/socionics-wiki/contact/">Контакты</a>
+</nav>
+
+<Default {...Astro.props}><slot /></Default>
+
+<style>
+  .top-nav {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+    margin-right: 0.3rem;
+  }
+
+  .top-nav__link {
+    position: relative;
+    font-family: var(--font-heading);
+    font-size: 0.93rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--sl-color-text);
+    text-decoration: none;
+    padding: 0.2rem 0;
+    transition: color 180ms ease;
+  }
+
+  .top-nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15rem;
+    height: 0.5px;
+    background: var(--sl-color-accent-high, #c7a0ff);
+    opacity: 0;
+    transform: scaleX(0.3);
+    transition: opacity 200ms ease, transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .top-nav__link:hover::after,
+  .top-nav__link:focus-visible::after {
+    opacity: 0.7;
+    transform: scaleX(1);
+  }
+
+  .top-nav__link:hover,
+  .top-nav__link:focus-visible {
+    color: var(--sl-color-white);
+  }
+
+  :global(:root[data-theme='light']) .top-nav__link:hover,
+  :global(:root[data-theme='light']) .top-nav__link:focus-visible {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .top-nav__link::after {
+    background: #6a1b9a;
+  }
+
+  /* Прячем на узких экранах — там всё доступно через сайдбар-меню */
+  @media (max-width: 55rem) {
+    .top-nav {
+      display: none;
+    }
+  }
+</style>

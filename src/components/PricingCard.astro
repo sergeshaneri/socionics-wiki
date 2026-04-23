@@ -30,7 +30,7 @@ const {
 ---
 
 <article class={`pricing-card${featured ? ' pricing-card--featured' : ''}`}>
-  {featured && <span class="pricing-card__badge">{featuredLabel}</span>}
+  {featured && featuredLabel && <span class="pricing-card__badge">{featuredLabel}</span>}
 
   <header class="pricing-card__head">
     <h3 class="pricing-card__name">{name}</h3>
@@ -161,6 +161,9 @@ const {
     font-weight: 400;
     line-height: 1.5;
     color: var(--sl-color-text-strong);
+    /* Резервируем место под 2 строки, чтобы карточки выровнялись по блокам
+       даже если лиды разной длины. */
+    min-height: 2.85em;
   }
 
   .pricing-card__list {
@@ -238,6 +241,33 @@ const {
   }
 
   /* Светлая тема */
+  :global(:root[data-theme='light']) .pricing-card {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+      rgba(245, 242, 255, 0.5);
+    border-color: rgba(106, 27, 154, 0.14);
+    box-shadow: 0 2px 18px rgba(26, 22, 39, 0.06);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  :global(:root[data-theme='light']) .pricing-card:hover {
+    border-color: rgba(106, 27, 154, 0.34);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.85)),
+      rgba(245, 238, 255, 0.6);
+    box-shadow: 0 6px 24px rgba(106, 27, 154, 0.12);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card--featured {
+    border-color: rgba(106, 27, 154, 0.4);
+    box-shadow: 0 6px 22px rgba(106, 27, 154, 0.14);
+  }
+
+  :global(:root[data-theme='light']) .pricing-card--featured:hover {
+    border-color: rgba(106, 27, 154, 0.6);
+  }
+
   :global(:root[data-theme='light']) .pricing-card__name {
     color: #1a1627;
   }
