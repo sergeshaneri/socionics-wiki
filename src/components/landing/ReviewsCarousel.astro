@@ -1,0 +1,295 @@
+---
+/**
+ * Horizontal scroll-snap reviews carousel.
+ * - CSS scroll-snap for native keyboard/touch
+ * - JS for prev/next buttons, dot indicator, auto-update on scroll
+ */
+interface Review {
+  author: string;
+  text: string;
+  date?: string;
+  source?: { url: string; label: string };
+}
+interface Props {
+  reviews: Review[];
+  id: string;
+}
+const { reviews, id } = Astro.props;
+---
+
+<div class="rc" data-carousel={id}>
+  <div class="rc__track" role="region" aria-label="Отзывы клиентов" data-rc-track>
+    {reviews.map((r, i) => (
+      <figure class="ln-bezel rc__slide" data-rc-slide={i}>
+        <div class="ln-bezel__inner rc__slide-inner">
+          <svg class="rc__mark" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+            <path d="M10 32C4 32 0 28 0 22C0 14 6 6 16 0L18 4C12 8 8 12 8 16C10 14 13 13 16 13C20 13 23 16 23 20C23 26 18 32 10 32ZM30 32C24 32 20 28 20 22C20 14 26 6 36 0L38 4C32 8 28 12 28 16C30 14 33 13 36 13C40 13 43 16 43 20C43 26 38 32 30 32Z" fill="currentColor" opacity="0.22" />
+          </svg>
+          <blockquote class="rc__quote">{r.text}</blockquote>
+          <figcaption class="rc__caption">
+            <span class="rc__author">{r.author}</span>
+            {r.source && (
+              <a class="rc__source" href={r.source.url} target="_blank" rel="noopener noreferrer">
+                Оригинал · {r.source.label} ↗
+              </a>
+            )}
+            {!r.source && r.date && <span class="rc__date">{r.date}</span>}
+          </figcaption>
+        </div>
+      </figure>
+    ))}
+  </div>
+
+  <div class="rc__controls">
+    <button class="rc__btn" type="button" data-rc-prev aria-label="Предыдущий отзыв">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M10 4L6 8L10 12" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div class="rc__dots" role="tablist" data-rc-dots>
+      {reviews.map((_, i) => (
+        <button
+          class="rc__dot"
+          type="button"
+          data-rc-dot={i}
+          aria-label={`Перейти к отзыву ${i + 1}`}
+        ></button>
+      ))}
+    </div>
+    <button class="rc__btn" type="button" data-rc-next aria-label="Следующий отзыв">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M6 4L10 8L6 12" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  .rc {
+    position: relative;
+    width: 100%;
+  }
+
+  .rc__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+  .rc__track::-webkit-scrollbar { display: none; }
+
+  .rc__slide {
+    display: flex;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .rc__slide-inner {
+    padding: clamp(2rem, 3.5vw, 3rem);
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rc__mark {
+    width: 2.6rem;
+    height: 2rem;
+    color: var(--ln-accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .rc__quote {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.55;
+    color: var(--ln-ink-strong);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .rc__caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--ln-line-faint);
+  }
+
+  .rc__author {
+    font-family: var(--ln-font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+  }
+
+  .rc__date,
+  .rc__source {
+    font-family: var(--ln-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    text-decoration: none;
+    transition: color 300ms var(--ln-ease-silk);
+  }
+  .rc__source:hover { color: var(--ln-accent); }
+
+  /* Controls */
+  .rc__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+  }
+
+  .rc__btn {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(230, 225, 255, 0.04);
+    border: 1px solid var(--ln-line);
+    color: var(--ln-ink-body);
+    cursor: pointer;
+    transition:
+      background 400ms var(--ln-ease-silk),
+      border-color 400ms var(--ln-ease-silk),
+      color 300ms var(--ln-ease-silk),
+      transform 500ms var(--ln-ease-silk);
+  }
+  .rc__btn:hover {
+    background: rgba(230, 225, 255, 0.08);
+    border-color: rgba(184, 157, 255, 0.3);
+    color: var(--ln-accent);
+  }
+  .rc__btn:active { transform: scale(0.95); }
+  .rc__btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+    transform: none;
+  }
+  .rc__btn:disabled:hover {
+    background: rgba(230, 225, 255, 0.04);
+    border-color: var(--ln-line);
+    color: var(--ln-ink-body);
+  }
+  .rc__btn svg { width: 0.95rem; height: 0.95rem; }
+
+  .rc__dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .rc__dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(234, 228, 255, 0.22);
+    cursor: pointer;
+    transition:
+      width 500ms var(--ln-ease-silk),
+      background 400ms var(--ln-ease-silk);
+  }
+  .rc__dot:hover { background: rgba(234, 228, 255, 0.4); }
+  .rc__dot.is-active {
+    width: 22px;
+    background: var(--ln-accent);
+  }
+
+  @media (max-width: 640px) {
+    .rc__slide-inner { padding: 1.5rem; }
+  }
+</style>
+
+<script>
+  function initCarousel(root: HTMLElement) {
+    const track = root.querySelector<HTMLElement>('[data-rc-track]');
+    const prev = root.querySelector<HTMLButtonElement>('[data-rc-prev]');
+    const next = root.querySelector<HTMLButtonElement>('[data-rc-next]');
+    const dots = root.querySelectorAll<HTMLButtonElement>('[data-rc-dot]');
+    const slides = root.querySelectorAll<HTMLElement>('[data-rc-slide]');
+    if (!track || slides.length === 0) return;
+
+    let current = 0;
+
+    function scrollTo(i: number) {
+      const slide = slides[i];
+      if (!slide) return;
+      track!.scrollTo({ left: slide.offsetLeft - track!.offsetLeft, behavior: 'smooth' });
+    }
+
+    function updateUI() {
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+      if (prev) prev.disabled = current === 0;
+      if (next) next.disabled = current === slides.length - 1;
+    }
+
+    prev?.addEventListener('click', () => {
+      current = Math.max(0, current - 1);
+      scrollTo(current);
+    });
+    next?.addEventListener('click', () => {
+      current = Math.min(slides.length - 1, current + 1);
+      scrollTo(current);
+    });
+    dots.forEach((d) => {
+      d.addEventListener('click', () => {
+        const i = Number(d.dataset.rcDot);
+        current = i;
+        scrollTo(current);
+      });
+    });
+
+    // Keep current in sync with manual scroll / swipe via IntersectionObserver
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        const idx = Number((visible.target as HTMLElement).dataset.rcSlide);
+        if (!Number.isNaN(idx)) {
+          current = idx;
+          updateUI();
+        }
+      },
+      { root: track, threshold: 0.6 },
+    );
+    slides.forEach((s) => io.observe(s));
+
+    // Keyboard nav when focus is in the track
+    track.setAttribute('tabindex', '0');
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prev?.click();
+        e.preventDefault();
+      } else if (e.key === 'ArrowRight') {
+        next?.click();
+        e.preventDefault();
+      }
+    });
+
+    updateUI();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(initCarousel);
+</script>

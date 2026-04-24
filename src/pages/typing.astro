@@ -1,5 +1,7 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
+import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
+import reviews from '../data/reviews-typing.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
@@ -360,7 +362,7 @@ const stats = [
 
   {/* ─────────────────── ОТЗЫВЫ ─────────────────── */}
   <section class="reviews ln-section">
-    <div class="ln-shell reviews__grid">
+    <div class="ln-shell">
       <header class="reviews__head" data-reveal>
         <span class="ln-eyebrow">
           <span class="ln-eyebrow__dot"></span>
@@ -381,31 +383,9 @@ const stats = [
         </a>
       </header>
 
-      <figure class="ln-bezel reviews__card" data-reveal data-reveal-delay="1">
-        <div class="ln-bezel__inner reviews__card-inner">
-          <svg class="reviews__mark" viewBox="0 0 40 32" fill="none" aria-hidden="true">
-            <path d="M10 32C4 32 0 28 0 22C0 14 6 6 16 0L18 4C12 8 8 12 8 16C10 14 13 13 16 13C20 13 23 16 23 20C23 26 18 32 10 32ZM30 32C24 32 20 28 20 22C20 14 26 6 36 0L38 4C32 8 28 12 28 16C30 14 33 13 36 13C40 13 43 16 43 20C43 26 38 32 30 32Z" fill="currentColor" opacity="0.22" />
-          </svg>
-          <blockquote class="reviews__quote">
-            Типирование прошло замечательно. Во-первых, человек располагает. Во-вторых, во время
-            типирования на все поставленные вопросы давались довольно развёрнутые ответы.
-            В-третьих, отличное знание теории и применение её, также смотрит на человека
-            с разных сторон, не зацикливается только на одном признаке. Разъясняет признаки
-            и по Модели А, и по Рейнину. В общем, типирование понравилось, желаю успехов!
-          </blockquote>
-          <figcaption class="reviews__caption">
-            <span class="reviews__author">Екатерина Антипова</span>
-            <a
-              class="reviews__source"
-              href="https://vk.com/topic-113543027_34887526?post=6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Оригинал · VK ↗
-            </a>
-          </figcaption>
-        </div>
-      </figure>
+      <div data-reveal data-reveal-delay="1">
+        <ReviewsCarousel reviews={reviews} id="typing" />
+      </div>
     </div>
   </section>
 
@@ -1069,6 +1049,8 @@ const stats = [
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
+    max-width: 44rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
   }
 
   .reviews__card-inner {

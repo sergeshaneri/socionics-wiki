@@ -11,8 +11,48 @@ import ContactChannel from '../../components/ContactChannel.astro';
   <h1 class="contact-hero__title">Выберите удобный способ</h1>
   <div class="contact-hero__lead">
     Пишите в любой из каналов — отвечу при первой возможности.
-    Для записи на типирование удобнее всего Telegram.
+    Или сразу откройте страницу услуги, которая интересует.
   </div>
+</div>
+
+<div class="contact-services not-content">
+  <span class="contact-services__eyebrow">Услуги</span>
+  <div class="contact-services__grid">
+    <a class="contact-service" href="/socionics-wiki/typing/">
+      <span class="contact-service__kicker">От&nbsp;3 000 ₽</span>
+      <span class="contact-service__title">Соционическое типирование</span>
+      <span class="contact-service__lead">Интервью с&nbsp;диагностикой ТИМа и&nbsp;обучение осознанности.</span>
+      <span class="contact-service__arrow" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
+    <a class="contact-service" href="/socionics-wiki/human-design/">
+      <span class="contact-service__kicker">От&nbsp;3 000 ₽</span>
+      <span class="contact-service__title">Дизайн Человека</span>
+      <span class="contact-service__lead">Интегральный разбор в&nbsp;подходе духовной психотерапии.</span>
+      <span class="contact-service__arrow" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
+    <a class="contact-service" href="/socionics-wiki/therapy/">
+      <span class="contact-service__kicker">От&nbsp;1 000 ₽</span>
+      <span class="contact-service__title">Духовная психотерапия</span>
+      <span class="contact-service__lead">Терапевтические консультации и&nbsp;целительные медитации.</span>
+      <span class="contact-service__arrow" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
+<div class="contact-section-label">
+  <span>или напишите напрямую</span>
 </div>
 
 <div class="contact-grid not-content">
@@ -97,6 +137,166 @@ import ContactChannel from '../../components/ContactChannel.astro';
     font-size: clamp(1rem, 1.35vw, 1.15rem);
     line-height: 1.55;
     color: var(--sl-color-text-weak);
+  }
+
+  .contact-services {
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+  }
+
+  .contact-services__eyebrow {
+    display: block;
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .contact-services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 880px) {
+    .contact-services__grid { grid-template-columns: 1fr; }
+  }
+
+  .contact-service {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.4rem 1.6rem;
+    border-radius: 22px;
+    background:
+      linear-gradient(170deg, rgba(28, 22, 46, 0.72), rgba(14, 10, 26, 0.78));
+    border: 1px solid rgba(230, 225, 255, 0.1);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      var(--panel-shadow);
+    text-decoration: none;
+    color: inherit;
+    isolation: isolate;
+    transition:
+      border-color 500ms cubic-bezier(0.32, 0.72, 0, 1),
+      box-shadow 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      transform 500ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .contact-service:hover {
+    transform: translateY(-3px);
+    border-color: rgba(184, 157, 255, 0.28);
+    background:
+      linear-gradient(170deg, rgba(36, 28, 58, 0.78), rgba(18, 14, 32, 0.82));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      var(--panel-shadow),
+      0 24px 60px -20px rgba(123, 44, 191, 0.35);
+  }
+
+  .contact-service__kicker {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+  }
+
+  .contact-service__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.6vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--sl-color-white);
+    letter-spacing: 0.005em;
+    margin-top: 0.1rem;
+  }
+
+  .contact-service__lead {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--sl-color-text-weak);
+    margin-top: 0.15rem;
+  }
+
+  .contact-service__arrow {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 1.85rem;
+    height: 1.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(230, 225, 255, 0.04);
+    border: 1px solid rgba(230, 225, 255, 0.1);
+    color: var(--sl-color-text-weak);
+    transition:
+      transform 600ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 400ms cubic-bezier(0.32, 0.72, 0, 1),
+      color 400ms cubic-bezier(0.32, 0.72, 0, 1),
+      border-color 400ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .contact-service__arrow svg { width: 0.85rem; height: 0.85rem; }
+
+  .contact-service:hover .contact-service__arrow {
+    transform: translate(2px, -2px);
+    background: rgba(184, 157, 255, 0.12);
+    border-color: rgba(184, 157, 255, 0.32);
+    color: rgba(245, 242, 255, 0.98);
+  }
+
+  .contact-section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    max-width: 52rem;
+    margin: 0 auto 1.75rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--sl-color-text-weak);
+    opacity: 0.75;
+  }
+
+  .contact-section-label::before,
+  .contact-section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: rgba(230, 225, 255, 0.12);
+  }
+
+  :root[data-theme='light'] .contact-service {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(26, 22, 39, 0.08);
+  }
+  :root[data-theme='light'] .contact-service:hover {
+    border-color: rgba(106, 27, 154, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  :root[data-theme='light'] .contact-service__title {
+    color: #1a1627;
+  }
+  :root[data-theme='light'] .contact-service__kicker,
+  :root[data-theme='light'] .contact-services__eyebrow,
+  :root[data-theme='light'] .contact-section-label {
+    color: rgba(26, 22, 39, 0.6);
+  }
+  :root[data-theme='light'] .contact-service__lead {
+    color: rgba(26, 22, 39, 0.7);
   }
 
   .contact-grid {

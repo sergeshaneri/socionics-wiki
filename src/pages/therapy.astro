@@ -1,54 +1,55 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
 import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
-import reviews from '../data/reviews-human-design.json';
+import reviews from '../data/reviews-therapy.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const tiers = [
   {
-    name: 'Начало самопознания',
-    price: '3 000 ₽',
-    priceNote: '40 минут',
-    lead: 'Первичная информация и ответы на готовые вопросы.',
+    name: 'Ознакомительная',
+    price: '1 000 ₽',
+    priceNote: '30 минут',
+    lead: 'Знакомство, выяснение запроса и план работы.',
     items: [
-      'Сессия-знакомство 40 минут онлайн',
-      'Стратегия и внутренний авторитет',
-      'Ответы на ваши готовые вопросы',
+      'Консультация-знакомство 30 минут онлайн',
+      'Выяснение запроса, подбор инструментов',
+      'Определение возможных причин ситуации',
+      'Определение духовных уроков',
+      'Составление плана действий',
       'Запись встречи',
     ],
     ctaLabel: 'Записаться',
   },
   {
-    name: 'Полный разбор',
-    price: '14 000 ₽',
-    priceNote: '2 × 1 час',
-    lead: 'Две часовых консультации с полным разбором карты и профиля.',
+    name: 'Целительная сессия',
+    price: '7 000 ₽',
+    priceNote: '1–2 часа',
+    lead: 'Консультация с определением духовного урока и терапевтической медитацией.',
     items: [
-      'Две часовых консультации онлайн',
-      'Информация обо всех центрах (чакрах)',
-      'Порядок проработок Генных Ключей',
-      'Чтение бодиграфа',
-      'Хологенетический профиль',
-      'Интегральный Дизайн Человека',
-      'Запись встреч',
+      'Психологическая беседа о сложностях',
+      'Помощь в понимании эмоций',
+      'Прояснение негативного паттерна и его причин',
+      'Определение духовного урока',
+      'Терапевтическая медитация под запрос',
+      'Запись встречи',
     ],
     ctaLabel: 'Записаться',
     featured: true,
   },
   {
-    name: 'Индивидуальное погружение',
-    price: '60 000 ₽',
-    priceNote: '2 месяца',
-    lead: 'Авторские практики, терапевтические медитации и освоение ИДЧ в повседневной жизни.',
+    name: 'Пакет сессий',
+    price: 'от 30 000 ₽',
+    priceNote: '5 / 10 / 20 часов',
+    lead: 'Продолжительное ведение и глубинные целительные отношения.',
     items: [
-      'Два месяца теории и практики',
-      '5 часовых консультаций',
-      '2 большие встречи (2+ часа) с медитациями',
-      'Работа с запросами даже вне Дизайна Человека',
-      'Хологенетический профиль, бодиграф и все центры',
-      'Терапевтические медитации под запрос',
-      'Запись всех встреч',
+      '5 ч — 30 000 ₽ · 10 ч — 55 000 ₽ · 20 ч — 100 000 ₽',
+      'Комплексная проработка разных ситуаций',
+      'Вырабатывание новых паттернов счастливой жизни',
+      'Глубокие целительные отношения терапевт-клиент',
+      'Интеграция соционики, ИДЧ, коучинга',
+      'Групповые практики для постоянных клиентов в подарок',
+      'Записи всех встреч',
     ],
     ctaLabel: 'Записаться',
   },
@@ -56,77 +57,111 @@ const tiers = [
 
 const faqs = [
   {
-    q: 'Что делать, если не знаю точное время рождения?',
-    a: 'Зависит от того, насколько известен промежуток. Если это несколько часов — можно посмотреть, возможно изменения будут минимальны и это не повлияет на консультацию. Если известна только дата — есть смысл задуматься о ректификации времени рождения (процедуре уточнения). Ректификацию можно сделать разными способами: заказать у астролога; воспользоваться инструментами для сонастройки с интуицией (маятник, карты, мускульный тест); или запросить ответ у Высшего Я (Души). В некоторых ситуациях я могу проконсультировать и не зная времени — это решается индивидуально. Обращайтесь — обсудим.',
+    q: 'Где вы учились?',
+    a: 'Я обучался Духовной Психологии у Екатерины Самойловой и Александра Меньшикова.',
   },
   {
-    q: 'Получу ли я свою карту с бодиграфом и хологенетическим профилем?',
-    a: 'Да, вы получите ссылки на все необходимые сайты, где можно посмотреть бодиграф, активные центры и каналы, хологенетический профиль, последовательности и сферы Золотого Пути.',
+    q: 'Это с применением гипноза?',
+    a: 'Трансформационные практики — это ведомые медитации, в которых я погружаю клиента в лёгкий гипноз. С точки зрения нейрофизиологии мозг работает в состоянии тета-волн, что способствует изменению состояния сознания и глубокому контакту с подсознанием. Это особо эффективное состояние для психотерапии; после встречи клиент помнит всё, что с ним происходило.',
   },
   {
-    q: 'Узнаю ли я своё предназначение? В чём моя миссия? Какое у меня призвание?',
-    a: 'Предназначение — в каждом моменте жизни, в каждом вдохе и действии. Интегральный Дизайн Человека помогает сонастроиться с собой и с ощущением, что идёшь по своему пути, а также подсвечивает темы, которые нужно проработать для реализации в социуме. Для реализации предназначения важно понимать свои интересы и уметь освобождаться от эмоциональных блоков. ИДЧ не говорит, на какую пойти работу — скорее показывает энергии, которые необходимо проявлять, чтобы быть собой в любом месте и притягивать единомышленников по миссии в этом воплощении.',
+    q: 'Психотерапия — это таблетки и антидепрессанты?',
+    a: 'В России под психотерапевтами часто понимают врачей-психиатров, которые ставят диагноз (синдром или расстройство) и прописывают медикаментозное лечение. В других странах под терапевтом обычно понимают психолога, который помогает трансформировать тяжёлые чувства и исцелить личность. Я не врач-психиатр и не прописываю лекарства.',
   },
   {
-    q: 'Что делать, если я уже немного понимаю Дизайн Человека и у меня есть один-два конкретных вопроса?',
-    a: 'Вам подойдёт 45-минутная консультация. Напишите мне вопрос, познакомимся — и я уточню вашу тему своим пониманием Генных Ключей, Интегрального Дизайна Человека и духовной психологии.',
+    q: 'Узнаю ли я, какое у меня расстройство личности или синдром?',
+    a: 'Нет, для этого нужно обратиться к врачу-психиатру. Мой подход строится вокруг духовных уроков и того, что у нас достаточно сил внутри для прохождения своего жизненного пути. Я помогаю выстраивать контакт с внутренним Источником и черпать в нём психологические ресурсы.',
   },
   {
-    q: 'Поможет ли мне Интегральный Дизайн Человека обрести вдохновение?',
-    a: 'Согласно Дизайну Человека у каждого есть свой уникальный способ принятия решения и навигации в этом мире. На консультациях я показываю, как сонастроиться с собственным вкусом вдохновения. Генные Ключи помогают поднять вибрации своих энергий и проявлять те же качества, больше испытывая открытость, любовь, желание сотворять и служить.',
+    q: 'Смогу ли я снять порчу, сглаз, проклятие, подключку, лярву, сущность?',
+    a: 'Всё служит нашему благу. Если в вашей жизни случились черно-магические воздействия, то это обязательно несёт духовный урок. Если понять, в чём суть урока, простить всех участников процесса, исцелить первичную ситуацию — можно освободиться от негативного воздействия. Главное — осознанно выбирать усваивать свой духовный урок более гармонично, тогда негативным энергиям не будет необходимости возвращаться.',
   },
   {
-    q: 'Поможет ли мне Интегральный Дизайн Человека нащупать источник счастья?',
-    a: 'Работа с Генными Ключами направлена на исцеление сердца — то есть духовную психотерапию. Самый главный источник счастья у нас внутри, и чтобы полноценно им пользоваться, нужно взять ответственность за своё исцеление. Золотой Путь показывает ключевые темы, которые нужно проработать для открытия внутреннего источника любви и исцеления травмы (сферы Духовный Интеллект и Ядро Сакральной Раны в Хологенетическом Профиле).',
+    q: 'Это религиозные практики?',
+    a: 'Духовная психология не является частью организованных религий — это смесь New Age концепций и прикладных психотерапевтических методик. Это не ритуалы и обряды; обращение к Богу и Душе идёт от сердца, и вы всё делаете сами. Нам не нужен посредник и специальные условия для контакта с Богом — он всегда рад нам помочь, нужно только открыться.',
   },
   {
-    q: 'Интегральный Дизайн Человека расскажет о моих взаимоотношениях с противоположным полом?',
-    a: 'Дизайн Человека рассказывает, какие энергии взаимно притягивают партнёров, как они усиливают друг друга и где могут друг друга подавлять. В Генных Ключах активации Луны, Венеры и Марса показывают темы, необходимые для исцеления кармы через отношения: что нужно в себе осознать, чтобы стабильнее чувствовать себя в отношениях и притягивать партнёра, наиболее полезного для духовного пути. Большое внимание уделяется Сакральной Ране — она актуальна для исцеления любых травм.',
+    q: 'Вдруг это всё кажется?',
+    a: 'Для мозга нет разницы между реальностью и иллюзией — это всё происходит в восприятии. Поэтому работа с чувствами и ситуациями в воображении оказывает прямое воздействие на мозг и личность. Терапия всё равно происходит, даже если относиться к духовной составляющей как к метафоре.',
   },
   {
-    q: 'Я узнаю свои сильные и слабые стороны? В чём моя уникальность?',
-    a: 'У каждого могут быть любые сильные и слабые стороны, зависящие от многих факторов: наработок Рода, опыта Души, культуры, в которой человек вырос. Генные Ключи показывают постоянно свойственные вам энергии (темы в жизни), как они проявляются на низких вибрациях и что делать, чтобы переходить на высокие — другими словами, как свои слабые стороны перевести в сильные. Дизайн Человека показывает, на каких темах не нужно слишком много заморачиваться (Ложное Я), а на что в себе полагаться как на приоритетные качества личности (Внутренний Авторитет).',
+    q: 'Что делать, если я ничего не вижу в медитациях и у меня не работает интуиция?',
+    a: 'Часто мы закрываем свои способности, потому что их использование когда-то было для нас небезопасным. Я провожу специальные практики по исцелению интуиции. Интуицию можно развивать разными способами — главное тренироваться и доверять себе. Есть разные формы считывания: визуальные, аудиальные образы, телесные ощущения, прямое знание, считывание через эмоции. В совместной работе мы определим подходящий для вас способ и улучшим с ним контакт.',
   },
   {
-    q: 'Как лучше себя узнать и понять?',
-    a: 'Дизайн Человека показывает грани, на которые можно в себе всегда положиться (Внутренний Авторитет). Через эти темы происходит сонастройка с телом, а тело — благодаря контакту с подсознанием — чувствует нашу судьбу и помогает идти по ней наиболее гармоничным образом. Генные Ключи показывают темы, которые вы «не можете не делать». Развитие основных качеств гарантирует рост и усиление — через них проще всего начать самопознание.',
+    q: 'Что делать, если я не понимаю свои чувства?',
+    a: 'Навык осознавать свои чувства, называть и проживать их — основной в психотерапии и очень необходимый в духовных практиках. Если у вас с ним сложности — мы обязательно будем с ним работать и разбираться в причинах трудностей. Мои групповые терапевтические практики ТЭО (Техника Эмоциональной Осознанности) помогают в развитии чувствительности и эмоционального интеллекта.',
   },
   {
-    q: 'Поможет ли ИДЧ понять, какие принять решения?',
-    a: 'Во время консультации я рассказываю, на какой из внутренних голосов полагаться в принятии решений, и лучшую стратегию для сонастройки с телом и Высшим Я. В разных ситуациях нужно пользоваться разными своими гранями, чем-то вроде внутренних голосов. Согласно Интегральному Дизайну Человека, мы можем развить в себе их все — потому что по своей природе мы целостны. Отличать один голос (энергетический центр) от другого и сонастраиваться с ними вы сможете, пройдя погружение в ИДЧ.',
+    q: 'Смогу ли я раскрыть свои чакры и энергоканалы?',
+    a: 'В духовной психотерапии мы работаем с энерготелами и энергопотоками: блоки в чакрах часто связаны с психологическими травмами и программами, которые мы прорабатываем. Для усиления эффекта поможет, если вы также будете заниматься другими практиками: йога, цигун, дыхательные практики, энергомедитации, ченнелинги.',
   },
   {
-    q: 'Поможет ли ИДЧ принять и полюбить себя?',
-    a: 'Последовательность Венеры — это специальные активации, темы, прорабатывая которые вы открываете своё сердце. Генные Ключи хорошо согласуются с современными методами психотерапии и направлены на самостоятельное глубинное исцеление.',
-  },
-  {
-    q: 'Что проработать, чтобы были деньги? Что мешает процветанию?',
-    a: 'Интегральный Дизайн Человека показывает «племенные» активации в карте — это темы, проработка которых актуальна в этом воплощении. Их энергии направлены на взаимодействие с людьми в команде, взаимное сотрудничество, заработок денег и процветание. Они также показывают подходящие роли в команде. В Генных Ключах Жемчужная Последовательность показывает, как активации Юпитера увеличивают социальную энергию (деньги!) и дают нужные знакомства. На полном разборе я рассказываю обо всех этих темах, а также о Сакральной Ране — кульминации Золотого Пути, — чтобы травма не остановила вас от служения и реализации.',
-  },
-  {
-    q: 'Как мне подавать, продавать, транслировать себя?',
-    a: 'Интегральный Дизайн Человека показывает стратегию принятия решений и роль в обществе (профиль и линии). В Генных Ключах «Бренд» указывает ваш способ самопрезентации, чтобы общество воспринимало вас аутентично. Активации Меркурия показывают идеи, которые вам естественно транслировать в обществе.',
-  },
-  {
-    q: 'Я уже пытался разобраться в Дизайне Человека или Генных Ключах, но у меня нет ясной картинки.',
-    a: 'На полном разборе за 2 встречи я помогаю осознать все свои активации и даю обратную связь по вашим примерам — чтобы вы могли соотнести эти абстракции со своим конкретным опытом.',
+    q: 'Погружаете ли вы в прошлые жизни?',
+    a: 'Регрессии в прошлые жизни используются, если корень негативных сценариев лежит в прошлых жизнях, если конфликт с человеком связан с прошлыми жизнями, или если нужно наполниться психологическим ресурсом, который был в других воплощениях.',
   },
 ];
 
-const sources = [
-  { label: 'Астрология' },
-  { label: 'Чакры' },
-  { label: 'И-Цзин', sub: 'Книга Перемен' },
-  { label: 'Нью-Эйдж', sub: 'и эзотерика' },
-  { label: 'Психотерапия' },
-  { label: 'Уроки Души' },
+const concerns = [
+  'Не чувствую свою ценность',
+  'Не принимаю свою силу',
+  'Не доверяю себе',
+  'Не понимаю, что тормозит',
+  'Потерянность в жизни',
+  'Трачу время зря',
+  'Зависимости',
+  'Не понимаю предназначение',
+  'Одиночество',
+  'Созависимость в отношениях',
+  'Не отпускаю прошлые отношения',
+  'Сложные отношения с родителями',
+  'Кризисные состояния',
+  'Апатия · вина · стыд · горе',
+];
+
+const approaches = [
+  'Гештальт-терапия',
+  'Эмоционально-образная терапия',
+  'Системные семейные расстановки',
+  'Духовная психология',
+  'Коучинг',
+  'Гипнотерапия',
+  'Целительные медитации',
+  'Работа с субличностями',
+  'Регрессии в прошлые жизни',
+  'История рода',
+  'Исцеление травм детства',
+  'Родовые практики',
+  'Энерготерапия',
+  'Манифестации',
+];
+
+const outcomes = [
+  'Увеличение энергии',
+  'Желание жить',
+  'Психологическая самодостаточность',
+  'Избавление от негативных сценариев',
+  'Лучше слышу интуицию',
+  'Доверие себе',
+  'Лучше понимаю себя',
+  'Навыки психологической скорой помощи',
+  'Социальный рост и самооценка',
+  'Гармонизация отношений с партнёром',
+  'Понимание точек роста',
+  'Ясность «куда и для чего»',
+  'Прощение и сепарация с родителями',
+  'Отпускание прошлых отношений',
+  'Освобождение от тяжёлых чувств',
+  'Глубинное соединение с собой',
+  'Жизнь из своего центра',
+  'Состояние потока',
 ];
 
 const bioList = [
-  'Работа с Дизайном Человека и Генными Ключами — 7 лет',
-  'Ведущий терапевтических медитаций',
+  'Обучался Духовной Психологии у Екатерины Самойловой и Александра Меньшикова',
   'Опыт в психотерапии — 8 лет',
-  'Обучался психологии у Екатерины Самойловой',
+  'Ведущий терапевтических медитаций',
+  'Работа с Дизайном Человека и Генными Ключами — 7 лет',
   'Опыт в соционике — 12 лет',
   'Ученик Семёна Чурюмова',
   'Более 2 000 типирований',
@@ -134,16 +169,16 @@ const bioList = [
 ];
 
 const stats = [
-  { value: '7+', label: 'лет с Дизайном Человека' },
-  { value: '8+', label: 'лет психотерапевтической практики' },
-  { value: '12+', label: 'лет в соционике' },
+  { value: '8+', label: 'лет практики в психотерапии' },
+  { value: '14', label: 'подходов и методов' },
+  { value: '3', label: 'формата работы' },
 ];
 ---
 
 <LandingLayout
-  title="Интегральный Дизайн Человека — Сергей Шанэри"
-  description="Консультации по Дизайну Человека и Генным Ключам в подходе духовной психотерапии. Бодиграф, хологенетический профиль, Золотой Путь, Генные Ключи."
-  canonical="human-design/"
+  title="Духовная психотерапия — Сергей Шанэри"
+  description="Индивидуальные терапевтические сессии в духовном подходе. Гештальт-терапия, целительные медитации, работа с подсознанием, регрессии, духовные уроки."
+  canonical="therapy/"
 >
   {/* ─────────────────── HERO ─────────────────── */}
   <section class="hero">
@@ -152,19 +187,19 @@ const stats = [
       <div class="hero__meta" data-reveal>
         <span class="ln-eyebrow">
           <span class="ln-eyebrow__dot"></span>
-          Консультации · Сергей Шанэри
+          Терапевтические сессии · Сергей Шанэри
         </span>
       </div>
 
       <h1 class="ln-display hero__title" data-reveal data-reveal-delay="1">
-        Интегральный<br />
-        Дизайн Человека.<br />
-        <em>Духовная психотерапия.</em>
+        Духовная<br />
+        <em>психотерапия.</em>
       </h1>
 
       <p class="ln-lead hero__lead" data-reveal data-reveal-delay="2">
-        Помогу воспользоваться выводами из систем самопознания —
-        без погружения в теорию.
+        Терапевтические консультации и&nbsp;целительные медитации.
+        Помогу понять свои чувства, определить духовный урок
+        и&nbsp;жить счастливее.
       </p>
 
       <div class="hero__actions" data-reveal data-reveal-delay="3">
@@ -203,50 +238,47 @@ const stats = [
     </div>
   </section>
 
-  {/* ─────────────────── МЕТОД + ВИДЕО ─────────────────── */}
+  {/* ─────────────────── ВВЕДЕНИЕ + ВИДЕО ─────────────────── */}
   <section class="intro ln-section">
     <div class="ln-shell intro__grid">
       <header class="intro__head" data-reveal>
         <span class="ln-eyebrow">
           <span class="ln-eyebrow__dot"></span>
-          Подход
+          Зачем нужны сессии
         </span>
         <h2 class="ln-h2 intro__title">
-          Инструмент<br />
-          <em>передовой духовной психотерапии.</em>
+          Разобраться в&nbsp;негативных чувствах<br />
+          <em>и&nbsp;выйти на&nbsp;новый уровень счастья.</em>
         </h2>
         <p class="ln-body intro__body">
-          ИДЧ — совокупность систем самопознания, которые помогают работать
-          с&nbsp;предназначением, сильными сторонами, осознанностью, а&nbsp;также
-          эмоциями, личными травмами и&nbsp;отношениями.
+          Терапевтические сессии нужны, когда возникают негативные эмоции
+          и&nbsp;нет понимания, что с&nbsp;ними делать. Когда хочется отпустить
+          тяжёлое прошлое и&nbsp;выйти на&nbsp;новый уровень счастья.
         </p>
 
         <blockquote class="intro__quote">
           <span aria-hidden="true" class="intro__quote-mark">“</span>
           <p>
-            На своих консультациях я&nbsp;варьирую методы под запрос, клиента
-            и&nbsp;состояние — работаю по&nbsp;потоку.
+            Духовный подход помогает увидеть смысл во&nbsp;всём происходящем,
+            понять свои духовные уроки, принять свой путь и&nbsp;соединиться
+            с&nbsp;силой Духа внутри.
           </p>
         </blockquote>
 
         <p class="ln-body intro__body">
-          Запись консультации поможет освежить выводы — информации и&nbsp;инсайтов
-          много. Для новичков я&nbsp;вижу пользу в&nbsp;том, чтобы понять,
-          как принимать решения, что в&nbsp;себе слушать и&nbsp;чего не&nbsp;делать.
+          Психотерапия помогает разобраться в&nbsp;глубинных причинах чувств,
+          освободиться от&nbsp;них и&nbsp;вывести жизнь на&nbsp;новый уровень.
+          Духовная психология дополняет это смыслом, мягкостью и&nbsp;целительными
+          медитациями.
         </p>
-
-        <a class="ln-underlink" href={`${base}podcast-human-design/`}>
-          <span>Подробный подкаст про Дизайн Человека и Генные Ключи</span>
-          <span aria-hidden="true">→</span>
-        </a>
       </header>
 
       <div class="intro__media" data-reveal data-reveal-delay="2">
         <div class="ln-bezel intro__video-bezel">
           <div class="ln-bezel__inner intro__video-inner">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/MfoToyRdsaM"
-              title="Интегральный Дизайн Человека — введение"
+              src="https://www.youtube-nocookie.com/embed/YKiKsDv29wY"
+              title="Зачем нужны терапевтические сессии"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
@@ -254,26 +286,94 @@ const stats = [
           </div>
         </div>
         <p class="intro__caption">
-          <em>Короткое введение в подход: что такое Интегральный Дизайн Человека и зачем.</em>
+          <em>Короткое введение: зачем нужны терапевтические сессии и как они работают.</em>
         </p>
       </div>
     </div>
+  </section>
 
-    <div class="ln-shell intro__sources" data-reveal data-reveal-delay="3">
-      <span class="intro__sources-title">
-        Интегральный Дизайн Человека объединяет идеи из&nbsp;систем
-      </span>
-      <ul class="intro__source-grid">
-        {sources.map((s) => (
-          <li class="intro__source-item">
-            <svg class="intro__source-mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+  {/* ─────────────────── ЗАПРОСЫ ─────────────────── */}
+  <section class="concerns ln-section ln-section--tight">
+    <div class="ln-shell">
+      <header class="concerns__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          С чем работаю
+        </span>
+        <h2 class="ln-h2 concerns__title">
+          Запросы,<br />
+          <em>с&nbsp;которыми прихожу на&nbsp;помощь.</em>
+        </h2>
+      </header>
+
+      <ul class="chip-grid concerns__grid" data-reveal data-reveal-delay="1">
+        {concerns.map((item) => (
+          <li class="chip-grid__item">
+            <svg class="chip-grid__mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
               <circle cx="6" cy="6" r="4.5" opacity="0.35" />
               <circle cx="6" cy="6" r="1.5" fill="currentColor" stroke="none" />
             </svg>
-            <span class="intro__source-label">
-              {s.label}
-              {s.sub && <span class="intro__source-sub">{s.sub}</span>}
-            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {/* ─────────────────── ПОДХОДЫ ─────────────────── */}
+  <section class="approaches ln-section ln-section--tight">
+    <div class="ln-shell">
+      <header class="concerns__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Подходы и методы
+        </span>
+        <h2 class="ln-h2 concerns__title">
+          Инструменты,<br />
+          <em>которые применяю в&nbsp;работе.</em>
+        </h2>
+      </header>
+
+      <ul class="chip-grid chip-grid--approaches" data-reveal data-reveal-delay="1">
+        {approaches.map((item) => (
+          <li class="chip-grid__item">
+            <svg class="chip-grid__mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+              <circle cx="6" cy="6" r="4.5" opacity="0.35" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {/* ─────────────────── РЕЗУЛЬТАТ ─────────────────── */}
+  <section class="outcomes ln-section">
+    <div class="ln-shell outcomes__grid">
+      <header class="outcomes__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          К чему приводит
+        </span>
+        <h2 class="ln-h2 outcomes__title">
+          Результат —<br />
+          <em>что меняется.</em>
+        </h2>
+        <p class="ln-body outcomes__body">
+          Не&nbsp;обещаю готовых ответов — помогаю их&nbsp;в&nbsp;себе найти. Сессии
+          складываются в&nbsp;новое состояние: больше энергии, ясности
+          и&nbsp;доверия себе.
+        </p>
+      </header>
+
+      <ul class="outcomes__list" data-reveal data-reveal-delay="1">
+        {outcomes.map((item) => (
+          <li class="outcomes__item">
+            <svg class="outcomes__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+              <path d="M3 8.5L6.5 12L13 4.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{item}</span>
           </li>
         ))}
       </ul>
@@ -290,7 +390,7 @@ const stats = [
         </span>
         <h2 class="ln-h2 pricing__title">
           Три формата —<br />
-          <em>подбираем под запрос.</em>
+          <em>от&nbsp;знакомства до&nbsp;длительного ведения.</em>
         </h2>
       </header>
 
@@ -358,8 +458,60 @@ const stats = [
         </h2>
       </header>
 
-      <div data-reveal data-reveal-delay="1">
-        <ReviewsCarousel reviews={reviews} id="hd" />
+      <div class="reviews__carousel-wrap" data-reveal data-reveal-delay="1">
+        <ReviewsCarousel reviews={reviews} id="therapy" />
+      </div>
+
+      <p class="reviews__more-label" data-reveal data-reveal-delay="2">
+        <em>Больше отзывов на&nbsp;внешних площадках</em>
+      </p>
+
+      <div class="reviews__links">
+        <a
+          class="ln-bezel reviews__link-card"
+          href="https://vk.com/topic-113543027_42360200"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-reveal
+          data-reveal-delay="1"
+        >
+          <div class="ln-bezel__inner reviews__link-inner">
+            <div class="reviews__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 12.4c0 .7-.4 1-1.1 1-1.3 0-2.7-.7-3.8-1.8C6.9 10.4 6 8.9 6 7.6c0-.4.2-.8.7-.8h1.6c.5 0 .6.2.8.7.4 1.3 1.3 2.4 1.7 2.4.2 0 .2-.1.2-.6V7.6c-.1-.7-.5-.8-.5-1 0-.2.1-.3.3-.3h2.7c.4 0 .5.2.5.5v3.1c0 .4.2.5.3.5.1 0 .3-.1.6-.4.8-.9 1.4-2.3 1.4-2.3.2-.4.4-.8.9-.8h1.6c.4 0 .5.2.4.6-.2 1-1.9 3.3-1.9 3.3-.1.2-.2.4 0 .6.2.2 1 .9 1.3 1.4.6.7 1 1.3 1.2 1.7.1.4-.1.6-.5.6h-1.7c-.4 0-.6-.1-1-.5-.3-.3-.7-.7-1.2-1.2-.3-.3-.5-.4-.7-.4s-.3.1-.3.4v1.3z"/>
+              </svg>
+            </div>
+            <div class="reviews__link-copy">
+              <span class="reviews__link-kicker">ВКонтакте</span>
+              <span class="reviews__link-title">Текстовые отзывы</span>
+              <span class="reviews__link-sub">Истории клиентов на&nbsp;странице в&nbsp;VK</span>
+            </div>
+            <span class="reviews__link-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+
+        <a
+          class="ln-bezel reviews__link-card"
+          href="https://t.me/shanerireviews/6"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-reveal
+          data-reveal-delay="2"
+        >
+          <div class="ln-bezel__inner reviews__link-inner">
+            <div class="reviews__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.5 14.2l-.4 4.1c.5 0 .8-.2 1.1-.5l2.6-2.5 5.4 3.9c1 .5 1.7.3 2-.9l3.6-16.8c.3-1.4-.6-2-1.5-1.6L1.9 8.6C.6 9.1.7 9.8 1.7 10.1l5.2 1.6 12-7.6c.6-.3 1.1-.1.6.3"/>
+              </svg>
+            </div>
+            <div class="reviews__link-copy">
+              <span class="reviews__link-kicker">Telegram</span>
+              <span class="reviews__link-title">Видео-отзывы</span>
+              <span class="reviews__link-sub">Канал с&nbsp;живыми рассказами клиентов</span>
+            </div>
+            <span class="reviews__link-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -385,7 +537,7 @@ const stats = [
 
       <div class="faq__list" data-reveal data-reveal-delay="1">
         {faqs.map((item) => (
-          <details class="faq__item" name="hdfaq">
+          <details class="faq__item" name="therfaq">
             <summary class="faq__summary">
               <span class="faq__q">{item.q}</span>
               <span class="faq__icon" aria-hidden="true">
@@ -415,15 +567,12 @@ const stats = [
             Следующий шаг
           </span>
           <p class="final__question ln-h2">
-            <em>Исцеление личности и&nbsp;раскрытие</em><br />
-            духовного потенциала.
-          </p>
-          <p class="final__sub-lead">
-            Залог счастливой жизни в&nbsp;своём предназначении.
+            <em>Отпустить тяжёлое прошлое</em><br />
+            и&nbsp;жить счастливее.
           </p>
           <a class="ln-btn ln-btn--primary final__cta" href={`${base}contact/`}>
             <span class="ln-btn__shine" aria-hidden="true"></span>
-            <span>Записаться на консультацию</span>
+            <span>Записаться на сессию</span>
             <span class="ln-btn__icon" aria-hidden="true">
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
                 <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
@@ -431,7 +580,7 @@ const stats = [
             </span>
           </a>
           <p class="final__sub">
-            Онлайн · разговор по&nbsp;потоку · запись остаётся у&nbsp;вас
+            Онлайн · от&nbsp;30&nbsp;минут · запись остаётся у&nbsp;вас
           </p>
         </div>
       </div>
@@ -446,7 +595,7 @@ const stats = [
           <div class="ln-bezel__inner bio__photo-inner">
             <img
               src={`${base}shaneri.jpg`}
-              alt="Сергей Шанэри — духовный психолог, целитель, исследователь соционики"
+              alt="Сергей Шанэри — духовный психолог, терапевт, ведущий целительных медитаций"
               loading="lazy"
               width="720"
               height="900"
@@ -457,7 +606,7 @@ const stats = [
         <span class="bio__photo-caption">
           <span>Сергей Шанэри</span>
           <span class="bio__photo-caption-line"></span>
-          <span>ДЧ · 7 лет</span>
+          <span>терапия · 8 лет</span>
         </span>
       </div>
 
@@ -467,7 +616,7 @@ const stats = [
           <em>Шанэри.</em>
         </h2>
         <p class="ln-lead bio__lead">
-          Духовный психолог, целитель, исследователь соционики.
+          Духовный психолог, психотерапевт, ведущий целительных медитаций.
         </p>
 
         <ul class="bio__list">
@@ -481,13 +630,6 @@ const stats = [
             </li>
           ))}
         </ul>
-
-        <p class="bio__closing">
-          <em>
-            Консультирую в&nbsp;подходе Интегральный Дизайн Человека — совмещающем ДЧ,
-            Генные Ключи, духовность и&nbsp;терапию.
-          </em>
-        </p>
       </div>
     </div>
   </section>
@@ -540,13 +682,13 @@ const stats = [
   .hero__meta { margin-bottom: 0.25rem; }
 
   .hero__title {
-    max-width: 20ch;
+    max-width: 18ch;
     margin: 0;
   }
 
   .hero__lead {
     margin: 0.5rem auto 0;
-    max-width: 38rem;
+    max-width: 40rem;
     text-align: center;
   }
 
@@ -626,15 +768,12 @@ const stats = [
   }
 
   @media (max-width: 640px) {
-    .hero__stats {
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
+    .hero__stats { grid-template-columns: 1fr; gap: 1.75rem; }
     .hero__scroll { display: none; }
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     INTRO / ПОДХОД
+     INTRO
      ═══════════════════════════════════════════════════════════════ */
   .intro__grid {
     display: grid;
@@ -651,7 +790,6 @@ const stats = [
   }
 
   .intro__title { margin: 0; }
-
   .intro__body { max-width: 28rem; }
 
   .intro__quote {
@@ -717,96 +855,134 @@ const stats = [
     padding: 0 0.5rem;
   }
 
-  /* Sources (объединяет системы) — editorial-bento 3×2 */
-  .intro__sources {
-    margin-top: clamp(3rem, 6vw, 5rem);
+  @media (max-width: 860px) {
+    .intro__grid { grid-template-columns: 1fr; }
+    .intro__media { position: static; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     CONCERNS / APPROACHES — chip-grid
+     ═══════════════════════════════════════════════════════════════ */
+  .concerns__head,
+  .outcomes__head {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    max-width: 44rem;
   }
 
-  .intro__sources-title {
-    font-family: var(--ln-font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ln-ink-mute);
-    text-align: center;
-  }
+  .concerns__title { margin: 0; }
 
-  .intro__source-grid {
+  .chip-grid {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
     border-top: 1px solid var(--ln-line-faint);
-    border-bottom: 1px solid var(--ln-line-faint);
+    border-left: 1px solid var(--ln-line-faint);
   }
 
-  .intro__source-item {
+  .chip-grid--approaches {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .chip-grid__item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1.35rem 1.5rem 1.35rem 1rem;
-    transition: padding-left 600ms cubic-bezier(0.32, 0.72, 0, 1), background 400ms;
-    cursor: default;
-    position: relative;
-  }
-  .intro__source-item:not(:nth-child(-n+3)) {
-    border-top: 1px solid var(--ln-line-faint);
-  }
-  .intro__source-item:not(:nth-child(3n)) {
+    gap: 0.85rem;
+    padding: 1.35rem 1.25rem;
     border-right: 1px solid var(--ln-line-faint);
+    border-bottom: 1px solid var(--ln-line-faint);
+    font-family: var(--ln-font-display);
+    font-size: clamp(1rem, 1.4vw, 1.18rem);
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+    line-height: 1.35;
+    letter-spacing: -0.003em;
+    transition: padding-left 500ms cubic-bezier(0.32, 0.72, 0, 1), background 400ms;
+    cursor: default;
   }
-  .intro__source-item:hover {
-    padding-left: 1.4rem;
+
+  .chip-grid__item:hover {
+    padding-left: 1.75rem;
     background: linear-gradient(90deg, rgba(184, 157, 255, 0.05), transparent 70%);
   }
 
-  .intro__source-mark {
-    width: 0.85rem;
-    height: 0.85rem;
+  .chip-grid__mark {
+    width: 0.8rem;
+    height: 0.8rem;
     color: var(--ln-accent);
     flex-shrink: 0;
   }
 
-  .intro__source-label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    font-family: var(--ln-font-display);
-    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
-    font-weight: 500;
-    color: var(--ln-ink-strong);
-    line-height: 1.3;
+  @media (max-width: 980px) {
+    .chip-grid,
+    .chip-grid--approaches { grid-template-columns: repeat(2, 1fr); }
   }
 
-  .intro__source-sub {
-    font-family: var(--ln-font-display);
-    font-style: italic;
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--ln-ink-mute);
-    letter-spacing: 0.005em;
+  @media (max-width: 560px) {
+    .chip-grid,
+    .chip-grid--approaches { grid-template-columns: 1fr; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     OUTCOMES — editorial split
+     ═══════════════════════════════════════════════════════════════ */
+  .outcomes__grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.3fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: start;
+  }
+
+  .outcomes__head { position: sticky; top: 7rem; }
+
+  .outcomes__body { max-width: 26rem; }
+
+  .outcomes__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ln-line-faint);
+  }
+
+  .outcomes__item {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 1rem 0.5rem 1rem 0.25rem;
+    border-bottom: 1px solid var(--ln-line-faint);
+    font-family: var(--ln-font-body);
+    font-size: 0.98rem;
+    line-height: 1.45;
+    color: var(--ln-ink-body);
+    transition: color 300ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .outcomes__item:hover { color: var(--ln-ink-strong); }
+  .outcomes__item:nth-child(odd) { border-right: 1px solid var(--ln-line-faint); padding-right: 1.25rem; }
+  .outcomes__item:nth-child(even) { padding-left: 1.25rem; }
+
+  .outcomes__check {
+    width: 1rem;
+    height: 1rem;
+    color: var(--ln-accent);
+    flex-shrink: 0;
   }
 
   @media (max-width: 860px) {
-    .intro__grid { grid-template-columns: 1fr; }
-    .intro__media { position: static; }
-
-    .intro__source-grid { grid-template-columns: repeat(2, 1fr); }
-    .intro__source-item:not(:nth-child(-n+3)) { border-top: 1px solid var(--ln-line-faint); }
-    .intro__source-item:not(:nth-child(3n)) { border-right: none; }
-    .intro__source-item:nth-child(odd) { border-right: 1px solid var(--ln-line-faint); }
-    .intro__source-item:nth-child(n+3) { border-top: 1px solid var(--ln-line-faint); }
-  }
-
-  @media (max-width: 520px) {
-    .intro__source-grid { grid-template-columns: 1fr; }
-    .intro__source-item { border-right: none !important; }
-    .intro__source-item:not(:first-child) { border-top: 1px solid var(--ln-line-faint); }
+    .outcomes__grid { grid-template-columns: 1fr; }
+    .outcomes__head { position: static; }
+    .outcomes__list { grid-template-columns: 1fr; }
+    .outcomes__item:nth-child(odd) { border-right: none; padding-right: 0.5rem; }
+    .outcomes__item:nth-child(even) { padding-left: 0.25rem; }
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -875,14 +1051,14 @@ const stats = [
   }
 
   .pricing__card-name {
-    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
     color: var(--ln-ink-strong);
   }
 
   .pricing__card-lead {
     font-family: var(--ln-font-display);
     font-style: italic;
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     color: var(--ln-ink-body);
     line-height: 1.45;
     margin: 0;
@@ -892,6 +1068,7 @@ const stats = [
     display: flex;
     align-items: baseline;
     gap: 0.7rem;
+    flex-wrap: wrap;
     padding: 1rem 0;
     border-top: 1px solid var(--ln-line-faint);
     border-bottom: 1px solid var(--ln-line-faint);
@@ -899,7 +1076,7 @@ const stats = [
 
   .pricing__price-value {
     font-family: var(--ln-font-display);
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: clamp(1.85rem, 3.2vw, 2.5rem);
     font-weight: 500;
     color: var(--ln-ink-strong);
     line-height: 1;
@@ -971,71 +1148,121 @@ const stats = [
       max-width: 32rem;
       margin: 0 auto;
     }
-    .pricing__card--featured {
-      transform: translateY(0);
-      order: -1;
-    }
+    .pricing__card--featured { transform: translateY(0); order: -1; }
     .pricing__card--featured:hover { transform: translateY(-4px); }
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     REVIEWS
+     REVIEWS — external link cards
      ═══════════════════════════════════════════════════════════════ */
-  .reviews__grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.3fr;
-    gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: center;
-  }
-
   .reviews__head {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
-    max-width: 44rem;
     margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    max-width: 44rem;
   }
 
-  .reviews__card-inner {
-    padding: clamp(2rem, 3.5vw, 3rem);
-    position: relative;
+  .reviews__title { margin: 0; }
+
+  .reviews__carousel-wrap {
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
   }
 
-  .reviews__mark {
-    width: 3rem;
-    height: 2.4rem;
-    color: var(--ln-accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .reviews__quote {
+  .reviews__more-label {
     font-family: var(--ln-font-display);
-    font-style: italic;
-    font-size: clamp(1.1rem, 1.7vw, 1.35rem);
-    line-height: 1.55;
-    color: var(--ln-ink-strong);
-    margin: 0 0 1.75rem;
-    quotes: none;
+    font-size: 1rem;
+    color: var(--ln-ink-mute);
+    margin: 0 0 1.25rem;
+    text-align: center;
   }
 
-  .reviews__caption {
+  .reviews__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .reviews__link-card {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .reviews__link-card:hover { transform: translateY(-3px); }
+
+  .reviews__link-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.75rem 1.75rem 1.75rem 1.5rem;
+    width: 100%;
+  }
+
+  .reviews__link-icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(230, 225, 255, 0.04);
+    border: 1px solid var(--ln-line);
+    color: var(--ln-accent);
+    flex-shrink: 0;
+    transition: background 400ms, border-color 400ms;
+  }
+  .reviews__link-icon svg { width: 1.5rem; height: 1.5rem; }
+  .reviews__link-card:hover .reviews__link-icon {
+    background: rgba(184, 157, 255, 0.08);
+    border-color: rgba(184, 157, 255, 0.28);
+  }
+
+  .reviews__link-copy {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--ln-line-faint);
+    gap: 0.25rem;
+    min-width: 0;
   }
 
-  .reviews__author {
-    font-family: var(--ln-font-body);
-    font-size: 0.95rem;
+  .reviews__link-kicker {
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+  }
+
+  .reviews__link-title {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
     font-weight: 500;
     color: var(--ln-ink-strong);
   }
 
-  @media (max-width: 860px) {
-    .reviews__grid { grid-template-columns: 1fr; }
+  .reviews__link-sub {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ln-ink-body);
+  }
+
+  .reviews__link-arrow {
+    font-family: var(--ln-font-mono);
+    font-size: 1.1rem;
+    color: var(--ln-ink-mute);
+    transition: transform 600ms cubic-bezier(0.32, 0.72, 0, 1), color 400ms;
+  }
+  .reviews__link-card:hover .reviews__link-arrow {
+    transform: translate(3px, -3px);
+    color: var(--ln-accent);
+  }
+
+  @media (max-width: 720px) {
+    .reviews__links { grid-template-columns: 1fr; }
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -1212,19 +1439,7 @@ const stats = [
 
   .final__inner > * { position: relative; z-index: 1; }
 
-  .final__question {
-    max-width: 26ch;
-    margin: 0 auto;
-  }
-
-  .final__sub-lead {
-    font-family: var(--ln-font-display);
-    font-style: italic;
-    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-    color: var(--ln-ink-body);
-    margin: 0;
-    max-width: 32rem;
-  }
+  .final__question { max-width: 24ch; margin: 0 auto; }
 
   .final__cta {
     margin-top: 0.5rem;
@@ -1312,7 +1527,7 @@ const stats = [
   .bio__name { margin: 0; }
 
   .bio__lead {
-    max-width: 28rem;
+    max-width: 30rem;
     margin: 0;
   }
 
@@ -1339,28 +1554,13 @@ const stats = [
     transition: padding-left 500ms cubic-bezier(0.32, 0.72, 0, 1), color 300ms;
   }
   .bio__list-item:last-child { border-bottom: 1px solid var(--ln-line-faint); }
-  .bio__list-item:hover {
-    padding-left: 0.4rem;
-    color: var(--ln-ink-strong);
-  }
+  .bio__list-item:hover { padding-left: 0.4rem; color: var(--ln-ink-strong); }
 
   .bio__list-mark {
     width: 0.8rem;
     height: 0.8rem;
     color: var(--ln-accent);
     flex-shrink: 0;
-  }
-
-  .bio__closing {
-    margin: 1.25rem 0 0;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--ln-line-faint);
-    font-family: var(--ln-font-display);
-    font-style: italic;
-    font-size: clamp(1rem, 1.4vw, 1.15rem);
-    line-height: 1.55;
-    color: var(--ln-ink-body);
-    max-width: 32rem;
   }
 
   @media (max-width: 860px) {
