@@ -1,0 +1,460 @@
+---
+/**
+ * Floating glass-pill navigation for standalone landings.
+ * - Closed: detached pill that shrinks on scroll (classes toggled via IO)
+ * - Open (mobile): screen-filling overlay with staggered link reveal
+ * - Hamburger morphs into 'X' via pure CSS (two lines rotated 45°/-45°)
+ */
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const links = [
+  { label: 'Вики', href: `${base}` },
+  { label: 'Услуги', href: `${base}services/` },
+  { label: 'Контакты', href: `${base}contact/` },
+];
+---
+
+<header class="ln-nav" data-nav>
+  <a class="ln-nav__brand" href={base} aria-label="На главную вики">
+    <span class="ln-nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9" opacity="0.28" />
+        <circle cx="12" cy="12" r="5.5" opacity="0.6" />
+        <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+      </svg>
+    </span>
+    <span class="ln-nav__wordmark">
+      <span class="ln-nav__wordmark-top">Фрактальная</span>
+      <span class="ln-nav__wordmark-bottom"><em>Соционика</em></span>
+    </span>
+  </a>
+
+  <nav class="ln-nav__links" aria-label="Разделы">
+    {links.map((link) => (
+      <a href={link.href} class="ln-nav__link">
+        <span>{link.label}</span>
+      </a>
+    ))}
+  </nav>
+
+  <a class="ln-nav__cta ln-btn ln-btn--primary" href={`${base}contact/`}>
+    <span class="ln-btn__shine" aria-hidden="true"></span>
+    <span>Записаться</span>
+    <span class="ln-btn__icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" /></svg>
+    </span>
+  </a>
+
+  <button class="ln-nav__toggle" type="button" aria-expanded="false" aria-controls="ln-mobile-menu" aria-label="Открыть меню" data-nav-toggle>
+    <span class="ln-nav__burger" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+</header>
+
+<div class="ln-nav__scrim" data-nav-scrim aria-hidden="true"></div>
+
+<div class="ln-nav__mobile" id="ln-mobile-menu" data-nav-mobile aria-hidden="true">
+  <div class="ln-nav__mobile-inner">
+    <nav class="ln-nav__mobile-links">
+      {links.map((link, i) => (
+        <a href={link.href} class="ln-nav__mobile-link" style={`--i:${i}`}>
+          <span class="ln-nav__mobile-num">0{i + 1}</span>
+          <span class="ln-nav__mobile-label">{link.label}</span>
+          <span class="ln-nav__mobile-arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </span>
+        </a>
+      ))}
+    </nav>
+    <a class="ln-nav__mobile-cta ln-btn ln-btn--primary" href={`${base}contact/`} style={`--i:${links.length}`}>
+      <span class="ln-btn__shine" aria-hidden="true"></span>
+      <span>Записаться на типирование</span>
+      <span class="ln-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .ln-nav {
+    position: fixed;
+    top: clamp(0.9rem, 2vw, 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 60;
+    width: min(calc(100% - 1.5rem), 68rem);
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    padding: 0.5rem 0.55rem 0.5rem 1.25rem;
+    border-radius: 999px;
+    background: rgba(12, 10, 22, 0.55);
+    border: 1px solid rgba(234, 228, 255, 0.09);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 20px 60px -20px rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+            backdrop-filter: blur(20px) saturate(140%);
+    transition:
+      transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      top 500ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 500ms cubic-bezier(0.32, 0.72, 0, 1),
+      border-color 500ms cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: transform;
+  }
+
+  :global(body.ln-scrolled) .ln-nav {
+    top: 0.6rem;
+    background: rgba(8, 6, 18, 0.78);
+    border-color: rgba(234, 228, 255, 0.12);
+  }
+
+  /* ─── Brand ─── */
+  .ln-nav__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    color: var(--ln-ink-strong);
+    transition: opacity 300ms;
+  }
+  .ln-nav__brand:hover { opacity: 0.88; }
+
+  .ln-nav__mark {
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%,
+      rgba(184, 157, 255, 0.35),
+      rgba(123, 44, 191, 0.2) 60%,
+      rgba(10, 8, 20, 0.6) 100%);
+    color: var(--ln-ink-strong);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 4px 14px -4px rgba(154, 120, 255, 0.4);
+  }
+  .ln-nav__mark svg { width: 1.05rem; height: 1.05rem; }
+
+  .ln-nav__wordmark {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1;
+    font-family: var(--ln-font-display);
+    letter-spacing: 0.005em;
+  }
+  .ln-nav__wordmark-top {
+    font-size: 0.62rem;
+    font-family: var(--ln-font-mono);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    margin-bottom: 0.18rem;
+  }
+  .ln-nav__wordmark-bottom {
+    font-size: 1.12rem;
+    font-weight: 500;
+  }
+  .ln-nav__wordmark-bottom em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ln-accent);
+  }
+
+  /* ─── Desktop links ─── */
+  .ln-nav__links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .ln-nav__link {
+    position: relative;
+    padding: 0.55rem 0.95rem;
+    border-radius: 999px;
+    font-family: var(--ln-font-body);
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    color: var(--ln-ink-body);
+    text-decoration: none;
+    transition:
+      color 300ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 400ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .ln-nav__link:hover {
+    color: var(--ln-ink-strong);
+    background: rgba(230, 225, 255, 0.06);
+  }
+  .ln-nav__link span {
+    position: relative;
+  }
+  .ln-nav__link span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1), opacity 300ms;
+  }
+  .ln-nav__link:hover span::after {
+    transform: scaleX(1);
+    opacity: 0.5;
+  }
+
+  /* ─── CTA ─── */
+  .ln-nav__cta {
+    font-size: 0.88rem;
+    padding: 0.55rem 0.45rem 0.55rem 1.1rem;
+    --btn-icon-size: 1.85rem;
+  }
+
+  /* ─── Burger toggle ─── */
+  .ln-nav__toggle {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 999px;
+    background: rgba(230, 225, 255, 0.06);
+    border: 1px solid var(--ln-line);
+    color: var(--ln-ink-strong);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background 300ms, border-color 300ms;
+  }
+  .ln-nav__toggle:hover {
+    background: rgba(230, 225, 255, 0.1);
+    border-color: rgba(234, 228, 255, 0.2);
+  }
+
+  .ln-nav__burger {
+    position: relative;
+    width: 18px;
+    height: 12px;
+    display: inline-block;
+  }
+  .ln-nav__burger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 600ms cubic-bezier(0.32, 0.72, 0, 1), opacity 300ms;
+  }
+  .ln-nav__burger span:nth-child(1) { top: 2px; }
+  .ln-nav__burger span:nth-child(2) { bottom: 2px; }
+
+  :global(body.ln-menu-open) .ln-nav__burger span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  :global(body.ln-menu-open) .ln-nav__burger span:nth-child(2) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  /* ─── Scrim ─── */
+  .ln-nav__scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    background: rgba(5, 4, 12, 0.72);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  :global(body.ln-menu-open) .ln-nav__scrim {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ─── Mobile menu ─── */
+  .ln-nav__mobile {
+    position: fixed;
+    inset: 0;
+    z-index: 58;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .ln-nav__mobile-inner {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ln-nav__mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .ln-nav__mobile-link {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 1.25rem;
+    background: rgba(20, 16, 36, 0.6);
+    border: 1px solid var(--ln-line);
+    color: var(--ln-ink-strong);
+    text-decoration: none;
+    font-family: var(--ln-font-display);
+    font-size: 1.85rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.005em;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+      opacity 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 300ms;
+    transition-delay: 0ms;
+  }
+  .ln-nav__mobile-link:hover {
+    background: rgba(30, 22, 52, 0.75);
+  }
+
+  .ln-nav__mobile-num {
+    font-family: var(--ln-font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    color: var(--ln-ink-mute);
+  }
+
+  .ln-nav__mobile-arrow {
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid var(--ln-line);
+    color: var(--ln-ink-strong);
+    transition: transform 600ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .ln-nav__mobile-arrow svg { width: 0.85rem; height: 0.85rem; }
+  .ln-nav__mobile-link:hover .ln-nav__mobile-arrow {
+    transform: translate(3px, -1px);
+  }
+
+  .ln-nav__mobile-cta {
+    justify-content: space-between;
+    padding: 1rem 0.55rem 1rem 1.5rem;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+      opacity 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      box-shadow 700ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  :global(body.ln-menu-open) .ln-nav__mobile { pointer-events: auto; }
+  :global(body.ln-menu-open) .ln-nav__mobile-link,
+  :global(body.ln-menu-open) .ln-nav__mobile-cta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(120ms + var(--i) * 70ms);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 960px) {
+    .ln-nav {
+      grid-template-columns: auto 1fr auto;
+      padding: 0.4rem 0.45rem 0.4rem 0.9rem;
+    }
+    .ln-nav__links { display: none; }
+    .ln-nav__cta { display: none; }
+    .ln-nav__toggle { display: inline-flex; }
+    .ln-nav__wordmark-top { display: none; }
+    .ln-nav__wordmark-bottom { font-size: 1rem; }
+  }
+
+  @media (max-width: 520px) {
+    .ln-nav {
+      width: calc(100% - 1.25rem);
+      padding: 0.35rem 0.4rem 0.35rem 0.7rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ln-nav, .ln-nav__mobile-link, .ln-nav__mobile-cta,
+    .ln-nav__burger span, .ln-nav__scrim {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  const body = document.body;
+  const toggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const scrim = document.querySelector<HTMLDivElement>('[data-nav-scrim]');
+  const mobile = document.querySelector<HTMLDivElement>('[data-nav-mobile]');
+
+  function setMenu(open: boolean) {
+    body.classList.toggle('ln-menu-open', open);
+    toggle?.setAttribute('aria-expanded', String(open));
+    toggle?.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    mobile?.setAttribute('aria-hidden', String(!open));
+    if (open) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = body.classList.contains('ln-menu-open');
+    setMenu(!isOpen);
+  });
+
+  scrim?.addEventListener('click', () => setMenu(false));
+
+  mobile?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => setMenu(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && body.classList.contains('ln-menu-open')) setMenu(false);
+  });
+
+  // Scroll-driven nav state via rAF (no scroll listener reflow)
+  let ticking = false;
+  function update() {
+    const scrolled = window.scrollY > 40;
+    body.classList.toggle('ln-scrolled', scrolled);
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  update();
+</script>

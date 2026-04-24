@@ -1,0 +1,182 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const year = new Date().getFullYear();
+---
+
+<footer class="ln-footer">
+  <div class="ln-shell">
+    <div class="ln-footer__inner">
+      <div class="ln-footer__lede" data-reveal>
+        <span class="ln-eyebrow"><span class="ln-eyebrow__dot"></span>Связаться</span>
+        <p class="ln-footer__headline">
+          Вопросы, запись, сотрудничество — напишите.<br />
+          <em>Отвечаю лично.</em>
+        </p>
+        <a class="ln-btn ln-btn--ghost" href={`${base}contact/`}>
+          <span>Все способы связи</span>
+          <span class="ln-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <nav class="ln-footer__cols" aria-label="Разделы сайта">
+        <div class="ln-footer__col" data-reveal data-reveal-delay="1">
+          <span class="ln-footer__col-title">Навигация</span>
+          <ul>
+            <li><a href={base}>Главная</a></li>
+            <li><a href={`${base}services/`}>Услуги</a></li>
+            <li><a href={`${base}contact/`}>Контакты</a></li>
+            <li><a href={`${base}types/`}>Типы</a></li>
+            <li><a href={`${base}theory/`}>Теория</a></li>
+          </ul>
+        </div>
+        <div class="ln-footer__col" data-reveal data-reveal-delay="2">
+          <span class="ln-footer__col-title">Соционика</span>
+          <ul>
+            <li><a href={`${base}information-elements/`}>Аспекты</a></li>
+            <li><a href={`${base}functions/`}>Функции</a></li>
+            <li><a href={`${base}signs/`}>Признаки</a></li>
+            <li><a href={`${base}relations/`}>Отношения</a></li>
+            <li><a href={`${base}books/`}>Книги Чурюмова</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="ln-footer__bottom">
+      <span class="ln-footer__signet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" opacity="0.3" />
+          <circle cx="12" cy="12" r="5.5" opacity="0.55" />
+          <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+        </svg>
+        <span>Фрактальная Соционика</span>
+      </span>
+      <span class="ln-footer__meta">© {year} · Сергей Шанэри</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ln-footer {
+    position: relative;
+    padding: clamp(5rem, 10vw, 8rem) 0 3rem;
+    border-top: 1px solid var(--ln-line);
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(10, 7, 20, 0.6) 50%,
+      rgba(8, 5, 16, 0.9) 100%);
+  }
+
+  .ln-footer__inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(2.5rem, 6vw, 6rem);
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--ln-line-faint);
+  }
+
+  .ln-footer__lede {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .ln-footer__headline {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.008em;
+    color: var(--ln-ink-strong);
+    margin: 0;
+    max-width: 26rem;
+  }
+  .ln-footer__headline em {
+    font-style: italic;
+    color: var(--ln-accent);
+  }
+
+  .ln-footer__cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .ln-footer__col ul {
+    list-style: none;
+    margin: 0.9rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .ln-footer__col-title {
+    display: block;
+    font-family: var(--ln-font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+  }
+
+  .ln-footer__col a {
+    color: var(--ln-ink-body);
+    text-decoration: none;
+    font-size: 0.98rem;
+    transition: color 300ms cubic-bezier(0.32, 0.72, 0, 1),
+                padding-left 400ms cubic-bezier(0.32, 0.72, 0, 1);
+    display: inline-block;
+  }
+  .ln-footer__col a:hover {
+    color: var(--ln-ink-strong);
+    padding-left: 0.3rem;
+  }
+
+  .ln-footer__bottom {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: var(--ln-font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ln-ink-faint);
+  }
+
+  .ln-footer__signet {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--ln-ink-mute);
+  }
+  .ln-footer__signet svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--ln-accent);
+  }
+
+  @media (max-width: 720px) {
+    .ln-footer__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .ln-footer__cols {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .ln-footer__cols {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
