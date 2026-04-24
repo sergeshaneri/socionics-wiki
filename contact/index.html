@@ -41,7 +41,9 @@
 </script> <script type="module" src="/socionics-wiki/_astro/Search.astro_astro_type_script_index_0_lang.PWJZ9IQg.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <nav class="top-nav astro-bvukr3bo" aria-label="Основная навигация"> <a class="top-nav__link astro-bvukr3bo" href="/socionics-wiki/services/">Услуги</a> <a class="top-nav__link astro-bvukr3bo" href="/socionics-wiki/contact/">Контакты</a> </nav> <a href="https://github.com/sergeshaneri/socionics-wiki" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Выберите тему</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Тёмная</option><option value="light" class="astro-4yphtoen">Светлая</option><option value="auto" selected class="astro-4yphtoen">Авто</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
 	StarlightThemeProvider.updatePickers();
 </script> <script type="module">const r="starlight-theme",o=e=>e==="auto"||e==="dark"||e==="light"?e:"auto",c=()=>o(typeof localStorage<"u"&&localStorage.getItem(r));function n(e){typeof localStorage<"u"&&localStorage.setItem(r,e==="light"||e==="dark"?e:"")}const l=()=>matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";function t(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e==="auto"?l():e,n(e)}matchMedia("(prefers-color-scheme: light)").addEventListener("change",()=>{c()==="auto"&&t("auto")});class s extends HTMLElement{constructor(){super(),t(c()),this.querySelector("select")?.addEventListener("change",a=>{a.currentTarget instanceof HTMLSelectElement&&t(o(a.currentTarget.value))})}}customElements.define("starlight-theme-select",s);</script> <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div></header>  <div class="main-frame astro-vrdttmbt">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-67yu43on">  <div class="main-pane astro-67yu43on">  <main data-pagefind-body class="astro-bguv2lll" lang="ru" dir="ltr">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-guvttfii">Связаться со мной</h1>  <script type="module">const i=".sl-markdown-content :is(h2, h3, h4)[id]";function n(){document.querySelectorAll(i).forEach(e=>{if(e.querySelector(".heading-anchor"))return;const t=document.createElement("button");t.type="button",t.className="heading-anchor",t.setAttribute("aria-label",`Скопировать ссылку на «${e.textContent?.trim()??""}»`),t.textContent="#",t.addEventListener("click",async o=>{o.preventDefault();const a=`${window.location.origin}${window.location.pathname}#${e.id}`;try{await navigator.clipboard.writeText(a),t.classList.add("copied"),t.textContent="✓",setTimeout(()=>{t.classList.remove("copied"),t.textContent="#"},1200)}catch{}}),e.appendChild(t)})}n();document.addEventListener("astro:page-load",n);</script> </div> </div> <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <div class="contact-hero"><span class="contact-hero__eyebrow">Связаться</span><h1 class="contact-hero__title">Выберите удобный способ</h1><div class="contact-hero__lead"><p>Пишите в любой из каналов — отвечу при первой возможности.
-Для записи на типирование удобнее всего Telegram.</p></div></div>
+Или сразу откройте страницу услуги, которая интересует.</p></div></div>
+<div class="contact-services not-content"><span class="contact-services__eyebrow">Услуги</span><div class="contact-services__grid"><a class="contact-service" href="/socionics-wiki/typing/"><span class="contact-service__kicker">От 3 000 ₽</span><span class="contact-service__title">Соционическое типирование</span><span class="contact-service__lead">Интервью с диагностикой ТИМа и обучение осознанности.</span><span class="contact-service__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a><a class="contact-service" href="/socionics-wiki/human-design/"><span class="contact-service__kicker">От 3 000 ₽</span><span class="contact-service__title">Дизайн Человека</span><span class="contact-service__lead">Интегральный разбор в подходе духовной психотерапии.</span><span class="contact-service__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a><a class="contact-service" href="/socionics-wiki/therapy/"><span class="contact-service__kicker">От 1 000 ₽</span><span class="contact-service__title">Духовная психотерапия</span><span class="contact-service__lead">Терапевтические консультации и целительные медитации.</span><span class="contact-service__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a></div></div>
+<div class="contact-section-label"><span>или напишите напрямую</span></div>
 <div class="contact-grid not-content"><a class="contact-channel astro-izfm3qnq" href="https://t.me/SergeyShaneri" target="_blank" rel="noopener noreferrer"> <span class="contact-channel__icon astro-izfm3qnq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></span> <div class="contact-channel__body astro-izfm3qnq"> <span class="contact-channel__name astro-izfm3qnq"> Telegram <span class="contact-channel__shevron astro-izfm3qnq" aria-hidden="true">›</span> </span> <span class="contact-channel__handle astro-izfm3qnq">@SergeyShaneri</span> <span class="contact-channel__desc astro-izfm3qnq">Самый быстрый способ связи</span> </div> </a><a class="contact-channel astro-izfm3qnq" href="https://vk.com/shaneri" target="_blank" rel="noopener noreferrer"> <span class="contact-channel__icon astro-izfm3qnq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.785 16.241s.288-.032.435-.193c.136-.148.131-.427.131-.427s-.019-1.301.582-1.495c.593-.19 1.355 1.267 2.163 1.828.611.424 1.075.331 1.075.331l2.16-.03s1.131-.07.595-.968c-.043-.073-.311-.661-1.608-1.877-1.356-1.277-1.173-1.07.46-3.267.995-1.334 1.393-2.15 1.269-2.502-.119-.334-.858-.246-.858-.246l-2.459.016s-.182-.025-.317.056c-.133.081-.217.267-.217.267s-.384 1.029-.896 1.904c-1.081 1.846-1.514 1.944-1.69 1.83-.411-.267-.309-1.078-.309-1.655 0-1.799.273-2.55-.531-2.744-.267-.065-.463-.108-1.143-.115-.874-.009-1.614.003-2.033.208-.279.137-.494.442-.363.459.162.022.529.099.723.365.252.343.243 1.115.243 1.115s.145 2.125-.337 2.389c-.331.181-.785-.188-1.749-1.862-.494-.857-.867-1.804-.867-1.804s-.072-.177-.202-.271c-.16-.116-.381-.152-.381-.152l-2.336.015s-.351.01-.481.163c-.114.135-.008.416-.008.416s1.83 4.278 3.902 6.434c1.9 1.977 4.057 1.847 4.057 1.847h.977z"/></svg></span> <div class="contact-channel__body astro-izfm3qnq"> <span class="contact-channel__name astro-izfm3qnq"> VK <span class="contact-channel__shevron astro-izfm3qnq" aria-hidden="true">›</span> </span> <span class="contact-channel__handle astro-izfm3qnq">vk.com/shaneri</span> <span class="contact-channel__desc astro-izfm3qnq">Посты, анонсы, отзывы</span> </div> </a><a class="contact-channel astro-izfm3qnq" href="https://www.youtube.com/@SergeyShaneri" target="_blank" rel="noopener noreferrer"> <span class="contact-channel__icon astro-izfm3qnq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span> <div class="contact-channel__body astro-izfm3qnq"> <span class="contact-channel__name astro-izfm3qnq"> YouTube <span class="contact-channel__shevron astro-izfm3qnq" aria-hidden="true">›</span> </span> <span class="contact-channel__handle astro-izfm3qnq">@SergeyShaneri</span> <span class="contact-channel__desc astro-izfm3qnq">Лекции, доклады, разборы</span> </div> </a><a class="contact-channel astro-izfm3qnq" href="mailto:shaneri.ser@gmail.com"> <span class="contact-channel__icon astro-izfm3qnq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> <div class="contact-channel__body astro-izfm3qnq"> <span class="contact-channel__name astro-izfm3qnq"> Почта <span class="contact-channel__shevron astro-izfm3qnq" aria-hidden="true">›</span> </span> <span class="contact-channel__handle astro-izfm3qnq">shaneri.ser@gmail.com</span> <span class="contact-channel__desc astro-izfm3qnq">Для развёрнутых вопросов и файлов</span> </div> </a><a class="contact-channel astro-izfm3qnq" href="tel:+79525115937"> <span class="contact-channel__icon astro-izfm3qnq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> <div class="contact-channel__body astro-izfm3qnq"> <span class="contact-channel__name astro-izfm3qnq"> Телефон <span class="contact-channel__shevron astro-izfm3qnq" aria-hidden="true">›</span> </span> <span class="contact-channel__handle astro-izfm3qnq">+7 952 511-59-37</span> <span class="contact-channel__desc astro-izfm3qnq">Звонок или WhatsApp</span> </div> </a></div>
 <style>
 .contact-hero {
@@ -83,6 +85,166 @@
   color: var(--sl-color-text-weak);
 }
 
+.contact-services {
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+}
+
+.contact-services__eyebrow {
+  display: block;
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-weak);
+  opacity: 0.75;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 880px) {
+  .contact-services__grid { grid-template-columns: 1fr; }
+}
+
+.contact-service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.4rem 1.6rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(170deg, rgba(28, 22, 46, 0.72), rgba(14, 10, 26, 0.78));
+  border: 1px solid rgba(230, 225, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    var(--panel-shadow);
+  text-decoration: none;
+  color: inherit;
+  isolation: isolate;
+  transition:
+    border-color 500ms cubic-bezier(0.32, 0.72, 0, 1),
+    box-shadow 700ms cubic-bezier(0.32, 0.72, 0, 1),
+    transform 500ms cubic-bezier(0.32, 0.72, 0, 1),
+    background 500ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.contact-service:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 157, 255, 0.28);
+  background:
+    linear-gradient(170deg, rgba(36, 28, 58, 0.78), rgba(18, 14, 32, 0.82));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    var(--panel-shadow),
+    0 24px 60px -20px rgba(123, 44, 191, 0.35);
+}
+
+.contact-service__kicker {
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-weak);
+}
+
+.contact-service__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 1.6vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--sl-color-white);
+  letter-spacing: 0.005em;
+  margin-top: 0.1rem;
+}
+
+.contact-service__lead {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--sl-color-text-weak);
+  margin-top: 0.15rem;
+}
+
+.contact-service__arrow {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 1.85rem;
+  height: 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(230, 225, 255, 0.04);
+  border: 1px solid rgba(230, 225, 255, 0.1);
+  color: var(--sl-color-text-weak);
+  transition:
+    transform 600ms cubic-bezier(0.32, 0.72, 0, 1),
+    background 400ms cubic-bezier(0.32, 0.72, 0, 1),
+    color 400ms cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.contact-service__arrow svg { width: 0.85rem; height: 0.85rem; }
+
+.contact-service:hover .contact-service__arrow {
+  transform: translate(2px, -2px);
+  background: rgba(184, 157, 255, 0.12);
+  border-color: rgba(184, 157, 255, 0.32);
+  color: rgba(245, 242, 255, 0.98);
+}
+
+.contact-section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin: 0 auto 1.75rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--sl-color-text-weak);
+  opacity: 0.75;
+}
+
+.contact-section-label::before,
+.contact-section-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: rgba(230, 225, 255, 0.12);
+}
+
+:root[data-theme='light'] .contact-service {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(26, 22, 39, 0.08);
+}
+:root[data-theme='light'] .contact-service:hover {
+  border-color: rgba(106, 27, 154, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+}
+:root[data-theme='light'] .contact-service__title {
+  color: #1a1627;
+}
+:root[data-theme='light'] .contact-service__kicker,
+:root[data-theme='light'] .contact-services__eyebrow,
+:root[data-theme='light'] .contact-section-label {
+  color: rgba(26, 22, 39, 0.6);
+}
+:root[data-theme='light'] .contact-service__lead {
+  color: rgba(26, 22, 39, 0.7);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -102,4 +264,4 @@
 :root[data-theme='light'] .contact-hero__eyebrow {
   color: rgba(26, 22, 39, 0.55);
 }
-</style> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">  <p>Последнее обновление: <time datetime="2026-04-24T17:35:56.000Z">24 апр. 2026 г.</time></p> </div> <div class="pagination-links print:hidden astro-u2l5gyhi" dir="ltr"> <a href="/socionics-wiki/services/" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg> <span class="astro-u2l5gyhi"> Назад <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Услуги</span> </span> </a> <a href="/socionics-wiki/beginners/" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg> <span class="astro-u2l5gyhi"> Вперёд <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Для начинающих</span> </span> </a> </div>  </footer> </div> </div>  </main> </div> </div> </div> </div> </body></html>
+</style> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">  <p>Последнее обновление: <time datetime="2026-04-24T18:40:08.000Z">24 апр. 2026 г.</time></p> </div> <div class="pagination-links print:hidden astro-u2l5gyhi" dir="ltr"> <a href="/socionics-wiki/services/" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg> <span class="astro-u2l5gyhi"> Назад <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Услуги</span> </span> </a> <a href="/socionics-wiki/beginners/" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg> <span class="astro-u2l5gyhi"> Вперёд <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Для начинающих</span> </span> </a> </div>  </footer> </div> </div>  </main> </div> </div> </div> </div> </body></html>
