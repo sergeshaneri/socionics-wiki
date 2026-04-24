@@ -1,0 +1,1383 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const tiers = [
+  {
+    name: 'Начало самопознания',
+    price: '3 000 ₽',
+    priceNote: '40 минут',
+    lead: 'Первичная информация и ответы на готовые вопросы.',
+    items: [
+      'Сессия-знакомство 40 минут онлайн',
+      'Стратегия и внутренний авторитет',
+      'Ответы на ваши готовые вопросы',
+      'Запись встречи',
+    ],
+    ctaLabel: 'Записаться',
+  },
+  {
+    name: 'Полный разбор',
+    price: '14 000 ₽',
+    priceNote: '2 × 1 час',
+    lead: 'Две часовых консультации с полным разбором карты и профиля.',
+    items: [
+      'Две часовых консультации онлайн',
+      'Информация обо всех центрах (чакрах)',
+      'Порядок проработок Генных Ключей',
+      'Чтение бодиграфа',
+      'Хологенетический профиль',
+      'Интегральный Дизайн Человека',
+      'Запись встреч',
+    ],
+    ctaLabel: 'Записаться',
+    featured: true,
+  },
+  {
+    name: 'Индивидуальное погружение',
+    price: '60 000 ₽',
+    priceNote: '2 месяца',
+    lead: 'Авторские практики, терапевтические медитации и освоение ИДЧ в повседневной жизни.',
+    items: [
+      'Два месяца теории и практики',
+      '5 часовых консультаций',
+      '2 большие встречи (2+ часа) с медитациями',
+      'Работа с запросами даже вне Дизайна Человека',
+      'Хологенетический профиль, бодиграф и все центры',
+      'Терапевтические медитации под запрос',
+      'Запись всех встреч',
+    ],
+    ctaLabel: 'Записаться',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Что делать, если не знаю точное время рождения?',
+    a: 'Зависит от того, насколько известен промежуток. Если это несколько часов — можно посмотреть, возможно изменения будут минимальны и это не повлияет на консультацию. Если известна только дата — есть смысл задуматься о ректификации времени рождения (процедуре уточнения). Ректификацию можно сделать разными способами: заказать у астролога; воспользоваться инструментами для сонастройки с интуицией (маятник, карты, мускульный тест); или запросить ответ у Высшего Я (Души). В некоторых ситуациях я могу проконсультировать и не зная времени — это решается индивидуально. Обращайтесь — обсудим.',
+  },
+  {
+    q: 'Получу ли я свою карту с бодиграфом и хологенетическим профилем?',
+    a: 'Да, вы получите ссылки на все необходимые сайты, где можно посмотреть бодиграф, активные центры и каналы, хологенетический профиль, последовательности и сферы Золотого Пути.',
+  },
+  {
+    q: 'Узнаю ли я своё предназначение? В чём моя миссия? Какое у меня призвание?',
+    a: 'Предназначение — в каждом моменте жизни, в каждом вдохе и действии. Интегральный Дизайн Человека помогает сонастроиться с собой и с ощущением, что идёшь по своему пути, а также подсвечивает темы, которые нужно проработать для реализации в социуме. Для реализации предназначения важно понимать свои интересы и уметь освобождаться от эмоциональных блоков. ИДЧ не говорит, на какую пойти работу — скорее показывает энергии, которые необходимо проявлять, чтобы быть собой в любом месте и притягивать единомышленников по миссии в этом воплощении.',
+  },
+  {
+    q: 'Что делать, если я уже немного понимаю Дизайн Человека и у меня есть один-два конкретных вопроса?',
+    a: 'Вам подойдёт 45-минутная консультация. Напишите мне вопрос, познакомимся — и я уточню вашу тему своим пониманием Генных Ключей, Интегрального Дизайна Человека и духовной психологии.',
+  },
+  {
+    q: 'Поможет ли мне Интегральный Дизайн Человека обрести вдохновение?',
+    a: 'Согласно Дизайну Человека у каждого есть свой уникальный способ принятия решения и навигации в этом мире. На консультациях я показываю, как сонастроиться с собственным вкусом вдохновения. Генные Ключи помогают поднять вибрации своих энергий и проявлять те же качества, больше испытывая открытость, любовь, желание сотворять и служить.',
+  },
+  {
+    q: 'Поможет ли мне Интегральный Дизайн Человека нащупать источник счастья?',
+    a: 'Работа с Генными Ключами направлена на исцеление сердца — то есть духовную психотерапию. Самый главный источник счастья у нас внутри, и чтобы полноценно им пользоваться, нужно взять ответственность за своё исцеление. Золотой Путь показывает ключевые темы, которые нужно проработать для открытия внутреннего источника любви и исцеления травмы (сферы Духовный Интеллект и Ядро Сакральной Раны в Хологенетическом Профиле).',
+  },
+  {
+    q: 'Интегральный Дизайн Человека расскажет о моих взаимоотношениях с противоположным полом?',
+    a: 'Дизайн Человека рассказывает, какие энергии взаимно притягивают партнёров, как они усиливают друг друга и где могут друг друга подавлять. В Генных Ключах активации Луны, Венеры и Марса показывают темы, необходимые для исцеления кармы через отношения: что нужно в себе осознать, чтобы стабильнее чувствовать себя в отношениях и притягивать партнёра, наиболее полезного для духовного пути. Большое внимание уделяется Сакральной Ране — она актуальна для исцеления любых травм.',
+  },
+  {
+    q: 'Я узнаю свои сильные и слабые стороны? В чём моя уникальность?',
+    a: 'У каждого могут быть любые сильные и слабые стороны, зависящие от многих факторов: наработок Рода, опыта Души, культуры, в которой человек вырос. Генные Ключи показывают постоянно свойственные вам энергии (темы в жизни), как они проявляются на низких вибрациях и что делать, чтобы переходить на высокие — другими словами, как свои слабые стороны перевести в сильные. Дизайн Человека показывает, на каких темах не нужно слишком много заморачиваться (Ложное Я), а на что в себе полагаться как на приоритетные качества личности (Внутренний Авторитет).',
+  },
+  {
+    q: 'Как лучше себя узнать и понять?',
+    a: 'Дизайн Человека показывает грани, на которые можно в себе всегда положиться (Внутренний Авторитет). Через эти темы происходит сонастройка с телом, а тело — благодаря контакту с подсознанием — чувствует нашу судьбу и помогает идти по ней наиболее гармоничным образом. Генные Ключи показывают темы, которые вы «не можете не делать». Развитие основных качеств гарантирует рост и усиление — через них проще всего начать самопознание.',
+  },
+  {
+    q: 'Поможет ли ИДЧ понять, какие принять решения?',
+    a: 'Во время консультации я рассказываю, на какой из внутренних голосов полагаться в принятии решений, и лучшую стратегию для сонастройки с телом и Высшим Я. В разных ситуациях нужно пользоваться разными своими гранями, чем-то вроде внутренних голосов. Согласно Интегральному Дизайну Человека, мы можем развить в себе их все — потому что по своей природе мы целостны. Отличать один голос (энергетический центр) от другого и сонастраиваться с ними вы сможете, пройдя погружение в ИДЧ.',
+  },
+  {
+    q: 'Поможет ли ИДЧ принять и полюбить себя?',
+    a: 'Последовательность Венеры — это специальные активации, темы, прорабатывая которые вы открываете своё сердце. Генные Ключи хорошо согласуются с современными методами психотерапии и направлены на самостоятельное глубинное исцеление.',
+  },
+  {
+    q: 'Что проработать, чтобы были деньги? Что мешает процветанию?',
+    a: 'Интегральный Дизайн Человека показывает «племенные» активации в карте — это темы, проработка которых актуальна в этом воплощении. Их энергии направлены на взаимодействие с людьми в команде, взаимное сотрудничество, заработок денег и процветание. Они также показывают подходящие роли в команде. В Генных Ключах Жемчужная Последовательность показывает, как активации Юпитера увеличивают социальную энергию (деньги!) и дают нужные знакомства. На полном разборе я рассказываю обо всех этих темах, а также о Сакральной Ране — кульминации Золотого Пути, — чтобы травма не остановила вас от служения и реализации.',
+  },
+  {
+    q: 'Как мне подавать, продавать, транслировать себя?',
+    a: 'Интегральный Дизайн Человека показывает стратегию принятия решений и роль в обществе (профиль и линии). В Генных Ключах «Бренд» указывает ваш способ самопрезентации, чтобы общество воспринимало вас аутентично. Активации Меркурия показывают идеи, которые вам естественно транслировать в обществе.',
+  },
+  {
+    q: 'Я уже пытался разобраться в Дизайне Человека или Генных Ключах, но у меня нет ясной картинки.',
+    a: 'На полном разборе за 2 встречи я помогаю осознать все свои активации и даю обратную связь по вашим примерам — чтобы вы могли соотнести эти абстракции со своим конкретным опытом.',
+  },
+];
+
+const sources = [
+  { label: 'Астрология' },
+  { label: 'Чакры' },
+  { label: 'И-Цзин', sub: 'Книга Перемен' },
+  { label: 'Нью-Эйдж', sub: 'и эзотерика' },
+  { label: 'Психотерапия' },
+  { label: 'Уроки Души' },
+];
+
+const bioList = [
+  'Работа с Дизайном Человека и Генными Ключами — 7 лет',
+  'Ведущий терапевтических медитаций',
+  'Опыт в психотерапии — 8 лет',
+  'Обучался психологии у Екатерины Самойловой',
+  'Опыт в соционике — 12 лет',
+  'Ученик Семёна Чурюмова',
+  'Более 2 000 типирований',
+  'Более 20 докладов на соционических конференциях',
+];
+
+const stats = [
+  { value: '7+', label: 'лет с Дизайном Человека' },
+  { value: '8+', label: 'лет психотерапевтической практики' },
+  { value: '12+', label: 'лет в соционике' },
+];
+---
+
+<LandingLayout
+  title="Интегральный Дизайн Человека — Сергей Шанэри"
+  description="Консультации по Дизайну Человека и Генным Ключам в подходе духовной психотерапии. Бодиграф, хологенетический профиль, Золотой Путь, Генные Ключи."
+  canonical="human-design/"
+>
+  {/* ─────────────────── HERO ─────────────────── */}
+  <section class="hero">
+    <div class="hero__aurora" aria-hidden="true"></div>
+    <div class="ln-shell ln-shell--narrow hero__inner">
+      <div class="hero__meta" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Консультации · Сергей Шанэри
+        </span>
+      </div>
+
+      <h1 class="ln-display hero__title" data-reveal data-reveal-delay="1">
+        Интегральный<br />
+        Дизайн Человека.<br />
+        <em>Духовная психотерапия.</em>
+      </h1>
+
+      <p class="ln-lead hero__lead" data-reveal data-reveal-delay="2">
+        Помогу воспользоваться выводами из систем самопознания —
+        без погружения в теорию.
+      </p>
+
+      <div class="hero__actions" data-reveal data-reveal-delay="3">
+        <a class="ln-btn ln-btn--primary" href={`${base}contact/`}>
+          <span class="ln-btn__shine" aria-hidden="true"></span>
+          <span>Записаться</span>
+          <span class="ln-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+        <a class="ln-btn ln-btn--ghost" href="#pricing">
+          <span>Что входит</span>
+          <span class="ln-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M4 6L8 10L12 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__stats" data-reveal data-reveal-delay="4">
+        {stats.map((s) => (
+          <div class="hero__stat">
+            <span class="hero__stat-value">{s.value}</span>
+            <span class="hero__stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">Прокрутить</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  {/* ─────────────────── МЕТОД + ВИДЕО ─────────────────── */}
+  <section class="intro ln-section">
+    <div class="ln-shell intro__grid">
+      <header class="intro__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Подход
+        </span>
+        <h2 class="ln-h2 intro__title">
+          Инструмент<br />
+          <em>передовой духовной психотерапии.</em>
+        </h2>
+        <p class="ln-body intro__body">
+          ИДЧ — совокупность систем самопознания, которые помогают работать
+          с&nbsp;предназначением, сильными сторонами, осознанностью, а&nbsp;также
+          эмоциями, личными травмами и&nbsp;отношениями.
+        </p>
+
+        <blockquote class="intro__quote">
+          <span aria-hidden="true" class="intro__quote-mark">“</span>
+          <p>
+            На своих консультациях я&nbsp;варьирую методы под запрос, клиента
+            и&nbsp;состояние — работаю по&nbsp;потоку.
+          </p>
+        </blockquote>
+
+        <p class="ln-body intro__body">
+          Запись консультации поможет освежить выводы — информации и&nbsp;инсайтов
+          много. Для новичков я&nbsp;вижу пользу в&nbsp;том, чтобы понять,
+          как принимать решения, что в&nbsp;себе слушать и&nbsp;чего не&nbsp;делать.
+        </p>
+
+        <a class="ln-underlink" href={`${base}podcast-human-design/`}>
+          <span>Подробный подкаст про Дизайн Человека и Генные Ключи</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </header>
+
+      <div class="intro__media" data-reveal data-reveal-delay="2">
+        <div class="ln-bezel intro__video-bezel">
+          <div class="ln-bezel__inner intro__video-inner">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/MfoToyRdsaM"
+              title="Интегральный Дизайн Человека — введение"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <p class="intro__caption">
+          <em>Короткое введение в подход: что такое Интегральный Дизайн Человека и зачем.</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="ln-shell intro__sources" data-reveal data-reveal-delay="3">
+      <span class="intro__sources-title">
+        Интегральный Дизайн Человека объединяет идеи из&nbsp;систем
+      </span>
+      <ul class="intro__source-grid">
+        {sources.map((s) => (
+          <li class="intro__source-item">
+            <svg class="intro__source-mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+              <circle cx="6" cy="6" r="4.5" opacity="0.35" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+            <span class="intro__source-label">
+              {s.label}
+              {s.sub && <span class="intro__source-sub">{s.sub}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {/* ─────────────────── ТАРИФЫ ─────────────────── */}
+  <section id="pricing" class="pricing ln-section">
+    <div class="ln-shell ln-shell--wide">
+      <header class="pricing__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Стоимость
+        </span>
+        <h2 class="ln-h2 pricing__title">
+          Три формата —<br />
+          <em>подбираем под запрос.</em>
+        </h2>
+      </header>
+
+      <div class="pricing__grid">
+        {tiers.map((tier, i) => (
+          <article
+            class:list={['pricing__card ln-bezel', tier.featured && 'pricing__card--featured']}
+            data-reveal
+            data-reveal-delay={i + 1}
+          >
+            <div class="ln-bezel__inner pricing__card-inner">
+              <header class="pricing__card-head">
+                <h3 class="ln-h3 pricing__card-name">{tier.name}</h3>
+                <p class="pricing__card-lead">{tier.lead}</p>
+              </header>
+
+              <div class="pricing__price">
+                <span class="pricing__price-value">{tier.price}</span>
+                <span class="pricing__price-note">{tier.priceNote}</span>
+              </div>
+
+              <ul class="pricing__features">
+                {tier.items.map((item) => (
+                  <li>
+                    <svg class="pricing__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                      <path d="M3 8.5L6.5 12L13 4.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                class:list={['pricing__cta', 'ln-btn', tier.featured ? 'ln-btn--primary' : 'ln-btn--ghost']}
+                href={`${base}contact/`}
+              >
+                {tier.featured && <span class="ln-btn__shine" aria-hidden="true"></span>}
+                <span>{tier.ctaLabel}</span>
+                <span class="ln-btn__icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+
+              {tier.featured && <span class="pricing__badge">Основной</span>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── ОТЗЫВЫ ─────────────────── */}
+  <section class="reviews ln-section">
+    <div class="ln-shell reviews__grid">
+      <header class="reviews__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Отзывы
+        </span>
+        <h2 class="ln-h2 reviews__title">
+          Что говорят<br />
+          <em>те, кто уже прошёл.</em>
+        </h2>
+      </header>
+
+      <figure class="ln-bezel reviews__card" data-reveal data-reveal-delay="1">
+        <div class="ln-bezel__inner reviews__card-inner">
+          <svg class="reviews__mark" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+            <path d="M10 32C4 32 0 28 0 22C0 14 6 6 16 0L18 4C12 8 8 12 8 16C10 14 13 13 16 13C20 13 23 16 23 20C23 26 18 32 10 32ZM30 32C24 32 20 28 20 22C20 14 26 6 36 0L38 4C32 8 28 12 28 16C30 14 33 13 36 13C40 13 43 16 43 20C43 26 38 32 30 32Z" fill="currentColor" opacity="0.22" />
+          </svg>
+          <blockquote class="reviews__quote">
+            Я благодарю Серёжу за такую качественную, глубокую и объёмную консультацию
+            по Дизайну Человека и Генным Ключам. Изучив мой бодиграф и хологенетический
+            профиль, он структурированно, без лишней воды, передал мне всю необходимую
+            информацию и знания, дал ответы на все мои вопросы. Приходило понимание
+            и осознание своей природы — как и где себя лучше проявлять, появилось больше
+            принятия. Могу точно сказать, что Серёжа профессионал в своём деле! Во время
+            нашей работы было ощущение полного понимания и доверия. Я очень рада нашему
+            взаимодействию — и вообще, что встретила такого человека, чудесную душу!
+          </blockquote>
+          <figcaption class="reviews__caption">
+            <span class="reviews__author">Александра Иванова</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  {/* ─────────────────── FAQ ─────────────────── */}
+  <section class="faq ln-section">
+    <div class="ln-shell faq__grid">
+      <header class="faq__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Частые вопросы
+        </span>
+        <h2 class="ln-h2 faq__title">
+          Частые<br />
+          <em>вопросы.</em>
+        </h2>
+        <p class="ln-body faq__body">
+          Если вашего вопроса нет — задайте его в&nbsp;
+          <a href={`${base}contact/`} class="faq__inline">контактах</a>,
+          отвечу лично.
+        </p>
+      </header>
+
+      <div class="faq__list" data-reveal data-reveal-delay="1">
+        {faqs.map((item) => (
+          <details class="faq__item" name="hdfaq">
+            <summary class="faq__summary">
+              <span class="faq__q">{item.q}</span>
+              <span class="faq__icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <line x1="4" y1="8" x2="12" y2="8" stroke-linecap="round" />
+                  <line class="faq__icon-v" x1="8" y1="4" x2="8" y2="12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq__answer">
+              <p>{item.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── FINAL CTA ─────────────────── */}
+  <section class="final ln-section">
+    <div class="ln-shell ln-shell--narrow">
+      <div class="final__card ln-bezel" data-reveal>
+        <div class="ln-bezel__inner final__inner">
+          <div class="final__glow" aria-hidden="true"></div>
+          <span class="ln-eyebrow">
+            <span class="ln-eyebrow__dot"></span>
+            Следующий шаг
+          </span>
+          <p class="final__question ln-h2">
+            <em>Исцеление личности и&nbsp;раскрытие</em><br />
+            духовного потенциала.
+          </p>
+          <p class="final__sub-lead">
+            Залог счастливой жизни в&nbsp;своём предназначении.
+          </p>
+          <a class="ln-btn ln-btn--primary final__cta" href={`${base}contact/`}>
+            <span class="ln-btn__shine" aria-hidden="true"></span>
+            <span>Записаться на консультацию</span>
+            <span class="ln-btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+          <p class="final__sub">
+            Онлайн · разговор по&nbsp;потоку · запись остаётся у&nbsp;вас
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── BIO ─────────────────── */}
+  <section class="bio ln-section ln-section--tight">
+    <div class="ln-shell bio__grid">
+      <div class="bio__photo-wrap" data-reveal>
+        <div class="ln-bezel bio__photo-bezel">
+          <div class="ln-bezel__inner bio__photo-inner">
+            <img
+              src={`${base}shaneri.jpg`}
+              alt="Сергей Шанэри — духовный психолог, целитель, исследователь соционики"
+              loading="lazy"
+              width="720"
+              height="900"
+            />
+            <div class="bio__photo-gradient" aria-hidden="true"></div>
+          </div>
+        </div>
+        <span class="bio__photo-caption">
+          <span>Сергей Шанэри</span>
+          <span class="bio__photo-caption-line"></span>
+          <span>ДЧ · 7 лет</span>
+        </span>
+      </div>
+
+      <div class="bio__content" data-reveal data-reveal-delay="1">
+        <h2 class="ln-h2 bio__name">
+          Сергей<br />
+          <em>Шанэри.</em>
+        </h2>
+        <p class="ln-lead bio__lead">
+          Духовный психолог, целитель, исследователь соционики.
+        </p>
+
+        <ul class="bio__list">
+          {bioList.map((item) => (
+            <li class="bio__list-item">
+              <svg class="bio__list-mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <circle cx="6" cy="6" r="4.5" opacity="0.35" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p class="bio__closing">
+          <em>
+            Консультирую в&nbsp;подходе Интегральный Дизайн Человека — совмещающем ДЧ,
+            Генные Ключи, духовность и&nbsp;терапию.
+          </em>
+        </p>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(7rem, 12vh, 9rem) 0 clamp(4rem, 8vh, 6rem);
+    overflow: hidden;
+  }
+
+  .hero__aurora {
+    position: absolute;
+    inset: -20% -10% 10%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 40% 35% at 22% 58%, rgba(154, 120, 255, 0.35), transparent 65%),
+      radial-gradient(ellipse 35% 30% at 78% 42%, rgba(80, 120, 255, 0.22), transparent 65%),
+      radial-gradient(ellipse 30% 25% at 50% 92%, rgba(168, 232, 205, 0.18), transparent 60%);
+    filter: blur(40px);
+    opacity: 0.85;
+    animation: hero-drift 28s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  @keyframes hero-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(-3%, 2%, 0) scale(1.06); }
+    66% { transform: translate3d(4%, -1%, 0) scale(0.96); }
+  }
+
+  .hero__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero__meta { margin-bottom: 0.25rem; }
+
+  .hero__title {
+    max-width: 20ch;
+    margin: 0;
+  }
+
+  .hero__lead {
+    margin: 0.5rem auto 0;
+    max-width: 38rem;
+    text-align: center;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: clamp(2rem, 6vw, 4.5rem);
+    margin-top: clamp(3rem, 7vh, 5rem);
+    padding-top: 3rem;
+    border-top: 1px solid var(--ln-line-faint);
+    width: 100%;
+    max-width: 44rem;
+    justify-content: center;
+  }
+
+  .hero__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero__stat-value {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+    line-height: 1;
+    color: var(--ln-ink-strong);
+    letter-spacing: -0.01em;
+  }
+
+  .hero__stat-label {
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    text-align: center;
+    max-width: 11rem;
+    line-height: 1.55;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ln-ink-faint);
+    opacity: 0.65;
+    animation: hero-fade 2.4s cubic-bezier(0.32, 0.72, 0, 1) 1s infinite;
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 2.5rem;
+    background: linear-gradient(180deg, currentColor, transparent);
+  }
+
+  @keyframes hero-fade {
+    0%, 100% { opacity: 0.65; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.25; transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 640px) {
+    .hero__stats {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    .hero__scroll { display: none; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     INTRO / ПОДХОД
+     ═══════════════════════════════════════════════════════════════ */
+  .intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .intro__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .intro__title { margin: 0; }
+
+  .intro__body { max-width: 28rem; }
+
+  .intro__quote {
+    position: relative;
+    margin: 0.25rem 0;
+    padding: 1.25rem 0 1.25rem 1.75rem;
+    border-left: 1px solid var(--ln-line-strong);
+    max-width: 28rem;
+  }
+  .intro__quote p {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ln-ink-strong);
+    margin: 0;
+  }
+  .intro__quote-mark {
+    position: absolute;
+    left: -0.15rem;
+    top: -1.5rem;
+    font-family: var(--ln-font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--ln-accent);
+    opacity: 0.4;
+  }
+
+  .intro__media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 7rem;
+  }
+
+  .intro__video-bezel { padding: 0.4rem; }
+
+  .intro__video-inner {
+    padding: 0;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .intro__video-inner iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .intro__caption {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--ln-ink-mute);
+    margin: 0;
+    padding: 0 0.5rem;
+  }
+
+  /* Sources (объединяет системы) — editorial-bento 3×2 */
+  .intro__sources {
+    margin-top: clamp(3rem, 6vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .intro__sources-title {
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    text-align: center;
+  }
+
+  .intro__source-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ln-line-faint);
+    border-bottom: 1px solid var(--ln-line-faint);
+  }
+
+  .intro__source-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.35rem 1.5rem 1.35rem 1rem;
+    transition: padding-left 600ms cubic-bezier(0.32, 0.72, 0, 1), background 400ms;
+    cursor: default;
+    position: relative;
+  }
+  .intro__source-item:not(:nth-child(-n+3)) {
+    border-top: 1px solid var(--ln-line-faint);
+  }
+  .intro__source-item:not(:nth-child(3n)) {
+    border-right: 1px solid var(--ln-line-faint);
+  }
+  .intro__source-item:hover {
+    padding-left: 1.4rem;
+    background: linear-gradient(90deg, rgba(184, 157, 255, 0.05), transparent 70%);
+  }
+
+  .intro__source-mark {
+    width: 0.85rem;
+    height: 0.85rem;
+    color: var(--ln-accent);
+    flex-shrink: 0;
+  }
+
+  .intro__source-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+    line-height: 1.3;
+  }
+
+  .intro__source-sub {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ln-ink-mute);
+    letter-spacing: 0.005em;
+  }
+
+  @media (max-width: 860px) {
+    .intro__grid { grid-template-columns: 1fr; }
+    .intro__media { position: static; }
+
+    .intro__source-grid { grid-template-columns: repeat(2, 1fr); }
+    .intro__source-item:not(:nth-child(-n+3)) { border-top: 1px solid var(--ln-line-faint); }
+    .intro__source-item:not(:nth-child(3n)) { border-right: none; }
+    .intro__source-item:nth-child(odd) { border-right: 1px solid var(--ln-line-faint); }
+    .intro__source-item:nth-child(n+3) { border-top: 1px solid var(--ln-line-faint); }
+  }
+
+  @media (max-width: 520px) {
+    .intro__source-grid { grid-template-columns: 1fr; }
+    .intro__source-item { border-right: none !important; }
+    .intro__source-item:not(:first-child) { border-top: 1px solid var(--ln-line-faint); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     PRICING
+     ═══════════════════════════════════════════════════════════════ */
+  .pricing__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .pricing__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .pricing__card {
+    display: flex;
+    transition:
+      transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+      box-shadow 700ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .pricing__card:hover { transform: translateY(-4px); }
+
+  .pricing__card--featured {
+    transform: translateY(-1.5rem);
+    z-index: 2;
+  }
+  .pricing__card--featured:hover { transform: translateY(-2rem); }
+  .pricing__card--featured .ln-bezel__inner {
+    background: linear-gradient(170deg,
+      rgba(44, 30, 74, 0.92) 0%,
+      rgba(20, 14, 38, 0.92) 60%,
+      rgba(14, 10, 26, 0.92) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 60px 140px -40px rgba(0, 0, 0, 0.95),
+      0 30px 80px -30px rgba(123, 44, 191, 0.3);
+  }
+  .pricing__card--featured::before {
+    background: linear-gradient(160deg,
+      rgba(184, 157, 255, 0.35),
+      rgba(184, 157, 255, 0.05) 40%,
+      rgba(80, 120, 255, 0.05) 60%,
+      rgba(80, 120, 255, 0.25));
+  }
+
+  .pricing__card-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    min-height: 100%;
+    padding: clamp(1.75rem, 2.5vw, 2.5rem);
+  }
+
+  .pricing__card-head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .pricing__card-name {
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    color: var(--ln-ink-strong);
+  }
+
+  .pricing__card-lead {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--ln-ink-body);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .pricing__price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--ln-line-faint);
+    border-bottom: 1px solid var(--ln-line-faint);
+  }
+
+  .pricing__price-value {
+    font-family: var(--ln-font-display);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .pricing__price-note {
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+  }
+
+  .pricing__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+  }
+
+  .pricing__features li {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    font-family: var(--ln-font-body);
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--ln-ink-body);
+  }
+
+  .pricing__check {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    color: var(--ln-accent);
+    flex-shrink: 0;
+  }
+
+  .pricing__cta {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.95rem 0.55rem 0.95rem 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .pricing__badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-family: var(--ln-font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(184, 157, 255, 0.14);
+    color: var(--ln-accent);
+    border: 1px solid rgba(184, 157, 255, 0.22);
+  }
+
+  @media (max-width: 960px) {
+    .pricing__grid {
+      grid-template-columns: 1fr;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    .pricing__card--featured {
+      transform: translateY(0);
+      order: -1;
+    }
+    .pricing__card--featured:hover { transform: translateY(-4px); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     REVIEWS
+     ═══════════════════════════════════════════════════════════════ */
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+
+  .reviews__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .reviews__card-inner {
+    padding: clamp(2rem, 3.5vw, 3rem);
+    position: relative;
+  }
+
+  .reviews__mark {
+    width: 3rem;
+    height: 2.4rem;
+    color: var(--ln-accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .reviews__quote {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--ln-ink-strong);
+    margin: 0 0 1.75rem;
+    quotes: none;
+  }
+
+  .reviews__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ln-line-faint);
+  }
+
+  .reviews__author {
+    font-family: var(--ln-font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+  }
+
+  @media (max-width: 860px) {
+    .reviews__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════════════ */
+  .faq__grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.3fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: start;
+  }
+
+  .faq__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    position: sticky;
+    top: 7rem;
+  }
+
+  .faq__body { max-width: 24rem; }
+
+  .faq__inline {
+    color: var(--ln-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: color 300ms;
+  }
+  .faq__inline:hover { color: #d7c4ff; }
+
+  .faq__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq__item {
+    position: relative;
+    border-top: 1px solid var(--ln-line-faint);
+    transition: background 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .faq__item:last-child { border-bottom: 1px solid var(--ln-line-faint); }
+
+  .faq__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg,
+      transparent,
+      rgba(184, 157, 255, 0.5) 30%,
+      rgba(184, 157, 255, 0.5) 70%,
+      transparent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+    pointer-events: none;
+  }
+  .faq__item:hover::before,
+  .faq__item[open]::before { transform: scaleY(1); }
+
+  .faq__item[open] {
+    background: linear-gradient(180deg, rgba(184, 157, 255, 0.04), transparent 85%);
+  }
+
+  .faq__summary {
+    display: grid;
+    grid-template-columns: 1fr 2.2rem;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 0.25rem 1.5rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+  }
+  .faq__summary::-webkit-details-marker { display: none; }
+
+  .faq__q {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--ln-ink-body);
+    letter-spacing: -0.003em;
+    transition: color 400ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .faq__item:hover .faq__q,
+  .faq__item[open] .faq__q { color: var(--ln-ink-strong); }
+
+  .faq__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid var(--ln-line);
+    background: transparent;
+    color: var(--ln-ink-mute);
+    transition:
+      border-color 500ms cubic-bezier(0.32, 0.72, 0, 1),
+      color 400ms cubic-bezier(0.32, 0.72, 0, 1),
+      background 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .faq__icon svg { width: 0.85rem; height: 0.85rem; }
+  .faq__icon-v {
+    transform-origin: center;
+    transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .faq__item:hover .faq__icon {
+    border-color: rgba(184, 157, 255, 0.3);
+    color: var(--ln-accent);
+  }
+  .faq__item[open] .faq__icon {
+    border-color: rgba(184, 157, 255, 0.4);
+    background: rgba(184, 157, 255, 0.06);
+    color: var(--ln-accent);
+  }
+  .faq__item[open] .faq__icon-v { transform: scaleY(0); }
+
+  .faq__answer {
+    padding: 0 3rem 1.75rem 1.25rem;
+    animation: faq-in 600ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .faq__answer p {
+    font-family: var(--ln-font-body);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--ln-ink-body);
+    margin: 0;
+    max-width: 42rem;
+  }
+
+  @keyframes faq-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 860px) {
+    .faq__grid { grid-template-columns: 1fr; }
+    .faq__head { position: static; }
+    .faq__summary { grid-template-columns: 1fr 2rem; gap: 1rem; padding-left: 1rem; }
+    .faq__answer { padding: 0 1rem 1.5rem 1rem; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════════════════════════════════ */
+  .final__card { padding: 0.5rem; }
+
+  .final__inner {
+    text-align: center;
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(170deg,
+      rgba(32, 22, 58, 0.9) 0%,
+      rgba(14, 10, 26, 0.92) 100%);
+  }
+
+  .final__glow {
+    position: absolute;
+    inset: -40% -20%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 40%, rgba(184, 157, 255, 0.25), transparent 65%);
+    filter: blur(30px);
+  }
+
+  .final__inner > * { position: relative; z-index: 1; }
+
+  .final__question {
+    max-width: 26ch;
+    margin: 0 auto;
+  }
+
+  .final__sub-lead {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    color: var(--ln-ink-body);
+    margin: 0;
+    max-width: 32rem;
+  }
+
+  .final__cta {
+    margin-top: 0.5rem;
+    padding: 1.1rem 0.6rem 1.1rem 1.5rem;
+    font-size: 1rem;
+    --btn-icon-size: 2.4rem;
+  }
+
+  .final__sub {
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    margin: 0.25rem 0 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     BIO
+     ═══════════════════════════════════════════════════════════════ */
+  .bio__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+
+  .bio__photo-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bio__photo-bezel { padding: 0.4rem; }
+
+  .bio__photo-inner {
+    padding: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bio__photo-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.02);
+    transition: transform 1400ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .bio__photo-bezel:hover img { transform: scale(1.03); }
+
+  .bio__photo-gradient {
+    position: absolute;
+    inset: 50% 0 0 0;
+    background: linear-gradient(180deg, transparent, rgba(5, 4, 12, 0.45));
+    pointer-events: none;
+  }
+
+  .bio__photo-caption {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--ln-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    padding: 0 0.25rem;
+  }
+  .bio__photo-caption-line {
+    flex: 1;
+    height: 1px;
+    background: var(--ln-line);
+  }
+
+  .bio__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .bio__name { margin: 0; }
+
+  .bio__lead {
+    max-width: 28rem;
+    margin: 0;
+  }
+
+  .bio__list {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .bio__list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--ln-line-faint);
+    font-family: var(--ln-font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ln-ink-body);
+    transition: padding-left 500ms cubic-bezier(0.32, 0.72, 0, 1), color 300ms;
+  }
+  .bio__list-item:last-child { border-bottom: 1px solid var(--ln-line-faint); }
+  .bio__list-item:hover {
+    padding-left: 0.4rem;
+    color: var(--ln-ink-strong);
+  }
+
+  .bio__list-mark {
+    width: 0.8rem;
+    height: 0.8rem;
+    color: var(--ln-accent);
+    flex-shrink: 0;
+  }
+
+  .bio__closing {
+    margin: 1.25rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ln-line-faint);
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.55;
+    color: var(--ln-ink-body);
+    max-width: 32rem;
+  }
+
+  @media (max-width: 860px) {
+    .bio__grid { grid-template-columns: 1fr; }
+    .bio__photo-inner { aspect-ratio: 3 / 4; }
+  }
+</style>
