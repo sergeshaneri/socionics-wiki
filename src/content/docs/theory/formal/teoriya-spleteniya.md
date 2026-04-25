@@ -29,3 +29,7 @@ categories: [meta, formal]
 Необходимость задания 4 тактов для инваринта Процесса/Результата
 
 **
+
+---
+
+Подробнее: [Доклад: Теория сплетения](./doklad-teoriya-spleteniya) · [Схемы к докладу](./doklad-teoriya-spleteniya-shemy)

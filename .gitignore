@@ -26,3 +26,6 @@ pnpm-debug.log*
 # Intermediate migration artifacts (scripts can regenerate)
 migration-plan.md
 migration-plan.json
+
+# Source screenshots used for OCR — extracted text lives in src/data/reviews-*.json
+public/photos/

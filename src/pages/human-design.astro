@@ -1,6 +1,7 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
 import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
+import RelatedServices from '../components/landing/RelatedServices.astro';
 import reviews from '../data/reviews-human-design.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -491,6 +492,8 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <RelatedServices current="human-design" />
 </LandingLayout>
 
 <style>

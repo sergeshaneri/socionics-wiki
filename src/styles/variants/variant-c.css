@@ -341,16 +341,17 @@ body {
   white-space: nowrap;
 }
 
-/* === 3D-hover hero-кнопок ==============================================
-   Base — тонкое подчёркивание, при hover кнопка «выдавливается»:
-   появляется прямоугольник + приподнимается + тень. */
+/* === Hero-кнопки: editorial luxury, угрюмо-премиум ====================
+   Архитектурный лейбл-ярлык: почти-чёрная заливка, hairline-граница,
+   слегка скруглённые углы (не таблетка), сдержанная типографика.
+   На hover — мягкая подсветка границы и акцент на шевроне. */
 .hero .actions,
 .hero-actions {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 1.25rem 1.5rem !important;
-  max-width: 540px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.65rem 0.7rem !important;
   margin: 2rem 0 !important;
+  max-width: none !important;
 }
 
 .hero .sl-link-button,
@@ -358,19 +359,46 @@ body {
 .hero .actions a,
 .hero-actions a {
   position: relative !important;
-  padding: 0.65rem 1.25rem !important;
-  border: 0.5px solid transparent !important;
-  border-bottom: 0.5px solid rgba(230, 225, 255, 0.28) !important;
-  border-radius: 2px !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.65em !important;
+  padding: 0.78rem 1.5rem !important;
+  border: 0.5px solid rgba(230, 225, 255, 0.09) !important;
+  border-radius: 6px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0)),
+    rgba(10, 7, 20, 0.55) !important;
+  color: rgba(220, 215, 235, 0.78) !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.018em !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  box-shadow:
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.04),
+    0 1px 0 rgba(0, 0, 0, 0.4) !important;
   transition:
-    transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    border-color 240ms ease-out,
-    background 240ms ease-out,
-    box-shadow 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    color 160ms ease-out !important;
-  will-change: transform, box-shadow;
+    border-color 320ms ease-out,
+    background 320ms ease-out,
+    box-shadow 320ms ease-out,
+    color 220ms ease-out !important;
+}
+
+/* Авто-шеврон `›` — приглушённый, узкий */
+.hero .sl-link-button::after,
+.hero .sl-button::after,
+.hero .actions a::after,
+.hero-actions a::after {
+  content: '›';
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.05em;
+  opacity: 0.42;
+  margin-left: 0.05em;
+  transform: translateY(-0.06em);
+  transition: opacity 280ms ease, transform 280ms ease, color 220ms ease;
 }
 
 .hero .sl-link-button:hover,
@@ -381,24 +409,102 @@ body {
 .hero .sl-button:focus-visible,
 .hero .actions a:focus-visible,
 .hero-actions a:focus-visible {
-  border-color: rgba(199, 160, 255, 0.4) !important;
-  background: linear-gradient(180deg, rgba(123, 44, 191, 0.14), rgba(74, 0, 128, 0.08)) !important;
-  color: rgba(245, 242, 255, 1) !important;
-  transform: translateY(-3px) !important;
+  border-color: rgba(154, 120, 220, 0.32) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    rgba(18, 12, 32, 0.78) !important;
+  color: rgba(245, 242, 255, 0.96) !important;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 2px 0 rgba(26, 10, 49, 0.6),
-    0 4px 0 rgba(26, 10, 49, 0.4),
-    0 12px 28px rgba(157, 78, 221, 0.22),
-    0 0 1px rgba(199, 160, 255, 0.4) !important;
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.07),
+    0 1px 0 rgba(0, 0, 0, 0.5),
+    0 8px 22px -14px rgba(123, 90, 200, 0.45) !important;
+}
+
+.hero .sl-link-button:hover::after,
+.hero .sl-button:hover::after,
+.hero .actions a:hover::after,
+.hero-actions a:hover::after,
+.hero .sl-link-button:focus-visible::after,
+.hero .sl-button:focus-visible::after,
+.hero .actions a:focus-visible::after,
+.hero-actions a:focus-visible::after {
+  opacity: 0.95;
+  transform: translate(0.22em, -0.06em);
+  color: rgba(184, 157, 255, 0.95);
 }
 
 .hero .sl-link-button:active,
 .hero .sl-button:active,
 .hero .actions a:active,
 .hero-actions a:active {
-  transform: translateY(-1px) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    rgba(8, 5, 16, 0.85) !important;
   box-shadow:
-    0 1px 0 rgba(26, 10, 49, 0.6),
-    0 6px 16px rgba(157, 78, 221, 0.18) !important;
+    inset 0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 0 0.5px rgba(154, 120, 220, 0.18) !important;
+}
+
+/* Primary — глубокий ink-violet, благородно тёмный */
+.hero .sl-link-button.primary,
+.hero .actions a.primary {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+    linear-gradient(170deg, rgba(54, 32, 102, 0.95), rgba(28, 14, 64, 0.95)) !important;
+  border-color: rgba(154, 120, 220, 0.32) !important;
+  color: rgba(248, 245, 255, 0.96) !important;
+  box-shadow:
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.08),
+    0 1px 0 rgba(0, 0, 0, 0.5),
+    0 6px 18px -10px rgba(74, 40, 140, 0.55) !important;
+}
+.hero .sl-link-button.primary:hover,
+.hero .actions a.primary:hover,
+.hero .sl-link-button.primary:focus-visible,
+.hero .actions a.primary:focus-visible {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0)),
+    linear-gradient(170deg, rgba(72, 44, 132, 0.97), rgba(40, 22, 86, 0.97)) !important;
+  border-color: rgba(184, 157, 255, 0.48) !important;
+  color: rgba(252, 250, 255, 1) !important;
+  box-shadow:
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.1),
+    0 1px 0 rgba(0, 0, 0, 0.5),
+    0 10px 28px -12px rgba(123, 90, 200, 0.6),
+    0 0 0 0.5px rgba(184, 157, 255, 0.25) !important;
+}
+.hero .sl-link-button.primary::after,
+.hero .actions a.primary::after {
+  opacity: 0.7;
+  color: rgba(220, 200, 255, 0.9);
+}
+.hero .sl-link-button.primary:hover::after,
+.hero .actions a.primary:hover::after {
+  color: rgba(245, 240, 255, 1);
+}
+
+/* Minimal — обнажённая ссылка, только шеврон даёт аффорданс */
+.hero .sl-link-button.minimal,
+.hero .actions a.minimal {
+  border-color: transparent !important;
+  background: transparent !important;
+  padding: 0.55rem 0.5rem !important;
+  color: rgba(180, 175, 200, 0.55) !important;
+  box-shadow: none !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+.hero .sl-link-button.minimal::after,
+.hero .actions a.minimal::after {
+  font-size: 1em;
+}
+.hero .sl-link-button.minimal:hover,
+.hero .actions a.minimal:hover,
+.hero .sl-link-button.minimal:focus-visible,
+.hero .actions a.minimal:focus-visible {
+  border-color: transparent !important;
+  background: transparent !important;
+  color: rgba(245, 242, 255, 0.92) !important;
+  box-shadow: none !important;
 }

@@ -56,11 +56,13 @@ export default defineConfig({
 				Head: './src/components/Head.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				SocialIcons: './src/components/SiteSocialIcons.astro',
+				Footer: './src/components/Footer.astro',
 			},
 			customCss: ['./src/styles/fonts.css', './src/styles/custom.css'],
 			sidebar: [
 				{ label: 'О Вики', slug: 'index' },
 				{ label: 'Услуги', slug: 'services' },
+				{ label: 'Отзывы', link: '/reviews/' },
 				{ label: 'Контакты', slug: 'contact' },
 				{
 					label: 'Для начинающих',

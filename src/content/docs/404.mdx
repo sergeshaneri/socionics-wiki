@@ -1,0 +1,84 @@
+---
+title: 404 — страница не найдена
+description: Эта страница потерялась — но рядом есть много полезного.
+template: splash
+hero:
+  tagline: Эта страница потерялась. Возможно, ссылка устарела или адрес введён с опечаткой — рядом есть много полезного.
+  actions:
+    - text: На главную
+      link: /socionics-wiki/
+      variant: primary
+    - text: Услуги
+      link: /socionics-wiki/services/
+      variant: secondary
+    - text: Контакты
+      link: /socionics-wiki/contact/
+      variant: secondary
+    - text: Поиск по сайту
+      link: '#starlight__search'
+      variant: minimal
+---
+
+import NoirCard from '../../components/NoirCard.astro';
+import { CardGrid } from '@astrojs/starlight/components';
+
+## Куда пойти
+
+<CardGrid>
+  <NoirCard
+    title="Услуги"
+    href="/socionics-wiki/services/"
+    lead="Типирование, Дизайн Человека, психотерапия и групповая практика ТЭО"
+    items={[
+      'Соционическое типирование — от 3 000 ₽',
+      'Дизайн Человека — от 3 000 ₽',
+      'Духовная психотерапия — от 1 000 ₽',
+      'ТЭО — групповая практика, 1 000 ₽',
+    ]}
+  />
+  <NoirCard
+    title="Отзывы клиентов"
+    href="/socionics-wiki/reviews/"
+    lead="121 отзыв с фильтром по направлениям"
+    items={[
+      'Типирование, Дизайн Человека',
+      'Психотерапия, ТЭО',
+      'С 2016 года',
+    ]}
+  />
+  <NoirCard
+    title="Контакты"
+    href="/socionics-wiki/contact/"
+    lead="Telegram, VK, YouTube, почта, телефон + тематические каналы"
+    items={[
+      'Прямая связь со мной',
+      'Тематические Telegram-каналы',
+      'Соционический чат сообщества',
+    ]}
+  />
+</CardGrid>
+
+## Или начать с теории
+
+<CardGrid>
+  <NoirCard
+    title="Типы"
+    href="/socionics-wiki/categories/tipy/"
+    lead="16 типов информационного метаболизма — описания, семантика, особенности"
+  />
+  <NoirCard
+    title="Метасоционика"
+    href="/socionics-wiki/categories/metasocionika/"
+    lead="Философия, методология, связь с квантовой информатикой и фракталами"
+  />
+  <NoirCard
+    title="Формальная Соционика"
+    href="/socionics-wiki/categories/formalnaya-socionika/"
+    lead="Симметрии, модели, признаки Рейнина, аспекты и функции"
+  />
+  <NoirCard
+    title="Книги Чурюмова"
+    href="/socionics-wiki/books/"
+    lead="«Улыбка Чеширского кота», «БЛИН» — конспекты и разборы"
+  />
+</CardGrid>

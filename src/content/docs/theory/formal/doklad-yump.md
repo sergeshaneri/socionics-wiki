@@ -1,6 +1,6 @@
 ---
-title: "Доклад ЮМП"
-description: "Доклад ЮМП"
+title: "Иллюстрации к докладу ЮМП"
+description: "Иллюстрации к докладу ЮМП"
 categories: [formal]
 ---
 

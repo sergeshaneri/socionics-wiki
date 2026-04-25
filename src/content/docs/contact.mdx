@@ -41,7 +41,17 @@ import ContactChannel from '../../components/ContactChannel.astro';
     <a class="contact-service" href="/socionics-wiki/therapy/">
       <span class="contact-service__kicker">От&nbsp;1 000 ₽</span>
       <span class="contact-service__title">Духовная психотерапия</span>
-      <span class="contact-service__lead">Терапевтические консультации и&nbsp;целительные медитации.</span>
+      <span class="contact-service__lead">Индивидуальные сессии и&nbsp;целительные медитации.</span>
+      <span class="contact-service__arrow" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
+    <a class="contact-service" href="/socionics-wiki/teo/">
+      <span class="contact-service__kicker">Группа</span>
+      <span class="contact-service__title">ТЭО — групповая практика</span>
+      <span class="contact-service__lead">Техника Эмоциональной Осознанности — медитация в&nbsp;поле группы.</span>
       <span class="contact-service__arrow" aria-hidden="true">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
           <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
@@ -96,6 +106,74 @@ import ContactChannel from '../../components/ContactChannel.astro';
     description="Звонок или WhatsApp"
     external={false}
     icon={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`}
+  />
+</div>
+
+<div class="contact-section-label">
+  <span>тематические Telegram-каналы</span>
+</div>
+
+<div class="contact-grid not-content">
+  <ContactChannel
+    name="О фрактальной психологии"
+    handle="@shaneripsy"
+    href="https://t.me/shaneripsy"
+    description="Личный канал — заметки о терапии и осознанности"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="О фрактальной соционике"
+    handle="@fractalscn"
+    href="https://t.me/fractalscn"
+    description="Канал о методологии и применении соционики"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Мои стихи"
+    handle="@shaneristihi"
+    href="https://t.me/shaneristihi"
+    description="Авторские стихи"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Все отзывы"
+    handle="@shanerireviews"
+    href="https://t.me/shanerireviews"
+    description="Архив отзывов клиентов по всем направлениям"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Соционический чат"
+    handle="Telegram-сообщество"
+    href="https://t.me/+3PS2UiI8Dec4NWZi"
+    description="Чат для обсуждений — соционика, разборы, вопросы"
+    icon={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`}
+  />
+</div>
+
+<div class="contact-section-label">
+  <span>социальные сети</span>
+</div>
+
+<div class="contact-grid not-content">
+  <ContactChannel
+    name="Instagram"
+    handle="@sergeyshaneri"
+    href="https://www.instagram.com/sergeyshaneri/"
+    description="Личный аккаунт"
+    icon={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`}
+  />
+
+  <ContactChannel
+    name="Facebook"
+    handle="Сергей Шанэри"
+    href="https://www.facebook.com/profile.php?id=100004267483676"
+    description="Личная страница"
+    icon={`<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>`}
   />
 </div>
 
@@ -159,11 +237,11 @@ import ContactChannel from '../../components/ContactChannel.astro';
 
   .contact-services__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  @media (max-width: 880px) {
+  @media (max-width: 600px) {
     .contact-services__grid { grid-template-columns: 1fr; }
   }
 

@@ -1,0 +1,876 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
+import RelatedServices from '../components/landing/RelatedServices.astro';
+import reviews from '../data/reviews-teo.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const stages = [
+  {
+    title: 'Медитация «Океан подсознания»',
+    body: 'Веду авторскую медитацию: наполнение силами и сонастройка с собственным подсознанием. Готовит к глубокому слушанию себя.',
+  },
+  {
+    title: 'Психологическое введение',
+    body: 'Немного теории про эмоции и коучинговая докрутка запроса — чтобы каждый зашёл в практику с ясной точкой фокуса.',
+  },
+  {
+    title: 'Круг проживания',
+    body: 'По одному проговариваем, что чувствуем. Я как ведущий помогаю сонастроиться с эмоциями, идти в глубину и осознать их суть.',
+  },
+  {
+    title: 'Главное — прожить',
+    body: 'Даём эмоциям внимание, принятие, пространство и время. Поле группы держит процесс — участники подсвечивают друг другу слепые зоны.',
+  },
+  {
+    title: 'Психологический разговор',
+    body: 'В финале — разговор о том, что произошло, как соединить опыт с обычной жизнью. Запись встречи остаётся у вас.',
+  },
+];
+
+const bioList = [
+  'Опыт в психотерапии — 8 лет',
+  'Ведущий целительных медитаций',
+  'Авторская медитация «Океан подсознания»',
+  'Обучался Духовной Психологии у Екатерины Самойловой и Александра Меньшикова',
+  'Работа с Дизайном Человека и Генными Ключами — 7 лет',
+  'Опыт в соционике — 12 лет',
+];
+---
+
+<LandingLayout
+  title="ТЭО — Техника Эмоциональной Осознанности — Сергей Шанэри"
+  description="Групповая терапевтическая практика: ведомая медитация, проживание эмоций в поле группы, шеринг. Авторская методика Сергея Шанэри."
+  canonical="teo/"
+>
+  {/* ─────────────────── HERO ─────────────────── */}
+  <section class="hero">
+    <div class="hero__aurora" aria-hidden="true"></div>
+    <div class="ln-shell ln-shell--narrow hero__inner">
+      <div class="hero__meta" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Групповая практика · Сергей Шанэри
+        </span>
+      </div>
+
+      <h1 class="ln-display hero__title" data-reveal data-reveal-delay="1">
+        ТЭО.<br />
+        <em>Техника Эмоциональной Осознанности.</em>
+      </h1>
+
+      <p class="ln-lead hero__lead" data-reveal data-reveal-delay="2">
+        Группа 5–10 человек, 2,5&nbsp;часа в&nbsp;Zoom. Проживаем эмоции
+        под мою авторскую медитацию <em>«Океан подсознания»</em>
+        и&nbsp;психологическую поддержку.
+      </p>
+
+      <div class="hero__actions" data-reveal data-reveal-delay="3">
+        <a class="ln-btn ln-btn--primary" href={`${base}contact/`}>
+          <span class="ln-btn__shine" aria-hidden="true"></span>
+          <span>Записаться</span>
+          <span class="ln-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+        <a class="ln-btn ln-btn--ghost" href="#format">
+          <span>Как проходит</span>
+          <span class="ln-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M4 6L8 10L12 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">Прокрутить</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  {/* ─────────────────── ВВЕДЕНИЕ ─────────────────── */}
+  <section class="intro ln-section">
+    <div class="ln-shell ln-shell--narrow intro__inner">
+      <header data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Что это
+        </span>
+        <h2 class="ln-h2 intro__title">
+          Эмоциональная осознанность —<br />
+          <em>навык нашего нового времени.</em>
+        </h2>
+      </header>
+
+      <div class="intro__body" data-reveal data-reveal-delay="1">
+        <p class="ln-body">
+          ТЭО — Техника Эмоциональной Осознанности — групповая
+          терапевтическая практика по&nbsp;проживанию эмоций. Мы
+          собираемся в&nbsp;Zoom группой 5–10 человек и&nbsp;по&nbsp;одному
+          проговариваем, что чувствуем. Я&nbsp;как ведущий помогаю
+          сонастроиться с&nbsp;эмоциями, идти в&nbsp;их&nbsp;глубину
+          и&nbsp;осознать суть. Но&nbsp;главное — конечно прожить.
+        </p>
+
+        <blockquote class="intro__quote">
+          <span aria-hidden="true" class="intro__quote-mark">“</span>
+          <p>
+            Я&nbsp;всегда был очень эмоциональным. Однажды прочитал
+            в&nbsp;Дизайне Человека, что мне таким быть и&nbsp;положено,
+            и&nbsp;это очень глубинно меня тронуло. Только позже понял —
+            проживать эмоции, помогать другим называть их&nbsp;своими
+            именами и&nbsp;ловко трансформировать состояния — это часть
+            моего предназначения.
+          </p>
+        </blockquote>
+
+        <p class="ln-body">
+          Веду в&nbsp;расширенном варианте: с&nbsp;психологическими
+          вставками, коучинговой докруткой запроса и&nbsp;довольно глубокой
+          медитацией-погружением перед практикой. В&nbsp;конце —
+          по-психологически разговариваем о&nbsp;том, что произошло.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── ПРИНЦИП ─────────────────── */}
+  <section class="principle ln-section ln-section--tight">
+    <div class="ln-shell ln-shell--narrow">
+      <div class="principle__card ln-bezel" data-reveal>
+        <div class="ln-bezel__inner principle__inner">
+          <span class="ln-eyebrow">
+            <span class="ln-eyebrow__dot"></span>
+            Главное правило
+          </span>
+          <p class="principle__text">
+            На практике важно отслеживать, чтобы участник говорил
+            <em>от&nbsp;чувств</em> — не&nbsp;от&nbsp;ощущений тела,
+            не&nbsp;от&nbsp;интуиции, не&nbsp;от&nbsp;мышления.
+          </p>
+          <p class="principle__sub">
+            Это и&nbsp;есть тренировка эмоциональной осознанности —
+            различать пласты внутреннего опыта.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── ФОРМАТ ─────────────────── */}
+  <section id="format" class="format ln-section">
+    <div class="ln-shell">
+      <header class="format__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Как проходит
+        </span>
+        <h2 class="ln-h2 format__title">
+          Пять этапов одной<br />
+          <em>встречи.</em>
+        </h2>
+      </header>
+
+      <ol class="format__list" data-reveal data-reveal-delay="1">
+        {stages.map((s, i) => (
+          <li class="format__item">
+            <span class="format__num">{String(i + 1).padStart(2, '0')}</span>
+            <div class="format__body">
+              <h3 class="format__step-title">{s.title}</h3>
+              <p class="format__step-body">{s.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="format__price" data-reveal data-reveal-delay="2">
+        <div class="format__price-row">
+          <div class="format__price-cell">
+            <span class="format__price-label">Стоимость</span>
+            <span class="format__price-value">1 000 ₽</span>
+          </div>
+          <div class="format__price-cell">
+            <span class="format__price-label">Длительность</span>
+            <span class="format__price-value">2,5 ч</span>
+          </div>
+          <div class="format__price-cell">
+            <span class="format__price-label">Группа</span>
+            <span class="format__price-value">5–10 чел</span>
+          </div>
+          <div class="format__price-cell">
+            <span class="format__price-label">Формат</span>
+            <span class="format__price-value">Zoom</span>
+          </div>
+        </div>
+        <p class="format__price-note">
+          Расписание ближайших встреч и&nbsp;запись —
+          в&nbsp;<a href={`${base}contact/`}>контактах</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── ВИДЕО ─────────────────── */}
+  <section class="video ln-section">
+    <div class="ln-shell ln-shell--narrow">
+      <header class="video__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Авторская медитация
+        </span>
+        <h2 class="ln-h2 video__title">
+          Океан<br />
+          <em>подсознания.</em>
+        </h2>
+        <p class="ln-body video__body">
+          Послушайте, как звучит наполняющая медитация, с&nbsp;которой
+          мы&nbsp;начинаем каждую встречу ТЭО.
+        </p>
+      </header>
+
+      <div class="ln-bezel video__bezel" data-reveal data-reveal-delay="1">
+        <div class="ln-bezel__inner video__inner">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/Zh1pgz822ms"
+            title="Океан подсознания — медитация Сергея Шанэри"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── ОТЗЫВЫ ─────────────────── */}
+  <section class="reviews ln-section">
+    <div class="ln-shell">
+      <header class="reviews__head" data-reveal>
+        <span class="ln-eyebrow">
+          <span class="ln-eyebrow__dot"></span>
+          Отзывы
+        </span>
+        <h2 class="ln-h2 reviews__title">
+          Что говорят<br />
+          <em>участники прошлых встреч.</em>
+        </h2>
+      </header>
+
+      <div data-reveal data-reveal-delay="1">
+        <ReviewsCarousel reviews={reviews} id="teo" />
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── FINAL CTA ─────────────────── */}
+  <section class="final ln-section">
+    <div class="ln-shell ln-shell--narrow">
+      <div class="final__card ln-bezel" data-reveal>
+        <div class="ln-bezel__inner final__inner">
+          <div class="final__glow" aria-hidden="true"></div>
+          <span class="ln-eyebrow">
+            <span class="ln-eyebrow__dot"></span>
+            Следующий шаг
+          </span>
+          <p class="final__question ln-h2">
+            <em>Прийти на&nbsp;ближайшую</em><br />
+            встречу.
+          </p>
+          <a class="ln-btn ln-btn--primary final__cta" href={`${base}contact/`}>
+            <span class="ln-btn__shine" aria-hidden="true"></span>
+            <span>Записаться</span>
+            <span class="ln-btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M4 12L12 4M12 4H6M12 4V10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+          <p class="final__sub">
+            Онлайн · ~2 часа · запись остаётся у&nbsp;вас
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── BIO ─────────────────── */}
+  <section class="bio ln-section ln-section--tight">
+    <div class="ln-shell bio__grid">
+      <div class="bio__photo-wrap" data-reveal>
+        <div class="ln-bezel bio__photo-bezel">
+          <div class="ln-bezel__inner bio__photo-inner">
+            <img
+              src={`${base}shaneri.jpg`}
+              alt="Сергей Шанэри — ведущий ТЭО"
+              loading="lazy"
+              width="720"
+              height="900"
+            />
+            <div class="bio__photo-gradient" aria-hidden="true"></div>
+          </div>
+        </div>
+        <span class="bio__photo-caption">
+          <span>Сергей Шанэри</span>
+          <span class="bio__photo-caption-line"></span>
+          <span>ведущий · 8&nbsp;лет</span>
+        </span>
+      </div>
+
+      <div class="bio__content" data-reveal data-reveal-delay="1">
+        <h2 class="ln-h2 bio__name">
+          Сергей<br />
+          <em>Шанэри.</em>
+        </h2>
+        <p class="ln-lead bio__lead">
+          Духовный психолог, ведущий целительных медитаций
+          и&nbsp;авторской групповой практики&nbsp;ТЭО.
+        </p>
+
+        <ul class="bio__list">
+          {bioList.map((item) => (
+            <li class="bio__list-item">
+              <svg class="bio__list-mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <circle cx="6" cy="6" r="4.5" opacity="0.35" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <RelatedServices current="teo" />
+</LandingLayout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(7rem, 12vh, 9rem) 0 clamp(4rem, 8vh, 6rem);
+    overflow: hidden;
+  }
+
+  .hero__aurora {
+    position: absolute;
+    inset: -20% -10% 10%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 40% 35% at 22% 58%, rgba(154, 120, 255, 0.32), transparent 65%),
+      radial-gradient(ellipse 35% 30% at 78% 42%, rgba(80, 120, 255, 0.2), transparent 65%),
+      radial-gradient(ellipse 30% 25% at 50% 92%, rgba(168, 232, 205, 0.16), transparent 60%);
+    filter: blur(40px);
+    opacity: 0.85;
+    animation: hero-drift 28s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  @keyframes hero-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(-3%, 2%, 0) scale(1.06); }
+    66% { transform: translate3d(4%, -1%, 0) scale(0.96); }
+  }
+
+  .hero__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero__meta { margin-bottom: 0.25rem; }
+
+  .hero__title {
+    max-width: 22ch;
+    margin: 0;
+  }
+
+  .hero__lead {
+    margin: 0.5rem auto 0;
+    max-width: 38rem;
+    text-align: center;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ln-ink-faint);
+    opacity: 0.65;
+    animation: hero-fade 2.4s cubic-bezier(0.32, 0.72, 0, 1) 1s infinite;
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 2.5rem;
+    background: linear-gradient(180deg, currentColor, transparent);
+  }
+
+  @keyframes hero-fade {
+    0%, 100% { opacity: 0.65; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.25; transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 640px) {
+    .hero__scroll { display: none; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     INTRO
+     ═══════════════════════════════════════════════════════════════ */
+  .intro__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .intro__title { margin: 0.75rem 0 0; }
+
+  .intro__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .intro__quote {
+    position: relative;
+    margin: 0;
+    padding: 1.25rem 0 1.25rem 1.75rem;
+    border-left: 1px solid var(--ln-line-strong);
+    max-width: 38rem;
+  }
+  .intro__quote p {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ln-ink-strong);
+    margin: 0;
+  }
+  .intro__quote-mark {
+    position: absolute;
+    left: -0.15rem;
+    top: -1.5rem;
+    font-family: var(--ln-font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--ln-accent);
+    opacity: 0.4;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FORMAT
+     ═══════════════════════════════════════════════════════════════ */
+  .format__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    max-width: 44rem;
+  }
+
+  .format__title { margin: 0; }
+
+  .format__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--ln-line-faint);
+  }
+
+  .format__item {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.5rem 0.5rem 1.5rem 0.25rem;
+    border-bottom: 1px solid var(--ln-line-faint);
+    transition: padding-left 500ms cubic-bezier(0.32, 0.72, 0, 1), background 400ms;
+  }
+  .format__item:hover {
+    padding-left: 0.85rem;
+    background: linear-gradient(90deg, rgba(184, 157, 255, 0.04), transparent 70%);
+  }
+
+  .format__num {
+    font-family: var(--ln-font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    color: var(--ln-accent);
+    padding-top: 0.2rem;
+  }
+
+  .format__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .format__step-title {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .format__step-body {
+    font-family: var(--ln-font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ln-ink-body);
+    margin: 0;
+    max-width: 42rem;
+  }
+
+  /* Price card */
+  .format__price {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    border-radius: 1.5rem;
+    background: linear-gradient(160deg, rgba(184, 157, 255, 0.06), transparent 80%);
+    border: 1px solid var(--ln-line);
+  }
+
+  .format__price-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--ln-line-faint);
+  }
+
+  .format__price-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .format__price-label {
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+  }
+
+  .format__price-value {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+    line-height: 1;
+    letter-spacing: -0.005em;
+  }
+
+  .format__price-note {
+    margin: 1.25rem 0 0;
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ln-ink-body);
+  }
+
+  .format__price-note a {
+    color: var(--ln-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: color 300ms;
+  }
+  .format__price-note a:hover { color: #d7c4ff; }
+
+  @media (max-width: 720px) {
+    .format__price-row { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  }
+
+  @media (max-width: 640px) {
+    .format__item { grid-template-columns: 3rem 1fr; gap: 1rem; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     PRINCIPLE
+     ═══════════════════════════════════════════════════════════════ */
+  .principle__card { padding: 0.5rem; }
+
+  .principle__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+  }
+
+  .principle__text {
+    font-family: var(--ln-font-display);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--ln-ink-strong);
+    margin: 0;
+    letter-spacing: -0.005em;
+    max-width: 36rem;
+  }
+
+  .principle__text em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ln-accent);
+    background: linear-gradient(135deg, #d7c4ff 0%, #b89dff 40%, #8e6dff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .principle__sub {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ln-ink-mute);
+    margin: 0;
+    max-width: 32rem;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     VIDEO
+     ═══════════════════════════════════════════════════════════════ */
+  .video__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    max-width: 38rem;
+  }
+
+  .video__title { margin: 0; }
+
+  .video__body { max-width: 32rem; }
+
+  .video__bezel { padding: 0.4rem; }
+
+  .video__inner {
+    padding: 0;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .video__inner iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     REVIEWS
+     ═══════════════════════════════════════════════════════════════ */
+  .reviews__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    max-width: 44rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+  .reviews__title { margin: 0; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════════════════════════════════ */
+  .final__card { padding: 0.5rem; }
+
+  .final__inner {
+    text-align: center;
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(170deg,
+      rgba(32, 22, 58, 0.9) 0%,
+      rgba(14, 10, 26, 0.92) 100%);
+  }
+
+  .final__glow {
+    position: absolute;
+    inset: -40% -20%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 40%, rgba(184, 157, 255, 0.25), transparent 65%);
+    filter: blur(30px);
+  }
+
+  .final__inner > * { position: relative; z-index: 1; }
+
+  .final__question { max-width: 22ch; margin: 0 auto; }
+
+  .final__cta {
+    margin-top: 0.5rem;
+    padding: 1.1rem 0.6rem 1.1rem 1.5rem;
+    font-size: 1rem;
+    --btn-icon-size: 2.4rem;
+  }
+
+  .final__sub {
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    margin: 0.25rem 0 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     BIO
+     ═══════════════════════════════════════════════════════════════ */
+  .bio__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+
+  .bio__photo-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bio__photo-bezel { padding: 0.4rem; }
+
+  .bio__photo-inner {
+    padding: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bio__photo-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.02);
+    transition: transform 1400ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .bio__photo-bezel:hover img { transform: scale(1.03); }
+
+  .bio__photo-gradient {
+    position: absolute;
+    inset: 50% 0 0 0;
+    background: linear-gradient(180deg, transparent, rgba(5, 4, 12, 0.45));
+    pointer-events: none;
+  }
+
+  .bio__photo-caption {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--ln-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    padding: 0 0.25rem;
+  }
+  .bio__photo-caption-line {
+    flex: 1;
+    height: 1px;
+    background: var(--ln-line);
+  }
+
+  .bio__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .bio__name { margin: 0; }
+  .bio__lead { max-width: 30rem; margin: 0; }
+
+  .bio__list {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .bio__list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--ln-line-faint);
+    font-family: var(--ln-font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ln-ink-body);
+    transition: padding-left 500ms cubic-bezier(0.32, 0.72, 0, 1), color 300ms;
+  }
+  .bio__list-item:last-child { border-bottom: 1px solid var(--ln-line-faint); }
+  .bio__list-item:hover { padding-left: 0.4rem; color: var(--ln-ink-strong); }
+
+  .bio__list-mark {
+    width: 0.8rem;
+    height: 0.8rem;
+    color: var(--ln-accent);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 860px) {
+    .bio__grid { grid-template-columns: 1fr; }
+    .bio__photo-inner { aspect-ratio: 3 / 4; }
+  }
+</style>

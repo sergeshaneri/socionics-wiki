@@ -1,0 +1,438 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import reviewsTyping from '../data/reviews-typing.json';
+import reviewsHumanDesign from '../data/reviews-human-design.json';
+import reviewsTherapy from '../data/reviews-therapy.json';
+import reviewsTeo from '../data/reviews-teo.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+interface Review {
+  author: string;
+  text: string;
+  date?: string;
+  source?: { url: string; label: string };
+}
+
+interface Tagged extends Review {
+  topic: 'typing' | 'human-design' | 'therapy' | 'teo';
+  topicLabel: string;
+  href: string;
+  sortKey: number;
+}
+
+const topics = {
+  typing: { label: 'Типирование', href: `${base}typing/` },
+  'human-design': { label: 'Дизайн Человека', href: `${base}human-design/` },
+  therapy: { label: 'Психотерапия', href: `${base}therapy/` },
+  teo: { label: 'ТЭО', href: `${base}teo/` },
+} as const;
+
+function parseDate(d?: string): number {
+  if (!d) return 0;
+  // Format: DD.MM.YYYY or just YYYY
+  const dmy = d.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+  if (dmy) {
+    return new Date(Number(dmy[3]), Number(dmy[2]) - 1, Number(dmy[1])).getTime();
+  }
+  const y = d.match(/^(\d{4})$/);
+  if (y) return new Date(Number(y[1]), 0, 1).getTime();
+  return 0;
+}
+
+function tag(items: Review[], topic: keyof typeof topics): Tagged[] {
+  return items.map((r) => ({
+    ...r,
+    topic,
+    topicLabel: topics[topic].label,
+    href: topics[topic].href,
+    sortKey: parseDate(r.date),
+  }));
+}
+
+const all: Tagged[] = [
+  ...tag(reviewsTyping as Review[], 'typing'),
+  ...tag(reviewsHumanDesign as Review[], 'human-design'),
+  ...tag(reviewsTherapy as Review[], 'therapy'),
+  ...tag(reviewsTeo as Review[], 'teo'),
+].sort((a, b) => b.sortKey - a.sortKey);
+
+const counts = {
+  all: all.length,
+  typing: reviewsTyping.length,
+  'human-design': reviewsHumanDesign.length,
+  therapy: reviewsTherapy.length,
+  teo: reviewsTeo.length,
+};
+---
+
+<LandingLayout
+  title="Отзывы клиентов · Сергей Шанэри"
+  description={`${all.length} отзывов о соционическом типировании, Дизайне Человека, духовной психотерапии и ТЭО.`}
+>
+  {/* ─────────────────── HERO ─────────────────── */}
+  <section class="rv-hero ln-section ln-section--tight">
+    <div class="ln-shell rv-hero__inner">
+      <div class="rv-hero__copy" data-reveal>
+        <span class="ln-eyebrow"><span class="ln-eyebrow__dot"></span>Отзывы</span>
+        <h1 class="ln-h1 rv-hero__title">
+          Слова <em>клиентов.</em>
+        </h1>
+        <p class="ln-lead rv-hero__lead">
+          {all.length}&nbsp;отзывов с&nbsp;2016&nbsp;года — типирование,
+          Дизайн Человека, психотерапия, групповая практика&nbsp;ТЭО.
+          Фильтруйте по&nbsp;направлению.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── FILTER ─────────────────── */}
+  <section class="rv-filter ln-section ln-section--tight">
+    <div class="ln-shell">
+      <div class="rv-filter__chips" role="tablist" aria-label="Фильтр по направлению">
+        <button
+          class="rv-chip is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-filter="all"
+        >
+          <span>Все</span>
+          <span class="rv-chip__count">{counts.all}</span>
+        </button>
+        <button class="rv-chip" type="button" role="tab" aria-selected="false" data-filter="typing">
+          <span>Типирование</span>
+          <span class="rv-chip__count">{counts.typing}</span>
+        </button>
+        <button
+          class="rv-chip"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-filter="human-design"
+        >
+          <span>Дизайн Человека</span>
+          <span class="rv-chip__count">{counts['human-design']}</span>
+        </button>
+        <button class="rv-chip" type="button" role="tab" aria-selected="false" data-filter="therapy">
+          <span>Психотерапия</span>
+          <span class="rv-chip__count">{counts.therapy}</span>
+        </button>
+        <button class="rv-chip" type="button" role="tab" aria-selected="false" data-filter="teo">
+          <span>ТЭО</span>
+          <span class="rv-chip__count">{counts.teo}</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* ─────────────────── REVIEWS GRID ─────────────────── */}
+  <section class="rv-grid-section ln-section">
+    <div class="ln-shell">
+      <div class="rv-grid" data-reviews-grid>
+        {
+          all.map((r) => (
+            <article class="rv" data-topic={r.topic}>
+              <div class="ln-bezel">
+                <div class="ln-bezel__inner rv__inner">
+                  <a class="rv__topic-tag" href={r.href}>
+                    {r.topicLabel}
+                  </a>
+                  <svg class="rv__mark" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+                    <path
+                      d="M10 32C4 32 0 28 0 22C0 14 6 6 16 0L18 4C12 8 8 12 8 16C10 14 13 13 16 13C20 13 23 16 23 20C23 26 18 32 10 32ZM30 32C24 32 20 28 20 22C20 14 26 6 36 0L38 4C32 8 28 12 28 16C30 14 33 13 36 13C40 13 43 16 43 20C43 26 38 32 30 32Z"
+                      fill="currentColor"
+                      opacity="0.22"
+                    />
+                  </svg>
+                  <blockquote class="rv__text">{r.text}</blockquote>
+                  <footer class="rv__caption">
+                    <span class="rv__author">{r.author}</span>
+                    {r.source ? (
+                      <a
+                        class="rv__source"
+                        href={r.source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {r.source.label} ↗
+                      </a>
+                    ) : (
+                      r.date && <span class="rv__date">{r.date}</span>
+                    )}
+                  </footer>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="rv-empty" data-reviews-empty hidden>
+        <span class="rv-empty__text">В этой категории пока нет отзывов.</span>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════════ */
+  .rv-hero {
+    padding-top: clamp(4rem, 8vw, 7rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .rv-hero__inner {
+    text-align: center;
+  }
+
+  .rv-hero__copy {
+    max-width: 44rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .rv-hero__title {
+    margin: 0;
+  }
+  .rv-hero__title em {
+    font-style: italic;
+    color: var(--ln-accent);
+  }
+
+  .rv-hero__lead {
+    margin: 0;
+    max-width: 38rem;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FILTER CHIPS
+     ═══════════════════════════════════════════════════════════════ */
+  .rv-filter {
+    padding-top: 0;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 5, 16, 0.92) 0%,
+      rgba(8, 5, 16, 0.86) 65%,
+      rgba(8, 5, 16, 0) 100%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .rv-filter__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    padding-block: 1.25rem;
+  }
+
+  .rv-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--ln-line);
+    background: rgba(230, 225, 255, 0.03);
+    color: var(--ln-ink-body);
+    font-family: var(--ln-font-body);
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition:
+      background 300ms var(--ln-ease-silk),
+      border-color 300ms var(--ln-ease-silk),
+      color 200ms var(--ln-ease-silk),
+      transform 300ms var(--ln-ease-silk);
+  }
+  .rv-chip:hover {
+    background: rgba(184, 157, 255, 0.08);
+    border-color: rgba(184, 157, 255, 0.3);
+    color: var(--ln-ink-strong);
+  }
+  .rv-chip.is-active {
+    background: linear-gradient(170deg, rgba(96, 56, 168, 0.45), rgba(60, 28, 128, 0.55));
+    border-color: rgba(199, 160, 255, 0.5);
+    color: var(--ln-ink-strong);
+  }
+
+  .rv-chip__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6em;
+    padding: 0.05em 0.45em;
+    border-radius: 999px;
+    background: rgba(230, 225, 255, 0.08);
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--ln-ink-mute);
+  }
+  .rv-chip.is-active .rv-chip__count {
+    background: rgba(199, 160, 255, 0.18);
+    color: rgba(245, 242, 255, 0.95);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     REVIEWS GRID — masonry via CSS columns
+     ═══════════════════════════════════════════════════════════════ */
+  .rv-grid-section {
+    padding-top: 0;
+  }
+
+  .rv-grid {
+    column-count: 3;
+    column-gap: 1.4rem;
+  }
+
+  @media (max-width: 1100px) {
+    .rv-grid { column-count: 2; }
+  }
+  @media (max-width: 680px) {
+    .rv-grid { column-count: 1; }
+  }
+
+  .rv {
+    break-inside: avoid;
+    margin-bottom: 1.4rem;
+    /* фикс хрома при scrollIntoView внутри columns */
+    transform: translateZ(0);
+  }
+
+  .rv[hidden] { display: none; }
+
+  .rv__inner {
+    padding: 1.6rem 1.7rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+  }
+
+  .rv__topic-tag {
+    align-self: flex-start;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--ln-line);
+    background: rgba(230, 225, 255, 0.03);
+    font-family: var(--ln-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    text-decoration: none;
+    transition:
+      color 300ms var(--ln-ease-silk),
+      border-color 300ms var(--ln-ease-silk),
+      background 300ms var(--ln-ease-silk);
+  }
+  .rv__topic-tag:hover {
+    color: var(--ln-accent);
+    border-color: rgba(184, 157, 255, 0.4);
+    background: rgba(184, 157, 255, 0.08);
+  }
+
+  .rv__mark {
+    width: 2rem;
+    height: 1.6rem;
+    color: var(--ln-accent);
+    margin-top: 0.25rem;
+  }
+
+  .rv__text {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ln-ink-strong);
+    margin: 0;
+  }
+
+  .rv__caption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.9rem;
+    margin-top: 0.4rem;
+    border-top: 1px solid var(--ln-line-faint);
+  }
+
+  .rv__author {
+    font-family: var(--ln-font-body);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--ln-ink-strong);
+  }
+
+  .rv__date,
+  .rv__source {
+    font-family: var(--ln-font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ln-ink-mute);
+    text-decoration: none;
+    transition: color 300ms var(--ln-ease-silk);
+  }
+  .rv__source:hover { color: var(--ln-accent); }
+
+  .rv-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  .rv-empty__text {
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    color: var(--ln-ink-mute);
+    font-size: 1rem;
+  }
+</style>
+
+<script>
+  // Filter logic
+  const chips = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('.rv');
+  const empty = document.querySelector<HTMLElement>('[data-reviews-empty]');
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const topic = chip.dataset.filter;
+      chips.forEach((c) => {
+        const active = c === chip;
+        c.classList.toggle('is-active', active);
+        c.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const show = topic === 'all' || card.dataset.topic === topic;
+        if (show) {
+          card.removeAttribute('hidden');
+          visibleCount++;
+        } else {
+          card.setAttribute('hidden', '');
+        }
+      });
+      if (empty) empty.hidden = visibleCount > 0;
+      // Smooth scroll to grid top after filter
+      document.querySelector('[data-reviews-grid]')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  });
+</script>
