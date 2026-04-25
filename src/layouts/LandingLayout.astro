@@ -2,6 +2,8 @@
 import '../styles/landing.css';
 import LandingNav from '../components/landing/LandingNav.astro';
 import LandingFooter from '../components/landing/LandingFooter.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { personSchema } from '../lib/structured-data';
 
 interface Props {
   title: string;
@@ -48,6 +50,7 @@ const canonicalUrl = canonical
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
+    <JsonLd data={personSchema} />
     <slot name="head" />
   </head>
   <body class="landing-body">

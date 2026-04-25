@@ -7,6 +7,8 @@
 import ReadingProgress from './ReadingProgress.astro';
 import NoirEnhancements from './NoirEnhancements.astro';
 import TypeTagger from './TypeTagger.astro';
+import JsonLd from './JsonLd.astro';
+import { personSchema } from '../lib/structured-data';
 // FractalBackground — отключён (идея отложена).
 // Файл сохранён в src/components/FractalBackground.astro, чтобы
 // вернуть его позже: достаточно восстановить импорт и рендер ниже.
@@ -31,6 +33,9 @@ const imageUrl = new URL('shaneri.jpg', siteBase).toString();
 {/* Цвет тулбара мобильных браузеров — совпадает с основным фоном темы */}
 <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#f6f3fa" media="(prefers-color-scheme: light)" />
+
+{/* JSON-LD: персональная schema.org разметка для rich snippets */}
+<JsonLd data={personSchema} />
 
 {/* Minimal Noir: клиентские эффекты. Компонент вставляет <script> — Astro
     выносит его из <head> в нужное место автоматически. */}

@@ -1,5 +1,7 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { reviewsListSchema } from '../lib/structured-data';
 import reviewsTyping from '../data/reviews-typing.json';
 import reviewsHumanDesign from '../data/reviews-human-design.json';
 import reviewsTherapy from '../data/reviews-therapy.json';
@@ -64,12 +66,16 @@ const counts = {
   therapy: reviewsTherapy.length,
   teo: reviewsTeo.length,
 };
+
+const reviewsSchema = reviewsListSchema(all);
 ---
 
 <LandingLayout
   title="Отзывы клиентов · Сергей Шанэри"
   description={`${all.length} отзывов о соционическом типировании, Дизайне Человека, духовной психотерапии и ТЭО.`}
 >
+  <JsonLd data={reviewsSchema} slot="head" />
+
   {/* ─────────────────── HERO ─────────────────── */}
   <section class="rv-hero ln-section ln-section--tight">
     <div class="ln-shell rv-hero__inner">
@@ -171,6 +177,13 @@ const counts = {
 
       <div class="rv-empty" data-reviews-empty hidden>
         <span class="rv-empty__text">В этой категории пока нет отзывов.</span>
+      </div>
+
+      <div class="rv-more" data-reviews-more-wrap>
+        <button class="rv-more__btn" type="button" data-reviews-more>
+          <span>Показать ещё</span>
+          <span class="rv-more__count" data-reviews-more-count></span>
+        </button>
       </div>
     </div>
   </section>
@@ -324,25 +337,31 @@ const counts = {
 
   .rv__topic-tag {
     align-self: flex-start;
-    padding: 0.25rem 0.7rem;
-    border-radius: 999px;
-    border: 1px solid var(--ln-line);
-    background: rgba(230, 225, 255, 0.03);
-    font-family: var(--ln-font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-family: var(--ln-font-display);
+    font-style: italic;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.005em;
     color: var(--ln-ink-mute);
     text-decoration: none;
-    transition:
-      color 300ms var(--ln-ease-silk),
-      border-color 300ms var(--ln-ease-silk),
-      background 300ms var(--ln-ease-silk);
+    transition: color 300ms var(--ln-ease-silk);
+  }
+  .rv__topic-tag::before {
+    content: '';
+    display: inline-block;
+    width: 1.4rem;
+    height: 0.5px;
+    background: currentColor;
+    opacity: 0.5;
   }
   .rv__topic-tag:hover {
     color: var(--ln-accent);
-    border-color: rgba(184, 157, 255, 0.4);
-    background: rgba(184, 157, 255, 0.08);
   }
 
   .rv__mark {
@@ -401,38 +420,113 @@ const counts = {
     color: var(--ln-ink-mute);
     font-size: 1rem;
   }
+
+  /* «Показать ещё» */
+  .rv-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+  .rv-more[hidden] { display: none; }
+
+  .rv-more__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7em;
+    padding: 0.85rem 1.7rem;
+    border: 0.5px solid rgba(230, 225, 255, 0.14) !important;
+    border-radius: 6px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+      rgba(10, 7, 20, 0.55);
+    color: rgba(220, 215, 235, 0.82);
+    font-family: var(--ln-font-display);
+    font-size: 0.95rem;
+    letter-spacing: 0.012em;
+    cursor: pointer;
+    transition:
+      border-color 320ms var(--ln-ease-silk),
+      background 320ms var(--ln-ease-silk),
+      color 220ms var(--ln-ease-silk);
+  }
+  .rv-more__btn:hover {
+    border-color: rgba(154, 120, 220, 0.32);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+      rgba(18, 12, 32, 0.78);
+    color: rgba(245, 242, 255, 0.96);
+  }
+  .rv-more__count {
+    font-family: var(--ln-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 0.15em 0.55em;
+    border-radius: 999px;
+    background: rgba(184, 157, 255, 0.12);
+    color: rgba(184, 157, 255, 0.85);
+  }
 </style>
 
 <script>
-  // Filter logic
+  // Filter + lazy pagination — show 30 at a time within current filter
+  const BATCH = 30;
   const chips = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
-  const cards = document.querySelectorAll<HTMLElement>('.rv');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.rv'));
   const empty = document.querySelector<HTMLElement>('[data-reviews-empty]');
+  const moreWrap = document.querySelector<HTMLElement>('[data-reviews-more-wrap]');
+  const moreBtn = document.querySelector<HTMLButtonElement>('[data-reviews-more]');
+  const moreCount = document.querySelector<HTMLElement>('[data-reviews-more-count]');
+
+  let currentTopic = 'all';
+  let visibleLimit = BATCH;
+
+  function applyView(scroll = false) {
+    let matching = 0;
+    let visible = 0;
+    cards.forEach((card) => {
+      const matchesTopic = currentTopic === 'all' || card.dataset.topic === currentTopic;
+      if (!matchesTopic) {
+        card.hidden = true;
+        return;
+      }
+      matching++;
+      if (visible < visibleLimit) {
+        card.hidden = false;
+        visible++;
+      } else {
+        card.hidden = true;
+      }
+    });
+    if (empty) empty.hidden = matching > 0;
+    const remaining = matching - visible;
+    if (moreWrap) moreWrap.hidden = remaining <= 0;
+    if (moreCount) moreCount.textContent = remaining > 0 ? `+${Math.min(BATCH, remaining)}` : '';
+    if (scroll) {
+      document.querySelector('[data-reviews-grid]')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
 
   chips.forEach((chip) => {
     chip.addEventListener('click', () => {
-      const topic = chip.dataset.filter;
+      currentTopic = chip.dataset.filter ?? 'all';
+      visibleLimit = BATCH;
       chips.forEach((c) => {
         const active = c === chip;
         c.classList.toggle('is-active', active);
         c.setAttribute('aria-selected', active ? 'true' : 'false');
       });
-      let visibleCount = 0;
-      cards.forEach((card) => {
-        const show = topic === 'all' || card.dataset.topic === topic;
-        if (show) {
-          card.removeAttribute('hidden');
-          visibleCount++;
-        } else {
-          card.setAttribute('hidden', '');
-        }
-      });
-      if (empty) empty.hidden = visibleCount > 0;
-      // Smooth scroll to grid top after filter
-      document.querySelector('[data-reviews-grid]')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+      applyView(true);
     });
   });
+
+  moreBtn?.addEventListener('click', () => {
+    visibleLimit += BATCH;
+    applyView();
+  });
+
+  // Initial render
+  applyView();
 </script>

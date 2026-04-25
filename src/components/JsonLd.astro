@@ -1,0 +1,13 @@
+---
+/**
+ * Утилитный компонент для встраивания JSON-LD structured data.
+ * Помогает Google показывать богатые сниппеты (rich results).
+ */
+interface Props {
+  data: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const { data } = Astro.props;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

@@ -1,0 +1,142 @@
+---
+/**
+ * Подсказки на 404: загружает /wiki-search-index.json,
+ * фуззи-матчит запрошенный URL и предлагает топ-3 близкие страницы.
+ * Скрыт по умолчанию, появляется только если найдены матчи.
+ */
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<aside class="sg404 not-content" data-sg404 hidden>
+  <span class="sg404__eyebrow">Возможно, вы искали</span>
+  <ul class="sg404__list" data-sg404-list></ul>
+</aside>
+
+<script define:vars={{ indexUrl: `${base}wiki-search-index.json` }}>
+  (async () => {
+    const wrap = document.querySelector('[data-sg404]');
+    const list = document.querySelector('[data-sg404-list]');
+    if (!wrap || !list) return;
+
+    let entries = [];
+    try {
+      const r = await fetch(indexUrl);
+      if (!r.ok) return;
+      entries = await r.json();
+    } catch {
+      return;
+    }
+
+    // Запрошенный путь без base-prefix и слешей
+    const basePath = new URL(indexUrl).pathname.replace(/wiki-search-index\.json$/, '');
+    const requested = location.pathname.replace(basePath, '').replace(/^\/|\/$/g, '');
+    if (!requested) return;
+
+    // Извлекаем токены из запрошенного URL и нормализуем
+    const norm = (s) => s.toLowerCase().replace(/[^a-zа-яё0-9]+/gi, ' ').trim();
+    const reqTokens = norm(requested).split(/\s+/).filter((t) => t.length >= 2);
+    if (reqTokens.length === 0) return;
+
+    // Скоринг: сумма (длина токена) если он встречается в slug или title
+    function score(entry) {
+      const hay = norm(entry.slug + ' ' + entry.title);
+      let s = 0;
+      for (const t of reqTokens) {
+        if (hay.includes(t)) s += t.length * 2;
+        // также частичные совпадения первых 4+ букв
+        else if (t.length >= 4 && hay.includes(t.slice(0, 4))) s += 1;
+      }
+      return s;
+    }
+
+    const ranked = entries
+      .map((e) => ({ e, s: score(e) }))
+      .filter((x) => x.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 3);
+
+    if (ranked.length === 0) return;
+
+    list.innerHTML = ranked
+      .map(
+        ({ e }) =>
+          `<li><a href="${e.url}"><span class="sg404__title">${e.title}</span><span class="sg404__url">${e.url}</span></a></li>`,
+      )
+      .join('');
+    wrap.hidden = false;
+  })();
+</script>
+
+<style>
+  .sg404 {
+    margin: 2.5rem auto 0;
+    max-width: 44rem;
+    padding: 1.6rem 1.8rem;
+    border: 0.5px solid var(--sl-color-hairline, rgba(230, 225, 255, 0.1));
+    border-radius: 14px;
+    background:
+      linear-gradient(170deg, rgba(28, 22, 46, 0.55), rgba(14, 10, 26, 0.65));
+  }
+  .sg404[hidden] { display: none; }
+
+  .sg404__eyebrow {
+    display: block;
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.66rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.78;
+    margin-bottom: 1rem;
+  }
+
+  .sg404__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sg404__list a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 220ms ease, transform 220ms ease;
+  }
+  .sg404__list a:hover {
+    background: rgba(184, 157, 255, 0.08);
+    transform: translateX(2px);
+  }
+
+  .sg404__title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--sl-color-white);
+  }
+  .sg404__url {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.72rem;
+    color: var(--sl-color-text-weak);
+    opacity: 0.7;
+    word-break: break-all;
+  }
+
+  :global(:root[data-theme='light']) .sg404 {
+    background:
+      linear-gradient(170deg, rgba(245, 240, 255, 0.85), rgba(235, 228, 255, 0.7));
+    border-color: rgba(106, 27, 154, 0.14);
+  }
+  :global(:root[data-theme='light']) .sg404__title {
+    color: #1a1627;
+  }
+  :global(:root[data-theme='light']) .sg404__url,
+  :global(:root[data-theme='light']) .sg404__eyebrow {
+    color: rgba(26, 22, 39, 0.6);
+  }
+</style>

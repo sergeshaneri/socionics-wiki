@@ -2,9 +2,21 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
 import RelatedServices from '../components/landing/RelatedServices.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { serviceSchema } from '../lib/structured-data';
 import reviews from '../data/reviews-human-design.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const hdServiceSchema = serviceSchema({
+  name: 'Дизайн Человека — интегральный разбор',
+  description:
+    'Интегральный разбор бодиграфа, хологенетического профиля и Генных Ключей в подходе духовной психотерапии. Чтение активных центров и каналов, Золотой Путь, проработки Ключей, терапевтические медитации под запрос.',
+  serviceType: 'Консультация по Дизайну Человека',
+  url: 'https://sergeshaneri.github.io/socionics-wiki/human-design/',
+  lowPrice: 3000,
+  highPrice: 60000,
+});
 
 const tiers = [
   {
@@ -146,6 +158,8 @@ const stats = [
   description="Консультации по Дизайну Человека и Генным Ключам в подходе духовной психотерапии. Бодиграф, хологенетический профиль, Золотой Путь, Генные Ключи."
   canonical="human-design/"
 >
+  <JsonLd data={hdServiceSchema} slot="head" />
+
   {/* ─────────────────── HERO ─────────────────── */}
   <section class="hero">
     <div class="hero__aurora" aria-hidden="true"></div>

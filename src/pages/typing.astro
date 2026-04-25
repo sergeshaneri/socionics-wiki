@@ -2,7 +2,19 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
 import RelatedServices from '../components/landing/RelatedServices.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { serviceSchema } from '../lib/structured-data';
 import reviews from '../data/reviews-typing.json';
+
+const typingServiceSchema = serviceSchema({
+  name: 'Соционическое типирование',
+  description:
+    'Авторская методика определения ТИМа через интервью с обучением слышать свой тип изнутри. Вопросы на признаки Рейнина и информационные аспекты, аргументация по всем ответам, разбор интертипных отношений. 12 лет практики, более 2000 типирований.',
+  serviceType: 'Соционическая консультация',
+  url: 'https://sergeshaneri.github.io/socionics-wiki/typing/',
+  lowPrice: 3000,
+  highPrice: 40000,
+});
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
@@ -134,6 +146,8 @@ const stats = [
   description="Уникальная методика типирования с элементами психологии и обучения. Интервью, признаки Рейнина, модель А и соционическая осознанность."
   canonical="typing/"
 >
+  <JsonLd data={typingServiceSchema} slot="head" />
+
   {/* ─────────────────── HERO ─────────────────── */}
   <section class="hero">
     <div class="hero__aurora" aria-hidden="true"></div>

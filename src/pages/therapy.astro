@@ -2,9 +2,21 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import ReviewsCarousel from '../components/landing/ReviewsCarousel.astro';
 import RelatedServices from '../components/landing/RelatedServices.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { serviceSchema } from '../lib/structured-data';
 import reviews from '../data/reviews-therapy.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const therapyServiceSchema = serviceSchema({
+  name: 'Духовная психотерапия',
+  description:
+    'Индивидуальные терапевтические сессии и целительные медитации в духовном подходе. Работа с эмоциями, травмами и духовными уроками. Гештальт, ЭОТ, гипнотерапия, регрессии в прошлые жизни, системные расстановки, работа с субличностями.',
+  serviceType: 'Психотерапия',
+  url: 'https://sergeshaneri.github.io/socionics-wiki/therapy/',
+  lowPrice: 1000,
+  highPrice: 30000,
+});
 
 const tiers = [
   {
@@ -181,6 +193,8 @@ const stats = [
   description="Индивидуальные терапевтические сессии в духовном подходе. Гештальт-терапия, целительные медитации, работа с подсознанием, регрессии, духовные уроки."
   canonical="therapy/"
 >
+  <JsonLd data={therapyServiceSchema} slot="head" />
+
   {/* ─────────────────── HERO ─────────────────── */}
   <section class="hero">
     <div class="hero__aurora" aria-hidden="true"></div>

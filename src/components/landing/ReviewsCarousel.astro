@@ -179,6 +179,8 @@ const { reviews, id } = Astro.props;
   .rc__btn {
     width: 2.75rem;
     height: 2.75rem;
+    min-width: 2.75rem;
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -218,20 +220,37 @@ const { reviews, id } = Astro.props;
     padding: 0 0.25rem;
   }
 
+  /* Точка с прозрачной hit-зоной 28×28 для удобного тапа на мобильных,
+     визуально остаётся 6×6. Видимая часть — через ::before. */
   .rc__dot {
-    width: 6px;
-    height: 6px;
+    position: relative;
+    width: 28px;
+    height: 28px;
     padding: 0;
     border: 0;
     border-radius: 999px;
-    background: rgba(234, 228, 255, 0.22);
+    background: transparent;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 500ms var(--ln-ease-silk);
+  }
+  .rc__dot::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(234, 228, 255, 0.22);
     transition:
       width 500ms var(--ln-ease-silk),
       background 400ms var(--ln-ease-silk);
   }
-  .rc__dot:hover { background: rgba(234, 228, 255, 0.4); }
+  .rc__dot:hover::before { background: rgba(234, 228, 255, 0.4); }
   .rc__dot.is-active {
+    width: 44px;
+  }
+  .rc__dot.is-active::before {
     width: 22px;
     background: var(--ln-accent);
   }
