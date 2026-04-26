@@ -4,6 +4,8 @@ description: "Иллюстрации к докладу ЮМП"
 categories: [formal]
 ---
 
+📹 [Видео доклада: Признаки Юнга-Минаева](../../video/признаки-юнга-минаева)
+
 So i've found 5 points where it manifest:
 
 1\. left/right metadichotomy  
