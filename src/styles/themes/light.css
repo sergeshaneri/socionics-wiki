@@ -138,6 +138,102 @@
   color: rgba(26, 22, 39, 0.6);
 }
 
+/* Pagefind-модалка: в тёмной теме фон жёстко задан как rgba(10,10,16,.96).
+   Перекрываем переменные и стили самого диалога под светлую тему — иначе
+   тёмный текст ложится на тёмный фон. */
+:root[data-theme='light'] #starlight__search {
+  --pagefind-ui-primary: #1a1627;
+  --pagefind-ui-text: rgba(26, 22, 39, 0.85);
+  --pagefind-ui-background: #f6f3fa;
+  --pagefind-ui-border: rgba(26, 22, 39, 0.18);
+  --pagefind-ui-tag: rgba(26, 22, 39, 0.05);
+}
+
+:root[data-theme='light'] dialog[open] {
+  background: #f6f3fa !important;
+  color: rgba(26, 22, 39, 0.85);
+  border: 0.5px solid rgba(26, 22, 39, 0.18);
+  box-shadow:
+    0 0 1px rgba(106, 27, 154, 0.18),
+    0 24px 60px rgba(26, 22, 39, 0.18);
+}
+
+:root[data-theme='light'] dialog[open]::backdrop {
+  background: rgba(26, 22, 39, 0.32);
+  backdrop-filter: blur(4px);
+}
+
+/* Поле ввода */
+:root[data-theme='light'] #starlight__search .pagefind-ui__search-input {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 0.5px solid rgba(26, 22, 39, 0.18) !important;
+  color: #1a1627 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+:root[data-theme='light'] #starlight__search .pagefind-ui__search-input::placeholder {
+  color: rgba(26, 22, 39, 0.5);
+}
+
+:root[data-theme='light'] #starlight__search .pagefind-ui__search-input:focus {
+  border-color: rgba(106, 27, 154, 0.45) !important;
+  outline: none !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 0 3px rgba(106, 27, 154, 0.12);
+}
+
+/* Иконка лупы и spinner — тёмные на светлом */
+:root[data-theme='light'] #starlight__search .pagefind-ui__search-clear,
+:root[data-theme='light'] #starlight__search .pagefind-ui__button {
+  color: rgba(26, 22, 39, 0.7) !important;
+  background: transparent !important;
+}
+
+:root[data-theme='light'] #starlight__search .pagefind-ui__button:hover {
+  color: #6a1b9a !important;
+  background: rgba(123, 44, 191, 0.06) !important;
+}
+
+/* Заголовки результатов */
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-title,
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-title a {
+  color: #1a1627 !important;
+}
+
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-title a:hover {
+  color: #6a1b9a !important;
+}
+
+/* Подсветка совпадений */
+:root[data-theme='light'] #starlight__search mark,
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-excerpt mark {
+  background: rgba(123, 44, 191, 0.18) !important;
+  color: #1a1627 !important;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+
+/* Превью / excerpt */
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-excerpt {
+  color: rgba(26, 22, 39, 0.68) !important;
+}
+
+/* Hover на строке результата */
+:root[data-theme='light'] #starlight__search .pagefind-ui__result {
+  border-bottom: 0.5px solid rgba(26, 22, 39, 0.1);
+}
+
+:root[data-theme='light'] #starlight__search .pagefind-ui__result-link:hover,
+:root[data-theme='light'] #starlight__search a:hover {
+  background: rgba(123, 44, 191, 0.06);
+}
+
+/* «No results» / счётчик */
+:root[data-theme='light'] #starlight__search .pagefind-ui__message {
+  color: rgba(26, 22, 39, 0.6) !important;
+}
+
 /* Hero — прозрачный: пусть градиент body просвечивает. */
 :root[data-theme='light'] .hero {
   background: transparent !important;
@@ -180,37 +276,77 @@
     0 20px 40px rgba(26, 22, 39, 0.1) !important;
 }
 
-/* Hero кнопки — editorial luxury (см. variant-c.css) */
+/* Hero кнопки — gallery-plaque (см. variant-c.css) */
 :root[data-theme='light'] .hero .sl-link-button,
 :root[data-theme='light'] .hero .sl-button,
 :root[data-theme='light'] .hero .actions a,
 :root[data-theme='light'] .hero-actions a {
-  border: 1px solid rgba(26, 22, 39, 0.22) !important;
-  border-radius: 6px !important;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.55)) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 1px 2px rgba(26, 22, 39, 0.06),
-    0 6px 14px -8px rgba(26, 22, 39, 0.12) !important;
-  color: rgba(26, 22, 39, 0.85) !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(26, 22, 39, 0.78) !important;
+}
+
+:root[data-theme='light'] .hero .sl-link-button::before,
+:root[data-theme='light'] .hero .sl-button::before,
+:root[data-theme='light'] .hero .actions a::before,
+:root[data-theme='light'] .hero-actions a::before {
+  background: rgba(26, 22, 39, 0.55);
 }
 
 :root[data-theme='light'] .hero .sl-link-button:hover,
 :root[data-theme='light'] .hero .sl-button:hover,
 :root[data-theme='light'] .hero .actions a:hover,
-:root[data-theme='light'] .hero-actions a:hover,
-:root[data-theme='light'] .hero .sl-link-button:focus-visible,
-:root[data-theme='light'] .hero .sl-button:focus-visible,
-:root[data-theme='light'] .hero .actions a:focus-visible,
-:root[data-theme='light'] .hero-actions a:focus-visible {
-  border-color: rgba(106, 27, 154, 0.28) !important;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 244, 255, 0.7)) !important;
+:root[data-theme='light'] .hero-actions a:hover {
   color: #1a1627 !important;
-  box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.7),
-    0 8px 22px -14px rgba(106, 27, 154, 0.25) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme='light'] .hero .sl-link-button:hover::before,
+:root[data-theme='light'] .hero .sl-button:hover::before,
+:root[data-theme='light'] .hero .actions a:hover::before,
+:root[data-theme='light'] .hero-actions a:hover::before {
+  background: rgba(106, 27, 154, 0.85);
+}
+
+:root[data-theme='light'] .hero .sl-link-button:hover::after,
+:root[data-theme='light'] .hero .sl-button:hover::after,
+:root[data-theme='light'] .hero .actions a:hover::after,
+:root[data-theme='light'] .hero-actions a:hover::after {
+  color: rgba(106, 27, 154, 0.95);
+}
+
+:root[data-theme='light'] .hero .sl-link-button.primary,
+:root[data-theme='light'] .hero .actions a.primary {
+  color: #1a1627 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+:root[data-theme='light'] .hero .sl-link-button.primary::before,
+:root[data-theme='light'] .hero .actions a.primary::before {
+  background: rgba(106, 27, 154, 0.55);
+}
+:root[data-theme='light'] .hero .sl-link-button.primary:hover::before,
+:root[data-theme='light'] .hero .actions a.primary:hover::before {
+  background: rgba(106, 27, 154, 1);
+}
+:root[data-theme='light'] .hero .sl-link-button.primary::after,
+:root[data-theme='light'] .hero .actions a.primary::after {
+  color: rgba(106, 27, 154, 0.85);
+}
+
+:root[data-theme='light'] .hero .sl-link-button.minimal,
+:root[data-theme='light'] .hero .actions a.minimal {
+  color: rgba(26, 22, 39, 0.45) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+:root[data-theme='light'] .hero .sl-link-button.minimal:hover,
+:root[data-theme='light'] .hero .actions a.minimal:hover {
+  color: #1a1627 !important;
+  background: transparent !important;
 }
 
 /* Primary в светлой теме — глубокий ink-violet */

@@ -172,14 +172,12 @@ const stats = [
       </div>
 
       <h1 class="ln-display hero__title" data-reveal data-reveal-delay="1">
-        Интегральный<br />
-        Дизайн Человека.<br />
-        <em>Духовная психотерапия.</em>
+        <span class="hero__title-eyebrow">Интегральный</span>
+        <span class="hero__title-main">Дизайн Человека</span>
       </h1>
 
       <p class="ln-lead hero__lead" data-reveal data-reveal-delay="2">
-        Помогу воспользоваться выводами из систем самопознания —
-        без погружения в теорию.
+        Помогу воспользоваться выводами из систем самопознания.
       </p>
 
       <div class="hero__actions" data-reveal data-reveal-delay="3">
@@ -557,8 +555,39 @@ const stats = [
   .hero__meta { margin-bottom: 0.25rem; }
 
   .hero__title {
-    max-width: 20ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    max-width: 100%;
     margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .hero__title-eyebrow {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-style: normal;
+    font-size: clamp(0.78rem, 1vw, 0.95rem);
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(220, 215, 235, 0.62);
+  }
+
+  .hero__title-main {
+    font-family: var(--ln-font-display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(3rem, 8.5vw, 7.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.018em;
+    background: linear-gradient(135deg, #d7c4ff 0%, #b89dff 40%, #8e6dff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--ln-accent);
   }
 
   .hero__lead {

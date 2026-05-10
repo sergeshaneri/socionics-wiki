@@ -341,16 +341,17 @@ body {
   white-space: nowrap;
 }
 
-/* === Hero-кнопки: editorial luxury, угрюмо-премиум ====================
-   Архитектурный лейбл-ярлык: почти-чёрная заливка, hairline-граница,
-   слегка скруглённые углы (не таблетка), сдержанная типографика.
-   На hover — мягкая подсветка границы и акцент на шевроне. */
+/* === Hero-кнопки: gallery-plaque ======================================
+   Никаких боксов. Чистая типографика — italic Cormorant + стрелка →.
+   Аффорданс кнопки даёт hairline под текстом, который прорисовывается
+   слева направо при hover. Primary — hairline всегда виден. */
 .hero .actions,
 .hero-actions {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 0.65rem 0.7rem !important;
-  margin: 2rem 0 !important;
+  align-items: baseline !important;
+  gap: 0.9rem 2.4rem !important;
+  margin: 2.5rem 0 !important;
   max-width: none !important;
 }
 
@@ -360,46 +361,62 @@ body {
 .hero-actions a {
   position: relative !important;
   display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.65em !important;
-  padding: 0.78rem 1.5rem !important;
-  border: 1px solid rgba(230, 225, 255, 0.22) !important;
-  border-radius: 6px !important;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)),
-    rgba(20, 16, 34, 0.78) !important;
-  color: rgba(232, 227, 245, 0.92) !important;
-  font-family: var(--font-heading) !important;
-  font-size: 0.92rem !important;
+  align-items: baseline !important;
+  gap: 0.5em !important;
+  padding: 0.4rem 0 0.6rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(220, 215, 235, 0.82) !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-style: normal !important;
+  font-size: 0.76rem !important;
   font-weight: 500 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
   white-space: nowrap !important;
   text-decoration: none !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    0 1px 2px rgba(0, 0, 0, 0.45),
-    0 6px 14px -8px rgba(0, 0, 0, 0.55) !important;
-  transition:
-    border-color 320ms ease-out,
-    background 320ms ease-out,
-    box-shadow 320ms ease-out,
-    color 220ms ease-out !important;
+  box-shadow: none !important;
+  transition: color 360ms ease-out !important;
 }
 
-/* Авто-шеврон `›` — приглушённый, узкий */
+/* Стрелка → справа, тонкая, без италика */
 .hero .sl-link-button::after,
 .hero .sl-button::after,
 .hero .actions a::after,
 .hero-actions a::after {
-  content: '›';
-  display: inline-block;
-  font-family: var(--font-heading);
+  content: '→';
+  font-style: normal;
+  font-family: var(--font-mono, 'Space Mono', monospace);
   font-weight: 300;
-  font-size: 1.05em;
-  opacity: 0.42;
-  margin-left: 0.05em;
-  transform: translateY(-0.06em);
-  transition: opacity 280ms ease, transform 280ms ease, color 220ms ease;
+  font-size: 0.92em;
+  opacity: 0.5;
+  margin-left: 0.15em;
+  transform: translateY(-0.05em);
+  transition:
+    opacity 320ms ease-out,
+    transform 600ms cubic-bezier(0.32, 0.72, 0, 1),
+    color 320ms ease-out;
+}
+
+/* Тонкая черта под текстом — прорисовывается слева на hover */
+.hero .sl-link-button::before,
+.hero .sl-button::before,
+.hero .actions a::before,
+.hero-actions a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.5px;
+  background: rgba(220, 215, 235, 0.55);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition:
+    transform 700ms cubic-bezier(0.32, 0.72, 0, 1),
+    background 360ms ease-out,
+    height 320ms ease-out;
 }
 
 .hero .sl-link-button:hover,
@@ -410,15 +427,24 @@ body {
 .hero .sl-button:focus-visible,
 .hero .actions a:focus-visible,
 .hero-actions a:focus-visible {
-  border-color: rgba(154, 120, 220, 0.32) !important;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
-    rgba(18, 12, 32, 0.78) !important;
-  color: rgba(245, 242, 255, 0.96) !important;
-  box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.07),
-    0 1px 0 rgba(0, 0, 0, 0.5),
-    0 8px 22px -14px rgba(123, 90, 200, 0.45) !important;
+  color: rgba(248, 245, 255, 0.98) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.hero .sl-link-button:hover::before,
+.hero .sl-button:hover::before,
+.hero .actions a:hover::before,
+.hero-actions a:hover::before,
+.hero .sl-link-button:focus-visible::before,
+.hero .sl-button:focus-visible::before,
+.hero .actions a:focus-visible::before,
+.hero-actions a:focus-visible::before {
+  transform: scaleX(1);
+  background: rgba(184, 157, 255, 0.85);
+  height: 1px;
 }
 
 .hero .sl-link-button:hover::after,
@@ -429,83 +455,56 @@ body {
 .hero .sl-button:focus-visible::after,
 .hero .actions a:focus-visible::after,
 .hero-actions a:focus-visible::after {
-  opacity: 0.95;
-  transform: translate(0.22em, -0.06em);
+  opacity: 1;
+  transform: translate(0.5em, -0.05em);
   color: rgba(184, 157, 255, 0.95);
 }
 
-.hero .sl-link-button:active,
-.hero .sl-button:active,
-.hero .actions a:active,
-.hero-actions a:active {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
-    rgba(8, 5, 16, 0.85) !important;
-  box-shadow:
-    inset 0 1px 2px rgba(0, 0, 0, 0.5),
-    0 0 0 0.5px rgba(154, 120, 220, 0.18) !important;
-}
-
-/* Primary — глубокий ink-violet, благородно тёмный */
+/* Primary — текст ярче + hairline всегда нарисован акцентом */
 .hero .sl-link-button.primary,
 .hero .actions a.primary {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
-    linear-gradient(170deg, rgba(54, 32, 102, 0.95), rgba(28, 14, 64, 0.95)) !important;
-  border-color: rgba(154, 120, 220, 0.32) !important;
-  color: rgba(248, 245, 255, 0.96) !important;
-  box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.08),
-    0 1px 0 rgba(0, 0, 0, 0.5),
-    0 6px 18px -10px rgba(74, 40, 140, 0.55) !important;
+  color: rgba(245, 242, 255, 0.96) !important;
+  font-weight: 600 !important;
 }
-.hero .sl-link-button.primary:hover,
-.hero .actions a.primary:hover,
-.hero .sl-link-button.primary:focus-visible,
-.hero .actions a.primary:focus-visible {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0)),
-    linear-gradient(170deg, rgba(72, 44, 132, 0.97), rgba(40, 22, 86, 0.97)) !important;
-  border-color: rgba(184, 157, 255, 0.48) !important;
-  color: rgba(252, 250, 255, 1) !important;
-  box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.1),
-    0 1px 0 rgba(0, 0, 0, 0.5),
-    0 10px 28px -12px rgba(123, 90, 200, 0.6),
-    0 0 0 0.5px rgba(184, 157, 255, 0.25) !important;
+.hero .sl-link-button.primary::before,
+.hero .actions a.primary::before {
+  transform: scaleX(1);
+  background: rgba(184, 157, 255, 0.55);
+  height: 1px;
+}
+.hero .sl-link-button.primary:hover::before,
+.hero .actions a.primary:hover::before {
+  background: rgba(199, 170, 255, 1);
+  height: 1.5px;
 }
 .hero .sl-link-button.primary::after,
 .hero .actions a.primary::after {
   opacity: 0.7;
-  color: rgba(220, 200, 255, 0.9);
-}
-.hero .sl-link-button.primary:hover::after,
-.hero .actions a.primary:hover::after {
-  color: rgba(245, 240, 255, 1);
+  color: rgba(199, 170, 255, 0.9);
 }
 
-/* Minimal — обнажённая ссылка, только шеврон даёт аффорданс */
+/* Minimal — мельче, без hairline, просто намёк */
 .hero .sl-link-button.minimal,
 .hero .actions a.minimal {
-  border-color: transparent !important;
-  background: transparent !important;
-  padding: 0.55rem 0.5rem !important;
   color: rgba(180, 175, 200, 0.55) !important;
-  box-shadow: none !important;
-  font-size: 0.85rem !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
+  font-size: 0.66rem !important;
+  letter-spacing: 0.22em !important;
+}
+.hero .sl-link-button.minimal::before,
+.hero .actions a.minimal::before {
+  display: none !important;
 }
 .hero .sl-link-button.minimal::after,
 .hero .actions a.minimal::after {
-  font-size: 1em;
+  opacity: 0.4;
 }
 .hero .sl-link-button.minimal:hover,
-.hero .actions a.minimal:hover,
-.hero .sl-link-button.minimal:focus-visible,
-.hero .actions a.minimal:focus-visible {
-  border-color: transparent !important;
-  background: transparent !important;
-  color: rgba(245, 242, 255, 0.92) !important;
-  box-shadow: none !important;
+.hero .actions a.minimal:hover {
+  color: rgba(232, 227, 245, 0.92) !important;
+}
+.hero .sl-link-button.minimal:hover::after,
+.hero .actions a.minimal:hover::after {
+  opacity: 0.85;
+  transform: translate(0.4em, -0.05em);
+  color: rgba(220, 215, 235, 0.85);
 }

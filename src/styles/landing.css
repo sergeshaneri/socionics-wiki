@@ -129,7 +129,7 @@ body.landing-body::after {
 }
 
 .ln-display em {
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   color: var(--ln-accent);
   background: linear-gradient(135deg, #d7c4ff 0%, #b89dff 40%, #8e6dff 100%);
@@ -149,7 +149,7 @@ body.landing-body::after {
 }
 
 .ln-h2 em {
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   color: var(--ln-accent);
 }
