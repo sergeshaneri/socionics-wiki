@@ -5,13 +5,17 @@
  * (там собственные CTA-секции).
  */
 import Default from '@astrojs/starlight/components/Footer.astro';
+import Backlinks from './Backlinks.astro';
 
 const { entry } = Astro.locals.starlightRoute;
 const isSplash = entry.data.template === 'splash';
 const showDiscuss = !isSplash;
+const showBacklinks = !isSplash;
 
 const chatUrl = 'https://t.me/+3PS2UiI8Dec4NWZi';
 ---
+
+{showBacklinks && <Backlinks entry={entry} />}
 
 {
   showDiscuss && (

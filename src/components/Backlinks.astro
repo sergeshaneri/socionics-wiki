@@ -1,0 +1,177 @@
+---
+/**
+ * Блок «См. также» + «Упоминают» внизу wiki-статьи.
+ *
+ * См. также: 5 статей с пересечением categories или из той же top-папки.
+ * Упоминают: статьи, у которых в body есть ссылка на текущую (wiki-link
+ * или абсолютная /socionics-wiki/...).
+ *
+ * Не рендерится, если оба списка пусты.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { getBacklinks, getRelated, entryUrl } from '../lib/backlinks';
+
+interface Props {
+	entry: CollectionEntry<'docs'>;
+}
+
+const { entry } = Astro.props;
+const [related, backlinks] = await Promise.all([
+	getRelated(entry, 5),
+	getBacklinks(entry, 8),
+]);
+
+const hasSomething = related.length > 0 || backlinks.length > 0;
+---
+
+{
+	hasSomething && (
+		<aside class="cross-links not-content" aria-label="Связанные материалы">
+			{related.length > 0 && (
+				<section class="cross-links__section">
+					<h2 class="cross-links__title">См. также</h2>
+					<ul class="cross-links__list">
+						{related.map((r) => (
+							<li>
+								<a href={entryUrl(r)}>{r.data.title}</a>
+								{r.data.description && (
+									<span class="cross-links__lead">{r.data.description}</span>
+								)}
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{backlinks.length > 0 && (
+				<section class="cross-links__section">
+					<h2 class="cross-links__title">Упоминают</h2>
+					<ul class="cross-links__list cross-links__list--compact">
+						{backlinks.map((b) => (
+							<li>
+								<a href={entryUrl(b)}>{b.data.title}</a>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+		</aside>
+	)
+}
+
+<style>
+	.cross-links {
+		margin: 3rem 0 1.5rem;
+		padding: 1.8rem 1.7rem;
+		border: 0.5px solid var(--sl-color-hairline, rgba(230, 225, 255, 0.1));
+		border-radius: 14px;
+		background: linear-gradient(180deg, rgba(20, 16, 32, 0.4), rgba(14, 10, 24, 0.5));
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+		gap: 1.8rem 2.5rem;
+	}
+
+	.cross-links__section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+		min-width: 0;
+	}
+
+	.cross-links__title {
+		margin: 0;
+		font-family: var(--font-mono, 'Space Mono', monospace);
+		font-size: 0.72rem;
+		font-weight: 400;
+		letter-spacing: 0.24em;
+		text-transform: uppercase;
+		color: var(--sl-color-text-weak);
+		opacity: 0.85;
+	}
+
+	.cross-links__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+
+	.cross-links__list--compact {
+		gap: 0.45rem;
+	}
+
+	.cross-links__list li {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		padding-left: 0.9rem;
+		position: relative;
+	}
+
+	.cross-links__list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.62em;
+		width: 0.45rem;
+		height: 0.5px;
+		background: rgba(199, 160, 255, 0.55);
+	}
+
+	.cross-links__list a {
+		font-family: var(--font-heading);
+		font-size: 1rem;
+		color: var(--sl-color-text-strong, var(--sl-color-white));
+		text-decoration: none;
+		line-height: 1.35;
+		transition: color 180ms ease;
+	}
+
+	.cross-links__list a:hover,
+	.cross-links__list a:focus-visible {
+		color: var(--sl-color-accent-high, #c7a0ff);
+	}
+
+	.cross-links__lead {
+		font-size: 0.85rem;
+		line-height: 1.45;
+		color: var(--sl-color-text-weak);
+		opacity: 0.92;
+	}
+
+	@media (max-width: 540px) {
+		.cross-links {
+			padding: 1.4rem 1.2rem;
+			gap: 1.4rem;
+		}
+	}
+
+	/* Светлая тема */
+	:global(:root[data-theme='light']) .cross-links {
+		background: rgba(255, 255, 255, 0.55);
+		border-color: rgba(26, 22, 39, 0.14);
+	}
+
+	:global(:root[data-theme='light']) .cross-links__title {
+		color: rgba(26, 22, 39, 0.58);
+	}
+
+	:global(:root[data-theme='light']) .cross-links__list li::before {
+		background: rgba(106, 27, 154, 0.6);
+	}
+
+	:global(:root[data-theme='light']) .cross-links__list a {
+		color: #1a1627;
+	}
+
+	:global(:root[data-theme='light']) .cross-links__list a:hover,
+	:global(:root[data-theme='light']) .cross-links__list a:focus-visible {
+		color: #6a1b9a;
+	}
+
+	:global(:root[data-theme='light']) .cross-links__lead {
+		color: rgba(26, 22, 39, 0.65);
+	}
+</style>
