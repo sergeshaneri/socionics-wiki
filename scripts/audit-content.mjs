@@ -76,9 +76,48 @@ function fileToUrl(filepath) {
 
 // ---------- анализаторы ----------
 
-function analyzeMarkup(body) {
+function analyzeMarkup(body, ctx) {
 	const issues = [];
 	const lines = body.split(/\r?\n/);
+
+	// 0. Подозрение на «поплывший заголовок»: одиночная строка вида **...**
+	// между пустыми строками (типичный артефакт Docs/Obsidian-экспорта,
+	// где heading стал просто bold-параграфом)
+	for (let i = 0; i < lines.length; i++) {
+		const cur = lines[i].trim();
+		const prev = (lines[i - 1] || '').trim();
+		const next = (lines[i + 1] || '').trim();
+		if (!cur) continue;
+		// строго **text** или **text**\, без других символов в строке
+		const m = cur.match(/^\\?\*\*([^*\n]{3,120})\*\*\\?$/);
+		if (!m) continue;
+		if (prev !== '' || next !== '') continue;
+		issues.push({
+			kind: 'suspected-heading',
+			line: i + 1,
+			detail: `bold-only параграф между пустыми строками: «${m[1].slice(0, 80)}» — возможно был heading в оригинале`,
+		});
+	}
+
+	// 0b. Подозрение на «поплывшую таблицу без separator»:
+	// 3+ строк подряд, начинающихся с | (т.е. визуально похоже на таблицу),
+	// но среди них нет ни одной separator-строки.
+	{
+		let i = 0;
+		while (i < lines.length) {
+			if (!/^\s*\|/.test(lines[i])) { i++; continue; }
+			const start = i;
+			while (i < lines.length && /^\s*\|/.test(lines[i])) i++;
+			const block = lines.slice(start, i);
+			if (block.length < 3) continue;
+			if (block.some(isSeparatorRow)) continue; // нормальная таблица — проверится ниже
+			issues.push({
+				kind: 'table-no-separator-block',
+				line: start + 1,
+				detail: `${block.length} строк, начинающихся с | подряд, без markdown-разделителя «| --- |»`,
+			});
+		}
+	}
 
 	// 1. Code fences
 	let openFence = null;
@@ -197,6 +236,60 @@ function validateTable(block, startLine, sepIdx, issues) {
 	}
 }
 
+// Все image-references (markdown, reference-style, raw HTML, wiki-link)
+function extractImageRefs(body) {
+	const refs = [];
+	// ![alt](path) — обычные markdown-картинки
+	for (const m of body.matchAll(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g)) {
+		refs.push({ kind: 'md-inline', alt: m[1], src: m[2], raw: m[0] });
+	}
+	// ![alt][key] + [key]: path — reference-style
+	const refDefs = new Map();
+	for (const m of body.matchAll(/^\s*\[([^\]]+)\]:\s*<?([^\s>]+)>?/gm)) {
+		refDefs.set(m[1].toLowerCase(), m[2]);
+	}
+	for (const m of body.matchAll(/!\[([^\]]*)\]\[([^\]]+)\]/g)) {
+		const key = (m[2] || m[1]).toLowerCase();
+		const src = refDefs.get(key);
+		refs.push({ kind: 'md-ref', alt: m[1], key, src: src ?? null, raw: m[0] });
+	}
+	// <img src="...">
+	for (const m of body.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["']/g)) {
+		refs.push({ kind: 'html', src: m[1], raw: m[0].slice(0, 80) });
+	}
+	// [[image.png]] — Obsidian-style (только если оканчивается на расширение)
+	for (const m of body.matchAll(/\[\[([^\]|]+?\.(png|jpe?g|gif|svg|webp|avif))(?:\|[^\]]+)?\]\]/gi)) {
+		refs.push({ kind: 'wiki-img', src: m[1], raw: m[0] });
+	}
+	return refs;
+}
+
+function isImageRefBroken(ref, ctx) {
+	if (!ref.src) return { broken: true, reason: 'reference без [key]: definition' };
+	const src = ref.src.trim();
+	// data: URI — встроенная картинка, не битая
+	if (src.startsWith('data:')) return null;
+	// http(s) — внешние, не проверяем существование
+	if (/^https?:\/\//i.test(src)) return null;
+	// относительный или абсолютный путь — проверяем файл
+	const cleaned = src.split('#')[0].split('?')[0];
+	// абсолютные /socionics-wiki/...
+	let candidates;
+	if (cleaned.startsWith('/socionics-wiki/')) {
+		const rel = cleaned.replace(/^\/socionics-wiki\//, '');
+		candidates = [path.join(ROOT, 'public', rel), path.join(ROOT, 'src', rel)];
+	} else if (cleaned.startsWith('/')) {
+		const rel = cleaned.replace(/^\/+/, '');
+		candidates = [path.join(ROOT, 'public', rel)];
+	} else {
+		// относительный — относительно самого .md файла
+		candidates = [path.resolve(path.dirname(ctx.filepath), cleaned)];
+	}
+	const exists = candidates.some((c) => fs.existsSync(c));
+	if (exists) return null;
+	return { broken: true, reason: `файл не найден: ${cleaned}` };
+}
+
 // Извлекаем внутренние ссылки + их сырое представление
 function extractInternalLinks(body) {
 	const links = [];
@@ -238,6 +331,7 @@ const pages = files.map(parseFile);
 
 const markupReport = [];
 const linksReport = [];
+const imagesReport = [];
 const stubsReport = [];
 const missingDescReport = [];
 const incomingMap = new Map(); // url -> Set<sourceFile>
@@ -247,8 +341,17 @@ for (const page of pages) {
 	const rel = path.relative(ROOT, page.filepath).replace(/\\/g, '/');
 
 	// markup
-	const mi = analyzeMarkup(page.body);
+	const mi = analyzeMarkup(page.body, { filepath: page.filepath });
 	if (mi.length) markupReport.push({ file: rel, url, issues: mi });
+
+	// image-refs
+	const imgs = extractImageRefs(page.body);
+	const brokenImgs = [];
+	for (const ref of imgs) {
+		const res = isImageRefBroken(ref, { filepath: page.filepath });
+		if (res) brokenImgs.push({ ref, reason: res.reason });
+	}
+	if (brokenImgs.length) imagesReport.push({ file: rel, url, broken: brokenImgs });
 
 	// links
 	const links = extractInternalLinks(page.body);
@@ -338,6 +441,18 @@ writeReport(
 );
 
 writeReport(
+	'broken-images.md',
+	'Битые ссылки на картинки (markdown, reference, HTML, wiki-link)',
+	imagesReport.flatMap(({ file, url, broken }) => [
+		`## ${file}`,
+		`URL: \`${url}\``,
+		'',
+		...broken.map((b) => `- ${b.ref.kind}: \`${b.ref.raw}\` — ${b.reason}`),
+		'',
+	]),
+);
+
+writeReport(
 	'broken-links.md',
 	'Битые внутренние ссылки',
 	linksReport.flatMap(({ file, url, broken }) => [
@@ -383,6 +498,7 @@ const summary = [
 	'| Отчёт | Записей |',
 	'| --- | ---: |',
 	`| [markup-issues.md](./markup-issues.md) | ${markupReport.length} файлов с проблемами вёрстки |`,
+	`| [broken-images.md](./broken-images.md) | ${imagesReport.length} файлов с битыми image-refs |`,
 	`| [broken-links.md](./broken-links.md) | ${linksReport.length} файлов с битыми ссылками |`,
 	`| [orphans.md](./orphans.md) | ${orphans.length} страниц без входящих ссылок из других статей |`,
 	`| [stubs.md](./stubs.md) | ${stubsReport.length} stub-страниц |`,
@@ -420,6 +536,7 @@ fs.writeFileSync(path.join(AUDITS_DIR, 'summary.md'), summary.join('\n') + '\n',
 // stdout — краткая сводка
 console.log('Audit готов. См. audits/summary.md');
 console.log(`  markup-issues:     ${markupReport.length} файлов`);
+console.log(`  broken-images:     ${imagesReport.length} файлов`);
 console.log(`  broken-links:      ${linksReport.length} файлов`);
 console.log(`  orphans:           ${orphans.length} страниц`);
 console.log(`  stubs (<${MIN_WORDS} слов): ${stubsReport.length}`);

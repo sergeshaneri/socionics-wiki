@@ -1,6 +1,6 @@
 # Stub-страницы (< 150 слов в теле)
 
-Сгенерировано: 2026-05-16T04:24:29
+Сгенерировано: 2026-05-16T05:24:00
 Всего записей: 174
 
 ---
@@ -147,16 +147,16 @@
 - **22** слов · [00 Начало](/socionics-wiki/books/blin-1/00-2-nachalo/) — `src/content/docs/books/blin-1/00-2-nachalo.mdx`
 - **22** слов · [Формальная соционика](/socionics-wiki/categories/formalnaya-socionika/) — `src/content/docs/categories/formalnaya-socionika.mdx`
 - **22** слов · [Прикладная соционика](/socionics-wiki/categories/prikladnaya-socionika/) — `src/content/docs/categories/prikladnaya-socionika.mdx`
-- **22** слов · [Иллюстрации доклад Базис Чурюмова](/socionics-wiki/theory/meta/doklad-bazis-churyumova/) — `src/content/docs/theory/meta/doklad-bazis-churyumova.md`
 - **23** слов · [Типы](/socionics-wiki/categories/tipy/) — `src/content/docs/categories/tipy.mdx`
 - **24** слов · [Видео](/socionics-wiki/video/) — `src/content/docs/video/index.mdx`
 - **32** слов · [Новаторство Фрактальной Соционики](/socionics-wiki/theory/meta/novatorstvo-fraktalnoj-socioniki/) — `src/content/docs/theory/meta/novatorstvo-fraktalnoj-socioniki.md`
+- **33** слов · [Иллюстрации доклад Базис Чурюмова](/socionics-wiki/theory/meta/doklad-bazis-churyumova/) — `src/content/docs/theory/meta/doklad-bazis-churyumova.md`
 - **38** слов · [Книги Семёна Чурюмова](/socionics-wiki/books/) — `src/content/docs/books/index.mdx`
 - **40** слов · [Generations list](/socionics-wiki/english/generations-list/) — `src/content/docs/english/generations-list.md`
 - **41** слов · [Теория Сплетения](/socionics-wiki/theory/formal/teoriya-spleteniya/) — `src/content/docs/theory/formal/teoriya-spleteniya.md`
-- **46** слов · [Доклад теория сплетения схемы](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya-shemy/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya-shemy.md`
 - **51** слов · [Родственные ИТО Семантика](/socionics-wiki/relations/rodstvennye-ito-semantika/) — `src/content/docs/relations/rodstvennye-ito-semantika.md`
-- **59** слов · [Иллюстрации к докладу ЮМП](/socionics-wiki/theory/formal/doklad-yump/) — `src/content/docs/theory/formal/doklad-yump.md`
+- **61** слов · [Доклад теория сплетения схемы](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya-shemy/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya-shemy.md`
+- **65** слов · [Иллюстрации к докладу ЮМП](/socionics-wiki/theory/formal/doklad-yump/) — `src/content/docs/theory/formal/doklad-yump.md`
 - **68** слов · [Список открытий Чурюмова](/socionics-wiki/theory/meta/spisok-otkrytij-churyumova/) — `src/content/docs/theory/meta/spisok-otkrytij-churyumova.md`
 - **71** слов · [English Articles](/socionics-wiki/english/) — `src/content/docs/english/index.mdx`
 - **75** слов · [фрактальность сцн дискурса](/socionics-wiki/theory/formal/fraktalnost-scn-diskursa/) — `src/content/docs/theory/formal/fraktalnost-scn-diskursa.md`
