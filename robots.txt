@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sergeshaneri.github.io/socionics-wiki/sitemap-index.xml
