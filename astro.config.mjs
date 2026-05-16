@@ -50,6 +50,10 @@ export default defineConfig({
 				},
 			},
 			plugins: [
+				// NB: starlight-site-graph 0.5 + zod v4 — при передаче ЛЮБЫХ options
+				// валидация падает на `z.map()` schema (`sitemapConfig.styleRules`).
+				// Поэтому конфигурируем граф через per-page frontmatter
+				// (sitemap.include + graph.visible) — см. scripts/configure-hub-graph.mjs.
 				starlightSiteGraph(),
 			],
 			components: {
