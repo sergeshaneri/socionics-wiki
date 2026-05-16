@@ -78,6 +78,50 @@ export function serviceSchema(input: ServiceSchemaInput) {
   };
 }
 
+interface ArticleSchemaInput {
+  headline: string;
+  description?: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+  image?: string;
+  inLanguage?: string;
+  keywords?: string[];
+}
+
+/**
+ * Article schema для wiki-статей — даёт rich snippets в Google
+ * и помогает краулерам понять структуру контента.
+ */
+export function articleSchema(input: ArticleSchemaInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: input.headline,
+    ...(input.description ? { description: input.description } : {}),
+    url: input.url,
+    ...(input.datePublished ? { datePublished: input.datePublished } : {}),
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+    image: input.image ?? `${SITE_URL}shaneri.jpg`,
+    inLanguage: input.inLanguage ?? 'ru',
+    ...(input.keywords?.length ? { keywords: input.keywords.join(', ') } : {}),
+    author: {
+      '@type': 'Person',
+      name: 'Сергей Шанэри',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Сергей Шанэри',
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': input.url,
+    },
+  };
+}
+
 interface ReviewItem {
   author: string;
   text: string;

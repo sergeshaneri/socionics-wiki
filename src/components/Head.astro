@@ -8,18 +8,33 @@ import ReadingProgress from './ReadingProgress.astro';
 import NoirEnhancements from './NoirEnhancements.astro';
 import TypeTagger from './TypeTagger.astro';
 import JsonLd from './JsonLd.astro';
-import { personSchema } from '../lib/structured-data';
+import { personSchema, articleSchema } from '../lib/structured-data';
 // FractalBackground — отключён (идея отложена).
 // Файл сохранён в src/components/FractalBackground.astro, чтобы
 // вернуть его позже: достаточно восстановить импорт и рендер ниже.
 
-const { head } = Astro.locals.starlightRoute;
+const route = Astro.locals.starlightRoute;
+const { head, entry } = route;
 // Astro.site = 'https://.../socionics-wiki' без trailing slash —
 // при resolve нужно добавить '/', иначе base теряется.
 const siteBase = Astro.site
   ? Astro.site.toString().replace(/\/?$/, '/')
   : `${Astro.url.origin}${import.meta.env.BASE_URL}`;
 const imageUrl = new URL('shaneri.jpg', siteBase).toString();
+
+// Article schema — для wiki-статей (не splash, не index-страниц-разделов).
+// Splash-страницы (index, services, contact) уже покрыты Person schema выше.
+const isSplash = entry?.data?.template === 'splash';
+const isArticle = entry && !isSplash;
+const articleData = isArticle
+  ? articleSchema({
+      headline: entry.data.title,
+      description: entry.data.description ?? undefined,
+      url: Astro.url.toString(),
+      dateModified: route.lastUpdated?.toISOString(),
+      keywords: Array.isArray(entry.data.categories) ? entry.data.categories : undefined,
+    })
+  : null;
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
@@ -36,6 +51,7 @@ const imageUrl = new URL('shaneri.jpg', siteBase).toString();
 
 {/* JSON-LD: персональная schema.org разметка для rich snippets */}
 <JsonLd data={personSchema} />
+{articleData && <JsonLd data={articleData} />}
 
 {/* Minimal Noir: клиентские эффекты. Компонент вставляет <script> — Astro
     выносит его из <head> в нужное место автоматически. */}
