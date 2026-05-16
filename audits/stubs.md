@@ -1,0 +1,180 @@
+# Stub-страницы (< 150 слов в теле)
+
+Сгенерировано: 2026-05-16T04:24:29
+Всего записей: 174
+
+---
+- **0** слов · [Иллюстрации доклад Формальная Соционика февраль 2023](/socionics-wiki/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023/) — `src/content/docs/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023.md`
+- **6** слов · [ДМ-АР](/socionics-wiki/audio/дм-ар/) — `src/content/docs/audio/дм-ар.mdx`
+- **6** слов · [КВ-ДК](/socionics-wiki/audio/кв-дк/) — `src/content/docs/audio/кв-дк.mdx`
+- **6** слов · [Мерности](/socionics-wiki/audio/мерности/) — `src/content/docs/audio/мерности.mdx`
+- **6** слов · [ПЗ-НГ](/socionics-wiki/audio/пз-нг/) — `src/content/docs/audio/пз-нг.mdx`
+- **6** слов · [УС-УП](/socionics-wiki/audio/ус-уп/) — `src/content/docs/audio/ус-уп.mdx`
+- **6** слов · [ЧЭ-БЭ](/socionics-wiki/audio/чэ-бэ/) — `src/content/docs/audio/чэ-бэ.mdx`
+- **7** слов · [Близкие ИФО](/socionics-wiki/audio/близкие-ифо/) — `src/content/docs/audio/близкие-ифо.mdx`
+- **7** слов · [Блок Суперэго](/socionics-wiki/audio/блок-суперэго/) — `src/content/docs/audio/блок-суперэго.mdx`
+- **7** слов · [Вертность функций](/socionics-wiki/audio/вертность-функций/) — `src/content/docs/audio/вертность-функций.mdx`
+- **7** слов · [Дополнение ЧИ-БС](/socionics-wiki/audio/дополнение-чи-бс/) — `src/content/docs/audio/дополнение-чи-бс.mdx`
+- **7** слов · [Мерности ЧЛ-отношения](/socionics-wiki/audio/мерности-чл-отношения/) — `src/content/docs/audio/мерности-чл-отношения.mdx`
+- **7** слов · [Объективизм ценностность](/socionics-wiki/audio/объективизм-ценностность/) — `src/content/docs/audio/объективизм-ценностность.mdx`
+- **7** слов · [Падение 16.6](/socionics-wiki/audio/падение-16-6/) — `src/content/docs/audio/падение-16-6.mdx`
+- **7** слов · [Типирование Никиты](/socionics-wiki/audio/типирование-никиты/) — `src/content/docs/audio/типирование-никиты.mdx`
+- **7** слов · [00 Предисловие](/socionics-wiki/books/ulybka/01-predislovie/) — `src/content/docs/books/ulybka/01-predislovie.mdx`
+- **7** слов · [01 Субстрат](/socionics-wiki/books/ulybka/01-substrat/) — `src/content/docs/books/ulybka/01-substrat.mdx`
+- **7** слов · [000 Введение](/socionics-wiki/books/ulybka/03-vvedenie/) — `src/content/docs/books/ulybka/03-vvedenie.mdx`
+- **7** слов · [05 Существование](/socionics-wiki/books/ulybka/05-sushchestvovanie/) — `src/content/docs/books/ulybka/05-sushchestvovanie.mdx`
+- **7** слов · [06 Признаки Рейнина](/socionics-wiki/books/ulybka/06-arp/) — `src/content/docs/books/ulybka/06-arp.mdx`
+- **7** слов · [07 Периодическая Система ТИМ](/socionics-wiki/books/ulybka/07-pstim/) — `src/content/docs/books/ulybka/07-pstim.mdx`
+- **7** слов · [09 Конфигурации](/socionics-wiki/books/ulybka/09-konfiguratsii/) — `src/content/docs/books/ulybka/09-konfiguratsii.mdx`
+- **7** слов · [11 Описание](/socionics-wiki/books/ulybka/11-opisanie/) — `src/content/docs/books/ulybka/11-opisanie.mdx`
+- **7** слов · [12 Отношения](/socionics-wiki/books/ulybka/12-otnosheniya/) — `src/content/docs/books/ulybka/12-otnosheniya.mdx`
+- **7** слов · [20 Соционика как методология](/socionics-wiki/books/ulybka/20-mtd-potentsial/) — `src/content/docs/books/ulybka/20-mtd-potentsial.mdx`
+- **7** слов · [21 Приложения](/socionics-wiki/books/ulybka/21-prilozheniya/) — `src/content/docs/books/ulybka/21-prilozheniya.mdx`
+- **8** слов · [Веторно-фрактальное моделирование АРПов](/socionics-wiki/audio/веторно-фрактальное-моделирование-арпов/) — `src/content/docs/audio/веторно-фрактальное-моделирование-арпов.mdx`
+- **8** слов · [Дежавю - БИ](/socionics-wiki/audio/дежавю-би/) — `src/content/docs/audio/дежавю-би.mdx`
+- **8** слов · [Деловые Роб Дост](/socionics-wiki/audio/деловые-роб-дост/) — `src/content/docs/audio/деловые-роб-дост.mdx`
+- **8** слов · [ИФО, особенно БЭ](/socionics-wiki/audio/ифо-особенно-бэ/) — `src/content/docs/audio/ифо-особенно-бэ.mdx`
+- **8** слов · [Мастерство в соционике](/socionics-wiki/audio/мастерство-в-соционике/) — `src/content/docs/audio/мастерство-в-соционике.mdx`
+- **8** слов · [Падение 12.2 55.5](/socionics-wiki/audio/падение-12-2-55-5/) — `src/content/docs/audio/падение-12-2-55-5.mdx`
+- **8** слов · [Прощение и БЭ](/socionics-wiki/audio/прощение-и-бэ/) — `src/content/docs/audio/прощение-и-бэ.mdx`
+- **8** слов · [Суперэго - герой](/socionics-wiki/audio/суперэго-герой/) — `src/content/docs/audio/суперэго-герой.mdx`
+- **8** слов · [Эгоистичность и альтруистичность](/socionics-wiki/audio/эгоистичность-и-альтруистичность/) — `src/content/docs/audio/эгоистичность-и-альтруистичность.mdx`
+- **8** слов · [00 Благодарности](/socionics-wiki/books/blin-1/00-1-blagodarnosti/) — `src/content/docs/books/blin-1/00-1-blagodarnosti.mdx`
+- **8** слов · [02 Аушра](/socionics-wiki/books/blin-1/02-aushra/) — `src/content/docs/books/blin-1/02-aushra.mdx`
+- **8** слов · [03 Юнг](/socionics-wiki/books/blin-1/03-yung/) — `src/content/docs/books/blin-1/03-yung.mdx`
+- **8** слов · [04 Афанасьев](/socionics-wiki/books/blin-1/04-afanasyev/) — `src/content/docs/books/blin-1/04-afanasyev.mdx`
+- **8** слов · [05 Калинаускас](/socionics-wiki/books/blin-1/05-kalinauskas/) — `src/content/docs/books/blin-1/05-kalinauskas.mdx`
+- **8** слов · [06 Литвиненко](/socionics-wiki/books/blin-1/06-litvinenko/) — `src/content/docs/books/blin-1/06-litvinenko.mdx`
+- **8** слов · [07 Таланов](/socionics-wiki/books/blin-1/07-talanov/) — `src/content/docs/books/blin-1/07-talanov.mdx`
+- **8** слов · [08 Небыкова](/socionics-wiki/books/blin-1/08-nebykova/) — `src/content/docs/books/blin-1/08-nebykova.mdx`
+- **8** слов · [09 Рейнин](/socionics-wiki/books/blin-1/09-reynin/) — `src/content/docs/books/blin-1/09-reynin.mdx`
+- **8** слов · [10 Скрипник](/socionics-wiki/books/blin-1/10-skripnik/) — `src/content/docs/books/blin-1/10-skripnik.mdx`
+- **8** слов · [11 ЛИТР](/socionics-wiki/books/blin-1/11-litr/) — `src/content/docs/books/blin-1/11-litr.mdx`
+- **8** слов · [02 Прокофьева](/socionics-wiki/books/blin-2/02-prokofeva/) — `src/content/docs/books/blin-2/02-prokofeva.mdx`
+- **8** слов · [03 Букалов](/socionics-wiki/books/blin-2/03-bukalov/) — `src/content/docs/books/blin-2/03-bukalov.mdx`
+- **8** слов · [04 Филимонов](/socionics-wiki/books/blin-2/04-filimonov/) — `src/content/docs/books/blin-2/04-filimonov.mdx`
+- **8** слов · [05 Кочубеева](/socionics-wiki/books/blin-2/05-kochubeeva/) — `src/content/docs/books/blin-2/05-kochubeeva.mdx`
+- **8** слов · [06 Филатова](/socionics-wiki/books/blin-2/06-filatova/) — `src/content/docs/books/blin-2/06-filatova.mdx`
+- **8** слов · [07 Математика](/socionics-wiki/books/blin-2/07-matematika/) — `src/content/docs/books/blin-2/07-matematika.mdx`
+- **8** слов · [02 Информационные аспекты](/socionics-wiki/books/ulybka/02-ia/) — `src/content/docs/books/ulybka/02-ia.mdx`
+- **8** слов · [03 Семантика функций](/socionics-wiki/books/ulybka/03-semantika-funk/) — `src/content/docs/books/ulybka/03-semantika-funk.mdx`
+- **8** слов · [04 Моделирование психики](/socionics-wiki/books/ulybka/04-modelirovanie-psi/) — `src/content/docs/books/ulybka/04-modelirovanie-psi.mdx`
+- **8** слов · [13 Универсальность ТИМ-кода](/socionics-wiki/books/ulybka/13-universalnost-t/) — `src/content/docs/books/ulybka/13-universalnost-t.mdx`
+- **8** слов · [14 Происхождение ТИМа](/socionics-wiki/books/ulybka/14-proishozhdenie-tima/) — `src/content/docs/books/ulybka/14-proishozhdenie-tima.mdx`
+- **8** слов · [19 Методология соционики](/socionics-wiki/books/ulybka/19-neizb-mtd/) — `src/content/docs/books/ulybka/19-neizb-mtd.mdx`
+- **9** слов · [БС и ЧИ Дюмы](/socionics-wiki/audio/бс-и-чи-дюмы/) — `src/content/docs/audio/бс-и-чи-дюмы.mdx`
+- **9** слов · [МЭИ и дихо ИА](/socionics-wiki/audio/мэи-и-дихо-иа/) — `src/content/docs/audio/мэи-и-дихо-иа.mdx`
+- **9** слов · [Падение 51.1 соположение 20.3](/socionics-wiki/audio/падение-51-1-соположение-20-3/) — `src/content/docs/audio/падение-51-1-соположение-20-3.mdx`
+- **9** слов · [Разница общ-чел и тимное](/socionics-wiki/audio/разница-общ-чел-и-тимное/) — `src/content/docs/audio/разница-общ-чел-и-тимное.mdx`
+- **9** слов · [Фрактальная герменевтика соционической интерпретации](/socionics-wiki/audio/фрактальная-герменевтика-соционической-интерпретации/) — `src/content/docs/audio/фрактальная-герменевтика-соционической-интерпретации.mdx`
+- **9** слов · [00 Титульный лист](/socionics-wiki/books/blin-1/00-0-titlist/) — `src/content/docs/books/blin-1/00-0-titlist.mdx`
+- **9** слов · [08 Уровень Ф](/socionics-wiki/books/blin-2/08-uroven-f/) — `src/content/docs/books/blin-2/08-uroven-f.mdx`
+- **9** слов · [08 Тип и Характер](/socionics-wiki/books/ulybka/08-tip-i-harakter/) — `src/content/docs/books/ulybka/08-tip-i-harakter.mdx`
+- **9** слов · [15 Соционика и психология](/socionics-wiki/books/ulybka/15-scn-i-psi/) — `src/content/docs/books/ulybka/15-scn-i-psi.mdx`
+- **9** слов · [16 Фрейд, Юнг, Аушра](/socionics-wiki/books/ulybka/16-freyd-yung-aushra/) — `src/content/docs/books/ulybka/16-freyd-yung-aushra.mdx`
+- **9** слов · [17 Соционика и философия](/socionics-wiki/books/ulybka/17-scn-i-fil/) — `src/content/docs/books/ulybka/17-scn-i-fil.mdx`
+- **9** слов · [18 Сексуальность и соционика](/socionics-wiki/books/ulybka/18-seks-scn/) — `src/content/docs/books/ulybka/18-seks-scn.mdx`
+- **10** слов · [Блок Эго - Центр психики](/socionics-wiki/audio/блок-эго-центр-психики/) — `src/content/docs/audio/блок-эго-центр-психики.mdx`
+- **10** слов · [Болевая творческая и ЧС ИФО](/socionics-wiki/audio/болевая-творческая-и-чс-ифо/) — `src/content/docs/audio/болевая-творческая-и-чс-ифо.mdx`
+- **10** слов · [ИТО между субъектом и миром](/socionics-wiki/audio/ито-между-субъектом-и-миром/) — `src/content/docs/audio/ито-между-субъектом-и-миром.mdx`
+- **10** слов · [Мозг - фрактальная граница сознания](/socionics-wiki/audio/мозг-фрактальная-граница-сознания/) — `src/content/docs/audio/мозг-фрактальная-граница-сознания.mdx`
+- **10** слов · [Перемножение АРПов и сплетенность ИТО](/socionics-wiki/audio/перемножение-арпов-и-сплетенность-ито/) — `src/content/docs/audio/перемножение-арпов-и-сплетенность-ито.mdx`
+- **10** слов · [Перепрочтение царя Эдипа от Терри](/socionics-wiki/audio/перепрочтение-царя-эдипа-от-терри/) — `src/content/docs/audio/перепрочтение-царя-эдипа-от-терри.mdx`
+- **10** слов · [Соционика и отличия от психологии](/socionics-wiki/audio/соционика-и-отличия-от-психологии/) — `src/content/docs/audio/соционика-и-отличия-от-психологии.mdx`
+- **10** слов · [Фрактальность и хаос в соционике](/socionics-wiki/audio/фрактальность-и-хаос-в-соционике/) — `src/content/docs/audio/фрактальность-и-хаос-в-соционике.mdx`
+- **10** слов · [ЧИ, фракталы и соответствие Чурюмова](/socionics-wiki/audio/чи-фракталы-и-соответствие-чурюмова/) — `src/content/docs/audio/чи-фракталы-и-соответствие-чурюмова.mdx`
+- **10** слов · [ЧЭ в 5 и 7](/socionics-wiki/audio/чэ-в-5-и-7/) — `src/content/docs/audio/чэ-в-5-и-7.mdx`
+- **10** слов · [Эго в соционике и духовности](/socionics-wiki/audio/эго-в-соционике-и-духовности/) — `src/content/docs/audio/эго-в-соционике-и-духовности.mdx`
+- **10** слов · [12 Экскурс в науку](/socionics-wiki/books/blin-1/12-eks-nauka/) — `src/content/docs/books/blin-1/12-eks-nauka.mdx`
+- **11** слов · [Опросник Экспресс Типирование](/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie/) — `src/content/docs/applied/oprosnik-ehkspress-tipirovanie.md`
+- **11** слов · [Как исследовать признаки функций и Рейнина](/socionics-wiki/audio/как-исследовать-признаки-функций-и-рейнина/) — `src/content/docs/audio/как-исследовать-признаки-функций-и-рейнина.mdx`
+- **11** слов · [О частоте вибраций и высоких вибрациях](/socionics-wiki/audio/о-частоте-вибраций-и-высоких-вибрациях/) — `src/content/docs/audio/о-частоте-вибраций-и-высоких-вибрациях.mdx`
+- **11** слов · [Отличия баз и твор, особенно БИ](/socionics-wiki/audio/отличия-баз-и-твор-особенно-би/) — `src/content/docs/audio/отличия-баз-и-твор-особенно-би.mdx`
+- **11** слов · [00 Введение ко 2-му тому](/socionics-wiki/books/blin-2/00-1-vvedenie/) — `src/content/docs/books/blin-2/00-1-vvedenie.mdx`
+- **11** слов · [09 Истина в гуманитарном знании](/socionics-wiki/books/blin-2/09-istina-v-gum/) — `src/content/docs/books/blin-2/09-istina-v-gum.mdx`
+- **11** слов · [Как понять предназначение?](/socionics-wiki/video/как-понять-предназначение/) — `src/content/docs/video/как-понять-предназначение.mdx`
+- **11** слов · [Передовые описания типов](/socionics-wiki/video/передовые-описания-типов/) — `src/content/docs/video/передовые-описания-типов.mdx`
+- **12** слов · [01 Ермак — Гуленко — Савченко](/socionics-wiki/books/blin-2/01-ermak-gulenko-savchenko/) — `src/content/docs/books/blin-2/01-ermak-gulenko-savchenko.mdx`
+- **12** слов · [Метасоционика](/socionics-wiki/theory/meta/) — `src/content/docs/theory/meta/index.mdx`
+- **12** слов · [Доклад границы применимости соционики](/socionics-wiki/video/границы-применимости-соционики/) — `src/content/docs/video/границы-применимости-соционики.mdx`
+- **12** слов · [Модель А в соционике](/socionics-wiki/video/модель-а-соционика/) — `src/content/docs/video/модель-а-соционика.mdx`
+- **12** слов · [Социальные роли типов | Соционика](/socionics-wiki/video/социальные-роли-типов/) — `src/content/docs/video/социальные-роли-типов.mdx`
+- **12** слов · [Доклад Соционика и Психотерапия](/socionics-wiki/video/соционика-и-психотерапия/) — `src/content/docs/video/соционика-и-психотерапия.mdx`
+- **13** слов · [Введение в дедуктивную соционику и модель А Драя](/socionics-wiki/audio/введение-в-дедуктивную-соционику-и-модель-а-драя/) — `src/content/docs/audio/введение-в-дедуктивную-соционику-и-модель-а-драя.mdx`
+- **13** слов · [Интуиция в терапии | Духовная психология](/socionics-wiki/video/интуиция-в-терапии/) — `src/content/docs/video/интуиция-в-терапии.mdx`
+- **13** слов · [Информационные Аспекты -- Сергей Шанэри](/socionics-wiki/video/информационные-аспекты-шанэри/) — `src/content/docs/video/информационные-аспекты-шанэри.mdx`
+- **13** слов · [Как отличить Робеспьера от Достоевского?](/socionics-wiki/video/как-отличить-робеспьера-от-достоевского/) — `src/content/docs/video/как-отличить-робеспьера-от-достоевского.mdx`
+- **13** слов · [Как отличить ТИМное от индивидуального](/socionics-wiki/video/как-отличить-тимное-от-индивидуального/) — `src/content/docs/video/как-отличить-тимное-от-индивидуального.mdx`
+- **13** слов · [Математическая структура соционики | Сергей Шанэри](/socionics-wiki/video/математическая-структура-соционики/) — `src/content/docs/video/математическая-структура-соционики.mdx`
+- **13** слов · [Отличия Габена от Бальзака | Соционика](/socionics-wiki/video/отличия-габена-от-бальзака/) — `src/content/docs/video/отличия-габена-от-бальзака.mdx`
+- **13** слов · [Доклад "Соционика и Междисциплинарная философия](/socionics-wiki/video/соционика-междисциплинарная-философия/) — `src/content/docs/video/соционика-междисциплинарная-философия.mdx`
+- **14** слов · [Для начинающих](/socionics-wiki/beginners/) — `src/content/docs/beginners/index.mdx`
+- **14** слов · [Признаки](/socionics-wiki/signs/) — `src/content/docs/signs/index.mdx`
+- **14** слов · [Теория](/socionics-wiki/theory/) — `src/content/docs/theory/index.mdx`
+- **14** слов · [Дон Кихот рассказывает о болевой БЭ](/socionics-wiki/video/дон-кихот-рассказывает-о-боевой-бэ/) — `src/content/docs/video/дон-кихот-рассказывает-о-боевой-бэ.mdx`
+- **14** слов · [Информационные Аспекты по Семену Чурюмову | Соционика](/socionics-wiki/video/информационные-аспекты-по-семену-чурюмову/) — `src/content/docs/video/информационные-аспекты-по-семену-чурюмову.mdx`
+- **14** слов · [Как понимать Информационные Аспекты в Соционике?](/socionics-wiki/video/как-понимать-информационные-аспекты-в-соционике/) — `src/content/docs/video/как-понимать-информационные-аспекты-в-соционике.mdx`
+- **14** слов · [Насколько важна интуиция в определении типа?](/socionics-wiki/video/насколько-важна-интуиция-в-определении-типа/) — `src/content/docs/video/насколько-важна-интуиция-в-определении-типа.mdx`
+- **14** слов · [доклад Принцип Соответствия типов и отношений](/socionics-wiki/video/принцип-соответствия-типов-и-отношений/) — `src/content/docs/video/принцип-соответствия-типов-и-отношений.mdx`
+- **14** слов · [Доклад о Соционическом Колесе Баланса | Коучинг](/socionics-wiki/video/соционическое-колесо-баланса-коучинг/) — `src/content/docs/video/соционическое-колесо-баланса-коучинг.mdx`
+- **14** слов · [Читаем описание Дюмы (СЭИ) по Чурюмову](/socionics-wiki/video/читаем-описание-дюмы-сэи-по-чурюмову/) — `src/content/docs/video/читаем-описание-дюмы-сэи-по-чурюмову.mdx`
+- **15** слов · [Функции и модели](/socionics-wiki/functions/) — `src/content/docs/functions/index.mdx`
+- **15** слов · [Формальная соционика](/socionics-wiki/theory/formal/) — `src/content/docs/theory/formal/index.mdx`
+- **15** слов · [Алгебраическая связь Признаков Рейнина и Модели А](/socionics-wiki/video/алгебраическая-связь-признаков-рейнина/) — `src/content/docs/video/алгебраическая-связь-признаков-рейнина.mdx`
+- **15** слов · [Лингвосоционика. Доклад на конференции дни соционики 2021](/socionics-wiki/video/лингвосоционика-доклад-2021/) — `src/content/docs/video/лингвосоционика-доклад-2021.mdx`
+- **15** слов · [Методика "Ицеление Травм Души" подробно | Духовная Психология](/socionics-wiki/video/методика-исцеление-травм-души/) — `src/content/docs/video/методика-исцеление-травм-души.mdx`
+- **15** слов · [Ответы на вопросы по Белой Интуиции | Соционика](/socionics-wiki/video/ответы-на-вопросы-по-белой-интуиции/) — `src/content/docs/video/ответы-на-вопросы-по-белой-интуиции.mdx`
+- **15** слов · [Порядок типов и периоды развития личности | Соционика](/socionics-wiki/video/порядок-типов-и-периоды-развития/) — `src/content/docs/video/порядок-типов-и-периоды-развития.mdx`
+- **15** слов · [Вебинар в Поля Сотворения "Соционика для целителей](/socionics-wiki/video/соционика-для-целителей/) — `src/content/docs/video/соционика-для-целителей.mdx`
+- **15** слов · [Читаем описания типов Семена Чурюмова ч.1 | Соционика](/socionics-wiki/video/читаем-описания-типов-чурюмова-ч1/) — `src/content/docs/video/читаем-описания-типов-чурюмова-ч1.mdx`
+- **15** слов · [Что описывает соционический тип? Психику? Темперамент? Характер?](/socionics-wiki/video/что-описывает-соционический-тип/) — `src/content/docs/video/что-описывает-соционический-тип.mdx`
+- **16** слов · [10 Диагностика](/socionics-wiki/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost/) — `src/content/docs/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost.mdx`
+- **16** слов · [Отличия между чувствами и эмоциями | Соционика и Психология](/socionics-wiki/video/отличия-чувств-и-эмоций/) — `src/content/docs/video/отличия-чувств-и-эмоций.mdx`
+- **16** слов · [ПЕРЕТИПИРОВАНИЕ — Как убедиться в своем настоящем ТИМе?](/socionics-wiki/video/перетипирование-как-убедиться-в-своем-настоящем-тиме/) — `src/content/docs/video/перетипирование-как-убедиться-в-своем-настоящем-тиме.mdx`
+- **16** слов · [Соционика — Дон Кихотская Наука | Философия и Методология](/socionics-wiki/video/соционика-дон-кихотская-наука/) — `src/content/docs/video/соционика-дон-кихотская-наука.mdx`
+- **16** слов · [Доклад Соционика и Нейросети (Большие Языковые Модели, LLM)](/socionics-wiki/video/соционика-и-нейросети-большие-языковые-модели-llm/) — `src/content/docs/video/соционика-и-нейросети-большие-языковые-модели-llm.mdx`
+- **16** слов · [Читаем описания Бальзака (ИЛИ) по Чурюмову и Шанэри](/socionics-wiki/video/читаем-описания-бальзака-или-по-чурюмову/) — `src/content/docs/video/читаем-описания-бальзака-или-по-чурюмову.mdx`
+- **17** слов · [В чем польза систем самопознания и как ими пользоваться?](/socionics-wiki/video/польза-систем-самопознания/) — `src/content/docs/video/польза-систем-самопознания.mdx`
+- **17** слов · [Соционика и Информатика - их общий метод перепроверки информации](/socionics-wiki/video/соционика-и-информатика/) — `src/content/docs/video/соционика-и-информатика.mdx`
+- **18** слов · [Прикладное](/socionics-wiki/applied/) — `src/content/docs/applied/index.mdx`
+- **18** слов · [Информационные Аспекты, объясненные через Материю, Энергию и информацию по Чурюмову](/socionics-wiki/video/информационные-аспекты-материя-энергия-информация/) — `src/content/docs/video/информационные-аспекты-материя-энергия-информация.mdx`
+- **18** слов · [Помогает ли соционика в личных отношениях? (и причем здесь терапия)](/socionics-wiki/video/помогает-ли-соционика-в-личных-отношениях/) — `src/content/docs/video/помогает-ли-соционика-в-личных-отношениях.mdx`
+- **18** слов · [Доклад по соционике: Признаки Юнга-Минаева](/socionics-wiki/video/признаки-юнга-минаева/) — `src/content/docs/video/признаки-юнга-минаева.mdx`
+- **18** слов · [Теория Поколений — передовой подход к объяснению дихотомий в соционике](/socionics-wiki/video/теория-поколений-передовой-подход-к-дихотомиям/) — `src/content/docs/video/теория-поколений-передовой-подход-к-дихотомиям.mdx`
+- **19** слов · [Метасоционика](/socionics-wiki/categories/metasocionika/) — `src/content/docs/categories/metasocionika.mdx`
+- **20** слов · [Информационные аспекты](/socionics-wiki/information-elements/) — `src/content/docs/information-elements/index.mdx`
+- **21** слов · [Семантическая соционика](/socionics-wiki/categories/semanticheskaya-socionika/) — `src/content/docs/categories/semanticheskaya-socionika.mdx`
+- **22** слов · [00 Начало](/socionics-wiki/books/blin-1/00-2-nachalo/) — `src/content/docs/books/blin-1/00-2-nachalo.mdx`
+- **22** слов · [Формальная соционика](/socionics-wiki/categories/formalnaya-socionika/) — `src/content/docs/categories/formalnaya-socionika.mdx`
+- **22** слов · [Прикладная соционика](/socionics-wiki/categories/prikladnaya-socionika/) — `src/content/docs/categories/prikladnaya-socionika.mdx`
+- **22** слов · [Иллюстрации доклад Базис Чурюмова](/socionics-wiki/theory/meta/doklad-bazis-churyumova/) — `src/content/docs/theory/meta/doklad-bazis-churyumova.md`
+- **23** слов · [Типы](/socionics-wiki/categories/tipy/) — `src/content/docs/categories/tipy.mdx`
+- **24** слов · [Видео](/socionics-wiki/video/) — `src/content/docs/video/index.mdx`
+- **32** слов · [Новаторство Фрактальной Соционики](/socionics-wiki/theory/meta/novatorstvo-fraktalnoj-socioniki/) — `src/content/docs/theory/meta/novatorstvo-fraktalnoj-socioniki.md`
+- **38** слов · [Книги Семёна Чурюмова](/socionics-wiki/books/) — `src/content/docs/books/index.mdx`
+- **40** слов · [Generations list](/socionics-wiki/english/generations-list/) — `src/content/docs/english/generations-list.md`
+- **41** слов · [Теория Сплетения](/socionics-wiki/theory/formal/teoriya-spleteniya/) — `src/content/docs/theory/formal/teoriya-spleteniya.md`
+- **46** слов · [Доклад теория сплетения схемы](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya-shemy/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya-shemy.md`
+- **51** слов · [Родственные ИТО Семантика](/socionics-wiki/relations/rodstvennye-ito-semantika/) — `src/content/docs/relations/rodstvennye-ito-semantika.md`
+- **59** слов · [Иллюстрации к докладу ЮМП](/socionics-wiki/theory/formal/doklad-yump/) — `src/content/docs/theory/formal/doklad-yump.md`
+- **68** слов · [Список открытий Чурюмова](/socionics-wiki/theory/meta/spisok-otkrytij-churyumova/) — `src/content/docs/theory/meta/spisok-otkrytij-churyumova.md`
+- **71** слов · [English Articles](/socionics-wiki/english/) — `src/content/docs/english/index.mdx`
+- **75** слов · [фрактальность сцн дискурса](/socionics-wiki/theory/formal/fraktalnost-scn-diskursa/) — `src/content/docs/theory/formal/fraktalnost-scn-diskursa.md`
+- **82** слов · [Введение на сайт](/socionics-wiki/theory/meta/vvedenie-na-sajt/) — `src/content/docs/theory/meta/vvedenie-na-sajt.md`
+- **83** слов · [ЛИИ ИЛИ Квазитождественные ИТО](/socionics-wiki/relations/лии-или-квазитождественные-ито/) — `src/content/docs/relations/ЛИИ ИЛИ Квазитождественные ИТО.mdx`
+- **88** слов · [циклы перестановок модели А](/socionics-wiki/theory/formal/cikly-perestanovok-modeli-a/) — `src/content/docs/theory/formal/cikly-perestanovok-modeli-a.md`
+- **94** слов · [БЛИН — Том 2](/socionics-wiki/books/blin-2/) — `src/content/docs/books/blin-2/index.mdx`
+- **94** слов · [Методология интерпретации обрывки](/socionics-wiki/theory/meta/metodologiya-interpretacii-obryvki/) — `src/content/docs/theory/meta/metodologiya-interpretacii-obryvki.md`
+- **95** слов · [Список поколения](/socionics-wiki/theory/formal/spisok-pokoleniya-novoe/) — `src/content/docs/theory/formal/spisok-pokoleniya-novoe.md`
+- **95** слов · [список поколения](/socionics-wiki/theory/formal/spisok-pokoleniya/) — `src/content/docs/theory/formal/spisok-pokoleniya.md`
+- **96** слов · [соционика и психология, важно лог-эт дихотомии](/socionics-wiki/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii/) — `src/content/docs/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii.md`
+- **97** слов · [болевая заметки](/socionics-wiki/functions/bolevaya-zametki/) — `src/content/docs/functions/bolevaya-zametki.md`
+- **107** слов · [как  прокачивать би](/socionics-wiki/applied/kak-prokachivat-bi/) — `src/content/docs/applied/kak-prokachivat-bi.md`
+- **107** слов · [БЛИН — Том 1](/socionics-wiki/books/blin-1/) — `src/content/docs/books/blin-1/index.mdx`
+- **107** слов · [Связь  ЮМПов и право-лево](/socionics-wiki/theory/formal/svyaz-yumpov-i-pravo-levo/) — `src/content/docs/theory/formal/svyaz-yumpov-i-pravo-levo.md`
+- **110** слов · [БИ Семантика Вдохновение](/socionics-wiki/information-elements/bi-semantika-vdohnovenie/) — `src/content/docs/information-elements/bi-semantika-vdohnovenie.md`
+- **114** слов · [Вертность в формальной соционике](/socionics-wiki/theory/formal/vertnost-v-formalnoj-socionike/) — `src/content/docs/theory/formal/vertnost-v-formalnoj-socionike.md`
+- **115** слов · [СЛЭ ИЭИ Дуальные ИТО](/socionics-wiki/relations/слэ-иэи-дуальные-ито/) — `src/content/docs/relations/СЛЭ ИЭИ Дуальные ИТО.mdx`
+- **127** слов · [Классификация правильных разбиений социона](/socionics-wiki/signs/klassifikaciya-pravilnyh-razbienij-sociona/) — `src/content/docs/signs/klassifikaciya-pravilnyh-razbienij-sociona.md`
+- **127** слов · [Доказательство Доноцентризма](/socionics-wiki/theory/meta/dokazatelstvo-donocentrizma/) — `src/content/docs/theory/meta/dokazatelstvo-donocentrizma.md`
+- **143** слов · [Улыбка](/socionics-wiki/books/ulybka/) — `src/content/docs/books/ulybka/index.mdx`
