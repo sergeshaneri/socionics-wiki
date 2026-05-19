@@ -11,8 +11,10 @@ const { entry } = Astro.locals.starlightRoute;
 const isSplash = entry.data.template === 'splash';
 const showDiscuss = !isSplash;
 const showBacklinks = !isSplash;
+const showThanks = !isSplash;
 
 const chatUrl = 'https://t.me/+3PS2UiI8Dec4NWZi';
+const thanksUrl = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}thanks/`;
 ---
 
 {showBacklinks && <Backlinks entry={entry} />}
@@ -50,6 +52,16 @@ const chatUrl = 'https://t.me/+3PS2UiI8Dec4NWZi';
         </a>
       </div>
     </aside>
+  )
+}
+
+{
+  showThanks && (
+    <p class="thanks-line not-content">
+      <span>Если материалы были полезны — </span>
+      <a href={thanksUrl}>можно поблагодарить</a>
+      <span class="thanks-line__arrow" aria-hidden="true"> ›</span>
+    </p>
   )
 }
 
@@ -183,5 +195,49 @@ const chatUrl = 'https://t.me/+3PS2UiI8Dec4NWZi';
 
   :global(:root[data-theme='light']) .discuss-cta__icon {
     color: #6a1b9a;
+  }
+
+  /* Тонкая строка «можно поблагодарить» — без давления */
+  .thanks-line {
+    margin: 1.5rem 0 2.2rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--sl-color-text-weak);
+    opacity: 0.78;
+  }
+
+  .thanks-line a {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(199, 160, 255, 0.4);
+    padding-bottom: 0.1em;
+    transition: color 200ms ease, border-color 200ms ease;
+  }
+
+  .thanks-line a:hover,
+  .thanks-line a:focus-visible {
+    color: var(--sl-color-white);
+    border-color: rgba(199, 160, 255, 0.85);
+  }
+
+  .thanks-line__arrow {
+    color: var(--sl-color-text-weak);
+    opacity: 0.55;
+  }
+
+  :global(:root[data-theme='light']) .thanks-line {
+    color: rgba(26, 22, 39, 0.62);
+  }
+  :global(:root[data-theme='light']) .thanks-line a {
+    color: rgba(26, 22, 39, 0.85);
+    border-color: rgba(106, 27, 154, 0.45);
+  }
+  :global(:root[data-theme='light']) .thanks-line a:hover,
+  :global(:root[data-theme='light']) .thanks-line a:focus-visible {
+    color: #1a1627;
+    border-color: rgba(106, 27, 154, 0.85);
   }
 </style>

@@ -1,0 +1,277 @@
+---
+/**
+ * Карточки реквизитов для страницы /thanks/.
+ * Вынесено в .astro потому что в .mdx нельзя <style>/<script>
+ * (MDX парсит { } в CSS как JSX expression).
+ */
+---
+
+<div class="thanks-grid not-content">
+  <article class="thanks-card">
+    <span class="thanks-card__eyebrow">Карта</span>
+    <h2 class="thanks-card__title">Озон&nbsp;Банк</h2>
+    <div class="thanks-card__value-row">
+      <code class="thanks-card__value">2204 3210 0164 0333</code>
+      <button
+        type="button"
+        class="thanks-card__copy"
+        data-copy="2204321001640333"
+        aria-label="Скопировать номер карты"
+      >
+        копировать
+      </button>
+    </div>
+  </article>
+
+  <article class="thanks-card">
+    <span class="thanks-card__eyebrow">СБП</span>
+    <h2 class="thanks-card__title">По номеру телефона</h2>
+    <div class="thanks-card__value-row">
+      <code class="thanks-card__value">+7&nbsp;952&nbsp;511-59-37</code>
+      <button
+        type="button"
+        class="thanks-card__copy"
+        data-copy="+79525115937"
+        aria-label="Скопировать номер телефона"
+      >
+        копировать
+      </button>
+    </div>
+    <span class="thanks-card__hint">Получатель: Озон Банк</span>
+  </article>
+
+  <article class="thanks-card">
+    <span class="thanks-card__eyebrow">PayPal</span>
+    <h2 class="thanks-card__title">paypal.me</h2>
+    <a
+      class="thanks-card__cta"
+      href="https://paypal.me/tatyanayansberg"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Перейти к&nbsp;оплате
+      <span aria-hidden="true">›</span>
+    </a>
+    <span class="thanks-card__hint">paypal.me/tatyanayansberg</span>
+  </article>
+</div>
+
+<p class="thanks-outro">
+  Спасибо. Любая поддержка — это сигнал, что время на материалы потрачено не зря.
+</p>
+
+<style>
+  .thanks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1.1rem;
+    margin: 2.5rem auto 2rem;
+    max-width: 64rem;
+  }
+
+  .thanks-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.8rem 1.6rem 1.5rem;
+    border: 0.5px solid var(--sl-color-hairline, rgba(230, 225, 255, 0.12));
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(20, 16, 32, 0.5), rgba(14, 10, 24, 0.6));
+    transition: border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
+  }
+
+  .thanks-card:hover {
+    border-color: rgba(199, 160, 255, 0.32);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px -22px rgba(123, 44, 191, 0.5);
+  }
+
+  .thanks-card__eyebrow {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sl-color-text-weak);
+    opacity: 0.86;
+  }
+
+  .thanks-card__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 1.7vw, 1.55rem);
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--sl-color-white);
+    letter-spacing: 0.005em;
+  }
+
+  .thanks-card__value-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+  }
+
+  .thanks-card__value {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.98rem;
+    letter-spacing: 0.04em;
+    color: var(--sl-color-text-strong);
+    background: rgba(255, 255, 255, 0.04);
+    border: 0.5px solid rgba(230, 225, 255, 0.08);
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    flex: 1 1 auto;
+  }
+
+  .thanks-card__copy {
+    flex-shrink: 0;
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.45rem 0.85rem;
+    color: var(--sl-color-text-weak);
+    background: transparent;
+    border: 0.5px solid rgba(199, 160, 255, 0.25);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 200ms ease, border-color 200ms ease, background 200ms ease;
+  }
+  .thanks-card__copy:hover {
+    color: var(--sl-color-white);
+    border-color: rgba(199, 160, 255, 0.55);
+    background: rgba(199, 160, 255, 0.06);
+  }
+  .thanks-card__copy.is-copied {
+    color: rgba(180, 230, 200, 0.95);
+    border-color: rgba(180, 230, 200, 0.5);
+    background: rgba(80, 140, 100, 0.08);
+  }
+
+  .thanks-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    align-self: flex-start;
+    margin-top: 0.2rem;
+    padding: 0.6rem 1.05rem;
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--sl-color-white);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+      linear-gradient(170deg, rgba(74, 32, 132, 0.7), rgba(48, 16, 96, 0.7));
+    border: 0.5px solid rgba(199, 160, 255, 0.32);
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px -10px rgba(123, 44, 191, 0.4);
+    transition: background 240ms ease, border-color 240ms ease, transform 240ms ease;
+  }
+  .thanks-card__cta:hover {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0)),
+      linear-gradient(170deg, rgba(96, 48, 158, 0.78), rgba(64, 24, 120, 0.78));
+    border-color: rgba(199, 160, 255, 0.55);
+    transform: translateY(-1px);
+  }
+  .thanks-card__cta span {
+    font-weight: 300;
+    transition: transform 220ms ease;
+  }
+  .thanks-card__cta:hover span {
+    transform: translateX(0.2em);
+  }
+
+  .thanks-card__hint {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-size: 0.86rem;
+    color: var(--sl-color-text-weak);
+    opacity: 0.85;
+    margin-top: 0.1rem;
+  }
+
+  .thanks-outro {
+    max-width: 38rem;
+    margin: 2.5rem auto 4rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--sl-color-text);
+    opacity: 0.9;
+  }
+
+  /* Светлая тема */
+  :global(:root[data-theme='light']) .thanks-card {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: rgba(26, 22, 39, 0.14);
+  }
+  :global(:root[data-theme='light']) .thanks-card:hover {
+    border-color: rgba(106, 27, 154, 0.4);
+    box-shadow: 0 12px 28px rgba(106, 27, 154, 0.1);
+  }
+  :global(:root[data-theme='light']) .thanks-card__title {
+    color: #1a1627;
+  }
+  :global(:root[data-theme='light']) .thanks-card__eyebrow {
+    color: rgba(26, 22, 39, 0.55);
+  }
+  :global(:root[data-theme='light']) .thanks-card__value {
+    color: #1a1627;
+    background: rgba(26, 22, 39, 0.04);
+    border-color: rgba(26, 22, 39, 0.1);
+  }
+  :global(:root[data-theme='light']) .thanks-card__copy {
+    color: rgba(26, 22, 39, 0.6);
+    border-color: rgba(106, 27, 154, 0.32);
+  }
+  :global(:root[data-theme='light']) .thanks-card__copy:hover {
+    color: #1a1627;
+    border-color: rgba(106, 27, 154, 0.55);
+    background: rgba(123, 44, 191, 0.06);
+  }
+  :global(:root[data-theme='light']) .thanks-card__hint {
+    color: rgba(26, 22, 39, 0.6);
+  }
+  :global(:root[data-theme='light']) .thanks-outro {
+    color: rgba(26, 22, 39, 0.8);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.thanks-card__copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.getAttribute('data-copy');
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch {}
+        document.body.removeChild(ta);
+      }
+      const original = btn.textContent;
+      btn.textContent = 'скопировано';
+      btn.classList.add('is-copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('is-copied');
+      }, 1800);
+    });
+  });
+</script>

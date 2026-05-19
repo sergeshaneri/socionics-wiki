@@ -68,6 +68,7 @@ export default defineConfig({
 				{ label: 'Услуги', slug: 'services' },
 				{ label: 'Отзывы', link: '/reviews/' },
 				{ label: 'Контакты', slug: 'contact' },
+				{ label: 'Поблагодарить', slug: 'thanks' },
 				{
 					label: 'Для начинающих',
 					collapsed: true,
