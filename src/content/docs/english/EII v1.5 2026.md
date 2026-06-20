@@ -102,9 +102,7 @@ Shows where a person feels pressure from the environment and a need to adapt. Th
 
 #### How It Manifests in EII
 
-EII may feel increased tension when their rights are not recognized or when they are dissatisfied with their place in a social hierarchy. Logical analysis and structuring information may be stressful, though they can manage them with additional effort. In such situations, EII turns to logical argument and tries to negotiate.
-
-In a tense situation, EII tries to shift from pressure toward a discussion of rules, rights, and responsibilities. They may prepare arguments in advance and explain why they consider a particular demand fair or permissible.
+EII may feel increased tension when their rights are not recognized or when they are dissatisfied with their place in a social hierarchy. In such situations, they try to shift from pressure toward a discussion of rules, rights, and responsibilities: to explain their position logically, justify their demands, and negotiate acceptable conditions. Logical analysis and structuring information may require effort, but they help EII adapt to the situation and preserve stability.
 
 ### Conservative-Critical Function (Vulnerable)
 
