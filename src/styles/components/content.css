@@ -224,3 +224,8 @@ main {
     --sl-content-margin-inline: auto;
   }
 }
+
+/* Хабы без правой колонки используют свободное место под каталоги и сетки. */
+html:not([data-has-toc]):has(main .category-hub, main .types-hub) {
+  --sl-content-width: 68rem;
+}

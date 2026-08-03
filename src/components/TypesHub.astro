@@ -1,0 +1,456 @@
+---
+interface TypeLink {
+  label: string;
+  slug: string;
+}
+
+interface SocionicType {
+  code: string;
+  name: string;
+  summary: string;
+  primary: TypeLink;
+  variants?: TypeLink[];
+}
+
+interface Quadra {
+  name: string;
+  types: SocionicType[];
+}
+
+const quadras: Quadra[] = [
+  {
+    name: 'Альфа-квадра',
+    types: [
+      {
+        code: 'ИЛЭ',
+        name: 'Дон Кихот',
+        summary: 'Понимание сути через структуру',
+        primary: { label: 'Описание', slug: 'types/илэ-семантика-2016' },
+      },
+      {
+        code: 'СЭИ',
+        name: 'Дюма',
+        summary: 'Баланс ощущений через эмоции',
+        primary: { label: 'Описание', slug: 'types/сэи-семантика-2016' },
+      },
+      {
+        code: 'ЭСЭ',
+        name: 'Гюго',
+        summary: 'Эмоциональный тонус через заботу',
+        primary: { label: 'Описание', slug: 'types/эсэ-семантика-2016' },
+      },
+      {
+        code: 'ЛИИ',
+        name: 'Робеспьер',
+        summary: 'Изобретение систем на основе видения возможностей',
+        primary: { label: 'Описание', slug: 'types/лии-семантика-2016' },
+        variants: [
+          { label: 'Роб 2.0', slug: 'types/роб-20' },
+          { label: 'Нейронки', slug: 'types/lii-nerojnki' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Бета-квадра',
+    types: [
+      {
+        code: 'ЭИЭ',
+        name: 'Гамлет',
+        summary: 'Идеология через внутреннюю глубину',
+        primary: { label: 'Описание', slug: 'types/эиэ-семантика-2016' },
+        variants: [
+          { label: 'Опус', slug: 'types/эиэ-опус' },
+          { label: 'Sonnet', slug: 'types/gam-sonnet' },
+        ],
+      },
+      {
+        code: 'ЛСИ',
+        name: 'Максим Горький',
+        summary: 'Порядок через волю',
+        primary: { label: 'Описание', slug: 'types/лси-семантика-2016' },
+        variants: [{ label: 'Максимус', slug: 'types/maksimus' }],
+      },
+      {
+        code: 'СЛЭ',
+        name: 'Жуков',
+        summary: 'Достижение при помощи системы',
+        primary: { label: 'Описание', slug: 'types/слэ-семантика-2016' },
+      },
+      {
+        code: 'ИЭИ',
+        name: 'Есенин',
+        summary: 'Внутренний смысл и свобода при помощи эмоций',
+        primary: { label: 'Описание', slug: 'types/иэи-семантика-2016' },
+        variants: [
+          { label: 'Opus 4', slug: 'types/иэи-by-opus-4' },
+          { label: 'Claude', slug: 'types/es-klod' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Гамма-квадра',
+    types: [
+      {
+        code: 'ЛИЭ',
+        name: 'Джек Лондон',
+        summary: 'Эффективность при помощи трендов',
+        primary: { label: 'Описание', slug: 'types/лиэ-семантика-2016' },
+      },
+      {
+        code: 'ЭСИ',
+        name: 'Драйзер',
+        summary: 'Сохранение близких при помощи воли',
+        primary: { label: 'Описание', slug: 'types/эси-семантика-2016' },
+      },
+      {
+        code: 'СЭЭ',
+        name: 'Наполеон',
+        summary: 'Влияние при помощи дипломатии',
+        primary: { label: 'Описание', slug: 'types/сээ-семантика-2016' },
+      },
+      {
+        code: 'ИЛИ',
+        name: 'Бальзак',
+        summary: 'Осмысленный путь при помощи оптимизации',
+        primary: { label: 'Описание', slug: 'types/или-семантика-2016' },
+        variants: [
+          { label: 'Баль 2.1', slug: 'types/баль-21-семантика' },
+          { label: 'Лайт', slug: 'types/bal-2-1-lajt' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Дельта-квадра',
+    types: [
+      {
+        code: 'ИЭЭ',
+        name: 'Гексли',
+        summary: 'Возможности при помощи знакомств',
+        primary: { label: 'Описание', slug: 'types/иээ-семантика-2016' },
+      },
+      {
+        code: 'СЛИ',
+        name: 'Габен',
+        summary: 'Качество жизни благодаря мастерству',
+        primary: { label: 'Описание', slug: 'types/сли-семантика-2016' },
+        variants: [{ label: 'Gemini', slug: 'types/сли-by-gemini' }],
+      },
+      {
+        code: 'ЛСЭ',
+        name: 'Штирлиц',
+        summary: 'Профессионализм при помощи качества',
+        primary: { label: 'Описание', slug: 'types/лсэ-семантика-2016' },
+      },
+      {
+        code: 'ЭИИ',
+        name: 'Достоевский',
+        summary: 'Гуманизм благодаря проницательности',
+        primary: { label: 'Описание', slug: 'types/эии-v15-2026' },
+      },
+    ],
+  },
+];
+
+const additionalGroups = [
+  {
+    title: 'Сводные и экспериментальные описания',
+    links: [
+      { label: 'Описания ТИМов от нейронок', slug: 'types/opisaniya-timov-ot-nejronok' },
+      { label: 'ЛИИ от нейронок', slug: 'types/lii-nerojnki' },
+      { label: 'СЛИ от Gemini', slug: 'types/сли-by-gemini' },
+    ],
+  },
+  {
+    title: 'Краткие описания',
+    links: [{ label: 'Кратко обо всех типах', slug: 'types/kratko-obo-vseh-tipah' }],
+  },
+  {
+    title: 'Видео о конкретных типах',
+    links: [
+      { label: 'Читаем описание Бальзака', slug: 'video/читаем-описания-бальзака-или-по-чурюмову' },
+      { label: 'Робеспьер и Достоевский', slug: 'video/как-отличить-робеспьера-от-достоевского' },
+      { label: 'Габен и Бальзак', slug: 'video/отличия-габена-от-бальзака' },
+      { label: 'Дон Кихот о болевой БЭ', slug: 'video/дон-кихот-рассказывает-о-боевой-бэ' },
+      { label: 'Читаем описание Дюмы (СЭИ) по Чурюмову', slug: 'video/читаем-описание-дюмы-сэи-по-чурюмову' },
+    ],
+  },
+  {
+    title: 'Общее о типах',
+    links: [
+      { label: 'Как отличить ТИМное от индивидуального', slug: 'video/как-отличить-тимное-от-индивидуального' },
+      { label: 'Социальные роли типов | Соционика', slug: 'video/социальные-роли-типов' },
+      { label: 'Читаем описания типов Семена Чурюмова ч.1 | Соционика', slug: 'video/читаем-описания-типов-чурюмова-ч1' },
+      { label: 'Что описывает соционический тип? Психику? Темперамент? Характер?', slug: 'video/что-описывает-соционический-тип' },
+      { label: 'Порядок типов и периоды развития личности | Соционика', slug: 'video/порядок-типов-и-периоды-развития' },
+    ],
+  },
+];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (slug: string) => `${base}/${slug}/`;
+---
+
+<div class="types-hub">
+  <div class="types-matrix">
+    {quadras.map((quadra) => (
+      <section class="types-quadra" aria-labelledby={`quadra-${quadra.name}`}>
+        <h2 id={`quadra-${quadra.name}`} class="types-quadra__title">{quadra.name}</h2>
+        <div class="types-quadra__grid">
+          {quadra.types.map((type) => (
+            <article class="type-card">
+              <header class="type-card__header">
+                <span class="type-card__code">{type.code}</span>
+                <h3 class="type-card__name">{type.name}</h3>
+              </header>
+              <p class="type-card__summary">{type.summary}</p>
+              <nav class="type-card__links" aria-label={`Материалы о типе ${type.name}`}>
+                <a class="type-card__primary" href={href(type.primary.slug)}>{type.primary.label}</a>
+                {type.variants?.map((variant) => (
+                  <a href={href(variant.slug)}>{variant.label}</a>
+                ))}
+              </nav>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="types-extra" aria-labelledby="types-extra-title">
+    <h2 id="types-extra-title">Дополнительные материалы</h2>
+    <div class="types-extra__grid">
+      {additionalGroups.map((group) => (
+        <section class="types-extra__group">
+          <h3>{group.title}</h3>
+          <ul>
+            {group.links.map((link) => (
+              <li><a href={href(link.slug)}>{link.label}</a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  :global(.sl-markdown-content:has(.types-hub)) {
+    max-width: 68rem;
+  }
+
+  .types-hub {
+    margin-top: 2rem;
+  }
+
+  .types-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .types-quadra__title {
+    margin: 0 0 0.65rem;
+    color: var(--sl-color-text-weak);
+    font-family: var(--font-body);
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.07em !important;
+    text-transform: uppercase;
+  }
+
+  .types-quadra__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .type-card {
+    display: flex;
+    min-width: 0;
+    min-height: 12.5rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+    border: 0.5px solid var(--line-soft);
+    border-left: 2px solid rgba(157, 78, 221, 0.45);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.018);
+    transition:
+      border-color 180ms ease,
+      background 180ms ease,
+      transform 180ms ease;
+  }
+
+  .type-card:hover,
+  .type-card:focus-within {
+    border-color: rgba(199, 160, 255, 0.32);
+    border-left-color: rgba(199, 160, 255, 0.78);
+    background: rgba(123, 44, 191, 0.07);
+    transform: translateY(-2px);
+  }
+
+  .type-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.65rem;
+    border: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  .type-card__code {
+    color: var(--sl-color-accent-high);
+    font-family: var(--sl-font-system);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .type-card__name {
+    margin: 0;
+    color: var(--sl-color-white);
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 1.25vw, 1.18rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.15;
+    text-align: right;
+  }
+
+  .type-card__summary {
+    margin: 1rem 0 1.25rem;
+    color: var(--sl-color-text);
+    font-family: var(--sl-font-system);
+    font-size: 0.94rem;
+    font-style: normal;
+    line-height: 1.45;
+  }
+
+  .type-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.65rem;
+    margin-top: auto;
+    padding-top: 0.7rem;
+    border-top: 0.5px solid var(--line-soft);
+  }
+
+  .type-card__links a,
+  .types-extra a {
+    color: var(--sl-color-text-weak);
+    font-size: 0.73rem;
+    line-height: 1.35;
+    text-decoration-color: rgba(199, 160, 255, 0.38);
+    text-underline-offset: 0.22em;
+  }
+
+  .type-card__links a:hover,
+  .type-card__links a:focus-visible,
+  .types-extra a:hover,
+  .types-extra a:focus-visible {
+    color: var(--sl-color-white);
+    text-decoration-color: var(--sl-color-accent-high);
+  }
+
+  .type-card__links .type-card__primary {
+    color: var(--sl-color-white);
+    font-weight: 600;
+  }
+
+  .types-extra {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.5px solid var(--line-strong);
+  }
+
+  .types-extra > h2 {
+    margin: 0 0 1.25rem;
+  }
+
+  .types-extra__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .types-extra__group h3 {
+    margin: 0 0 0.65rem;
+    color: var(--sl-color-white);
+    font-size: 1rem !important;
+  }
+
+  .types-extra__group ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  :global(:root[data-theme='light']) .type-card {
+    background: rgba(106, 27, 154, 0.018);
+    border-color: rgba(26, 22, 39, 0.14);
+    border-left-color: rgba(106, 27, 154, 0.48);
+  }
+
+  :global(:root[data-theme='light']) .type-card__header {
+    border: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  :global(:root[data-theme='light']) .type-card:hover,
+  :global(:root[data-theme='light']) .type-card:focus-within {
+    border-color: rgba(106, 27, 154, 0.34);
+    background: rgba(106, 27, 154, 0.055);
+  }
+
+  :global(:root[data-theme='light']) .type-card__name,
+  :global(:root[data-theme='light']) .type-card__links .type-card__primary,
+  :global(:root[data-theme='light']) .types-extra__group h3 {
+    color: #1a1627;
+  }
+
+  :global(:root[data-theme='light']) .type-card__summary {
+    color: rgba(26, 22, 39, 0.82);
+  }
+
+  :global(:root[data-theme='light']) .type-card__links a:hover,
+  :global(:root[data-theme='light']) .type-card__links a:focus-visible,
+  :global(:root[data-theme='light']) .types-extra a:hover,
+  :global(:root[data-theme='light']) .types-extra a:focus-visible {
+    color: #1a1627;
+  }
+
+  @media (max-width: 71.99rem) {
+    .types-quadra__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 39.99rem) {
+    .types-quadra__grid,
+    .types-extra__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .type-card {
+      min-height: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .type-card {
+      transition: none;
+    }
+
+    .type-card:hover,
+    .type-card:focus-within {
+      transform: none;
+    }
+  }
+</style>
