@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import starlightSiteGraph from 'starlight-site-graph';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 import remarkWikiLink from 'remark-wiki-link';
 import { readFileSync } from 'node:fs';
 import { buildPermalinkMap, normalizeSlug } from './src/lib/wiki-links.mjs';
@@ -22,6 +24,7 @@ export default defineConfig({
 	redirects: migrationRedirects,
 	markdown: {
 		remarkPlugins: [
+			remarkMath,
 			[
 				remarkWikiLink,
 				{
@@ -35,6 +38,7 @@ export default defineConfig({
 				},
 			],
 		],
+		rehypePlugins: [rehypeKatex],
 	},
 	integrations: [
 		sitemap(),
@@ -62,7 +66,7 @@ export default defineConfig({
 				SocialIcons: './src/components/SiteSocialIcons.astro',
 				Footer: './src/components/Footer.astro',
 			},
-			customCss: ['./src/styles/fonts.css', './src/styles/custom.css'],
+			customCss: ['./src/styles/fonts.css', './src/styles/katex.css', './src/styles/custom.css'],
 			sidebar: [
 				{ label: 'О Вики', slug: 'index' },
 				{ label: 'Услуги', slug: 'services' },

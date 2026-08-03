@@ -1,0 +1,17 @@
+@import 'katex/dist/katex.min.css';
+
+/* Формулы могут быть шире колонки статьи, особенно матрицы на телефоне. */
+.sl-markdown-content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.4rem 0 0.65rem;
+}
+
+.sl-markdown-content .katex-display > .katex {
+  min-width: max-content;
+  text-align: center;
+}
+
+.sl-markdown-content .katex {
+  color: var(--sl-color-text);
+}
