@@ -4,7 +4,14 @@
  * Вынесено в .astro потому что в .mdx нельзя <style>/<script>
  * (MDX парсит { } в CSS как JSX expression).
  */
+import { Image } from 'astro:assets';
+import thanksPhoto from '../assets/thanks-sergey.jpg';
 ---
+
+<p class="thanks-intro">
+  Wiki, статьи и видео — бесплатны. Если что-то из материалов оказалось
+  полезным, можно поддержать переводом. Я рад служить.
+</p>
 
 <div class="thanks-grid not-content">
   <article class="thanks-card">
@@ -90,11 +97,29 @@
   </article>
 </div>
 
+<figure class="thanks-photo not-content">
+  <Image
+    src={thanksPhoto}
+    alt="Сергей Шанэри благодарит за поддержку"
+    widths={[420, 608]}
+    sizes="(max-width: 640px) 88vw, 420px"
+    loading="lazy"
+  />
+</figure>
+
 <p class="thanks-outro">
-  Спасибо. Любая поддержка — это сигнал, что время на материалы потрачено не зря.
+  Любая поддержка — это сигнал, что вам ценно и стоит продолжать делиться.
 </p>
 
 <style>
+  .thanks-intro {
+    max-width: 58rem;
+    margin: 1.5rem 0 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--sl-color-text);
+  }
+
   .thanks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
@@ -257,9 +282,22 @@
     margin-top: 0.1rem;
   }
 
+  .thanks-photo {
+    width: min(100%, 26rem);
+    margin: 2.8rem auto 0;
+  }
+
+  .thanks-photo :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 0.5px solid var(--sl-color-hairline, rgba(230, 225, 255, 0.12));
+  }
+
   .thanks-outro {
     max-width: 38rem;
-    margin: 2.5rem auto 4rem;
+    margin: 1.8rem auto 4rem;
     font-family: var(--font-heading);
     font-style: italic;
     font-size: 1.05rem;

@@ -1,13 +1,11 @@
 /**
- * Backlinks + Related для wiki-статей.
+ * Backlinks для wiki-статей.
  *
  * Однократно (lazy) обходит коллекцию docs, парсит body на:
  *   - [[wiki-link]] / [[wiki-link|alias]]
  *   - [text](/socionics-wiki/path/) — абсолютные внутренние ссылки
  *
- * И строит:
- *   - backlinks: targetId → entries, которые на него ссылаются
- *   - related: считается ad-hoc по пересечению categories / общей директории
+ * Строит backlinks: targetId → entries, которые на него ссылаются.
  *
  * Использование: см. Backlinks.astro в Footer.
  */
@@ -18,7 +16,6 @@ import { normalizeSlug } from './wiki-links.mjs';
 type DocEntry = CollectionEntry<'docs'>;
 
 interface Cache {
-	all: DocEntry[];
 	byId: Map<string, DocEntry>;
 	byTitleSlug: Map<string, DocEntry>;
 	backlinks: Map<string, DocEntry[]>;
@@ -73,7 +70,7 @@ async function build(): Promise<Cache> {
 		}
 	}
 
-	cache = { all, byId, byTitleSlug, backlinks };
+	cache = { byId, byTitleSlug, backlinks };
 	return cache;
 }
 
@@ -105,31 +102,6 @@ export async function getBacklinks(entry: DocEntry, max = 8): Promise<DocEntry[]
 	return [...list]
 		.sort((a, b) => a.data.title.localeCompare(b.data.title, 'ru'))
 		.slice(0, max);
-}
-
-export async function getRelated(entry: DocEntry, max = 5): Promise<DocEntry[]> {
-	const c = await build();
-	const myCats = new Set((entry.data as { categories?: string[] }).categories ?? []);
-	const myTopDir = entry.id.split('/')[0];
-	const candidates: { entry: DocEntry; score: number }[] = [];
-
-	for (const other of c.all) {
-		if (other.id === entry.id) continue;
-		if (other.data.template === 'splash') continue;
-		if (other.data.draft) continue;
-		const otherCats = new Set((other.data as { categories?: string[] }).categories ?? []);
-		const overlap = [...myCats].filter((cat) => otherCats.has(cat)).length;
-		const sameDir = other.id.split('/')[0] === myTopDir ? 1 : 0;
-		const score = overlap * 10 + sameDir * 3;
-		if (score > 0) candidates.push({ entry: other, score });
-	}
-
-	if (candidates.length === 0) return [];
-	// Сортировка: больший score выше. При равных — стабильно по title.
-	candidates.sort((a, b) =>
-		b.score - a.score || a.entry.data.title.localeCompare(b.entry.data.title, 'ru'),
-	);
-	return candidates.slice(0, max).map((c) => c.entry);
 }
 
 /**

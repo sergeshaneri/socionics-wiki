@@ -563,9 +563,3 @@
 :root[data-theme='light'] .sl-markdown-content time {
   color: rgba(26, 22, 39, 0.92);
 }
-
-/* Mono-тег типа в светлой теме */
-:root[data-theme='light'] .type-tag {
-  color: rgba(26, 22, 39, 0.55);
-  border-color: rgba(26, 22, 39, 0.22);
-}

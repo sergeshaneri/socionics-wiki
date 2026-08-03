@@ -322,25 +322,6 @@ body {
   font-weight: 500;
 }
 
-/* === Mono-тег типа =====================================================
-   Автоматически вставляется клиентским JS после имён соционических типов.
-   Моноширинный, очень сдержанный. */
-.type-tag {
-  display: inline-block;
-  margin-left: 0.25em;
-  padding: 0 0.3em;
-  font-family: var(--font-mono);
-  font-size: 0.72em;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: rgba(230, 225, 255, 0.6);
-  border: 0.5px solid rgba(230, 225, 255, 0.2);
-  border-radius: 2px;
-  vertical-align: middle;
-  translate: 0 -0.08em;
-  white-space: nowrap;
-}
-
 /* === Hero-кнопки: gallery-plaque ======================================
    Никаких боксов. Чистая типографика — italic Cormorant + стрелка →.
    Аффорданс кнопки даёт hairline под текстом, который прорисовывается
