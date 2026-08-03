@@ -1,0 +1,53 @@
+---
+/**
+ * Starlight MarkdownContent override.
+ * Добавляет Schema.org Microdata для контентной аналитики Яндекс Метрики,
+ * не дублируя полный текст статьи в JSON-LD.
+ */
+import '@astrojs/starlight/style/markdown.css';
+
+const { entry, lastUpdated } = Astro.locals.starlightRoute;
+const isHome = entry.id === '' || entry.id === 'index' || entry.slug === '';
+const isSplash = entry.data.template === 'splash';
+const isCategoryHub =
+  (entry.slug ?? '').startsWith('categories/') ||
+  (entry.id ?? '').startsWith('categories/');
+const isArticle = !isHome && !isSplash && !isCategoryHub && !entry.data.hero;
+
+const pageUrl = Astro.url.toString();
+const categories = entry.data.categories ?? [];
+---
+
+{
+  isArticle ? (
+    <article
+      class="sl-markdown-content"
+      itemscope
+      itemtype="https://schema.org/Article"
+      itemid={pageUrl}
+    >
+      <meta itemprop="identifier" content={pageUrl} />
+      <meta itemprop="headline" content={entry.data.title} />
+      <meta itemprop="author" content="Сергей Шанэри" />
+      <link itemprop="url" href={pageUrl} />
+      {lastUpdated && (
+        <meta itemprop="dateModified" content={lastUpdated.toISOString()} />
+      )}
+      {categories.map((category) => <meta itemprop="about" content={category} />)}
+      <div itemprop="articleBody">
+        <slot />
+      </div>
+    </article>
+  ) : (
+    <div class="sl-markdown-content">
+      <slot />
+    </div>
+  )
+}
+
+<style>
+  article.sl-markdown-content > [itemprop='articleBody'] > :is(h1, h2, p):first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+</style>

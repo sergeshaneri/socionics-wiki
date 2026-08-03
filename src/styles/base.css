@@ -42,14 +42,14 @@ h3 {
   font-size: clamp(1.45rem, 2vw, 1.7rem);
 }
 
-.sl-markdown-content > h2,
-.sl-markdown-content > h3 {
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h2,
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h3 {
   position: relative;
   padding-bottom: 0.65rem;
 }
 
-.sl-markdown-content > h2::after,
-.sl-markdown-content > h3::after {
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h2::after,
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h3::after {
   content: '';
   position: absolute;
   left: 0;

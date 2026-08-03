@@ -7,6 +7,7 @@
 import ReadingProgress from './ReadingProgress.astro';
 import NoirEnhancements from './NoirEnhancements.astro';
 import JsonLd from './JsonLd.astro';
+import YandexMetrika from './YandexMetrika.astro';
 import { personSchema, articleSchema } from '../lib/structured-data';
 // FractalBackground — отключён (идея отложена).
 // Файл сохранён в src/components/FractalBackground.astro, чтобы
@@ -51,6 +52,9 @@ const articleData = isArticle
 {/* JSON-LD: персональная schema.org разметка для rich snippets */}
 <JsonLd data={personSchema} />
 {articleData && <JsonLd data={articleData} />}
+
+{/* Аналитика на всех страницах сайта. */}
+<YandexMetrika />
 
 {/* Minimal Noir: клиентские эффекты. Компонент вставляет <script> — Astro
     выносит его из <head> в нужное место автоматически. */}

@@ -30,8 +30,8 @@ h3 {
 }
 
 /* Hairlines — минимальные, единственный декор */
-.sl-markdown-content > h2::after,
-.sl-markdown-content > h3::after {
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h2::after,
+:where(.sl-markdown-content, .sl-markdown-content > [itemprop='articleBody']) > h3::after {
   background: rgba(230, 225, 255, 0.28) !important;
   height: 0.5px !important;
   width: 3rem !important;

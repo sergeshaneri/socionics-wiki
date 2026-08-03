@@ -67,7 +67,22 @@ const thanksUrl = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}thanks/`;
 
 <Default><slot /></Default>
 
+<noscript>
+  <div>
+    <img
+      src="https://mc.yandex.ru/watch/111270420"
+      class="metrika-noscript"
+      alt=""
+    />
+  </div>
+</noscript>
+
 <style>
+  .metrika-noscript {
+    position: absolute;
+    left: -9999px;
+  }
+
   .discuss-cta {
     margin: 3rem 0 2rem;
     padding: 1.6rem 1.7rem;

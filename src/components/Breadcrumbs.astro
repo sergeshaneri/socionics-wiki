@@ -38,21 +38,25 @@ const homeHref = import.meta.env.BASE_URL || '/';
 
 {crumbs.length > 0 && (
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
-    <ol>
-      <li>
-        <a href={homeHref}>Главная</a>
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href={homeHref}><span itemprop="name">Главная</span></a>
+        <meta itemprop="position" content="1" />
       </li>
-      {crumbs.map((crumb) => (
-        <li>
+      {crumbs.map((crumb, index) => (
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           {crumb.type === 'link' && crumb.href ? (
-            <a href={crumb.href}>{crumb.label}</a>
+            <a itemprop="item" href={crumb.href}><span itemprop="name">{crumb.label}</span></a>
           ) : (
-            <span>{crumb.label}</span>
+            <span itemprop="name">{crumb.label}</span>
           )}
+          <meta itemprop="position" content={String(index + 2)} />
         </li>
       ))}
-      <li>
-        <span aria-current="page">{pageTitle}</span>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <link itemprop="item" href={Astro.url.toString()} />
+        <span itemprop="name" aria-current="page">{pageTitle}</span>
+        <meta itemprop="position" content={String(crumbs.length + 2)} />
       </li>
     </ol>
   </nav>
