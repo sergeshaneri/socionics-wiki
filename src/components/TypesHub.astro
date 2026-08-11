@@ -69,7 +69,10 @@ const quadras: Quadra[] = [
         name: 'Максим Горький',
         summary: 'Порядок через волю',
         primary: { label: 'Описание', slug: 'types/лси-семантика-2016' },
-        variants: [{ label: 'Максимус', slug: 'types/maksimus' }],
+        variants: [
+          { label: 'Кратко', slug: 'types/lsi-kratko' },
+          { label: 'Максимус', slug: 'types/maksimus' },
+        ],
       },
       {
         code: 'СЛЭ',
@@ -109,6 +112,7 @@ const quadras: Quadra[] = [
         name: 'Наполеон',
         summary: 'Влияние при помощи дипломатии',
         primary: { label: 'Описание', slug: 'types/сээ-семантика-2016' },
+        variants: [{ label: 'Кратко', slug: 'types/see-kratko' }],
       },
       {
         code: 'ИЛИ',
@@ -165,7 +169,11 @@ const additionalGroups = [
   },
   {
     title: 'Краткие описания',
-    links: [{ label: 'Кратко обо всех типах', slug: 'types/kratko-obo-vseh-tipah' }],
+    links: [
+      { label: 'Кратко обо всех типах', slug: 'types/kratko-obo-vseh-tipah' },
+      { label: 'Максим Горький (ЛСИ) кратко', slug: 'types/lsi-kratko' },
+      { label: 'Наполеон (СЭЭ) кратко', slug: 'types/see-kratko' },
+    ],
   },
   {
     title: 'Видео о конкретных типах',
