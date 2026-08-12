@@ -2,7 +2,5 @@
   "tableOfContents.onThisPage": "Оглавление",
   "page.previousLink": "Назад",
   "page.nextLink": "Вперёд",
-  "search.label": "Поиск",
-  "starlight-site-graph.graph": "Граф",
-  "starlight-site-graph.backlinks": "Обратные ссылки"
+  "search.label": "Поиск"
 }

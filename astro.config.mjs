@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
-import starlightSiteGraph from 'starlight-site-graph';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import remarkWikiLink from 'remark-wiki-link';
@@ -53,13 +52,6 @@ export default defineConfig({
 					lang: 'ru',
 				},
 			},
-			plugins: [
-				// NB: starlight-site-graph 0.5 + zod v4 — при передаче ЛЮБЫХ options
-				// валидация падает на `z.map()` schema (`sitemapConfig.styleRules`).
-				// Поэтому конфигурируем граф через per-page frontmatter
-				// (sitemap.include + graph.visible) — см. scripts/configure-hub-graph.mjs.
-				starlightSiteGraph(),
-			],
 			components: {
 				Head: './src/components/Head.astro',
 				MarkdownContent: './src/components/MarkdownContent.astro',

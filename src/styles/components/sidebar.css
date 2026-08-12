@@ -1,4 +1,4 @@
-/* Левый и правый сайдбары + граф */
+/* Левый и правый сайдбары */
 
 /* Фон/блюр/фикс-позиционирование — только на десктопе (≥ 50rem).
    На мобильных оставляем поведение Starlight по-умолчанию: сайдбар скрыт
@@ -69,7 +69,7 @@
 
 /* Starlight-кнопка-гамбургер на мобильных — видна и работает по-умолчанию. */
 
-/* Правый сайдбар с графом */
+/* Правый сайдбар */
 .page-sidebar {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 24%),
@@ -77,11 +77,4 @@
   border-left: 1px solid rgba(230, 225, 255, 0.06);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-}
-
-page-graph {
-  --graph-bg: rgba(10, 10, 16, 0.5);
-  --graph-node-color: var(--sl-color-accent);
-  --graph-link-color: rgba(157, 78, 221, 0.5);
-  --graph-text-color: var(--sl-color-text);
 }

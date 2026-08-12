@@ -112,12 +112,6 @@
   backdrop-filter: none !important;
 }
 
-:root[data-theme='light'] page-graph {
-  --graph-bg: rgba(255, 255, 255, 0.6);
-  --graph-node-color: #6a1b9a;
-  --graph-link-color: rgba(106, 27, 154, 0.4);
-  --graph-text-color: #1a1627;
-}
 
 /* Поиск */
 :root[data-theme='light'] site-search button[data-open-modal] {

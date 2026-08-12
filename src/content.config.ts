@@ -1,7 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
 import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
-import { pageSiteGraphSchema } from 'starlight-site-graph/schema';
 
 export const SOCIONICS_CATEGORIES = [
 	'meta',
@@ -14,7 +13,7 @@ export const SOCIONICS_CATEGORIES = [
 ] as const;
 export type SocionicsCategory = (typeof SOCIONICS_CATEGORIES)[number];
 
-const extendedSchema = pageSiteGraphSchema.extend({
+const extendedSchema = z.object({
 	categories: z.array(z.enum(SOCIONICS_CATEGORIES)).optional(),
 });
 
