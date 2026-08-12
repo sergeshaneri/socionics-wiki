@@ -1,7 +1,7 @@
 ---
 title: как  прокачивать би
 description: как  прокачивать би
-categories: [applied]
+categories: [applied, draft]
 ---
 
 дневник, ретроспектива, слежение за своей жизнью

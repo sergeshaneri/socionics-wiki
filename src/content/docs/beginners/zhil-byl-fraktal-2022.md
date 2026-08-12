@@ -1,7 +1,7 @@
 ---
 title: жил был фрактал 2022
 description: жил был фрактал 2022
-categories: [applied]
+categories: [draft, meta]
 ---
 
 жил был фрактал и решил раздвоиться в пределе)

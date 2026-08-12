@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import type { SocionicsCategory } from '../content.config';
+
+interface Props {
+  category: SocionicsCategory;
+}
+
+const { category } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const entries = (await getCollection('docs'))
+  .filter((entry) => entry.data.categories?.includes(category))
+  .sort((a, b) => (a.data.title || a.id).localeCompare(b.data.title || b.id, 'ru'));
+
+const sections = category === 'draft'
+  ? [{ title: '', entries }]
+  : [
+      { title: '', entries: entries.filter((entry) => !entry.data.categories?.includes('draft')) },
+      { title: 'Черновики', entries: entries.filter((entry) => entry.data.categories?.includes('draft')) },
+    ];
+---
+
+{sections.map((section) => section.entries.length > 0 && (
+  <section class="tagged-category-section">
+    {section.title && <h2>{section.title}</h2>}
+    <ul class="tagged-category-hub">
+      {section.entries.map((entry) => (
+        <li>
+          <a href={`${base}/${entry.id.replace(/\.(md|mdx)$/, '')}/`}>
+            <span>{entry.data.title}</span>
+            {entry.data.description && entry.data.description !== entry.data.title && (
+              <small>{entry.data.description}</small>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+))}
+
+<style>
+  .tagged-category-section {
+    margin-top: 1.5rem;
+  }
+
+  .tagged-category-section h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .tagged-category-hub {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.6rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tagged-category-hub a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .tagged-category-hub a:hover,
+  .tagged-category-hub a:focus-visible {
+    border-left-color: rgba(199, 160, 255, 0.55);
+    background: rgba(199, 160, 255, 0.06);
+  }
+
+  .tagged-category-hub span {
+    color: var(--sl-color-white);
+    font-weight: 500;
+  }
+
+  .tagged-category-hub small {
+    color: var(--sl-color-text-weak);
+  }
+
+  :global(:root[data-theme='light']) .tagged-category-hub span {
+    color: #1a1627;
+  }
+</style>

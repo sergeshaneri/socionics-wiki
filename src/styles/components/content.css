@@ -197,6 +197,9 @@ a.category-tag:focus-visible {
 .category-tag.category-tag--formal { border-left-color: rgba(130, 190, 255, 0.7); }
 .category-tag.category-tag--semantic { border-left-color: rgba(255, 190, 140, 0.7); }
 .category-tag.category-tag--applied { border-left-color: rgba(150, 230, 170, 0.7); }
+.category-tag.category-tag--beginners { border-left-color: rgba(255, 220, 120, 0.7); }
+.category-tag.category-tag--draft { border-left-color: rgba(190, 190, 200, 0.7); }
+.category-tag.category-tag--ai { border-left-color: rgba(110, 225, 220, 0.7); }
 
 /* Исправление пустого первого экрана */
 .sl-container {

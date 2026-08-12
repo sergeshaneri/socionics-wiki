@@ -3,7 +3,15 @@ import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
 import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 import { pageSiteGraphSchema } from 'starlight-site-graph/schema';
 
-export const SOCIONICS_CATEGORIES = ['meta', 'formal', 'semantic', 'applied'] as const;
+export const SOCIONICS_CATEGORIES = [
+	'meta',
+	'formal',
+	'semantic',
+	'applied',
+	'beginners',
+	'draft',
+	'ai',
+] as const;
 export type SocionicsCategory = (typeof SOCIONICS_CATEGORIES)[number];
 
 const extendedSchema = pageSiteGraphSchema.extend({

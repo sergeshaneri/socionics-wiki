@@ -1,7 +1,7 @@
 ---
 title: "Описания ТИМов от нейронок"
 description: "Описания ТИМов от нейронок"
-categories: [applied]
+categories: [semantic, ai]
 ---
 
 # ИЛЭ

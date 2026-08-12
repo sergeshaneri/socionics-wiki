@@ -3,15 +3,8 @@ title: Семантическая соционика
 description: Смыслы и значения в соционике — семантика аспектов, функций, отношений
 ---
 
-import CategoryHub from '../../../components/CategoryHub.astro';
+import TaggedCategoryHub from '../../../components/TaggedCategoryHub.astro';
 
 Самое интересное в соционике — смыслы. Семантика информационных аспектов, функций и интертипных отношений: словари, тезаурусы, описания, лингвистика.
 
-<CategoryHub
-  folders={['information-elements', 'functions', 'relations']}
-  labels={{
-    'information-elements': 'Информационные аспекты',
-    'functions': 'Функции и модели',
-    'relations': 'Интертипные отношения',
-  }}
-/>
+<TaggedCategoryHub category="semantic" />
