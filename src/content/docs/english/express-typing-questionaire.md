@@ -8,9 +8,25 @@ categories: [meta]
 
 ### **The Express Typing Methodology**
 
+#### **Introduction: Structure and Logic of the Method**
+
+**1\. Determining the socionic temperament.**
+
+The first step is to determine the temperament: a group of four types united by the dichotomies of **Extroversion / Introversion** and **Rationality / Irrationality**. These two dichotomies are the foundation of the express approach. Any two orthogonal dichotomies narrow the search to four types, but temperament grouping creates four sets with a special property: within each set, only two specific information aspects can occupy the Base function, and only two can occupy the Creative function. This simplifies the next diagnostic stage.
+
+**2\. Verification through cross-checking.**
+
+The second step is to test the temperament hypothesis. For this, we use additional Reinin dichotomies: **Statics / Dynamics**, **Positivism / Negativism**, and **Process / Result**. Their values are mathematically linked to temperament. If the person's answers match the values expected for the proposed temperament, the hypothesis is confirmed. A mismatch points to a possible error in the initial data and allows the hypothesis to be corrected.
+
+**3\. A differentiated questionnaire with four branches.**
+
+After the temperament has been determined and confirmed, the diagnostic process moves into one of four questionnaire branches. Each branch is designed for its own group of types. This structure makes it possible to ask focused questions in which the person chooses between two possible information aspects for the Base function and two for the Creative function.
+
+### **Primary Questions for Determining Temperament**
+
 #### **Preliminary Setup**
 
-Before starting the typing session, it is important to give the person the right mindset: *"I will be asking some abstract questions. In life, we are all capable of acting in different ways. It is important to answer based on what feels most natural, inherent, and comfortable to you overall, not how you act in a specific situation or at work."* This helps to filter out situational, professionally-biased, and socially desirable answers.
+Before starting the typing session, it is important to give the person the right mindset: *"I will be asking some abstract questions. In life, we are all capable of acting in different ways. It is important to answer based on what feels most natural, inherent, and comfortable to you overall, not how you act in a specific situation or at work. If both poles describe you strongly, choose the one that has been with you since birth rather than the one you learned later."* This helps to filter out situational, professionally-biased, and socially desirable answers.
 
 #### **Dichotomy 1: Irrationality / Rationality  — Full Description**
 
@@ -27,44 +43,34 @@ This dichotomy determines what is primary for the psyche: a pre-made decision (j
   * **Initial Interpretation:**  
     * A clear answer of "according to a plan" is a strong indicator of Rationality.  
     * A clear answer of "according to the situation," or "sometimes by a plan, sometimes by the situation" is a strong indicator of Irrationality.  
-  *   
-* 
 
 **2\. Clarifying Questions Block (if the answer is ambiguous):**
 
 * **Question:** *"I usually end up acting according to the situation."* — But do you **PREFER** to act according to a plan?  
   * **Goal:** To guide the person back from stating a fact to their inner preference. Pay attention to the emotional tone of the answer.  
   * **Interpretation:** An answer given with regret ("Yes, I prefer to, but it never works out") is an indicator of Rationality. An answer given with humor or satisfaction ("Of course by the situation, it's more interesting that way\!") is an indicator of Irrationality.  
-*   
 * **Question:** How often do you succeed in following your intended plan?  
   * **Goal:** To check what the person considers the norm versus a disruption.  
   * **Interpretation:** For a Rational, a disruption of the plan is an unfortunate event, so they more often implement their plans. An Irrational may not even understand the problem, as the initial "plan" is just one of many possible vectors for them.  
-*   
 * **(\!) Question:** Do you experience discomfort when plans change on the fly?  
   * **Goal:** A direct check of the reaction to a disruption of the internal program.  
   * **Interpretation:** The presence of clear discomfort, irritation, or a feeling of "the ground slipping from under one's feet" is a strong indicator of Rationality. Calmness, interest, or excitement is an indicator of Irrationality.  
-*   
 * **Question:** Perhaps you adapt easily to the situation, but you prefer to have initial preparations?  
   * **Goal:** This question works well for identifying two types of "deviations."  
     * Rationals who have developed flexibility (e.g., LIE and EIE). **Interpretation:** An answer of "Yes, I can improvise, but I feel much calmer when I have at least the skeleton of a plan" indicates Rationality.  
     * Irrationals who, due to being proactive, like to think through different options (e.g., SLE and SEE). **Interpretation:** An answer of "I can act without a plan, but it's more reliable with preparations" indicates Irrationality.  
-  *   
-*   
 * **Question:** Are you comfortable leaving the house without a clear plan of action for the day?  
   * **Goal:** To translate an abstract question into a very concrete, everyday scenario.  
   * **Interpretation:** For a Rational, this can be associated with a feeling of anxiety or meaninglessness. An Irrational in such a situation feels freedom and anticipation of possibilities.  
-* 
 
 **3\. Typological Nuances and "Pitfalls"**
 
 * **Irrationals who answer "by a plan":**  
   * **SEE and SLE:** Their base Extraverted Sensing (Se) is oriented toward achieving concrete goals. They may perceive a goal as a "plan" and state this confidently. Here, you need to clarify: "Is it a rigid step-by-step plan, or more of a goal that you move toward by flexibly changing your methods?" This is also where their "Proactive" trait manifests; they need preparations for the future to rely on previous reasoning.  
   * **IEI and ILI:** Their base Introverted Intuition (Ni) is oriented toward thinking through temporal scenarios and, consequently, plans. However, they do not often succeed in implementing their plans; they flexibly adjust them.  
-*   
 * **Rationals who answer "by the situation":**  
   * **LIE and EIE:** Their strong Introverted Intuition (Ni) allows them to see how events are developing and to spot opportunities for maneuvering, so they may consider themselves "situational." The question about "initial preparations" helps to identify them.  
   * **LSI and ESI:** May note with regret that they *have to* act according to the situation due to external chaos, but this does not please them. The very phrasing "have to" reveals their Rational orientation.  
-* 
 
 **Practical Example:**  
 An IEE being typed confidently stated that he lives by a plan. However, when asked about discomfort when plans change, he enthusiastically told a story about how, on his way home from work early, he spontaneously decided to do errands planned for the next day, jumped off the subway at the right station, and "got a thrill" from changing everything. This is a perfect illustration of how the emotional reaction to spontaneity reveals a person's true nature, even if their self-perception suggests otherwise.
@@ -84,30 +90,24 @@ In Socionics, this is not about sociability, but about the direction of attentio
   * **Goal:** To learn the person's self-assessment and, more importantly, the criteria it is based on. The answer to "why?" is often more revealing than the choice itself.  
   * **Interpretation:** A person might say, "I'm an introvert because I have few friends." This is a common understanding. Our task is to shift the conversation to the Socionics definition.  
   * **Typological Nuance:** An EIE, despite being a vivid extrovert, may consider themselves an introvert due to a deep immersion in their inner world of experiences and images (creative Ni).  
-* 
 
 **2\. Main Socionics Question:**
 
 * Is your attention directed “extensively **outward** with a focus on **quantity**” or “intensively **inward** with a focus on **quality**”?  
   * **Goal:** To ask directly about the Socionics essence of the dichotomy. If the words "extensively/intensively" are difficult, you can simplify: "Do you strive to expand your influence, knowledge, and contacts, or to deepen what you already have?"  
   * **Interpretation:** The answers here usually point quite clearly to the dichotomy.  
-* 
 
 **3\. Clarifying and Behavioral Questions:**
 
 * Do you like being the center of attention? How easy is it for you?  
   * **Interpretation:** Extroverts more often answer positively or say it is familiar to them. Introverts often describe it as work or stress, even if they are good at it.  
-*   
 * Do you have many friends and acquaintances? How important is the distinction between close friends and distant acquaintances to you?  
   * **Interpretation:** An Extrovert tends to have a wide circle of acquaintances. An Introvert, a narrow circle of close friends. The "us/them" distinction can be important for Ethics of both kinds, but for an Introvert, this division constitutes the very essence of their social world.  
-*   
 * How important is it for you to be alone? Does interacting with a large number of people **energize** you?  
   * **Goal:** The classic test for the source of energy.  
   * **Interpretation:**  
     * **Extrovert:** "Interaction energizes me," "I languish from being alone for too long."  
     * **Introvert:** "I need time to myself to recharge," "Large groups are draining."  
-  *   
-* 
 
 #### **Dichotomy 3: Statics / Dynamics**
 
@@ -133,27 +133,21 @@ This is a verification dichotomy. It shows how a person perceives information: a
   * **Interpretation:**  
     * **Markers of Statics:** A description of a stationary object and its properties. "It's a wooden box, dark, with a carved lid. It is sitting on a table. There is dust on it. The lock is made of brass." This is a "photograph."  
     * **Markers of Dynamics:** A description of a process, movement, or change. "The box is opening, light pours out of it, music begins to play, a ballerina is spinning." This is a "video."  
-  *   
-* 
 
 **2\. Clarifying Questions for the Test:**
 
 * Was the box in a static or dynamic state? Like a **photo** or a **video**? Were the changes like **jumps** or were they **smooth**?  
   * **Goal:** To ask directly about the nature of perception if it is not entirely clear from the description.  
-*   
 * If the answer is "photo": Could it be that the box was stationary, but the **camera was moving smoothly** around it?  
   * **Goal:** To check for hidden dynamics. If the observer (the camera) is moving, it is still a process, which means Dynamics.  
-*   
 * If the answer is "video": Could it be that it was like a **slow succession of frames**, like a slideshow?  
   * **Goal:** To check for hidden statics. A slideshow is a series of static frames, which means Statics.  
-* 
 
 **3\. Additional Question (less reliable, but useful):**
 
 * When telling a story, is it important to maintain chronological order and sequence? Do you often jump from topic to topic?  
   * **Interpretation:** Dynamics are more inclined to tell stories sequentially, from beginning to end, like a film. Statics may jump from one moment to another, linking them by a common theme rather than chronology, as if showing different "snapshots" of the situation.  
   * **Pitfall:** Rationality also influences the sequence of narration, so this question should be used with caution as an additional touch.  
-* 
 
 **4\. Additional Use of the Projective Technique:**
 
@@ -178,8 +172,6 @@ This is a verification dichotomy. After determining a preliminary version of the
   * **Interpretation:**  
     * An answer of "good" or "what is present" indicates Positivism.  
     * An answer of "bad" or "what is absent" indicates Negativism.  
-  *   
-* 
 
 **Typological Nuances and "Pitfalls":**  
 This is one of the most unreliable dichotomies to determine by direct questioning, as the answer is heavily influenced by external factors. It should be approached with extreme caution.
@@ -207,8 +199,6 @@ Like Positivism/Negativism, this is a verification dichotomy for clarifying the 
   * **Interpretation:**  
     * An answer of "result" indicates Result.  
     * An answer of "process" indicates Process.  
-  *   
-* 
 
 **Typological Nuances and "Pitfalls":**
 
@@ -294,7 +284,6 @@ This is the first line of verification. We compare the person's answer on the "b
 * **Results:**  
   * **Match:** The answer matches the expected value. This is an argument in favor of the initial hypothesis. We note this and move on to the next check.  
   * **Mismatch:** The answer does not match the expected value. This is a signal of a data discrepancy. We note this contradiction and understand that it will require further analysis in the final synthesis stage.  
-* 
 
 **Check \#2: Analysis of the Positivism/Negativism and Process/Result Combination**  
 This is the second, independent line of verification. We analyze the **combination** of answers on these two dichotomies to see which of the four temperaments it points to.
@@ -303,7 +292,6 @@ This is the second, independent line of verification. We analyze the **combinati
 * **Results:**  
   * **Match:** The combination of dichotomies points to types that are part of our initial temperament hypothesis. This serves as a second argument in its favor.  
   * **Mismatch:** The combination of dichotomies points to types belonging to a different temperament (or several others). This is a second signal of a data discrepancy.  
-* 
 
 **Final Synthesis and Decision-Making**  
 At this stage, we gather all the data we have obtained: the initial hypothesis, the result of Check \#1, and the result of Check \#2. The decision on the most likely temperament is made based on an analysis of this combination, taking into account two additional factors.
@@ -613,4 +601,54 @@ Based on the synthesis of all these factors, we make a decision on a working tem
 
 * **Abstract ideas and possibilities**? How to look at a situation from different angles to see the essence and the big picture? (LII, EII)  
 * **Real facts, goals**, and the application of your will and strength? What obstacles exist and where to apply effort to overcome them? (LSI, ESI)
+
+### **Example of Determining Temperament**
+
+**Scenario: Contradictory Data**
+
+Imagine that you are typing a client and, after the first stage, you have the following answers:
+
+* **Rationality / Irrationality:** “I easily act according to the situation and change my plan” → **Irrational**.
+* **Extroversion / Introversion:** Very confidently: “I am 100% an extrovert” → **Extrovert**.
+* **Statics / Dynamics:** Very confidently: “The box was definitely like a video, in motion” → **Dynamic**.
+* **Positivism / Negativism:** “I tend to notice the good” → **Positivist**.
+* **Process / Result:** Very confidently: “Only the result matters to me” → **Result**.
+
+**Step-by-step analysis:**
+
+**Step 1\. Initial hypothesis and Check No. 1 (Statics / Dynamics)**
+
+* **Initial hypothesis (based on Extroversion / Introversion and Rationality / Irrationality):** Irrational + Extrovert = **Flexible-Maneuvering** temperament.
+* **Expected value of Statics / Dynamics for this group:** Always **STATIC**.
+* **Check result:** The client confidently answered **Dynamic**. This is a **contradiction**, so the initial hypothesis is doubtful.
+
+**Step 2\. Check No. 2 (the Positivism / Result combination)**
+
+* **Client data:** **Positivist (+)** and **Result (R)**.
+* **Consulting the table:** The types with the (+, R) combination are **IEI, ESE, LIE, and SLI**.
+* **Temperament analysis:**
+  * IEI and SLI belong to the **Receptive-Adaptive** temperament (Introverted Irrationals).
+  * ESE and LIE belong to the **Linear-Assertive** temperament (Extraverted Rationals).
+* **Check result:** This check also **contradicts** the initial Flexible-Maneuvering hypothesis and points to two other possible temperaments.
+
+**Step 3\. Final synthesis and resolution of the contradiction**
+
+The initial hypothesis has failed both checks. What should we do?
+
+1. **Identify the most reliable data.** Weigh the answers by confidence. The client was **very confident** about three things: being an **Extrovert**, a **Dynamic**, and a **Result** type. The “according to the situation” answer was less substantiated. We therefore use the most confident answers as our foundation.
+2. **Find a new temperament from the reliable data.** Which temperament combines **Extroversion** and **Dynamics**?
+   * Extraverted Irrationals are Statics. *Not a match.*
+   * Extraverted Rationals are Dynamics. *A match.*
+   * The most likely temperament is therefore **Linear-Assertive**.
+3. **Test the new hypothesis against the remaining data.**
+   * The **Linear-Assertive** temperament includes ESE, EIE, LIE, and LSE.
+   * The remaining reliable values are **Positivist (+)** and **Result (R)**.
+   * Within this group, **ESE** and **LIE** have that combination.
+   * The search has now narrowed from 16 types to only 2.
+4. **Explain the original contradiction.** Why did the client initially identify as Irrational?
+   * **LIE (Jack London)** is a classic example of a Rational type who, because of strong Introverted Intuition (Ni) and Extraverted Logic (Te), navigates changing possibilities well, adapts easily, and improvises. For this reason, LIEs are more likely than other Rational types to mistake themselves for Irrationals and describe their style as “acting according to the situation.”
+
+**Final conclusion:**
+
+After comparing all the evidence, we conclude that the client's initial “Irrational” answer was an inaccurate self-description characteristic of LIE. All other confident answers—Extrovert, Dynamic, Positivist, and Result—fit **LIE** perfectly, with **ESE** as the less likely alternative. The hypothesis changes to the **Linear-Assertive temperament**. We can now move to the Base / Creative function questions to distinguish LIE from ESE.
 

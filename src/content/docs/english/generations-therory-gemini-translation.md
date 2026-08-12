@@ -527,19 +527,15 @@ At the 4th level (Socion), each of these four "parent" signs generates two "offs
 * *Offspring of "Evaluatory/Situational":*  
   * **Carefree/Farsighted**  
   * **Yielding/Obstinate**  
-*   
 * *Offspring of "Strong/Weak":*  
   * **Intuition/Sensing**  
   * **Thinking/Feeling**  
-*   
 * *Offspring of "Valued/Subdued":*  
   * **Merry/Serious (Subjectivism/Objectivism)**  
   * **Judicious/Decisive**  
-*   
 * *Offspring of "Inert/Contact":*  
   * **Constructivism/Emotivism**  
   * **Tactic/Strategy**  
-* 
 
 **4th Generation Signs** — are the four "newest" signs that only appear at the 4th level (Socion) and have no direct ancestral link to the 3rd generation signs. They describe the most complex, systemic properties of TIMs.
 
@@ -613,7 +609,6 @@ Now let's apply this mechanism and see how it, in combination with the laws of i
   * **Positions 3-4 and 13-14:** Inherited by the **3rd generation** signs as positions after the first pair and before the last pair.  
   * **Positions 7-10:** Inherited by the **3rd generation** signs as the central positions, 2 before and 2 after the equator.  
   * **Positions 5-6 and 11-12:** These "interwoven" spots are occupied by the new **4th generation** signs.  
-* 
 
 *The Final Order of Reinin Signs:*
 
@@ -656,12 +651,10 @@ The second meta-sign is fundamental and crucial for understanding the internal l
   G. Reinin had already classified signs by their domain of manifestation. These signs show that in each Informacion, elements are arranged in blocks: dual dyads and foursomes (quadras).  
   * **Collective Signs:** Signs whose polarity is common to a block of elements. They are, in turn, divided into **Dyadic** (same polarity within a dual dyad) and **Quadral** (same polarity within a quadra).  
   * **Individual Signs:** Signs whose polarity differs within a dual dyad.  
-*   
 * **Formal Structure: Meta-vertness**  
   How do we know which sign is collective and which is individual? The answer is provided by Churyumov's Principle of Correspondence. We determine the **meta-vertness** of a sign through the vertness of the element to which this sign corresponds in the canonical bijection.  
   * If a sign corresponds to an **extraverted** TIM, we call it an **extraverted (collective) sign**.  
   * If a sign corresponds to an **introverted** TIM, we call it an **introverted (individual) sign**.  
-* 
 
 This identity is not coincidental. Extraversion, by its nature, is directed towards interaction with objects, the group, the collective. Introversion is directed towards internal, individual states and relations. At the first level, the External informational space corresponds to the **Existence** sign, which is common to all (collective), while the Internal space corresponds to the **Vertness** sign, which is individual and differs within this dual dyad that constitutes the entire Duon. This fundamental meta-dichotomy is projected throughout the entire fractal structure, endowing the signs themselves with corresponding properties.
 
@@ -673,13 +666,10 @@ Meta-signs are not just classifiers. They are governing parameters that define f
 
 * **Law 1: Conservation of Meta-vertness (Collectivism)**  
   * **Formulation:** During the generation of a new sign, meta-vertness is conserved. An extraverted (Collective) ancestor can only generate an extraverted (Collective) descendant. An introverted (Individual) parent can only generate an introverted (Individual) one.  
-*   
 * **Law 2: Positional Inheritance**  
   * **Formulation:** Generations of signs occupy strictly defined, "reserved" slots in the Informacions at each level, as was demonstrated in the tables of section 3.2.  
-*   
 * **Law 3: Alternation of Collectivism**  
   * **Formulation:** In the canonical order of signs at all levels (from Duon to Socion), Collective (Extraverted) and Individual (Introverted) signs strictly alternate. This is explained by the fact that Vertness is always in the second position.  
-*   
 * **Law 4: Inheritance of Structural Role**  
   * **Formulation:** The "younger" descendant of Existence at each new level must not only be a Collective sign but the **most collective** of all available candidates, i.e., Dyadic at level 2, and Quadral at levels 3 and 4\. This shows the continuity of the fundamental qualities of the descendants of Existence.
 
@@ -705,11 +695,8 @@ We will start with the simplest level and sequentially make decisions about the 
     4. **Law of Conservation of Vertness:**  
        * The "younger" descendant of Existence (Coll.) must be Collective. Rationality fits.  
        * The "younger" descendant of Vertness (Ind.) must be Individual. Statics fits.  
-    5.   
-  *   
   * **Synthesis:** All laws converge at a single point. To satisfy alternation and conservation of vertness, Rationality (Coll.) must become the descendant of Existence (Coll.) and occupy the 3rd position. Statics (Ind.) must become the descendant of Vertness (Ind.) and occupy the 4th position.  
   * **Result:** The order {1:Existence, 2:Vertness, 3:Rationality, 4:Statics} is the only one possible.  
-*   
 * **Step 2: Constructing Signaton-3 (Aspecton)**  
   * **Given:** The ordered Signaton-2.  
   * **Task:** To determine the four "newborn" descendants (3rd generation) and their positions.  
@@ -720,19 +707,15 @@ We will start with the simplest level and sequentially make decisions about the 
     4. **Law of Conservation of Vertness:** We must correctly match parents and descendants.  
        * Existence(C) and Rationality(C) must generate the two Collective descendants: Evaluatory/Situational and Valued/Subdued.  
        * Vertness(I) and Statics(I) must generate the two Individual descendants: Strong/Weak and Inert/Contact.  
-    5.   
     6. **Law of Inheritance of Structural Role:** Which of the two Collective descendants (Evaluatory or Valued) is the descendant of Existence? Existence is the most fundamental sign. Its descendant must define the most large-scale structure. It is known that Valued/Subdued corresponds to the division into Quadras of values (Alpha/Gamma), while Evaluatory/Situational corresponds to dyads (Beta/Delta). The Quadral structure is more large-scale than the Dyadic. Therefore, the descendant of Existence is **Valued/Subdued**.  
-  *   
   * **Synthesis:** By applying the group algebra (XNOR), we can show that if Existence→Valued/Subdued, then automatically Rationality→Evaluatory/Situational, Vertness→Inert/Contact, and Statics→Strong/Weak.  
   * **Result:** The canonical order of Signaton-3 is unambiguously reconstructed.  
-*   
 * **Step 3: Constructing Signaton-4 (Socion)**  
   * The logic is repeated at a new, more complex level.  
   * The **Law of Position** defines the "slots" for each generation.  
   * The **Law of Alternation** requires all 16 signs to strictly alternate in meta-vertness (Collective/Individual).  
   * The **Law of Inheritance of Role** comes into play again: when choosing the descendant of Existence from the two Collective 4th generation candidates (Democracy/Aristocracy and Process/Result), we choose **Democracy**, as it is a Quadral sign (more large-scale), while Process/Result is Dyadic.  
   * **Synthesis:** The full application of all laws and the group algebra (multiplying all existing signs by Dem/Ar) allows for the step-by-step filling of all 16 slots in the only possible way, which exactly matches Churyumov's canonical order of the Reinin signs.  
-* 
 
 **3.4.2. Conclusions and Significance of Generation Theory**
 
