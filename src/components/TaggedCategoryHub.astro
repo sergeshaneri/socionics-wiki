@@ -12,17 +12,81 @@ const entries = (await getCollection('docs'))
   .filter((entry) => entry.data.categories?.includes(category))
   .sort((a, b) => (a.data.title || a.id).localeCompare(b.data.title || b.id, 'ru'));
 
-const sections = category === 'draft'
+type Entry = (typeof entries)[number];
+type Section = { title: string; entries: Entry[]; featured?: Entry[] };
+
+const published = entries.filter((entry) => !entry.data.categories?.includes('draft'));
+const drafts = entries.filter((entry) => entry.data.categories?.includes('draft'));
+const aspect2026Order = [
+  'information-elements/2026/bi',
+  'information-elements/2026/chi',
+  'information-elements/2026/bl',
+  'information-elements/2026/chl',
+  'information-elements/2026/bs',
+  'information-elements/2026/chs',
+  'information-elements/2026/be',
+  'information-elements/2026/che',
+];
+const aspect2026 = aspect2026Order
+  .map((id) => published.find((entry) => entry.id === id))
+  .filter((entry): entry is Entry => Boolean(entry));
+const aspect2026Ids = new Set(aspect2026Order);
+
+const semanticSections: Section[] = [
+  {
+    title: 'Информационные аспекты',
+    featured: aspect2026,
+    entries: published.filter(
+      (entry) => entry.id.startsWith('information-elements/') && !aspect2026Ids.has(entry.id),
+    ),
+  },
+  {
+    title: 'Функции и модели',
+    entries: published.filter((entry) => entry.id.startsWith('functions/')),
+  },
+  {
+    title: 'Интертипные отношения',
+    entries: published.filter((entry) => entry.id.startsWith('relations/')),
+  },
+  {
+    title: 'Другие материалы',
+    entries: published.filter(
+      (entry) => !['information-elements/', 'functions/', 'relations/'].some((prefix) => entry.id.startsWith(prefix)),
+    ),
+  },
+  { title: 'Черновики', entries: drafts },
+];
+
+const sections: Section[] = category === 'draft'
   ? [{ title: '', entries }]
-  : [
-      { title: '', entries: entries.filter((entry) => !entry.data.categories?.includes('draft')) },
-      { title: 'Черновики', entries: entries.filter((entry) => entry.data.categories?.includes('draft')) },
-    ];
+  : category === 'semantic'
+    ? semanticSections
+    : [
+        { title: '', entries: published },
+        { title: 'Черновики', entries: drafts },
+      ];
 ---
 
-{sections.map((section) => section.entries.length > 0 && (
+{sections.map((section) => (section.entries.length > 0 || section.featured?.length) && (
   <section class="tagged-category-section">
     {section.title && <h2>{section.title}</h2>}
+    {section.featured && section.featured.length > 0 && (
+      <div class="featured-version">
+        <h3>Версия 2026</h3>
+        <p>Свежие подробные тезаурусы восьми информационных аспектов.</p>
+        <ul class="tagged-category-hub">
+          {section.featured.map((entry) => (
+            <li>
+              <a href={`${base}/${entry.id}/`}>
+                <span>{entry.data.title}</span>
+                {entry.data.description && <small>{entry.data.description}</small>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+    {section.featured && section.entries.length > 0 && <h3 class="other-materials-title">Другие материалы</h3>}
     <ul class="tagged-category-hub">
       {section.entries.map((entry) => (
         <li>
@@ -45,6 +109,28 @@ const sections = category === 'draft'
 
   .tagged-category-section h2 {
     margin-bottom: 0.75rem;
+  }
+
+  .featured-version {
+    margin: 0.75rem 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(199, 160, 255, 0.28);
+    border-radius: 0.65rem;
+    background: rgba(199, 160, 255, 0.05);
+  }
+
+  .featured-version h3 {
+    margin: 0;
+  }
+
+  .featured-version p {
+    margin: 0.35rem 0 0.85rem;
+    color: var(--sl-color-text-weak);
+  }
+
+  .other-materials-title {
+    margin: 1.25rem 0 0.75rem;
+    font-size: 1rem;
   }
 
   .tagged-category-hub {
