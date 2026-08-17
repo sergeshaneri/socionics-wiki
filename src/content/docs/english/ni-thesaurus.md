@@ -172,7 +172,6 @@ Here are 20 more words for BI with justifications in the given key:
 
 1. **Nostalgia (+che):**  
    * **Contact BI:**Refers to BI because*nostalgia*– this is a deep inner experience, a longing for the past, requiring attunement to one’s subconscious, where emotionally charged images and states of a bygone time are stored.  
-2.   
 3. **Prophecy (in the non-religious sense of intuitive foresight):**  
    * **Contact BI:**Refers to BI because*prophecy*how intuitive foresight of future events arises from a deep internal attunement to the subconscious, which captures the hidden trajectories of the development of time flows.  
 4. **Cyclicity:**  
@@ -182,90 +181,60 @@ Here are 20 more words for BI with justifications in the given key:
 
 5. **Continuity:**  
    * **Contact BI:**Refers to BI because of the feeling*succession*generations, traditions or ideas requires an internal understanding of the connection between times, which is formed in the subconscious and influences the perception of one’s place in history.  
-6.   
 7. **Ephemerality:**  
    * **Contact BI:**Refers to BI because awareness*ephemeral*, the transience of being and phenomena is the result of an internal tuning to the subconscious feeling of the fluidity of time and the fragility of states.  
-8.   
 9. **Premonition of trouble (or joy):**  
    * **Contact BI:**It is related to BI because it is an intuitive internal feeling of an approaching negative (or positive) event, arising from the subconscious “reading” of subtle signals and a premonition of a change in the flow of time.  
-10.   
 11. **Thoughtfulness:**  
     * **Contact BI:**Refers to BI because*thoughtfulness*– this is a state of immersion in the inner world, in one’s thoughts and memories, which requires tuning into subconscious processes and reflection on the flow of time.  
-12.   
 13. **Fatalism:**  
     * **Contact BI:**Refers to BI because*fatalism*– this is a worldview based on a deep internal, often subconscious, conviction in the predetermination of events and the impossibility of changing the course of time.  
-14.   
 15. **Historical memory:**  
     * **Contact BI:**Refers to BI because*historical memory*– this is not just knowledge of facts, but an internal, subconscious feeling of connection with the past, with the experience of previous generations, influencing the current state and vision of the future.  
-16.   
 17. **Peace (+che):**  
     * **Contact BI:**Refers to BI because*pacification*– is a deep inner state of peace and harmony, often achieved through accepting the flow of time and tuning into the calm rhythm of your subconscious.  
-18.   
 19. **Procrastination (if associated with the feeling of "not the right moment") (+ch?):**  
     * **Contact BI:**Refers to BI (in a specific aspect) if the procrastination is caused not by laziness, but by an internal, subconscious feeling that now is the “wrong time”, that the internal state or external flow of events is not yet ready.  
-20.   
 21. **Introspection:**  
     * **Contact BI:**Refers to BI because*introspection*– this is a process of self-observation, deep immersion into one’s internal states, thoughts and experiences, which requires tuning into subconscious processes.  
-22.   
 23. **Waiting (as a state):**  
     * **Contact BI:**Refers to BI because*expectation*– this is a special internal state associated with a focus on the future, with a premonition and living through time on the eve of an event, which requires an internal adjustment to this time “gap”.  
-24.   
 25. **The past (as a lived experience and state):**  
     * **Contact BI:**Refers to BI because*past*is perceived not just as a set of facts, but as a collection of experienced internal states, images and lessons stored in the subconscious and influencing the present.  
-26.   
 27. **The future (as a field of premonitions and internal images):**  
     * **Contact BI:**Refers to BI because*future*for this function, it is not so much a logical forecast as a space of intuitive premonitions, internal images and sensations of potential time trajectories.  
-28.   
 29. **Continuum (temporal):**  
     * **Contact BI:**Refers to BI because the feeling is temporary*continuum*, the continuous connection between past, present and future, is fundamental to the internal, subconscious perception of time.  
 30. **"Inner Voice":**  
     * **Contact BI:**Refers to BI because*inner voice*, intuitive clues or warnings are often perceived as signals from the subconscious, guiding or warning on the path of life.  
-31.   
 32. **Duration (subjective experience):**  
     * **Contact BI:**Refers to BI because it is a subjective experience*duration*time (whether it “stretches” or “flies”) depends on the internal state and the setting of the subconscious, and not only on the objective clock.  
-33.   
 1. **Predestination:**  
    * **Contact BI:**Refers to BI because of the feeling*predestinations*– this is a deep internal, subconscious “knowledge” or feeling of the inevitability of a certain path or outcome that is formed outside of logical analysis.  
-2.   
 3. **Contemplation:**  
    * **Contact BI:**Refers to BI because*contemplation*– is a state of mind characterized by passive observation of the flow of time, thoughts and internal states, requiring attunement to subconscious processes.  
-4.   
-5.   
 6. **Intuitive insight (about time, destiny):**  
    * **Contact BI:**Refers to BI because*intuitive insight*, concerning the passage of time, hidden patterns of fate or the essence of the internal state, comes as a sudden "understanding" from the depths of the subconscious.  
-7.   
 8. **Passivity (as trust in the flow):**  
    * **Contact BI:**Refers to BI (in a certain context) if*passivity*– this is not inaction due to laziness, but a conscious decision to trust the flow of time and internal processes, based on a subconscious feeling of the correctness of such “inaction”.  
-9.   
 10. **"Stream" (state):**  
     * **Contact BI:**Refers to BI because of the condition*flow*, complete immersion in an activity with a loss of the sense of time, is associated with a harmonious tuning to one’s internal rhythms and subconscious processes.  
-11.   
 12. **Trance:**  
     * **Contact BI:**Refers to BI because*trance*– is an altered state of consciousness, characterized by deep immersion in the inner world, detachment from external reality and activation of subconscious images and sensations.  
-13.   
-14.   
 15. **Premonition of change:**  
     * **Contact BI:**It is related to BI because it is an internal, subconscious feeling that significant changes are approaching in life or in the surrounding world, even if there are no visible reasons yet.  
-16.   
 17. **"Internal clock":**  
     * **Contact BI:**It is related to BI because it is a metaphor for the internal, subconscious sense of time that allows us to navigate time intervals without external devices.  
-18.   
 19. **Dreaminess:**  
     * **Contact BI:**Refers to BI because*dreaminess*\- is a tendency to immerse oneself in a world of internal images, fantasies and dreams, often associated with a desired future or an idealized past, which requires tuning into subconscious sources.  
-20.   
 21. **Symbolism of dreams:**  
     * **Contact BI:**Refers to BI because the interpretation*symbolism of dreams*requires tuning into the subconscious and an intuitive understanding of the language of images through which it communicates.  
-22.   
-23.   
 24. **Detachment:**  
     * **Contact BI:**Refers to BI because*detachment*– this is a state of internal detachment from the current bustle, immersion in one’s thoughts or contemplation of the flow of time, which requires tuning into one’s inner world.  
-25.   
 26. **"Threads of Fate":**  
     * **Contact BI:**It is related to BI because this metaphorical expression reflects an internal, subconscious feeling of invisible connections and predetermination in the path of life.  
-27.   
 28. **Procrastination of fate (the feeling that "it is not yet time" for great achievements):**  
     * **Contact BI:**Refers to BI if it is an internal, subconscious feeling that key events or self-realization should happen later, that “the time has not come yet.”  
-29.   
 30. **Inner compass (guiding through life):**  
     * **Contact BI:**It is related to BI because it is a metaphor for the intuitive, subconscious sense of the right direction in life that helps us navigate time and make decisions.
 
@@ -274,131 +243,88 @@ Here are 20 more words for BI with justifications in the given key:
 
 31. **Eschatology (a sense of the end of time, personal or universal):**  
     * **Contact BI:**Refers to BI because the thoughts and internal sensations associated with*eschatology*, the end of time, deeply affect the perception of time perspectives and can cause strong subconscious states.  
-32.   
 33. **Slowing down (subjective perception of time):**  
     * **Contact BI:**Refers to BI because of the feeling*slowdowns*the passage of time is a subjective internal experience that depends on the state and setting of the subconscious (for example, in moments of danger or deep contemplation).  
-34.   
 35. **Acceleration (subjective perception of time):**  
     * **Contact BI:**Refers to BI because of the feeling*acceleration*the passage of time (for example, when busy with something interesting) is also a product of internal, subconscious perception and state.  
-36.   
 37. **"Spirit of the place" (Genius Loci \- as an inner feeling of the atmosphere associated with history):**  
     * **Contact BI:**Refers to BI because*The genius of the place*– these are not just physical characteristics, but an elusive inner feeling of the unique atmosphere of a place, imbued with its history and past events, which is “read” by the subconscious.  
-38.   
 39. **Experience (as a process of internal processing of experience over time) (+che):**  
     * **Contact BI:**Refers to BI because*experience*– this is not just an emotion, but a long internal process of understanding and integrating events into personal experience, occurring in the subconscious and stretched out over time.  
-40.   
 41. **Sublimation (as a redirection of internal energies and states in time):**  
     * **Contact BI:**Refers to BI (in terms of the dynamics of internal states), because*sublimation*– is a subconscious process of transformation of internal impulses and states, which unfolds over time and influences the path of life.  
-42.   
-43.   
 44. **"Prophetic Dreams":**  
     * **Contact BI:**Refers to BI because of belief in*prophetic dreams*and their interpretation as predictions of the future is associated with the idea that the subconscious in a dream is capable of capturing information about future events.  
-45.   
 46. **Moment (conscious, as a point in the flow of time):**  
     * **Contact BI:**Refers to BI if*instant*is experienced not just as a brief moment, but as a point of deep internal awareness, a “stop in time,” allowing one to feel the full extent of the current state.  
-47.   
-48.   
 49. **Catharsis (as a resolution of internal conflict in time) (+che):**  
     * **Contact BI:**Refers to BI because*catharsis*– is a powerful emotional and internal cleansing, often the culmination of a long process of experiencing and comprehending the past, which occurs in the subconscious and leads to a change in state.  
 1. **Esoterics (in the aspect of knowledge of hidden temporal laws and internal states):**  
    * **Contact BI:**It belongs to BI because many esoteric teachings are aimed at understanding the hidden laws of time, fate, cycles and developing the ability to perceive subtle internal states and premonitions through tuning into the subconscious.  
-2.   
 3. **Chronotope (in literature, as the unity of time and space, influencing the state):**  
    * **Contact BI:**Refers to BI because perception*chronotope*in art it requires an internal, subconscious feeling of the unity of time and space, which creates a special atmosphere and influences the state of the reader/viewer.  
-4.   
 5. **Reincarnation (as an idea of ​​repeating cycles of life in time):**  
    * **Contact BI:**Refers to BI because the idea*reincarnation*deeply connected with the perception of the cyclical nature of time, fate and subconscious "memory" of past existences.  
-6.   
 7. **Providence (in the sense of Divine plan, felt internally):**  
    * **Contact BI:**Refers to BI if*providence*is understood as a sense of a higher purpose guiding the course of events in time, which is perceived through a deep internal, subconscious setting and faith.  
-8.   
 9. **Mediumship (as a supposed connection with "spirits" and information from "other times"):**  
    * **Contact BI:**Refers to BI (in the context of paranormal phenomena), because*mediumship*involves the ability to tune into subconscious or transcendental channels to receive information related to the past, future, or other states of being.  
-10.   
 11. **"Stream of consciousness" (literary device):**  
     * **Contact BI:**It is related to BI because this technique imitates the free, unstructured flow of thoughts, memories and sensations, reflecting the work of the subconscious and the internal perception of time.  
-12.   
 13. **Synchronicity (according to Jung, as meaningful coincidences in time):**  
     * **Contact BI:**Refers to BI because perception*synchronicity*requires an internal, subconscious sense of the significance and non-randomness of coincidences, which seem to “suggest” the right direction or confirm premonitions.  
-14.   
 15. **"The Moment of Truth":**  
     * **Contact BI:**It is related to BI because it is a culmination point in time when a deep inner insight, realization of the essence or making of a fateful decision occurs, which greatly changes the state.  
-16.   
 17. **Aura (as an internal sensation of the energy field and state):**  
     * **Contact BI:**Refers to BI if*aura*is perceived not visually, but as an intuitive, subconscious sensation of the energy field of another person, his internal state and “vibrations”.  
-18.   
 19. **"The Wheel of Samsara" (as a metaphor for cyclicality and fate):**  
     * **Contact BI:**It relates to BI because this metaphor reflects a deep inner, subconscious understanding of the endless cycles of birth, death and rebirth, as well as a sense of predetermination within these cycles.  
-20.   
 21. **Premonition:**  
     * **Contact BI:**Refers to BI because*premonition*– this is a subtle, barely perceptible internal feeling or state that signals the approach of some event, requiring tuning into subconscious signals.  
-22.   
 23. **Palimpsest (as a layering of times and meanings, felt internally):**  
     * **Contact BI:**Refers to BI because the perception of something as*the palimpsest*(for example, a text, a city, a destiny) requires an internal, subconscious feeling of the layering of various time layers, meanings and states.  
-24.   
 25. **Contemplation:**  
     * **Contact BI:**Refers to BI because*contemplation*– this is a deep, calm reflection, often aimed at eternal themes, the passage of time, the comprehension of internal truths, requiring attunement to the subconscious.  
-26.   
 27. **Eschatological premonitions (personal):**  
     * **Contact BI:**It is related to BI because these are internal, subconscious feelings of the approaching end of some important stage in life or even one’s own life, not always associated with a real threat.  
-28.   
 29. **Regression (into past lives or states – as work with the subconscious memory of time):**  
     * **Contact BI:**Refers to BI because of the techniques*regressions*aimed at accessing deep, subconscious layers of memory associated with past events, states, or even supposed past lives.  
-30.   
 31. **"Midnight of the Soul" (as a state of deep internal crisis and rethinking) (+che):**  
     * **Contact BI:**It relates to BI because it is a metaphor for a period of intense internal experiences, re-evaluation of the past and a premonition of future changes, requiring deep attunement to the subconscious.  
-32.   
 33. **Limbo (as a state of uncertainty, stuck in time):**  
     * **Contact BI:**Refers to BI because of the feeling*limbo*, a suspended state, when time seems to have stopped and there are no clear prospects, is a specific internal experience of the flow of time.  
-34.   
 35. **Prolongation (subjective time extension):**  
     * **Contact BI:**Refers to BI because*prolongation*– this is an internal, subconscious feeling that time drags on longer than usual, often during moments of tense anticipation or intense experiences.  
-36.   
 37. **Eon (as a huge time cycle, felt intuitively):**  
     * **Contact BI:**Refers to BI because perception or thinking about*eons*, huge cosmic or historical cycles of time, requires abstraction from everyday life and tuning into the subconscious sense of the scale of time.  
-38.   
 39. **"River of Time" (as a metaphor for continuous flow):**  
     * **Contact BI:**It relates to BI because this common metaphor reflects the fundamental BI internal, subconscious sense of time as a continuous, fluid and all-encompassing process.  
-40.   
 41. **"Time loop" (as a feeling of repeating events or states):**  
     * **Contact BI:**Refers to BI because the feeling of getting into*time loop*, when events or internal states seem to repeat themselves over and over again, is associated with a special perception of time cycles at a subconscious level.  
-42.   
 43. **"The Golden Age" (as a nostalgic image of an ideal past):**  
     * **Contact BI:**Refers to BI because the idea of*Golden Age*– this is often an idealized, emotionally charged image of the past, stored in the collective or personal subconscious and influencing the internal state.  
-44.   
 45. **Anabiosis (metaphorical, as a freezing of internal time):**  
     * **Contact BI:**Refers to BI if*anabiosis*is used as a metaphor for a state when internal time seems to freeze, development is suspended, and a person is immersed in deep, subconscious processes of expectation or stagnation.  
-46.   
 47. **"Nirvana" (as a state of liberation from time and suffering):**  
     * **Contact BI:**Refers to BI (in the context of spiritual teachings) because*Nirvana*– is a transcendental state that involves going beyond the ordinary perception of time, cycles of rebirth and suffering, which is achieved through a deep internal, subconscious transformation.  
-48.   
 49. **Anamnesis (in the philosophical sense, as a recollection of eternal truths):**  
     * **Contact BI:**Refers to BI because it is Platonic*anamnesis*– this is the idea that knowledge is the soul’s recollection of eternal truths seen before birth, which requires tuning into deep, subconscious layers of memory.  
-50.   
 51. **Kairos (ancient Greek – a favorable moment, felt intuitively):**  
     * **Contact BI:**Refers to BI because*Kairos*– this is not just chronological time (Chronos), but a special, decisive, favorable moment that must be intuitively “caught”, tuning in to the internal sensation of its arrival.  
-52.   
 53. **Mantika (fortune telling as an attempt to look into the time streams):**  
     * **Contact BI:**Refers to BI (in the context of practices) because*mantic*practices are often based on the idea that one can intuitively, through attunement to the subconscious or "higher powers", obtain information about the future or hidden aspects of the present.  
-54.   
 55. **"Twilight of consciousness" (as a transitional internal state):**  
     * **Contact BI:**It is related to BI because it is a state on the border between sleep and wakefulness, or in moments of extreme fatigue/shock, when subconscious images and premonitions are activated, and the perception of time is distorted.  
-56.   
 57. **Proskopia (clairvoyance of the future):**  
     * **Contact BI:**Refers to BI because*proscopy*– this is the supposed ability to see future events, which requires a hypersensitive attunement to subconscious time flows.  
-58.   
 59. **Retroscopy (clairvoyance of the past):**  
     * **Contact BI:**Refers to BI because*retroscopy*– this is the supposed ability to see past events without being a witness to them, which also requires tuning into the subconscious “archives” of time.  
-60.   
 61. **"Inner child" (as access to past states and experiences):** *(repeat from the previous list, but very important for BI)*  
     * **Contact BI:**Refers to BI because it works with an image*inner child*involves tuning into the subconscious to access early memories, states and unresolved issues from the past that influence the current perception of time.  
-62.   
 63. **"The collective unconscious" (according to Jung, as a repository of archetypes and the temporal experience of humanity):**  
     * **Contact BI:**Related to BI because it provides access to images and energies*collective unconscious*, to archetypes and universal plots unfolding over time, requires deep intuitive attunement.  
-64.   
 65. **"Threshold" (as a transitional state in time, a premonition of change):**  
     * **Contact BI:**Refers to BI because the feeling of being on*threshold*something new, important, a premonition of imminent changes \- this is a typical internal state for BI, associated with the perception of time transitions.  
-66.   
 67. **"Eternity" (as an inner feeling or concept that goes beyond linear time):**  
     * **Contact BI:**Refers to BI because thinking about*eternity*or moments of inner sense of belonging to something eternal, beyond the limits of individual life and linear time, are deeply connected with the work of this function.  
 68.  Trend: Related to BI, because catching a trend is not just data analysis, but rather an internal, subconscious "reading" of the general direction of movement and development of processes over time. It requires tuning into the hidden "rhythm" of changes in order to intuitively feel where the "vibe" of the situation is shifting, even if there are still few obvious signs, and this premonition forms a certain internal state.

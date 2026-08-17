@@ -1,7 +1,7 @@
 # Битые внутренние ссылки
 
-Сгенерировано: 2026-05-16T05:24:00
-Всего записей: 34
+Сгенерировано: 2026-08-17T02:59:12
+Всего записей: 39
 
 ---
 ## src/content/docs/beginners/metodichka.md
@@ -37,4 +37,9 @@ URL: `/socionics-wiki/functions/znaki-funkcij/`
 URL: `/socionics-wiki/theory/formal/svyaz-yumpov-i-pravo-levo/`
 
 - wiki: `[[Формулы АРПов 2022]]` → цель «Формулы АРПов 2022» не найдена
+
+## src/content/docs/theory/meta/filosofiya-socioniki-gemini.md
+URL: `/socionics-wiki/theory/meta/filosofiya-socioniki-gemini/`
+
+- wiki: `[[Многомерность Бифуркации в Становлении]]` → цель «Многомерность Бифуркации в Становлении» не найдена
 

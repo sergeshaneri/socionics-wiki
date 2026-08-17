@@ -4,7 +4,6 @@ description: Как интерпретировать модель А ИТО
 categories: [formal]
 ---
 
-**
 
 - в общем логика какая  
       
@@ -48,7 +47,6 @@ categories: [formal]
       
     и так можно про все отношения. единственное что асимметричные вызывают много сложностей, тут нужен детальный анализ и перепроверка
     
--   
     
 
 - както писал черновичек про дуальные, но как перечитал понял что там больше половины просто перепечатал с Чурюмовского ![😆](https://lh7-us.googleusercontent.com/bBWFTd8X8y3En3f2jRHXmZoniMaNRpY8wA-sJZ5knxYruHueJ6E_T-uHK_Y7ZI_r619XMlc_fDWqowQqvCSC3fdee9rhM3DsSHVBya2IuBWHsCpE-wvdcywpCJ1FIBBvBeGmjYcxbgYiG6_gdpfNqw)
@@ -60,6 +58,3 @@ categories: [formal]
   
 
 (это надо будет в отдельную статью)
-
-  
-**

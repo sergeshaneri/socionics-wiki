@@ -6,7 +6,6 @@ categories: [formal]
 
 https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/edit
 
-**
 
 На нулевом уровне дихотомии нет, адвайта, приехали.
 
@@ -1518,7 +1517,6 @@ https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/
 
   
 
-*
 
 (странный какойто порядок где не заканчивается на таль и наль)
 
@@ -1589,7 +1587,6 @@ https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/
 
   
 
-*
 
 (странный какойто порядок где не заканчивается на таль и наль)
 
@@ -1787,7 +1784,6 @@ https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/
 
 Пц/Рз =  Лг/Эт Х Тк/Ст
 
-*
 
 (странный какойто порядок где не заканчивается на таль и наль)
 
@@ -2477,7 +2473,6 @@ https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/
 
   
 
-1.   
     
 
 Вертность Х Позитивизм/Негативизм = Дм/Ар 
@@ -2563,7 +2558,3 @@ https://docs.google.com/document/d/1njL_2MAcPFP5rnXyon8lNbY65ggw1_-jgsfTeBKXgQg/
 Признаки - это экстенсивные характеристики
 
 [https://docs.google.com/document/d/1UWwQVWr5mhY8C1kqZNup5KiBtlLDoVxh94HwkymxX8I/edit](https://docs.google.com/document/d/1UWwQVWr5mhY8C1kqZNup5KiBtlLDoVxh94HwkymxX8I/edit)
-
-  
-  
-**

@@ -1,111 +1,50 @@
 ---
-title: Demo-Ari formula
-description: Demo-Ari formula
+title: Demo-Ari Formula
+description: The Demo-Ari formula for Democratic and Aristocratic types in Model A.
 ---
 
-**
+## The basic formula
 
-1. Democratic/Aristocratic this is the first superlocal dichotomy, which connect acceptive and productive functions the simplest way to express the formula is: democrats have 2 abstract or 2 involved elements in horizontal blocks aristocrats have 2 inner or 2 outer elements in horizontal blocks im gonna make the rule more complete and precise
-    
-2. [
-    
-3. 18:52
-    
-4. ]
-    
-5. firstly to be more rigorous i'd express the horizontal blocks as Fn tetrachotomy: strong/weak | metal/vital | valued/subdued (изменено)
-    
-6. [
-    
-7. 18:57
-    
-8. ]
-    
-9. then i'd look for more similarities of elements in these blocks, and there 2 more dichotomies to it. now the formula would be more detailed: democrats have elements that coincide by 3 dichotomies (abstract/involved | static/dynamic | alpha/gamma) in the functions that coincide by 3 dichotomies (strong/weak | metal/vital | valued/subdued) aristocrats have elements that coincide by 3 dichotomies (inner/outer | static/dynamic | delta/beta) in the functions that coincide by 3 dichotomies (strong/weak | metal/vital | valued/subdued) (изменено)
-    
-10. [
-    
-11. 18:57
-    
-12. ]
-    
-13. but even this rule would not be complete (изменено)
-    
-14. [
-    
-15. 18:58
-    
-16. ]
-    
-17. cos there are invariant for every couple of functions that contains bot acceptive and productive functions (изменено)
-    
-18. [
-    
-19. 18:59
-    
-20. ]
-    
-21. that would be 4 model A tetrachotomies: horizontal block (12) vertical block (14) long vertical block (16) dimension block (18)
-    
-22. [
-    
-23. 19:02
-    
-24. ]
-    
-25. now i should express precisely these tetrahotomies horizontal (strong/weak | metal/vital | valued/subdued) vertical (inert/contact | mental/vital | evaluative/situational) long vertical (inert/contact | bold/cautious | valued/subdued) dimensions (strong/weak | bold/cautious | evaluative/situational) (изменено)
-    
-26. [
-    
-27. 19:06
-    
-28. ]
-    
-29. the formula for vertical block can be just switched with horizontal what democrat has in horizonatl blocks arictocrat has in vertical and vice versa
-    
-30. [
-    
-31. 19:09
-    
-32. ]
-    
-33. democrats have in long vertical blocks elements that coincide by 3 dichotomies (inner/outer | alpha/gamma | extra/intro) aristocrats have in long vertical blocks elements that coincide by 3 dichotomies (abstract/involved | delta/beta | extra/intro)
-    
+The Democratic/Aristocratic dichotomy is the first superlocal dichotomy. It connects accepting and producing functions.
 
-  
-  
-  
-  
-  
+The simplest expression of the formula is as follows:
 
-Democrats:
+- Democratic types have two abstract or two involved elements in their horizontal blocks.
+- Aristocratic types have two inner or two outer elements in their horizontal blocks.
 
-  
+This rule can be made more complete and precise.
 
-Horizontal: (abstract/involved | static/dynamic | alpha/gamma)
+## A more rigorous expression
 
-Vertical: (inner/outer | static/dynamic | delta/beta)
+First, the horizontal blocks can be expressed through a tetrachotomy of functions:
 
-Long Vertical:(inner/outer | alpha/gamma | extra/intro)
+**Strong/Weak | Mental/Vital | Valued/Subdued**
 
-Dimensions:(abstract/involved | delta/beta | extra/intro)
+We can then look for further similarities between the elements in these blocks. Two more dichotomies appear, producing a more detailed formula:
 
-  
+- Democratic types have elements that coincide in three dichotomies—Abstract/Involved, Static/Dynamic, and Alpha/Gamma—in functions that coincide in three dichotomies: Strong/Weak, Mental/Vital, and Valued/Subdued.
+- Aristocratic types have elements that coincide in three dichotomies—Inner/Outer, Static/Dynamic, and Delta/Beta—in functions that coincide in three dichotomies: Strong/Weak, Mental/Vital, and Valued/Subdued.
 
-Aristocrats:
+Even this version of the rule is not complete, because there are invariants for every pair of functions containing both accepting and producing functions.
 
-  
+## Model A tetrachotomies
 
-Horizontal: (inner/outer | static/dynamic | delta/beta)
+This gives us four Model A tetrachotomies:
 
-Vertical: (abstract/involved | static/dynamic | alpha/gamma)
+- **Horizontal block (1–2):** Strong/Weak | Mental/Vital | Valued/Subdued
+- **Vertical block (1–4):** Inert/Contact | Mental/Vital | Evaluatory/Situational
+- **Long vertical block (1–6):** Inert/Contact | Bold/Cautious | Valued/Subdued
+- **Dimension block (1–8):** Strong/Weak | Bold/Cautious | Evaluatory/Situational
 
-Long Vertical:(abstract/involved | delta/beta | extra/intro)
+The formula for the vertical block can be obtained by switching the horizontal formula: what Democratic types have in their horizontal blocks, Aristocratic types have in their vertical blocks, and vice versa.
 
-Dimensions:(inner/outer | alpha/gamma | extra/intro)
+In long vertical blocks, Democratic types have elements that coincide in three dichotomies—Inner/Outer, Alpha/Gamma, and Extraverted/Introverted. Aristocratic types have elements that coincide in Abstract/Involved, Delta/Beta, and Extraverted/Introverted.
 
-  
-**
+## Complete correspondence
 
-
-#соционика  #english  #gdrive 
+| Block | Democratic types | Aristocratic types |
+| --- | --- | --- |
+| Horizontal | Abstract/Involved \| Static/Dynamic \| Alpha/Gamma | Inner/Outer \| Static/Dynamic \| Delta/Beta |
+| Vertical | Inner/Outer \| Static/Dynamic \| Delta/Beta | Abstract/Involved \| Static/Dynamic \| Alpha/Gamma |
+| Long vertical | Inner/Outer \| Alpha/Gamma \| Extraverted/Introverted | Abstract/Involved \| Delta/Beta \| Extraverted/Introverted |
+| Dimensions | Abstract/Involved \| Delta/Beta \| Extraverted/Introverted | Inner/Outer \| Alpha/Gamma \| Extraverted/Introverted |

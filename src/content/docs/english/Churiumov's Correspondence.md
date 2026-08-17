@@ -1,79 +1,61 @@
 ---
-title: "Churiumov's Correspondence"
+title: "Churiumov’s Correspondence"
+description: "Correspondences between information metabolism elements, Model A functions, types, intertype relations, and dichotomies."
 ---
 
-**
+## The correspondence principle
 
-Duality Principle (Churiumov)
+Churiumov’s correspondence principle states that the same abstract structure appears at multiple levels of information metabolism (IM). Each level contains two sets whose elements are linked by a one-to-one correspondence, or bijection. The dichotomies defined on those sets correspond as well.
 
-Relative (Introverted) Socionics (Gulenko)
+In this sense, the levels can be understood as a kind of quantum superposition of **Informacions**: the underlying structure remains the same, while the phenomena described by it differ and can be expressed through one another.
 
-Fractal Correspondence Principle
+> **Terminology:** *Informacion* is used here as a technical count noun for a level of information metabolism, rather than as the ordinary English word *information*.
 
-Churiumov’s Bijection (Correspondence)
+The same or closely related idea appears under several names:
 
-  
-  
+- the **Duality Principle** (Churiumov);
+- **Relative (Introverted) Socionics** (Gulenko);
+- the **Fractal Correspondence Principle**;
+- **Churiumov’s bijection**, or correspondence.
 
-Some sort of quantum superposition of Informacions (lvls of IM) 
+## Information metabolism elements and Model A functions
 
-It means that the structure is one, but there are multiple phenomena described by it, and they can be expressed via each other
+The following table shows the correspondence between information metabolism elements, Model A functions, function dichotomies, and the related dichotomies or groupings of information elements.
 
-  
+| Information element | Model A function | Function dichotomy | Corresponding element dichotomy or grouping |
+| :---: | --- | --- | --- |
+| Ne | Leading | Existence | Existence |
+| Si | Suggestive | Bold/<wbr>Cautious | Extraverted/<wbr>Introverted (Black/<wbr>White) |
+| Fe | Mobilizing | Evaluatory/<wbr>Situational | Delta/<wbr>Beta values |
+| Ti | Creative | Strong/<wbr>Weak | Detached/<wbr>Attached (Abstract/<wbr>Involved) |
+| Te | Demonstrative | Verbal/<wbr>Non-verbal (Valued/<wbr>Subdued) | Alpha/<wbr>Gamma values |
+| Fi | Vulnerable | Inert/<wbr>Contact | Implicit/<wbr>Explicit |
+| Se | Role | Accepting/<wbr>Producing | Irrational/<wbr>Rational |
+| Ni | Ignoring | Mental/<wbr>Vital | Static/<wbr>Dynamic |
 
-Each level consists of 2 sets and 1-to-1 correspondence between their elements. Sets are also equipped with dichotomies, they correspond as well.
+### The leading function
 
-  
+The leading function models the world. It acts as the lens through which a person sees and understands reality and shapes the ideas that arise from that perspective.
 
-Information Element – Function 
+## Types and intertype relations
 
-  
+The same correspondence extends to types of information metabolism (**TIMs**) and intertype relations (**ITRs**). Each row connects a TIM, an ITR, a Reinin dichotomy, and a semantic label.
 
-1. I ~ Ne ~ Leading fn ~ existence
-    
-2. s ~ Si ~ Suggestive fn ~ extra/intro (bold//cautious) ~  black/white
-    
-3. E ~ Fe ~ Mobolizing fn ~ eval/sit - delta/beta
-    
-4. l ~ Ti ~ Creative fn ~ str/wk ~ detached/attached
-    
-5. L ~ Te ~ Demostrative ~ verb/lab ~ alpha/gamma
-    
-6. e ~ Fi ~ Vulnerable ~ inrt/ctct ~ implicit/explicit
-    
-7. S ~ Se ~ Role ~ acceptive/producing ~ irr/ra
-    
-8. i ~ Ni ~ Ignorative ~ menta/vital ~ static/dynamic
-    
-
-  
-
-Leading function - models the world, eyes through which we see and understand the world, the ideas that come
-
-  
-
-TIM - ITR 
-
-  
-
-ILE - Identity  - Existence (neutral element of dichotomies set) - Cognition  
-SEI - Duality - Extra/Intro - Balance  
-ESE - Activation - "carefree/farsighted" - Activization (Energy Tone)  
-LII - Mirror - Intuition/Sensorics - Invention  
-EIE - Beneficiary - Democratic/Aristocratic - Ideology  
-LSI - Supervisee - Positivist/Negativist - Order  
-SLE - Business - Yielding and obstinate - Authority  
-IEI - Illusionary - Logic/Ethic - Freedom  
-LIE - Quasi - Merry/Serios - Enterprise  
-ESI - Conflict - Constructivist/Emotivis - Perseverence  
-SEE - superego - process/result - Influence  
-ILI - Contratry - Questim/Declatim - Doubt  
-IEE - Kindred - Reasonable / Resolute -  Familiarity  
-SLI - semiduality - Tactical / Strategic - Mastery  
-LSE - benefactor - irrational/rational - Technology  
-EII - supervisor - static/dynamic - Humanism
-
-  
-**
-
-#соционика #english #соционика #edit 
+| TIM | Intertype relation | Reinin dichotomy | Semantic label |
+| :---: | --- | --- | --- |
+| ILE | Identity | Existence (the neutral element of the dichotomy set) | Cognition |
+| SEI | Duality | Extraversion/Introversion | Balance |
+| ESE | Activation | Carefree/Farsighted | Activation (energy tone) |
+| LII | Mirror | Intuition/Sensing | Invention |
+| EIE | Beneficiary | Democracy/Aristocracy | Ideology |
+| LSI | Supervisee | Positivism/Negativism | Order |
+| SLE | Business | Yielding/Obstinate | Authority |
+| IEI | Mirage | Logic/Ethics | Freedom |
+| LIE | Quasi-Identity | Merry/Serious (Subjectivism/Objectivism) | Enterprise |
+| ESI | Conflict | Constructivism/Emotivism | Perseverance |
+| SEE | Superego | Process/Result | Influence |
+| ILI | Contrary | Questimism/Declatimism | Doubt |
+| IEE | Kindred | Judicious/Decisive (Reasonable/Resolute) | Familiarity |
+| SLI | Semi-duality | Tactics/Strategy | Mastery |
+| LSE | Benefactor | Irrationality/Rationality | Technology |
+| EII | Supervisor | Static/Dynamic | Humanism |

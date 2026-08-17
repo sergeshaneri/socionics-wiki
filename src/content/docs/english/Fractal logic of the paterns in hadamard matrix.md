@@ -4,7 +4,6 @@ description: Fractal logic of the paterns in hadamard matrix
 ---
 
 
-**
 
 Goal: show that there is fractal logic connection between model A and Reinin dichotomies.expressed in terms of hadamard matrix and scale transform.  
 We’ll use Hadamard matrix rows as fractal tuple XNOR and fractal scale transform
@@ -329,7 +328,6 @@ Quantum entanglement property
 
 every accepting and every producing function proceeds the IE of the same nality (irr/ra) and share IE-Fn relation pattern
 
-**
 
 
 #gdrive #соционика

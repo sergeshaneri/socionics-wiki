@@ -1,16 +1,16 @@
 # Audit summary
 
-Сгенерировано: 2026-05-16T05:24:00
-Всего файлов в `src/content/docs/`: **367**
+Сгенерировано: 2026-08-17T02:59:12
+Всего файлов в `src/content/docs/`: **391**
 
 | Отчёт | Записей |
 | --- | ---: |
-| [markup-issues.md](./markup-issues.md) | 43 файлов с проблемами вёрстки |
+| [markup-issues.md](./markup-issues.md) | 51 файлов с проблемами вёрстки |
 | [broken-images.md](./broken-images.md) | 3 файлов с битыми image-refs |
-| [broken-links.md](./broken-links.md) | 5 файлов с битыми ссылками |
-| [orphans.md](./orphans.md) | 331 страниц без входящих ссылок из других статей |
-| [stubs.md](./stubs.md) | 174 stub-страниц |
-| [missing-description.md](./missing-description.md) | 207 без description |
+| [broken-links.md](./broken-links.md) | 6 файлов с битыми ссылками |
+| [orphans.md](./orphans.md) | 341 страниц без входящих ссылок из других статей |
+| [stubs.md](./stubs.md) | 176 stub-страниц |
+| [missing-description.md](./missing-description.md) | 365 без description |
 
 ## Приоритет на перезаливку с Google Drive
 

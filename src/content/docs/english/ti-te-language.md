@@ -41,12 +41,10 @@ categories: [semantic]
   * Action: Ask them to visualize their internal aspect as an image.  
   * ,  
   * Purpose: This is the most effective method for them to see for themselves what is really happening in their subconscious and what emotions are there. It saves time on lengthy questioning.  
-  *   
 * Step 4: Establishing Contact and Processing (Objective: Initiate the transformation process).  
   * Action: Give them a clear instruction: "Say to this image: 'Hello. I see that you feel \[name of emotion\]. I feel it too.'" Then, instruct them to support that part.  
   * ,  
   * Purpose: This is the key action for connecting with suppressed feelings. The result is that the client becomes aware of their emotions, the tension subsides, and energy is released to solve the problem.  
-  *   
 * Step 5: Finding a Solution and Programming (Objective: Find and install a new course of action).  
   * Action: Once the negative feelings have been processed, ask practical questions: "What do you need?", "What quality will help you?". Help them formulate a concrete solution or program their subconscious for it.  
   * ,  
@@ -56,9 +54,7 @@ categories: [semantic]
   * Action: Focus their attention on the positive feelings that arose from the agreement with themselves. Ask them to remember this sensation in their body.  
   * ,  
   * Purpose: This is an anchoring technique. It creates a conditioned reflex so the client can return to this resourceful state later. It increases the productivity of the entire session.  
-  *   
 * Step 7: Homework (Objective: Transfer the result into real life).  
   * Action: Give them a specific homework assignment: "Within 48 hours, take \[a simple action\] to resolve your situation, drawing on that resourceful feeling you anchored." Ask them to write down the insights from the session.  
   * ,  
   * Purpose: This is essential so that the insight doesn't just stay in the office but turns into a real-life skill. The ROI of the therapy increases exponentially."
-

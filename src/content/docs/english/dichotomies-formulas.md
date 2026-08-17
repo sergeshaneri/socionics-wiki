@@ -193,15 +193,12 @@ demo/ari connects all the functions that are of the different nality (accepting/
 * \[1+4, 2+3, 5+8, 6+7\] **vertical** are equal in (inert/contact | mental/vital | evaluatory/situational)   
 * \[1+6, 2+5, 3+8, 4+7\] **long vertical** are equal in (inert/contact | bold/cautious | valued/subdued)   
 * \[1+8, 2+7, 3+6, 4+5\] **dimensions** are equal in (strong/weak | evaluatory/situational | bold/cautious)   
-*   
 * So depending on demo/ari TIMs would have certain IEs in these blockings, the elements would have specific dichotomies in common, which is shown in parenthesis:   
-*   
 * **—Democrats**—   
 * Horizontal: (Detached /involved | static/dynamic | alpha/gamma)   
 * Vertical: (implicit/explicit | static/dynamic | delta/beta)   
 * Long Vertical: (implicit/explicit | alpha/gamma | extra/intro)   
 * Dimensions: (Detached /involved | delta/beta | extra/intro)   
-* 
 
 \[**Ne Ti** \~ **Se Fi** \~ **Si Fe** \~ **Ni Te**\] → (**1 2** \~ **3 4** \~ **5 6** \~ **7 8** | horizontal)  
 \[**Ne Fi** \~ **Se Ti** \~ **Si Te** \~ **Ni Fe**\] → (**1 4** \~ **2 3** \~ **5 8** \~ **6 7** | vertical)
@@ -214,7 +211,6 @@ demo/ari connects all the functions that are of the different nality (accepting/
 * Vertical: (Detached /involved | static/dynamic | alpha/gamma)   
 * Long Vertical: (Detached /involved | delta/beta | extra/intro)  
 * Dimensions: (implicit/explicit | alpha/gamma | extra/intro)   
-* 
 
 \[**Ne Fi** \~ **Se Ti** \~ **Si Te** \~ **Ni Fe**\] → (**1 2** \~ **3 4** \~ **5 6** \~ **7 8** | horizontal)  
 \[**Ne Ti** \~ **Se Fi** \~ **Si Fe** \~ **Ni Te**\] → (**1 4** \~ **2 3** \~ **5 8** \~ **6 7** | vertical)

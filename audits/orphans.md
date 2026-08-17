@@ -1,339 +1,349 @@
 # Слабая внутренняя перелинковка (0 ссылок из других статей)
 
-Сгенерировано: 2026-05-16T05:24:00
-Всего записей: 333
+Сгенерировано: 2026-08-17T02:59:12
+Всего записей: 343
 
 ---
 _Доступность через автогенерируемый sidebar не учитывается — эти страницы найти можно, но из тела других статей на них никто не ссылается. Полезный сигнал для backlinks-фичи и cross-link плана._
 
-- [Анализ Ани Кожановой - о принятии](/socionics-wiki/applied/analiz-ani-kozhanovoj-o-prinyatii/) — `src/content/docs/applied/analiz-ani-kozhanovoj-o-prinyatii.md`
+- [(без title)](/socionics-wiki/404/) — `src/content/docs/404.mdx`
+- [(без title)](/socionics-wiki/applied/analiz-ani-kozhanovoj-o-prinyatii/) — `src/content/docs/applied/analiz-ani-kozhanovoj-o-prinyatii.md`
 - [Болевая на практике](/socionics-wiki/applied/bolevaya-na-praktike/) — `src/content/docs/applied/bolevaya-na-praktike.md`
-- [Доклад методика типирования](/socionics-wiki/applied/doklad-metodika-tipirovaniya/) — `src/content/docs/applied/doklad-metodika-tipirovaniya.md`
-- [как  прокачивать би](/socionics-wiki/applied/kak-prokachivat-bi/) — `src/content/docs/applied/kak-prokachivat-bi.md`
-- [Конспект Типирующие Дон](/socionics-wiki/applied/konspekt-tipiruyushhie-don/) — `src/content/docs/applied/konspekt-tipiruyushhie-don.md`
-- [Опросник Экспресс Типирование](/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie-novoe/) — `src/content/docs/applied/oprosnik-ehkspress-tipirovanie-novoe.md`
-- [Опросник Экспресс Типирование](/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie/) — `src/content/docs/applied/oprosnik-ehkspress-tipirovanie.md`
-- [Разбор Урганта](/socionics-wiki/applied/razbor-urganta/) — `src/content/docs/applied/razbor-urganta.md`
-- [семантика для типирования](/socionics-wiki/applied/semantika-dlya-tipirovaniya/) — `src/content/docs/applied/semantika-dlya-tipirovaniya.md`
-- [Структуры для типирования](/socionics-wiki/applied/struktury-dlya-tipirovaniya/) — `src/content/docs/applied/struktury-dlya-tipirovaniya.md`
-- [Заметки по Типированию](/socionics-wiki/applied/zametki-po-tipirovaniyu/) — `src/content/docs/applied/zametki-po-tipirovaniyu.md`
-- [Близкие ИФО](/socionics-wiki/audio/близкие-ифо/) — `src/content/docs/audio/близкие-ифо.mdx`
-- [Блок Суперэго](/socionics-wiki/audio/блок-суперэго/) — `src/content/docs/audio/блок-суперэго.mdx`
-- [Блок Эго - Центр психики](/socionics-wiki/audio/блок-эго-центр-психики/) — `src/content/docs/audio/блок-эго-центр-психики.mdx`
-- [Болевая творческая и ЧС ИФО](/socionics-wiki/audio/болевая-творческая-и-чс-ифо/) — `src/content/docs/audio/болевая-творческая-и-чс-ифо.mdx`
-- [БС и ЧИ Дюмы](/socionics-wiki/audio/бс-и-чи-дюмы/) — `src/content/docs/audio/бс-и-чи-дюмы.mdx`
-- [Введение в дедуктивную соционику и модель А Драя](/socionics-wiki/audio/введение-в-дедуктивную-соционику-и-модель-а-драя/) — `src/content/docs/audio/введение-в-дедуктивную-соционику-и-модель-а-драя.mdx`
-- [Вертность функций](/socionics-wiki/audio/вертность-функций/) — `src/content/docs/audio/вертность-функций.mdx`
-- [Веторно-фрактальное моделирование АРПов](/socionics-wiki/audio/веторно-фрактальное-моделирование-арпов/) — `src/content/docs/audio/веторно-фрактальное-моделирование-арпов.mdx`
-- [Дежавю - БИ](/socionics-wiki/audio/дежавю-би/) — `src/content/docs/audio/дежавю-би.mdx`
-- [Деловые Роб Дост](/socionics-wiki/audio/деловые-роб-дост/) — `src/content/docs/audio/деловые-роб-дост.mdx`
-- [ДМ-АР](/socionics-wiki/audio/дм-ар/) — `src/content/docs/audio/дм-ар.mdx`
-- [Дополнение ЧИ-БС](/socionics-wiki/audio/дополнение-чи-бс/) — `src/content/docs/audio/дополнение-чи-бс.mdx`
-- [ИТО между субъектом и миром](/socionics-wiki/audio/ито-между-субъектом-и-миром/) — `src/content/docs/audio/ито-между-субъектом-и-миром.mdx`
-- [ИФО, особенно БЭ](/socionics-wiki/audio/ифо-особенно-бэ/) — `src/content/docs/audio/ифо-особенно-бэ.mdx`
-- [Как исследовать признаки функций и Рейнина](/socionics-wiki/audio/как-исследовать-признаки-функций-и-рейнина/) — `src/content/docs/audio/как-исследовать-признаки-функций-и-рейнина.mdx`
-- [КВ-ДК](/socionics-wiki/audio/кв-дк/) — `src/content/docs/audio/кв-дк.mdx`
-- [Мастерство в соционике](/socionics-wiki/audio/мастерство-в-соционике/) — `src/content/docs/audio/мастерство-в-соционике.mdx`
-- [Мерности ЧЛ-отношения](/socionics-wiki/audio/мерности-чл-отношения/) — `src/content/docs/audio/мерности-чл-отношения.mdx`
-- [Мерности](/socionics-wiki/audio/мерности/) — `src/content/docs/audio/мерности.mdx`
-- [Мозг - фрактальная граница сознания](/socionics-wiki/audio/мозг-фрактальная-граница-сознания/) — `src/content/docs/audio/мозг-фрактальная-граница-сознания.mdx`
-- [МЭИ и дихо ИА](/socionics-wiki/audio/мэи-и-дихо-иа/) — `src/content/docs/audio/мэи-и-дихо-иа.mdx`
-- [О частоте вибраций и высоких вибрациях](/socionics-wiki/audio/о-частоте-вибраций-и-высоких-вибрациях/) — `src/content/docs/audio/о-частоте-вибраций-и-высоких-вибрациях.mdx`
-- [Объективизм ценностность](/socionics-wiki/audio/объективизм-ценностность/) — `src/content/docs/audio/объективизм-ценностность.mdx`
-- [Отличия баз и твор, особенно БИ](/socionics-wiki/audio/отличия-баз-и-твор-особенно-би/) — `src/content/docs/audio/отличия-баз-и-твор-особенно-би.mdx`
-- [Падение 12.2 55.5](/socionics-wiki/audio/падение-12-2-55-5/) — `src/content/docs/audio/падение-12-2-55-5.mdx`
-- [Падение 16.6](/socionics-wiki/audio/падение-16-6/) — `src/content/docs/audio/падение-16-6.mdx`
-- [Падение 51.1 соположение 20.3](/socionics-wiki/audio/падение-51-1-соположение-20-3/) — `src/content/docs/audio/падение-51-1-соположение-20-3.mdx`
-- [Перемножение АРПов и сплетенность ИТО](/socionics-wiki/audio/перемножение-арпов-и-сплетенность-ито/) — `src/content/docs/audio/перемножение-арпов-и-сплетенность-ито.mdx`
-- [Перепрочтение царя Эдипа от Терри](/socionics-wiki/audio/перепрочтение-царя-эдипа-от-терри/) — `src/content/docs/audio/перепрочтение-царя-эдипа-от-терри.mdx`
-- [ПЗ-НГ](/socionics-wiki/audio/пз-нг/) — `src/content/docs/audio/пз-нг.mdx`
-- [Прощение и БЭ](/socionics-wiki/audio/прощение-и-бэ/) — `src/content/docs/audio/прощение-и-бэ.mdx`
-- [Разница общ-чел и тимное](/socionics-wiki/audio/разница-общ-чел-и-тимное/) — `src/content/docs/audio/разница-общ-чел-и-тимное.mdx`
-- [Соционика и отличия от психологии](/socionics-wiki/audio/соционика-и-отличия-от-психологии/) — `src/content/docs/audio/соционика-и-отличия-от-психологии.mdx`
-- [Суперэго - герой](/socionics-wiki/audio/суперэго-герой/) — `src/content/docs/audio/суперэго-герой.mdx`
-- [Типирование Никиты](/socionics-wiki/audio/типирование-никиты/) — `src/content/docs/audio/типирование-никиты.mdx`
-- [УС-УП](/socionics-wiki/audio/ус-уп/) — `src/content/docs/audio/ус-уп.mdx`
-- [Фрактальная герменевтика соционической интерпретации](/socionics-wiki/audio/фрактальная-герменевтика-соционической-интерпретации/) — `src/content/docs/audio/фрактальная-герменевтика-соционической-интерпретации.mdx`
-- [Фрактальность и хаос в соционике](/socionics-wiki/audio/фрактальность-и-хаос-в-соционике/) — `src/content/docs/audio/фрактальность-и-хаос-в-соционике.mdx`
-- [ЧИ, фракталы и соответствие Чурюмова](/socionics-wiki/audio/чи-фракталы-и-соответствие-чурюмова/) — `src/content/docs/audio/чи-фракталы-и-соответствие-чурюмова.mdx`
-- [ЧЭ-БЭ](/socionics-wiki/audio/чэ-бэ/) — `src/content/docs/audio/чэ-бэ.mdx`
-- [ЧЭ в 5 и 7](/socionics-wiki/audio/чэ-в-5-и-7/) — `src/content/docs/audio/чэ-в-5-и-7.mdx`
-- [Эго в соционике и духовности](/socionics-wiki/audio/эго-в-соционике-и-духовности/) — `src/content/docs/audio/эго-в-соционике-и-духовности.mdx`
-- [Эгоистичность и альтруистичность](/socionics-wiki/audio/эгоистичность-и-альтруистичность/) — `src/content/docs/audio/эгоистичность-и-альтруистичность.mdx`
-- [Давайте общаться о соционике](/socionics-wiki/beginners/davajte-obshhatsya-o-socionike/) — `src/content/docs/beginners/davajte-obshhatsya-o-socionike.md`
-- [МЕТОДИЧКА](/socionics-wiki/beginners/metodichka/) — `src/content/docs/beginners/metodichka.md`
-- [Соционика введение 2016](/socionics-wiki/beginners/socionika-vvedenie-2016/) — `src/content/docs/beginners/socionika-vvedenie-2016.md`
-- [Введение во Фрактальную Соционику](/socionics-wiki/beginners/vvedenie-vo-fraktalnuyu-socioniku/) — `src/content/docs/beginners/vvedenie-vo-fraktalnuyu-socioniku.md`
-- [жил был фрактал 2022](/socionics-wiki/beginners/zhil-byl-fraktal-2022/) — `src/content/docs/beginners/zhil-byl-fraktal-2022.md`
-- [00 Титульный лист](/socionics-wiki/books/blin-1/00-0-titlist/) — `src/content/docs/books/blin-1/00-0-titlist.mdx`
-- [00 Благодарности](/socionics-wiki/books/blin-1/00-1-blagodarnosti/) — `src/content/docs/books/blin-1/00-1-blagodarnosti.mdx`
-- [00 Начало](/socionics-wiki/books/blin-1/00-2-nachalo/) — `src/content/docs/books/blin-1/00-2-nachalo.mdx`
-- [02 Аушра](/socionics-wiki/books/blin-1/02-aushra/) — `src/content/docs/books/blin-1/02-aushra.mdx`
-- [03 Юнг](/socionics-wiki/books/blin-1/03-yung/) — `src/content/docs/books/blin-1/03-yung.mdx`
-- [04 Афанасьев](/socionics-wiki/books/blin-1/04-afanasyev/) — `src/content/docs/books/blin-1/04-afanasyev.mdx`
-- [05 Калинаускас](/socionics-wiki/books/blin-1/05-kalinauskas/) — `src/content/docs/books/blin-1/05-kalinauskas.mdx`
-- [06 Литвиненко](/socionics-wiki/books/blin-1/06-litvinenko/) — `src/content/docs/books/blin-1/06-litvinenko.mdx`
-- [07 Таланов](/socionics-wiki/books/blin-1/07-talanov/) — `src/content/docs/books/blin-1/07-talanov.mdx`
-- [08 Небыкова](/socionics-wiki/books/blin-1/08-nebykova/) — `src/content/docs/books/blin-1/08-nebykova.mdx`
-- [09 Рейнин](/socionics-wiki/books/blin-1/09-reynin/) — `src/content/docs/books/blin-1/09-reynin.mdx`
-- [10 Скрипник](/socionics-wiki/books/blin-1/10-skripnik/) — `src/content/docs/books/blin-1/10-skripnik.mdx`
-- [11 ЛИТР](/socionics-wiki/books/blin-1/11-litr/) — `src/content/docs/books/blin-1/11-litr.mdx`
-- [12 Экскурс в науку](/socionics-wiki/books/blin-1/12-eks-nauka/) — `src/content/docs/books/blin-1/12-eks-nauka.mdx`
-- [00 Введение ко 2-му тому](/socionics-wiki/books/blin-2/00-1-vvedenie/) — `src/content/docs/books/blin-2/00-1-vvedenie.mdx`
-- [01 Ермак — Гуленко — Савченко](/socionics-wiki/books/blin-2/01-ermak-gulenko-savchenko/) — `src/content/docs/books/blin-2/01-ermak-gulenko-savchenko.mdx`
-- [02 Прокофьева](/socionics-wiki/books/blin-2/02-prokofeva/) — `src/content/docs/books/blin-2/02-prokofeva.mdx`
-- [03 Букалов](/socionics-wiki/books/blin-2/03-bukalov/) — `src/content/docs/books/blin-2/03-bukalov.mdx`
-- [04 Филимонов](/socionics-wiki/books/blin-2/04-filimonov/) — `src/content/docs/books/blin-2/04-filimonov.mdx`
-- [05 Кочубеева](/socionics-wiki/books/blin-2/05-kochubeeva/) — `src/content/docs/books/blin-2/05-kochubeeva.mdx`
-- [06 Филатова](/socionics-wiki/books/blin-2/06-filatova/) — `src/content/docs/books/blin-2/06-filatova.mdx`
-- [07 Математика](/socionics-wiki/books/blin-2/07-matematika/) — `src/content/docs/books/blin-2/07-matematika.mdx`
-- [08 Уровень Ф](/socionics-wiki/books/blin-2/08-uroven-f/) — `src/content/docs/books/blin-2/08-uroven-f.mdx`
-- [09 Истина в гуманитарном знании](/socionics-wiki/books/blin-2/09-istina-v-gum/) — `src/content/docs/books/blin-2/09-istina-v-gum.mdx`
-- [00 Предисловие](/socionics-wiki/books/ulybka/01-predislovie/) — `src/content/docs/books/ulybka/01-predislovie.mdx`
-- [01 Субстрат](/socionics-wiki/books/ulybka/01-substrat/) — `src/content/docs/books/ulybka/01-substrat.mdx`
-- [02 Информационные аспекты](/socionics-wiki/books/ulybka/02-ia/) — `src/content/docs/books/ulybka/02-ia.mdx`
-- [03 Семантика функций](/socionics-wiki/books/ulybka/03-semantika-funk/) — `src/content/docs/books/ulybka/03-semantika-funk.mdx`
-- [000 Введение](/socionics-wiki/books/ulybka/03-vvedenie/) — `src/content/docs/books/ulybka/03-vvedenie.mdx`
-- [04 Моделирование психики](/socionics-wiki/books/ulybka/04-modelirovanie-psi/) — `src/content/docs/books/ulybka/04-modelirovanie-psi.mdx`
-- [05 Существование](/socionics-wiki/books/ulybka/05-sushchestvovanie/) — `src/content/docs/books/ulybka/05-sushchestvovanie.mdx`
-- [06 Признаки Рейнина](/socionics-wiki/books/ulybka/06-arp/) — `src/content/docs/books/ulybka/06-arp.mdx`
-- [07 Периодическая Система ТИМ](/socionics-wiki/books/ulybka/07-pstim/) — `src/content/docs/books/ulybka/07-pstim.mdx`
-- [08 Тип и Характер](/socionics-wiki/books/ulybka/08-tip-i-harakter/) — `src/content/docs/books/ulybka/08-tip-i-harakter.mdx`
-- [09 Конфигурации](/socionics-wiki/books/ulybka/09-konfiguratsii/) — `src/content/docs/books/ulybka/09-konfiguratsii.mdx`
-- [10 Диагностика](/socionics-wiki/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost/) — `src/content/docs/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost.mdx`
-- [11 Описание](/socionics-wiki/books/ulybka/11-opisanie/) — `src/content/docs/books/ulybka/11-opisanie.mdx`
-- [12 Отношения](/socionics-wiki/books/ulybka/12-otnosheniya/) — `src/content/docs/books/ulybka/12-otnosheniya.mdx`
-- [13 Универсальность ТИМ-кода](/socionics-wiki/books/ulybka/13-universalnost-t/) — `src/content/docs/books/ulybka/13-universalnost-t.mdx`
-- [14 Происхождение ТИМа](/socionics-wiki/books/ulybka/14-proishozhdenie-tima/) — `src/content/docs/books/ulybka/14-proishozhdenie-tima.mdx`
-- [15 Соционика и психология](/socionics-wiki/books/ulybka/15-scn-i-psi/) — `src/content/docs/books/ulybka/15-scn-i-psi.mdx`
-- [16 Фрейд, Юнг, Аушра](/socionics-wiki/books/ulybka/16-freyd-yung-aushra/) — `src/content/docs/books/ulybka/16-freyd-yung-aushra.mdx`
-- [17 Соционика и философия](/socionics-wiki/books/ulybka/17-scn-i-fil/) — `src/content/docs/books/ulybka/17-scn-i-fil.mdx`
-- [18 Сексуальность и соционика](/socionics-wiki/books/ulybka/18-seks-scn/) — `src/content/docs/books/ulybka/18-seks-scn.mdx`
-- [19 Методология соционики](/socionics-wiki/books/ulybka/19-neizb-mtd/) — `src/content/docs/books/ulybka/19-neizb-mtd.mdx`
-- [20 Соционика как методология](/socionics-wiki/books/ulybka/20-mtd-potentsial/) — `src/content/docs/books/ulybka/20-mtd-potentsial.mdx`
-- [21 Приложения](/socionics-wiki/books/ulybka/21-prilozheniya/) — `src/content/docs/books/ulybka/21-prilozheniya.mdx`
-- [Формальная соционика](/socionics-wiki/categories/formalnaya-socionika/) — `src/content/docs/categories/formalnaya-socionika.mdx`
-- [Метасоционика](/socionics-wiki/categories/metasocionika/) — `src/content/docs/categories/metasocionika.mdx`
-- [Прикладная соционика](/socionics-wiki/categories/prikladnaya-socionika/) — `src/content/docs/categories/prikladnaya-socionika.mdx`
-- [Семантическая соционика](/socionics-wiki/categories/semanticheskaya-socionika/) — `src/content/docs/categories/semanticheskaya-socionika.mdx`
-- [Типы](/socionics-wiki/categories/tipy/) — `src/content/docs/categories/tipy.mdx`
-- [Dichotomies formulas](/socionics-wiki/english/dichotomies-formulas/) — `src/content/docs/english/dichotomies-formulas.md`
-- [Express Typing Questionaire](/socionics-wiki/english/express-typing-questionaire/) — `src/content/docs/english/express-typing-questionaire.md`
-- [Formal Socionics 2022](/socionics-wiki/english/formal-socionics-2022/) — `src/content/docs/english/formal-socionics-2022.md`
-- [Fractal Socionics](/socionics-wiki/english/fractal-socionics/) — `src/content/docs/english/fractal-socionics.md`
-- [Generations list](/socionics-wiki/english/generations-list/) — `src/content/docs/english/generations-list.md`
-- [Generations Therory (Gemini translation)](/socionics-wiki/english/generations-therory-gemini-translation/) — `src/content/docs/english/generations-therory-gemini-translation.md`
-- [ILI 2.1 machine translate](/socionics-wiki/english/ili-21-machine-translate/) — `src/content/docs/english/ILI 2.1 machine translate.md`
-- [ITR Dichotomies Formulae](/socionics-wiki/english/itr-dichotomies-formulae/) — `src/content/docs/english/itr-dichotomies-formulae.md`
-- [Markdown tables](/socionics-wiki/english/markdown-tables/) — `src/content/docs/english/markdown-tables.md`
-- [Minaev dichotomies - left right](/socionics-wiki/english/minaev-dichotomies---left-right/) — `src/content/docs/english/Minaev dichotomies - left right.md`
-- [Model A](/socionics-wiki/english/model-a/) — `src/content/docs/english/model-a.md`
-- [Newman Dichotomies](/socionics-wiki/english/newman-dichotomies-draft/) — `src/content/docs/english/newman-dichotomies-draft.md`
-- [Ni Thesaurus](/socionics-wiki/english/ni-thesaurus/) — `src/content/docs/english/ni-thesaurus.md`
-- [Octa chotomies 8](/socionics-wiki/english/octa-chotomies-8/) — `src/content/docs/english/octa-chotomies-8.md`
-- [Retyping video translate](/socionics-wiki/english/retyping-video-translate/) — `src/content/docs/english/retyping-video-translate.md`
-- [Tencer Minaev and Reinin dichotomies formulae](/socionics-wiki/english/tencer-minaev-and-reinin-dichotomies-formulae/) — `src/content/docs/english/tencer-minaev-and-reinin-dichotomies-formulae.md`
-- [Tetrachotomies Classes (v2)](/socionics-wiki/english/tetrachotomies-classes-v2/) — `src/content/docs/english/tetrachotomies-classes-v2.md`
-- [Ti Te language](/socionics-wiki/english/ti-te-language/) — `src/content/docs/english/ti-te-language.md`
-- [Блок ИД Семантика](/socionics-wiki/functions/blok-id-semantika/) — `src/content/docs/functions/blok-id-semantika.md`
-- [болевая заметки](/socionics-wiki/functions/bolevaya-zametki/) — `src/content/docs/functions/bolevaya-zametki.md`
-- [Доклад болевая](/socionics-wiki/functions/doklad-bolevaya/) — `src/content/docs/functions/doklad-bolevaya.md`
-- [ИФО ИнтерФункциональные Отношения](/socionics-wiki/functions/ifo-interfunkcionalnye-otnosheniya/) — `src/content/docs/functions/ifo-interfunkcionalnye-otnosheniya.md`
-- [Информационный Метаболизм Функции Юнга](/socionics-wiki/functions/informacionnyj-metabolizm-funkcii-yunga/) — `src/content/docs/functions/informacionnyj-metabolizm-funkcii-yunga.md`
-- [Как интерпретировать модель А ИТО](/socionics-wiki/functions/kak-interpretirovat-model-a-ito/) — `src/content/docs/functions/kak-interpretirovat-model-a-ito.md`
-- [Модель А 2016](/socionics-wiki/functions/model-a-2016/) — `src/content/docs/functions/model-a-2016.md`
-- [Модель А от gemini](/socionics-wiki/functions/model-a-ot-gemini/) — `src/content/docs/functions/model-a-ot-gemini.md`
-- [Одномерные Функции](/socionics-wiki/functions/odnomernye-funkcii/) — `src/content/docs/functions/odnomernye-funkcii.md`
-- [Полутакты](/socionics-wiki/functions/polutakty/) — `src/content/docs/functions/polutakty.md`
-- [Витал Q-A](/socionics-wiki/functions/vital-q-a/) — `src/content/docs/functions/vital-q-a.md`
-- [Знаки функций](/socionics-wiki/functions/znaki-funkcij-novoe/) — `src/content/docs/functions/znaki-funkcij-novoe.md`
-- [Знаки функций](/socionics-wiki/functions/znaki-funkcij/) — `src/content/docs/functions/znaki-funkcij.md`
-- [Аспектон Структура](/socionics-wiki/information-elements/aspekton-struktura/) — `src/content/docs/information-elements/aspekton-struktura.md`
-- [Аспекты и Психические Функции](/socionics-wiki/information-elements/aspekty-i-psihicheskie-funkcii/) — `src/content/docs/information-elements/aspekty-i-psihicheskie-funkcii.md`
-- [БЭ БЛ разбор по МЭИ 2016](/socionics-wiki/information-elements/beh-bl-razbor-po-mehi-2016/) — `src/content/docs/information-elements/beh-bl-razbor-po-mehi-2016.md`
-- [БЭ Семантика 2016](/socionics-wiki/information-elements/beh-semantika-2016/) — `src/content/docs/information-elements/beh-semantika-2016.md`
-- [БИ Семантика Вдохновение](/socionics-wiki/information-elements/bi-semantika-vdohnovenie/) — `src/content/docs/information-elements/bi-semantika-vdohnovenie.md`
-- [Би тени дары старое](/socionics-wiki/information-elements/bi-teni-dary-staroe/) — `src/content/docs/information-elements/bi-teni-dary-staroe.md`
-- [БС Семантика 2016](/socionics-wiki/information-elements/bs-semantika-2016/) — `src/content/docs/information-elements/bs-semantika-2016.md`
-- [Игры по аспектам скб](/socionics-wiki/information-elements/igry-po-aspektam-skb/) — `src/content/docs/information-elements/igry-po-aspektam-skb.md`
-- [ИнтерТипные Отношения Семантика по ЭГО](/socionics-wiki/information-elements/intertipnye-otnosheniya-semantika-po-ehgo/) — `src/content/docs/information-elements/intertipnye-otnosheniya-semantika-po-ehgo.md`
-- [ЛСП БИ](/socionics-wiki/information-elements/lsp-bi/) — `src/content/docs/information-elements/lsp-bi.md`
-- [ЛСП БЛ](/socionics-wiki/information-elements/lsp-bl/) — `src/content/docs/information-elements/lsp-bl.md`
-- [Обучение БИ](/socionics-wiki/information-elements/obuchenie-bi/) — `src/content/docs/information-elements/obuchenie-bi.md`
-- [Психологические навыки гемини](/socionics-wiki/information-elements/psihologicheskie-navyki-gemini/) — `src/content/docs/information-elements/psihologicheskie-navyki-gemini.md`
-- [Семантика АРПов (2014)](/socionics-wiki/information-elements/semantika-arpov-2014/) — `src/content/docs/information-elements/semantika-arpov-2014.md`
-- [Семантика Аспектон](/socionics-wiki/information-elements/semantika-aspekton/) — `src/content/docs/information-elements/semantika-aspekton.md`
-- [Тезаурус БИ](/socionics-wiki/information-elements/tezaurus-bi/) — `src/content/docs/information-elements/tezaurus-bi.md`
-- [Тезаурус с определениями (gemini)](/socionics-wiki/information-elements/tezaurus-s-opredeleniyami-gemini/) — `src/content/docs/information-elements/tezaurus-s-opredeleniyami-gemini.md`
-- [Тезаурус списком](/socionics-wiki/information-elements/tezaurus-spiskom/) — `src/content/docs/information-elements/tezaurus-spiskom.md`
-- [Восприятие с разных ИА](/socionics-wiki/information-elements/vospriyatie-s-raznyh-ia/) — `src/content/docs/information-elements/vospriyatie-s-raznyh-ia.md`
-- [Асимметричные ИТО](/socionics-wiki/relations/asimmetrichnye-ito/) — `src/content/docs/relations/asimmetrichnye-ito.md`
-- [Асимметричные отношения по функциям](/socionics-wiki/relations/asimmetrichnye-otnosheniya-po-funkciyam/) — `src/content/docs/relations/asimmetrichnye-otnosheniya-po-funkciyam.md`
-- [Родственные ИТО Семантика](/socionics-wiki/relations/rodstvennye-ito-semantika/) — `src/content/docs/relations/rodstvennye-ito-semantika.md`
-- [Дуальные ИТО 2018](/socionics-wiki/relations/дуальные-ито-2018/) — `src/content/docs/relations/Дуальные ИТО 2018.mdx`
-- [ИЛЭ-ЛСЭ Заказ ИТО](/socionics-wiki/relations/илэ-лсэ-заказ-ито/) — `src/content/docs/relations/ИЛЭ-ЛСЭ Заказ ИТО.mdx`
-- [ЛИИ ИЛИ Квазитождественные ИТО](/socionics-wiki/relations/лии-или-квазитождественные-ито/) — `src/content/docs/relations/ЛИИ ИЛИ Квазитождественные ИТО.mdx`
-- [ЛСИ Прием Контроля Семантика](/socionics-wiki/relations/лси-прием-контроля-семантика/) — `src/content/docs/relations/ЛСИ Прием Контроля Семантика.mdx`
-- [СЛЭ ИЭИ Дуальные ИТО](/socionics-wiki/relations/слэ-иэи-дуальные-ито/) — `src/content/docs/relations/СЛЭ ИЭИ Дуальные ИТО.mdx`
-- [ЭСИ Конфликт ИТО Семантика](/socionics-wiki/relations/эси-конфликт-ито-семантика/) — `src/content/docs/relations/ЭСИ Конфликт ИТО Семантика.mdx`
-- [4 свежак](/socionics-wiki/signs/4-svezhak/) — `src/content/docs/signs/4-svezhak.md`
-- [Дихотомии. Справочник](/socionics-wiki/signs/dihotomii-spravochnik/) — `src/content/docs/signs/dihotomii-spravochnik.md`
-- [Дуальные тетрахотомии социона](/socionics-wiki/signs/dualnye-tetrahotomii-sociona/) — `src/content/docs/signs/dualnye-tetrahotomii-sociona.md`
-- [Формулы Дихотомий АРП](/socionics-wiki/signs/formuly-dihotomij-arp/) — `src/content/docs/signs/formuly-dihotomij-arp.md`
-- [Формулы Кратии](/socionics-wiki/signs/formuly-kratii/) — `src/content/docs/signs/formuly-kratii.md`
-- [Классификация правильных разбиений социона](/socionics-wiki/signs/klassifikaciya-pravilnyh-razbienij-sociona/) — `src/content/docs/signs/klassifikaciya-pravilnyh-razbienij-sociona.md`
-- [Классификация Тетрахотомий 2022](/socionics-wiki/signs/klassifikaciya-tetrahotomij-2022/) — `src/content/docs/signs/klassifikaciya-tetrahotomij-2022.md`
-- [Классификация тетрахотомий по формулам](/socionics-wiki/signs/klassifikaciya-tetrahotomij-po-formulam/) — `src/content/docs/signs/klassifikaciya-tetrahotomij-po-formulam.md`
-- [Логическое построение формул АРП](/socionics-wiki/signs/logicheskoe-postroenie-formul-arp/) — `src/content/docs/signs/logicheskoe-postroenie-formul-arp.md`
-- [МЭИ и признаки функций](/socionics-wiki/signs/mehi-i-priznaki-funkcij/) — `src/content/docs/signs/mehi-i-priznaki-funkcij.md`
-- [Метапризнаки 2022](/socionics-wiki/signs/metapriznaki-2022/) — `src/content/docs/signs/metapriznaki-2022.md`
-- [Метапризнаки](/socionics-wiki/signs/metapriznaki/) — `src/content/docs/signs/metapriznaki.md`
-- [Октохотомии](/socionics-wiki/signs/oktohotomii/) — `src/content/docs/signs/oktohotomii.md`
-- [Рейнин ИТО формулы](/socionics-wiki/signs/rejnin-ito-formuly/) — `src/content/docs/signs/rejnin-ito-formuly.md`
-- [Рейнин Октохотомии Формулы](/socionics-wiki/signs/rejnin-oktohotomii-formuly/) — `src/content/docs/signs/rejnin-oktohotomii-formuly.md`
-- [Соционические системы дихотомий Ньюмана](/socionics-wiki/signs/socionicheskie-sistemy-dihotomij-nyumana/) — `src/content/docs/signs/socionicheskie-sistemy-dihotomij-nyumana.md`
-- [соционика и психология, важно лог-эт дихотомии](/socionics-wiki/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii/) — `src/content/docs/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii.md`
-- [Соответствие формул АРП ТМП](/socionics-wiki/signs/sootvetstvie-formul-arp-tmp/) — `src/content/docs/signs/sootvetstvie-formul-arp-tmp.md`
-- [Список Формул АРП](/socionics-wiki/signs/spisok-formul-arp/) — `src/content/docs/signs/spisok-formul-arp.md`
-- [ТМ система признаки статья](/socionics-wiki/signs/tm-sistema-priznaki-statya/) — `src/content/docs/signs/tm-sistema-priznaki-statya.md`
-- [циклы перестановок модели А](/socionics-wiki/theory/formal/cikly-perestanovok-modeli-a/) — `src/content/docs/theory/formal/cikly-perestanovok-modeli-a.md`
-- [Доклад Доноцентризм](/socionics-wiki/theory/formal/doklad-donocentrizm/) — `src/content/docs/theory/formal/doklad-donocentrizm.md`
-- [Доклад двойственность чурюмова (принцип соответсвия)](/socionics-wiki/theory/formal/doklad-dvojstvennost-churyumova-princip-sootvetsviya/) — `src/content/docs/theory/formal/doklad-dvojstvennost-churyumova-princip-sootvetsviya.md`
-- [Доклад Формальная Соционика февраль 2023](/socionics-wiki/theory/formal/doklad-formalnaya-socionika-fevral-2023/) — `src/content/docs/theory/formal/doklad-formalnaya-socionika-fevral-2023.md`
-- [Доклад Формальная Соционика](/socionics-wiki/theory/formal/doklad-formalnaya-socionika/) — `src/content/docs/theory/formal/doklad-formalnaya-socionika.md`
-- [Доклад теория сплетения схемы](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya-shemy/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya-shemy.md`
-- [Доклад теория сплетения](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya.md`
-- [Иллюстрации к докладу ЮМП](/socionics-wiki/theory/formal/doklad-yump/) — `src/content/docs/theory/formal/doklad-yump.md`
-- [Доноцентризм](/socionics-wiki/theory/formal/donocentrizm/) — `src/content/docs/theory/formal/donocentrizm.md`
-- [Экстенсивные характеристики](/socionics-wiki/theory/formal/ehkstensivnye-harakteristiki/) — `src/content/docs/theory/formal/ehkstensivnye-harakteristiki.md`
-- [фрактальная логика паттернов матрицы Адамара](/socionics-wiki/theory/formal/fraktalnaya-logika-patternov-matricy-adamara/) — `src/content/docs/theory/formal/fraktalnaya-logika-patternov-matricy-adamara.md`
-- [Фрактальная Соционика 2022](/socionics-wiki/theory/formal/fraktalnaya-socionika-2022/) — `src/content/docs/theory/formal/fraktalnaya-socionika-2022.md`
-- [фрактальность сцн дискурса](/socionics-wiki/theory/formal/fraktalnost-scn-diskursa/) — `src/content/docs/theory/formal/fraktalnost-scn-diskursa.md`
-- [Гиперкомплексная соционика](/socionics-wiki/theory/formal/giperkompleksnaya-socionika/) — `src/content/docs/theory/formal/giperkompleksnaya-socionika.md`
-- [Иллюстрации доклад Формальная Соционика февраль 2023](/socionics-wiki/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023/) — `src/content/docs/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023.md`
-- [История математики в соционике](/socionics-wiki/theory/formal/istoriya-matematiki-v-socionike/) — `src/content/docs/theory/formal/istoriya-matematiki-v-socionike.md`
-- [Логика Эквиваленции и Различения](/socionics-wiki/theory/formal/logika-ehkvivalencii-i-razlicheniya/) — `src/content/docs/theory/formal/logika-ehkvivalencii-i-razlicheniya.md`
-- [Markdown таблицы](/socionics-wiki/theory/formal/markdown-tablicy/) — `src/content/docs/theory/formal/markdown-tablicy.md`
-- [Математика, где она в соционике и что дает](/socionics-wiki/theory/formal/matematika-gde-ona-v-socionike-i-chto-daet/) — `src/content/docs/theory/formal/matematika-gde-ona-v-socionike-i-chto-daet.md`
-- [Метабон структура](/socionics-wiki/theory/formal/metabon-struktura/) — `src/content/docs/theory/formal/metabon-struktura.md`
-- [Метабон](/socionics-wiki/theory/formal/metabon/) — `src/content/docs/theory/formal/metabon.md`
-- [Полная Формализация соционики](/socionics-wiki/theory/formal/polnaya-formalizaciya-socioniki/) — `src/content/docs/theory/formal/polnaya-formalizaciya-socioniki.md`
-- [Порядок Чурюмова](/socionics-wiki/theory/formal/poryadok-churyumova-novoe/) — `src/content/docs/theory/formal/poryadok-churyumova-novoe.md`
-- [Порядок Чурюмова](/socionics-wiki/theory/formal/poryadok-churyumova/) — `src/content/docs/theory/formal/poryadok-churyumova.md`
-- [Семинар мат сцн](/socionics-wiki/theory/formal/seminar-mat-scn/) — `src/content/docs/theory/formal/seminar-mat-scn.md`
-- [Симметрии и Распределения](/socionics-wiki/theory/formal/simmetrii-i-raspredeleniya/) — `src/content/docs/theory/formal/simmetrii-i-raspredeleniya.md`
-- [Системы Импримитивности в Соционике](/socionics-wiki/theory/formal/sistemy-imprimitivnosti-v-socionike/) — `src/content/docs/theory/formal/sistemy-imprimitivnosti-v-socionike.md`
-- [Соответствие Чурюмова](/socionics-wiki/theory/formal/sootvetstvie-churyumova/) — `src/content/docs/theory/formal/sootvetstvie-churyumova.md`
-- [Список поколения](/socionics-wiki/theory/formal/spisok-pokoleniya-novoe/) — `src/content/docs/theory/formal/spisok-pokoleniya-novoe.md`
-- [список поколения](/socionics-wiki/theory/formal/spisok-pokoleniya/) — `src/content/docs/theory/formal/spisok-pokoleniya.md`
-- [Связь  ЮМПов и право-лево](/socionics-wiki/theory/formal/svyaz-yumpov-i-pravo-levo/) — `src/content/docs/theory/formal/svyaz-yumpov-i-pravo-levo.md`
-- [Теория Поколений](/socionics-wiki/theory/formal/teoriya-pokolenij-novoe/) — `src/content/docs/theory/formal/teoriya-pokolenij-novoe.md`
-- [Теория Поколений](/socionics-wiki/theory/formal/teoriya-pokolenij/) — `src/content/docs/theory/formal/teoriya-pokolenij.md`
-- [Теория Ритма](/socionics-wiki/theory/formal/teoriya-ritma/) — `src/content/docs/theory/formal/teoriya-ritma.md`
-- [Теория Сплетения](/socionics-wiki/theory/formal/teoriya-spleteniya/) — `src/content/docs/theory/formal/teoriya-spleteniya.md`
-- [Вертность в формальной соционике](/socionics-wiki/theory/formal/vertnost-v-formalnoj-socionike/) — `src/content/docs/theory/formal/vertnost-v-formalnoj-socionike.md`
-- [Загадка сплетенности](/socionics-wiki/theory/formal/zagadka-spletennosti/) — `src/content/docs/theory/formal/zagadka-spletennosti.md`
-- [заметки июль 2022 соционическая математика](/socionics-wiki/theory/formal/zametki-iyul-2022-socionicheskaya-matematika/) — `src/content/docs/theory/formal/zametki-iyul-2022-socionicheskaya-matematika.md`
-- [Аксиома Тождества](/socionics-wiki/theory/meta/aksioma-tozhdestva/) — `src/content/docs/theory/meta/aksioma-tozhdestva.md`
-- [аксиоматика Шанэри 2023](/socionics-wiki/theory/meta/aksiomatika-shanehri-2023/) — `src/content/docs/theory/meta/aksiomatika-shanehri-2023.md`
-- [Аксиоматика Шанэри](/socionics-wiki/theory/meta/aksiomatika-shanehri/) — `src/content/docs/theory/meta/aksiomatika-shanehri.md`
-- [Дедуктивная Соционика ликбез](/socionics-wiki/theory/meta/deduktivnaya-socionika-likbez/) — `src/content/docs/theory/meta/deduktivnaya-socionika-likbez.md`
-- [Доказательство Доноцентризма](/socionics-wiki/theory/meta/dokazatelstvo-donocentrizma/) — `src/content/docs/theory/meta/dokazatelstvo-donocentrizma.md`
-- [Иллюстрации доклад Базис Чурюмова](/socionics-wiki/theory/meta/doklad-bazis-churyumova/) — `src/content/docs/theory/meta/doklad-bazis-churyumova.md`
-- [Доклад Границы Применимости](/socionics-wiki/theory/meta/doklad-granicy-primenimosti/) — `src/content/docs/theory/meta/doklad-granicy-primenimosti.md`
-- [Доклад ИИ соционика](/socionics-wiki/theory/meta/doklad-ii-socionika/) — `src/content/docs/theory/meta/doklad-ii-socionika.md`
-- [философия соционики gemini](/socionics-wiki/theory/meta/filosofiya-socioniki-gemini/) — `src/content/docs/theory/meta/filosofiya-socioniki-gemini.md`
-- [гипотеза Чурюмова gemini](/socionics-wiki/theory/meta/gipoteza-churyumova-gemini/) — `src/content/docs/theory/meta/gipoteza-churyumova-gemini.md`
-- [границы применимости соционики](/socionics-wiki/theory/meta/granicy-primenimosti-socioniki/) — `src/content/docs/theory/meta/granicy-primenimosti-socioniki.md`
-- [история некоторых моих открытий](/socionics-wiki/theory/meta/istoriya-nekotoryh-moih-otkrytij/) — `src/content/docs/theory/meta/istoriya-nekotoryh-moih-otkrytij.md`
-- [Квантовая Соционика](/socionics-wiki/theory/meta/kvantovaya-socionika/) — `src/content/docs/theory/meta/kvantovaya-socionika.md`
-- [Квантовое типирование гемини](/socionics-wiki/theory/meta/kvantovoe-tipirovanie-gemini/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie-gemini.md`
-- [Квантовое типирование](/socionics-wiki/theory/meta/kvantovoe-tipirovanie-novoe/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie-novoe.md`
-- [Квантовое типирование](/socionics-wiki/theory/meta/kvantovoe-tipirovanie/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie.md`
-- [Квантовые свойства соционики](/socionics-wiki/theory/meta/kvantovye-svojstva-socioniki/) — `src/content/docs/theory/meta/kvantovye-svojstva-socioniki.md`
-- [Лингвосоционика 2021](/socionics-wiki/theory/meta/lingvosocionika-2021/) — `src/content/docs/theory/meta/lingvosocionika-2021.md`
-- [Метадология соционики 2022](/socionics-wiki/theory/meta/metadologiya-socioniki-2022/) — `src/content/docs/theory/meta/metadologiya-socioniki-2022.md`
-- [Методологические проблемы соционики](/socionics-wiki/theory/meta/metodologicheskie-problemy-socioniki/) — `src/content/docs/theory/meta/metodologicheskie-problemy-socioniki.md`
-- [Методология 2017](/socionics-wiki/theory/meta/metodologiya-2017/) — `src/content/docs/theory/meta/metodologiya-2017.md`
-- [Методология интерпретации обрывки](/socionics-wiki/theory/meta/metodologiya-interpretacii-obryvki/) — `src/content/docs/theory/meta/metodologiya-interpretacii-obryvki.md`
-- [Методология соционики 2016](/socionics-wiki/theory/meta/metodologiya-socioniki-2016/) — `src/content/docs/theory/meta/metodologiya-socioniki-2016.md`
-- [методология соционику 2015](/socionics-wiki/theory/meta/metodologiya-socioniku-2015/) — `src/content/docs/theory/meta/metodologiya-socioniku-2015.md`
-- [Многомерность Бифуркации в Становлении](/socionics-wiki/theory/meta/mnogomernost-bifurkacii-v-stanovlenii/) — `src/content/docs/theory/meta/mnogomernost-bifurkacii-v-stanovlenii.md`
-- [многоуровневая аксиоматика 2024](/socionics-wiki/theory/meta/mnogourovnevaya-aksiomatika-2024/) — `src/content/docs/theory/meta/mnogourovnevaya-aksiomatika-2024.md`
-- [Мой путь в соционике](/socionics-wiki/theory/meta/moj-put-v-socionike/) — `src/content/docs/theory/meta/moj-put-v-socionike.md`
-- [Набросок ЛСП 2017](/socionics-wiki/theory/meta/nabrosok-lsp-2017/) — `src/content/docs/theory/meta/nabrosok-lsp-2017.md`
-- [Новаторство Фрактальной Соционики](/socionics-wiki/theory/meta/novatorstvo-fraktalnoj-socioniki/) — `src/content/docs/theory/meta/novatorstvo-fraktalnoj-socioniki.md`
-- [Почему соционика донкихотская наука](/socionics-wiki/theory/meta/pochemu-socionika-donkihotskaya-nauka/) — `src/content/docs/theory/meta/pochemu-socionika-donkihotskaya-nauka.md`
-- [семантическая соционика доклад](/socionics-wiki/theory/meta/semanticheskaya-socionika-doklad/) — `src/content/docs/theory/meta/semanticheskaya-socionika-doklad.md`
-- [Социон простым языком 2017](/socionics-wiki/theory/meta/socion-prostym-yazykom-2017/) — `src/content/docs/theory/meta/socion-prostym-yazykom-2017.md`
-- [Соционика и отношения 2018](/socionics-wiki/theory/meta/socionika-i-otnosheniya-2018/) — `src/content/docs/theory/meta/socionika-i-otnosheniya-2018.md`
-- [Список открытий Чурюмова](/socionics-wiki/theory/meta/spisok-otkrytij-churyumova/) — `src/content/docs/theory/meta/spisok-otkrytij-churyumova.md`
-- [Список открытий Шанэри](/socionics-wiki/theory/meta/spisok-otkrytij-shanehri/) — `src/content/docs/theory/meta/spisok-otkrytij-shanehri.md`
-- [Тенсер История Соционики](/socionics-wiki/theory/meta/tenser-istoriya-socioniki/) — `src/content/docs/theory/meta/tenser-istoriya-socioniki.md`
-- [Теория групп на примере соционики](/socionics-wiki/theory/meta/teoriya-grupp-na-primere-socioniki/) — `src/content/docs/theory/meta/teoriya-grupp-na-primere-socioniki.md`
-- [Терминосистема Соционики](/socionics-wiki/theory/meta/terminosistema-socioniki/) — `src/content/docs/theory/meta/terminosistema-socioniki.md`
-- [Введение на сайт](/socionics-wiki/theory/meta/vvedenie-na-sajt/) — `src/content/docs/theory/meta/vvedenie-na-sajt.md`
-- [Баль 2.1 лайт](/socionics-wiki/types/bal-2-1-lajt/) — `src/content/docs/types/bal-2-1-lajt.md`
-- [Есь клод](/socionics-wiki/types/es-klod/) — `src/content/docs/types/es-klod.md`
-- [Гам соннет](/socionics-wiki/types/gam-sonnet/) — `src/content/docs/types/gam-sonnet.md`
-- [ЛИИ неройнки](/socionics-wiki/types/lii-nerojnki/) — `src/content/docs/types/lii-nerojnki.md`
-- [Максимус](/socionics-wiki/types/maksimus/) — `src/content/docs/types/maksimus.md`
-- [Описания ТИМов от нейронок](/socionics-wiki/types/opisaniya-timov-ot-nejronok/) — `src/content/docs/types/opisaniya-timov-ot-nejronok.md`
-- [ИЛЭ Семантика 2016](/socionics-wiki/types/илэ-семантика-2016/) — `src/content/docs/types/ИЛЭ Семантика 2016.md`
-- [ИЭИ by opus 4](/socionics-wiki/types/иэи-by-opus-4/) — `src/content/docs/types/ИЭИ by opus 4.md`
-- [ИЭИ Семантика 2016](/socionics-wiki/types/иэи-семантика-2016/) — `src/content/docs/types/ИЭИ Семантика 2016.md`
-- [ИЭЭ Семантика (2016)](/socionics-wiki/types/иээ-семантика-2016/) — `src/content/docs/types/ИЭЭ Семантика (2016).md`
-- [ЛИИ Семантика 2016](/socionics-wiki/types/лии-семантика-2016/) — `src/content/docs/types/ЛИИ Семантика 2016.md`
-- [ЛИЭ Семантика (2016)](/socionics-wiki/types/лиэ-семантика-2016/) — `src/content/docs/types/ЛИЭ Семантика (2016).md`
-- [ЛСИ Семантика 2016](/socionics-wiki/types/лси-семантика-2016/) — `src/content/docs/types/ЛСИ Семантика 2016.mdx`
-- [ЛСЭ Семантика 2016](/socionics-wiki/types/лсэ-семантика-2016/) — `src/content/docs/types/ЛСЭ Семантика 2016.md`
-- [Роб 2.0](/socionics-wiki/types/роб-20/) — `src/content/docs/types/Роб 2.0.md`
-- [СЛИ by GEmini](/socionics-wiki/types/сли-by-gemini/) — `src/content/docs/types/СЛИ by GEmini.md`
-- [СЛИ Семантика (2016)](/socionics-wiki/types/сли-семантика-2016/) — `src/content/docs/types/СЛИ Семантика (2016).md`
-- [СЛЭ Семантика 2016](/socionics-wiki/types/слэ-семантика-2016/) — `src/content/docs/types/СЛЭ Семантика 2016.md`
-- [СЭИ Семантика 2016](/socionics-wiki/types/сэи-семантика-2016/) — `src/content/docs/types/СЭИ Семантика 2016.md`
-- [СЭЭ Семантика 2016](/socionics-wiki/types/сээ-семантика-2016/) — `src/content/docs/types/СЭЭ Семантика 2016.md`
-- [ЭИИ Семантика 2016](/socionics-wiki/types/эии-семантика-2016/) — `src/content/docs/types/ЭИИ Семантика 2016.md`
-- [ЭИЭ опус](/socionics-wiki/types/эиэ-опус/) — `src/content/docs/types/ЭИЭ опус.md`
-- [ЭИЭ Семантика 2016](/socionics-wiki/types/эиэ-семантика-2016/) — `src/content/docs/types/ЭИЭ Семантика 2016.md`
-- [ЭСИ Семантика 2016](/socionics-wiki/types/эси-семантика-2016/) — `src/content/docs/types/ЭСИ Семантика 2016.md`
-- [ЭСЭ Семантика (2016)](/socionics-wiki/types/эсэ-семантика-2016/) — `src/content/docs/types/ЭСЭ Семантика (2016).md`
-- [Алгебраическая связь Признаков Рейнина и Модели А](/socionics-wiki/video/алгебраическая-связь-признаков-рейнина/) — `src/content/docs/video/алгебраическая-связь-признаков-рейнина.mdx`
-- [Доклад границы применимости соционики](/socionics-wiki/video/границы-применимости-соционики/) — `src/content/docs/video/границы-применимости-соционики.mdx`
-- [Дон Кихот рассказывает о болевой БЭ](/socionics-wiki/video/дон-кихот-рассказывает-о-боевой-бэ/) — `src/content/docs/video/дон-кихот-рассказывает-о-боевой-бэ.mdx`
-- [Интуиция в терапии | Духовная психология](/socionics-wiki/video/интуиция-в-терапии/) — `src/content/docs/video/интуиция-в-терапии.mdx`
-- [Информационные Аспекты, объясненные через Материю, Энергию и информацию по Чурюмову](/socionics-wiki/video/информационные-аспекты-материя-энергия-информация/) — `src/content/docs/video/информационные-аспекты-материя-энергия-информация.mdx`
-- [Информационные Аспекты по Семену Чурюмову | Соционика](/socionics-wiki/video/информационные-аспекты-по-семену-чурюмову/) — `src/content/docs/video/информационные-аспекты-по-семену-чурюмову.mdx`
-- [Информационные Аспекты -- Сергей Шанэри](/socionics-wiki/video/информационные-аспекты-шанэри/) — `src/content/docs/video/информационные-аспекты-шанэри.mdx`
-- [Как отличить Робеспьера от Достоевского?](/socionics-wiki/video/как-отличить-робеспьера-от-достоевского/) — `src/content/docs/video/как-отличить-робеспьера-от-достоевского.mdx`
-- [Как отличить ТИМное от индивидуального](/socionics-wiki/video/как-отличить-тимное-от-индивидуального/) — `src/content/docs/video/как-отличить-тимное-от-индивидуального.mdx`
-- [Как понимать Информационные Аспекты в Соционике?](/socionics-wiki/video/как-понимать-информационные-аспекты-в-соционике/) — `src/content/docs/video/как-понимать-информационные-аспекты-в-соционике.mdx`
-- [Как понять предназначение?](/socionics-wiki/video/как-понять-предназначение/) — `src/content/docs/video/как-понять-предназначение.mdx`
-- [Лингвосоционика. Доклад на конференции дни соционики 2021](/socionics-wiki/video/лингвосоционика-доклад-2021/) — `src/content/docs/video/лингвосоционика-доклад-2021.mdx`
-- [Математическая структура соционики | Сергей Шанэри](/socionics-wiki/video/математическая-структура-соционики/) — `src/content/docs/video/математическая-структура-соционики.mdx`
-- [Методика "Ицеление Травм Души" подробно | Духовная Психология](/socionics-wiki/video/методика-исцеление-травм-души/) — `src/content/docs/video/методика-исцеление-травм-души.mdx`
-- [Модель А в соционике](/socionics-wiki/video/модель-а-соционика/) — `src/content/docs/video/модель-а-соционика.mdx`
-- [Насколько важна интуиция в определении типа?](/socionics-wiki/video/насколько-важна-интуиция-в-определении-типа/) — `src/content/docs/video/насколько-важна-интуиция-в-определении-типа.mdx`
-- [Ответы на вопросы по Белой Интуиции | Соционика](/socionics-wiki/video/ответы-на-вопросы-по-белой-интуиции/) — `src/content/docs/video/ответы-на-вопросы-по-белой-интуиции.mdx`
-- [Отличия Габена от Бальзака | Соционика](/socionics-wiki/video/отличия-габена-от-бальзака/) — `src/content/docs/video/отличия-габена-от-бальзака.mdx`
-- [Отличия между чувствами и эмоциями | Соционика и Психология](/socionics-wiki/video/отличия-чувств-и-эмоций/) — `src/content/docs/video/отличия-чувств-и-эмоций.mdx`
-- [Передовые описания типов](/socionics-wiki/video/передовые-описания-типов/) — `src/content/docs/video/передовые-описания-типов.mdx`
-- [ПЕРЕТИПИРОВАНИЕ — Как убедиться в своем настоящем ТИМе?](/socionics-wiki/video/перетипирование-как-убедиться-в-своем-настоящем-тиме/) — `src/content/docs/video/перетипирование-как-убедиться-в-своем-настоящем-тиме.mdx`
-- [В чем польза систем самопознания и как ими пользоваться?](/socionics-wiki/video/польза-систем-самопознания/) — `src/content/docs/video/польза-систем-самопознания.mdx`
-- [Помогает ли соционика в личных отношениях? (и причем здесь терапия)](/socionics-wiki/video/помогает-ли-соционика-в-личных-отношениях/) — `src/content/docs/video/помогает-ли-соционика-в-личных-отношениях.mdx`
-- [Порядок типов и периоды развития личности | Соционика](/socionics-wiki/video/порядок-типов-и-периоды-развития/) — `src/content/docs/video/порядок-типов-и-периоды-развития.mdx`
-- [Доклад по соционике: Признаки Юнга-Минаева](/socionics-wiki/video/признаки-юнга-минаева/) — `src/content/docs/video/признаки-юнга-минаева.mdx`
-- [доклад Принцип Соответствия типов и отношений](/socionics-wiki/video/принцип-соответствия-типов-и-отношений/) — `src/content/docs/video/принцип-соответствия-типов-и-отношений.mdx`
-- [Социальные роли типов | Соционика](/socionics-wiki/video/социальные-роли-типов/) — `src/content/docs/video/социальные-роли-типов.mdx`
-- [Вебинар в Поля Сотворения "Соционика для целителей](/socionics-wiki/video/соционика-для-целителей/) — `src/content/docs/video/соционика-для-целителей.mdx`
-- [Соционика — Дон Кихотская Наука | Философия и Методология](/socionics-wiki/video/соционика-дон-кихотская-наука/) — `src/content/docs/video/соционика-дон-кихотская-наука.mdx`
-- [Соционика и Информатика - их общий метод перепроверки информации](/socionics-wiki/video/соционика-и-информатика/) — `src/content/docs/video/соционика-и-информатика.mdx`
-- [Доклад Соционика и Нейросети (Большие Языковые Модели, LLM)](/socionics-wiki/video/соционика-и-нейросети-большие-языковые-модели-llm/) — `src/content/docs/video/соционика-и-нейросети-большие-языковые-модели-llm.mdx`
-- [Доклад Соционика и Психотерапия](/socionics-wiki/video/соционика-и-психотерапия/) — `src/content/docs/video/соционика-и-психотерапия.mdx`
-- [Доклад "Соционика и Междисциплинарная философия](/socionics-wiki/video/соционика-междисциплинарная-философия/) — `src/content/docs/video/соционика-междисциплинарная-философия.mdx`
-- [Доклад о Соционическом Колесе Баланса | Коучинг](/socionics-wiki/video/соционическое-колесо-баланса-коучинг/) — `src/content/docs/video/соционическое-колесо-баланса-коучинг.mdx`
-- [Теория Поколений — передовой подход к объяснению дихотомий в соционике](/socionics-wiki/video/теория-поколений-передовой-подход-к-дихотомиям/) — `src/content/docs/video/теория-поколений-передовой-подход-к-дихотомиям.mdx`
-- [Читаем описание Дюмы (СЭИ) по Чурюмову](/socionics-wiki/video/читаем-описание-дюмы-сэи-по-чурюмову/) — `src/content/docs/video/читаем-описание-дюмы-сэи-по-чурюмову.mdx`
-- [Читаем описания Бальзака (ИЛИ) по Чурюмову и Шанэри](/socionics-wiki/video/читаем-описания-бальзака-или-по-чурюмову/) — `src/content/docs/video/читаем-описания-бальзака-или-по-чурюмову.mdx`
-- [Читаем описания типов Семена Чурюмова ч.1 | Соционика](/socionics-wiki/video/читаем-описания-типов-чурюмова-ч1/) — `src/content/docs/video/читаем-описания-типов-чурюмова-ч1.mdx`
-- [Что описывает соционический тип? Психику? Темперамент? Характер?](/socionics-wiki/video/что-описывает-соционический-тип/) — `src/content/docs/video/что-описывает-соционический-тип.mdx`
+- [(без title)](/socionics-wiki/applied/doklad-metodika-tipirovaniya/) — `src/content/docs/applied/doklad-metodika-tipirovaniya.md`
+- [(без title)](/socionics-wiki/applied/kak-prokachivat-bi/) — `src/content/docs/applied/kak-prokachivat-bi.md`
+- [(без title)](/socionics-wiki/applied/konspekt-tipiruyushhie-don/) — `src/content/docs/applied/konspekt-tipiruyushhie-don.md`
+- [(без title)](/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie-novoe/) — `src/content/docs/applied/oprosnik-ehkspress-tipirovanie-novoe.md`
+- [(без title)](/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie/) — `src/content/docs/applied/oprosnik-ehkspress-tipirovanie.md`
+- [(без title)](/socionics-wiki/applied/razbor-urganta/) — `src/content/docs/applied/razbor-urganta.md`
+- [(без title)](/socionics-wiki/applied/struktury-dlya-tipirovaniya/) — `src/content/docs/applied/struktury-dlya-tipirovaniya.md`
+- [Тени и дары Белой этики (БЭ)](/socionics-wiki/applied/teni-i-dary-aspektov/be/) — `src/content/docs/applied/teni-i-dary-aspektov/be.md`
+- [Тени и дары Белой интуиции (БИ)](/socionics-wiki/applied/teni-i-dary-aspektov/bi/) — `src/content/docs/applied/teni-i-dary-aspektov/bi.md`
+- [Тени и дары Белой логики (БЛ)](/socionics-wiki/applied/teni-i-dary-aspektov/bl/) — `src/content/docs/applied/teni-i-dary-aspektov/bl.md`
+- [Тени и дары Белой сенсорики (БС)](/socionics-wiki/applied/teni-i-dary-aspektov/bs/) — `src/content/docs/applied/teni-i-dary-aspektov/bs.md`
+- [Тени и дары Чёрной этики (ЧЭ)](/socionics-wiki/applied/teni-i-dary-aspektov/che/) — `src/content/docs/applied/teni-i-dary-aspektov/che.md`
+- [Тени и дары Чёрной интуиции (ЧИ)](/socionics-wiki/applied/teni-i-dary-aspektov/chi/) — `src/content/docs/applied/teni-i-dary-aspektov/chi.md`
+- [Тени и дары Чёрной логики (ЧЛ)](/socionics-wiki/applied/teni-i-dary-aspektov/chl/) — `src/content/docs/applied/teni-i-dary-aspektov/chl.md`
+- [Тени и дары Чёрной сенсорики (ЧС)](/socionics-wiki/applied/teni-i-dary-aspektov/chs/) — `src/content/docs/applied/teni-i-dary-aspektov/chs.md`
+- [(без title)](/socionics-wiki/audio/близкие-ифо/) — `src/content/docs/audio/близкие-ифо.mdx`
+- [(без title)](/socionics-wiki/audio/блок-суперэго/) — `src/content/docs/audio/блок-суперэго.mdx`
+- [(без title)](/socionics-wiki/audio/блок-эго-центр-психики/) — `src/content/docs/audio/блок-эго-центр-психики.mdx`
+- [(без title)](/socionics-wiki/audio/болевая-творческая-и-чс-ифо/) — `src/content/docs/audio/болевая-творческая-и-чс-ифо.mdx`
+- [(без title)](/socionics-wiki/audio/бс-и-чи-дюмы/) — `src/content/docs/audio/бс-и-чи-дюмы.mdx`
+- [(без title)](/socionics-wiki/audio/введение-в-дедуктивную-соционику-и-модель-а-драя/) — `src/content/docs/audio/введение-в-дедуктивную-соционику-и-модель-а-драя.mdx`
+- [(без title)](/socionics-wiki/audio/вертность-функций/) — `src/content/docs/audio/вертность-функций.mdx`
+- [(без title)](/socionics-wiki/audio/веторно-фрактальное-моделирование-арпов/) — `src/content/docs/audio/веторно-фрактальное-моделирование-арпов.mdx`
+- [(без title)](/socionics-wiki/audio/дежавю-би/) — `src/content/docs/audio/дежавю-би.mdx`
+- [(без title)](/socionics-wiki/audio/деловые-роб-дост/) — `src/content/docs/audio/деловые-роб-дост.mdx`
+- [(без title)](/socionics-wiki/audio/дм-ар/) — `src/content/docs/audio/дм-ар.mdx`
+- [(без title)](/socionics-wiki/audio/дополнение-чи-бс/) — `src/content/docs/audio/дополнение-чи-бс.mdx`
+- [(без title)](/socionics-wiki/audio/ито-между-субъектом-и-миром/) — `src/content/docs/audio/ито-между-субъектом-и-миром.mdx`
+- [(без title)](/socionics-wiki/audio/ифо-особенно-бэ/) — `src/content/docs/audio/ифо-особенно-бэ.mdx`
+- [(без title)](/socionics-wiki/audio/как-исследовать-признаки-функций-и-рейнина/) — `src/content/docs/audio/как-исследовать-признаки-функций-и-рейнина.mdx`
+- [(без title)](/socionics-wiki/audio/кв-дк/) — `src/content/docs/audio/кв-дк.mdx`
+- [(без title)](/socionics-wiki/audio/мастерство-в-соционике/) — `src/content/docs/audio/мастерство-в-соционике.mdx`
+- [(без title)](/socionics-wiki/audio/мерности-чл-отношения/) — `src/content/docs/audio/мерности-чл-отношения.mdx`
+- [(без title)](/socionics-wiki/audio/мерности/) — `src/content/docs/audio/мерности.mdx`
+- [(без title)](/socionics-wiki/audio/мозг-фрактальная-граница-сознания/) — `src/content/docs/audio/мозг-фрактальная-граница-сознания.mdx`
+- [(без title)](/socionics-wiki/audio/мэи-и-дихо-иа/) — `src/content/docs/audio/мэи-и-дихо-иа.mdx`
+- [(без title)](/socionics-wiki/audio/о-частоте-вибраций-и-высоких-вибрациях/) — `src/content/docs/audio/о-частоте-вибраций-и-высоких-вибрациях.mdx`
+- [(без title)](/socionics-wiki/audio/объективизм-ценностность/) — `src/content/docs/audio/объективизм-ценностность.mdx`
+- [(без title)](/socionics-wiki/audio/отличия-баз-и-твор-особенно-би/) — `src/content/docs/audio/отличия-баз-и-твор-особенно-би.mdx`
+- [(без title)](/socionics-wiki/audio/падение-12-2-55-5/) — `src/content/docs/audio/падение-12-2-55-5.mdx`
+- [(без title)](/socionics-wiki/audio/падение-16-6/) — `src/content/docs/audio/падение-16-6.mdx`
+- [(без title)](/socionics-wiki/audio/падение-51-1-соположение-20-3/) — `src/content/docs/audio/падение-51-1-соположение-20-3.mdx`
+- [(без title)](/socionics-wiki/audio/перемножение-арпов-и-сплетенность-ито/) — `src/content/docs/audio/перемножение-арпов-и-сплетенность-ито.mdx`
+- [(без title)](/socionics-wiki/audio/перепрочтение-царя-эдипа-от-терри/) — `src/content/docs/audio/перепрочтение-царя-эдипа-от-терри.mdx`
+- [(без title)](/socionics-wiki/audio/пз-нг/) — `src/content/docs/audio/пз-нг.mdx`
+- [(без title)](/socionics-wiki/audio/прощение-и-бэ/) — `src/content/docs/audio/прощение-и-бэ.mdx`
+- [(без title)](/socionics-wiki/audio/разница-общ-чел-и-тимное/) — `src/content/docs/audio/разница-общ-чел-и-тимное.mdx`
+- [(без title)](/socionics-wiki/audio/соционика-и-отличия-от-психологии/) — `src/content/docs/audio/соционика-и-отличия-от-психологии.mdx`
+- [(без title)](/socionics-wiki/audio/суперэго-герой/) — `src/content/docs/audio/суперэго-герой.mdx`
+- [(без title)](/socionics-wiki/audio/типирование-никиты/) — `src/content/docs/audio/типирование-никиты.mdx`
+- [(без title)](/socionics-wiki/audio/ус-уп/) — `src/content/docs/audio/ус-уп.mdx`
+- [(без title)](/socionics-wiki/audio/фрактальная-герменевтика-соционической-интерпретации/) — `src/content/docs/audio/фрактальная-герменевтика-соционической-интерпретации.mdx`
+- [(без title)](/socionics-wiki/audio/фрактальность-и-хаос-в-соционике/) — `src/content/docs/audio/фрактальность-и-хаос-в-соционике.mdx`
+- [(без title)](/socionics-wiki/audio/чи-фракталы-и-соответствие-чурюмова/) — `src/content/docs/audio/чи-фракталы-и-соответствие-чурюмова.mdx`
+- [(без title)](/socionics-wiki/audio/чэ-бэ/) — `src/content/docs/audio/чэ-бэ.mdx`
+- [(без title)](/socionics-wiki/audio/чэ-в-5-и-7/) — `src/content/docs/audio/чэ-в-5-и-7.mdx`
+- [(без title)](/socionics-wiki/audio/эго-в-соционике-и-духовности/) — `src/content/docs/audio/эго-в-соционике-и-духовности.mdx`
+- [(без title)](/socionics-wiki/audio/эгоистичность-и-альтруистичность/) — `src/content/docs/audio/эгоистичность-и-альтруистичность.mdx`
+- [(без title)](/socionics-wiki/beginners/davajte-obshhatsya-o-socionike/) — `src/content/docs/beginners/davajte-obshhatsya-o-socionike.md`
+- [(без title)](/socionics-wiki/beginners/metodichka/) — `src/content/docs/beginners/metodichka.md`
+- [(без title)](/socionics-wiki/beginners/socionika-vvedenie-2016/) — `src/content/docs/beginners/socionika-vvedenie-2016.md`
+- [(без title)](/socionics-wiki/beginners/vvedenie-vo-fraktalnuyu-socioniku/) — `src/content/docs/beginners/vvedenie-vo-fraktalnuyu-socioniku.md`
+- [(без title)](/socionics-wiki/beginners/zhil-byl-fraktal-2022/) — `src/content/docs/beginners/zhil-byl-fraktal-2022.md`
+- [(без title)](/socionics-wiki/books/blin-1/00-0-titlist/) — `src/content/docs/books/blin-1/00-0-titlist.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/00-1-blagodarnosti/) — `src/content/docs/books/blin-1/00-1-blagodarnosti.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/00-2-nachalo/) — `src/content/docs/books/blin-1/00-2-nachalo.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/02-aushra/) — `src/content/docs/books/blin-1/02-aushra.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/03-yung/) — `src/content/docs/books/blin-1/03-yung.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/04-afanasyev/) — `src/content/docs/books/blin-1/04-afanasyev.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/05-kalinauskas/) — `src/content/docs/books/blin-1/05-kalinauskas.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/06-litvinenko/) — `src/content/docs/books/blin-1/06-litvinenko.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/07-talanov/) — `src/content/docs/books/blin-1/07-talanov.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/08-nebykova/) — `src/content/docs/books/blin-1/08-nebykova.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/09-reynin/) — `src/content/docs/books/blin-1/09-reynin.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/10-skripnik/) — `src/content/docs/books/blin-1/10-skripnik.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/11-litr/) — `src/content/docs/books/blin-1/11-litr.mdx`
+- [(без title)](/socionics-wiki/books/blin-1/12-eks-nauka/) — `src/content/docs/books/blin-1/12-eks-nauka.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/00-1-vvedenie/) — `src/content/docs/books/blin-2/00-1-vvedenie.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/01-ermak-gulenko-savchenko/) — `src/content/docs/books/blin-2/01-ermak-gulenko-savchenko.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/02-prokofeva/) — `src/content/docs/books/blin-2/02-prokofeva.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/03-bukalov/) — `src/content/docs/books/blin-2/03-bukalov.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/04-filimonov/) — `src/content/docs/books/blin-2/04-filimonov.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/05-kochubeeva/) — `src/content/docs/books/blin-2/05-kochubeeva.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/06-filatova/) — `src/content/docs/books/blin-2/06-filatova.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/07-matematika/) — `src/content/docs/books/blin-2/07-matematika.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/08-uroven-f/) — `src/content/docs/books/blin-2/08-uroven-f.mdx`
+- [(без title)](/socionics-wiki/books/blin-2/09-istina-v-gum/) — `src/content/docs/books/blin-2/09-istina-v-gum.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/01-predislovie/) — `src/content/docs/books/ulybka/01-predislovie.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/01-substrat/) — `src/content/docs/books/ulybka/01-substrat.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/02-ia/) — `src/content/docs/books/ulybka/02-ia.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/03-semantika-funk/) — `src/content/docs/books/ulybka/03-semantika-funk.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/03-vvedenie/) — `src/content/docs/books/ulybka/03-vvedenie.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/04-modelirovanie-psi/) — `src/content/docs/books/ulybka/04-modelirovanie-psi.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/05-sushchestvovanie/) — `src/content/docs/books/ulybka/05-sushchestvovanie.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/06-arp/) — `src/content/docs/books/ulybka/06-arp.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/07-pstim/) — `src/content/docs/books/ulybka/07-pstim.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/08-tip-i-harakter/) — `src/content/docs/books/ulybka/08-tip-i-harakter.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/09-konfiguratsii/) — `src/content/docs/books/ulybka/09-konfiguratsii.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost/) — `src/content/docs/books/ulybka/10-kontekst-i-kontekstualnaya-relativnost.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/11-opisanie/) — `src/content/docs/books/ulybka/11-opisanie.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/12-otnosheniya/) — `src/content/docs/books/ulybka/12-otnosheniya.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/13-universalnost-t/) — `src/content/docs/books/ulybka/13-universalnost-t.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/14-proishozhdenie-tima/) — `src/content/docs/books/ulybka/14-proishozhdenie-tima.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/15-scn-i-psi/) — `src/content/docs/books/ulybka/15-scn-i-psi.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/16-freyd-yung-aushra/) — `src/content/docs/books/ulybka/16-freyd-yung-aushra.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/17-scn-i-fil/) — `src/content/docs/books/ulybka/17-scn-i-fil.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/18-seks-scn/) — `src/content/docs/books/ulybka/18-seks-scn.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/19-neizb-mtd/) — `src/content/docs/books/ulybka/19-neizb-mtd.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/20-mtd-potentsial/) — `src/content/docs/books/ulybka/20-mtd-potentsial.mdx`
+- [(без title)](/socionics-wiki/books/ulybka/21-prilozheniya/) — `src/content/docs/books/ulybka/21-prilozheniya.mdx`
+- [Черновики](/socionics-wiki/categories/chernoviki/) — `src/content/docs/categories/chernoviki.mdx`
+- [(без title)](/socionics-wiki/categories/formalnaya-socionika/) — `src/content/docs/categories/formalnaya-socionika.mdx`
+- [ИИ контент](/socionics-wiki/categories/ii-kontent/) — `src/content/docs/categories/ii-kontent.mdx`
+- [(без title)](/socionics-wiki/categories/metasocionika/) — `src/content/docs/categories/metasocionika.mdx`
+- [(без title)](/socionics-wiki/categories/prikladnaya-socionika/) — `src/content/docs/categories/prikladnaya-socionika.mdx`
+- [(без title)](/socionics-wiki/categories/semanticheskaya-socionika/) — `src/content/docs/categories/semanticheskaya-socionika.mdx`
+- [(без title)](/socionics-wiki/categories/tipy/) — `src/content/docs/categories/tipy.mdx`
+- [(без title)](/socionics-wiki/contact/) — `src/content/docs/contact.mdx`
+- [(без title)](/socionics-wiki/english/dichotomies-formulas/) — `src/content/docs/english/dichotomies-formulas.md`
+- [EII v1.5 2026](/socionics-wiki/english/eii-v15-2026/) — `src/content/docs/english/EII v1.5 2026.md`
+- [(без title)](/socionics-wiki/english/express-typing-questionaire/) — `src/content/docs/english/express-typing-questionaire.md`
+- [(без title)](/socionics-wiki/english/formal-socionics-2022/) — `src/content/docs/english/formal-socionics-2022.md`
+- [(без title)](/socionics-wiki/english/fractal-socionics/) — `src/content/docs/english/fractal-socionics.md`
+- [(без title)](/socionics-wiki/english/generations-list/) — `src/content/docs/english/generations-list.md`
+- [(без title)](/socionics-wiki/english/generations-therory-gemini-translation/) — `src/content/docs/english/generations-therory-gemini-translation.md`
+- [(без title)](/socionics-wiki/english/ili-21-machine-translate/) — `src/content/docs/english/ILI 2.1 machine translate.md`
+- [(без title)](/socionics-wiki/english/itr-dichotomies-formulae/) — `src/content/docs/english/itr-dichotomies-formulae.md`
+- [(без title)](/socionics-wiki/english/markdown-tables/) — `src/content/docs/english/markdown-tables.md`
+- [(без title)](/socionics-wiki/english/minaev-dichotomies---left-right/) — `src/content/docs/english/Minaev dichotomies - left right.md`
+- [(без title)](/socionics-wiki/english/model-a/) — `src/content/docs/english/model-a.md`
+- [(без title)](/socionics-wiki/english/newman-dichotomies-draft/) — `src/content/docs/english/newman-dichotomies-draft.md`
+- [(без title)](/socionics-wiki/english/ni-thesaurus/) — `src/content/docs/english/ni-thesaurus.md`
+- [(без title)](/socionics-wiki/english/octa-chotomies-8/) — `src/content/docs/english/octa-chotomies-8.md`
+- [(без title)](/socionics-wiki/english/retyping-video-translate/) — `src/content/docs/english/retyping-video-translate.md`
+- [(без title)](/socionics-wiki/english/tencer-minaev-and-reinin-dichotomies-formulae/) — `src/content/docs/english/tencer-minaev-and-reinin-dichotomies-formulae.md`
+- [(без title)](/socionics-wiki/english/tetrachotomies-classes-v2/) — `src/content/docs/english/tetrachotomies-classes-v2.md`
+- [(без title)](/socionics-wiki/english/ti-te-language/) — `src/content/docs/english/ti-te-language.md`
+- [(без title)](/socionics-wiki/functions/blok-id-semantika/) — `src/content/docs/functions/blok-id-semantika.md`
+- [(без title)](/socionics-wiki/functions/bolevaya-zametki/) — `src/content/docs/functions/bolevaya-zametki.md`
+- [(без title)](/socionics-wiki/functions/ifo-interfunkcionalnye-otnosheniya/) — `src/content/docs/functions/ifo-interfunkcionalnye-otnosheniya.md`
+- [(без title)](/socionics-wiki/functions/informacionnyj-metabolizm-funkcii-yunga/) — `src/content/docs/functions/informacionnyj-metabolizm-funkcii-yunga.md`
+- [(без title)](/socionics-wiki/functions/kak-interpretirovat-model-a-ito/) — `src/content/docs/functions/kak-interpretirovat-model-a-ito.md`
+- [(без title)](/socionics-wiki/functions/model-a-ot-gemini/) — `src/content/docs/functions/model-a-ot-gemini.md`
+- [(без title)](/socionics-wiki/functions/odnomernye-funkcii/) — `src/content/docs/functions/odnomernye-funkcii.md`
+- [(без title)](/socionics-wiki/functions/polutakty/) — `src/content/docs/functions/polutakty.md`
+- [(без title)](/socionics-wiki/functions/vital-q-a/) — `src/content/docs/functions/vital-q-a.md`
+- [(без title)](/socionics-wiki/functions/znaki-funkcij-novoe/) — `src/content/docs/functions/znaki-funkcij-novoe.md`
+- [(без title)](/socionics-wiki/functions/znaki-funkcij/) — `src/content/docs/functions/znaki-funkcij.md`
+- [Базовые слова БС — версия 2026](/socionics-wiki/information-elements/2026-may/базовые-слова-бс/) — `src/content/docs/information-elements/2026 may/Базовые слова БС.md`
+- [Белая интуиция (БИ) — версия 2026](/socionics-wiki/information-elements/2026-may/белая-интуиция-би/) — `src/content/docs/information-elements/2026 may/Белая Интуиция (БИ).md`
+- [Белая логика (БЛ) — версия 2026](/socionics-wiki/information-elements/2026-may/белая-логика-бл---упорядоченная/) — `src/content/docs/information-elements/2026 may/Белая Логика (БЛ) - упорядоченная.md`
+- [Белая сенсорика (БС) — версия 2026](/socionics-wiki/information-elements/2026-may/белая-сенсорика-бс/) — `src/content/docs/information-elements/2026 may/Белая Сенсорика (БС).md`
+- [(без title)](/socionics-wiki/information-elements/2026-may/белая-этика-бэ/) — `src/content/docs/information-elements/2026 may/Белая Этика (БЭ).md`
+- [Омонимы и полисемия — версия 2026](/socionics-wiki/information-elements/2026-may/омонимы-полисемия/) — `src/content/docs/information-elements/2026 may/Омонимы (полисемия).md`
+- [Чёрная интуиция (ЧИ) — версия 2026](/socionics-wiki/information-elements/2026-may/черная-интуиция-чи/) — `src/content/docs/information-elements/2026 may/Черная Интуиция (ЧИ).md`
+- [Чёрная логика (ЧЛ) — версия 2026](/socionics-wiki/information-elements/2026-may/черная-логика-чл---упорядоченная/) — `src/content/docs/information-elements/2026 may/Черная Логика (ЧЛ) - упорядоченная.md`
+- [Чёрная сенсорика (ЧС) — версия 2026](/socionics-wiki/information-elements/2026-may/черная-сенсорика-чс/) — `src/content/docs/information-elements/2026 may/Черная Сенсорика (ЧС).md`
+- [Чёрная этика (ЧЭ) — версия 2026](/socionics-wiki/information-elements/2026-may/черная-этика-чэ/) — `src/content/docs/information-elements/2026 may/Черная Этика (ЧЭ).md`
+- [(без title)](/socionics-wiki/information-elements/aspekton-struktura/) — `src/content/docs/information-elements/aspekton-struktura.md`
+- [(без title)](/socionics-wiki/information-elements/aspekty-i-psihicheskie-funkcii/) — `src/content/docs/information-elements/aspekty-i-psihicheskie-funkcii.md`
+- [(без title)](/socionics-wiki/information-elements/beh-bl-razbor-po-mehi-2016/) — `src/content/docs/information-elements/beh-bl-razbor-po-mehi-2016.md`
+- [(без title)](/socionics-wiki/information-elements/beh-semantika-2016/) — `src/content/docs/information-elements/beh-semantika-2016.md`
+- [(без title)](/socionics-wiki/information-elements/bi-semantika-vdohnovenie/) — `src/content/docs/information-elements/bi-semantika-vdohnovenie.md`
+- [(без title)](/socionics-wiki/information-elements/bi-teni-dary-staroe/) — `src/content/docs/information-elements/bi-teni-dary-staroe.md`
+- [(без title)](/socionics-wiki/information-elements/bs-semantika-2016/) — `src/content/docs/information-elements/bs-semantika-2016.md`
+- [(без title)](/socionics-wiki/information-elements/igry-po-aspektam-skb/) — `src/content/docs/information-elements/igry-po-aspektam-skb.md`
+- [(без title)](/socionics-wiki/information-elements/intertipnye-otnosheniya-semantika-po-ehgo/) — `src/content/docs/information-elements/intertipnye-otnosheniya-semantika-po-ehgo.md`
+- [(без title)](/socionics-wiki/information-elements/lsp-bi/) — `src/content/docs/information-elements/lsp-bi.md`
+- [(без title)](/socionics-wiki/information-elements/lsp-bl/) — `src/content/docs/information-elements/lsp-bl.md`
+- [(без title)](/socionics-wiki/information-elements/obuchenie-bi/) — `src/content/docs/information-elements/obuchenie-bi.md`
+- [(без title)](/socionics-wiki/information-elements/psihologicheskie-navyki-gemini/) — `src/content/docs/information-elements/psihologicheskie-navyki-gemini.md`
+- [(без title)](/socionics-wiki/information-elements/semantika-arpov-2014/) — `src/content/docs/information-elements/semantika-arpov-2014.md`
+- [(без title)](/socionics-wiki/information-elements/semantika-aspekton/) — `src/content/docs/information-elements/semantika-aspekton.md`
+- [(без title)](/socionics-wiki/information-elements/tezaurus-bi/) — `src/content/docs/information-elements/tezaurus-bi.md`
+- [(без title)](/socionics-wiki/information-elements/tezaurus-s-opredeleniyami-gemini/) — `src/content/docs/information-elements/tezaurus-s-opredeleniyami-gemini.md`
+- [(без title)](/socionics-wiki/information-elements/tezaurus-spiskom/) — `src/content/docs/information-elements/tezaurus-spiskom.md`
+- [(без title)](/socionics-wiki/information-elements/vospriyatie-s-raznyh-ia/) — `src/content/docs/information-elements/vospriyatie-s-raznyh-ia.md`
+- [(без title)](/socionics-wiki/podcast-human-design/) — `src/content/docs/podcast-human-design.mdx`
+- [(без title)](/socionics-wiki/relations/asimmetrichnye-ito/) — `src/content/docs/relations/asimmetrichnye-ito.md`
+- [(без title)](/socionics-wiki/relations/asimmetrichnye-otnosheniya-po-funkciyam/) — `src/content/docs/relations/asimmetrichnye-otnosheniya-po-funkciyam.md`
+- [(без title)](/socionics-wiki/relations/rodstvennye-ito-semantika/) — `src/content/docs/relations/rodstvennye-ito-semantika.md`
+- [(без title)](/socionics-wiki/relations/дуальные-ито-2018/) — `src/content/docs/relations/Дуальные ИТО 2018.mdx`
+- [(без title)](/socionics-wiki/relations/илэ-лсэ-заказ-ито/) — `src/content/docs/relations/ИЛЭ-ЛСЭ Заказ ИТО.mdx`
+- [(без title)](/socionics-wiki/relations/лии-или-квазитождественные-ито/) — `src/content/docs/relations/ЛИИ ИЛИ Квазитождественные ИТО.mdx`
+- [(без title)](/socionics-wiki/relations/лси-прием-контроля-семантика/) — `src/content/docs/relations/ЛСИ Прием Контроля Семантика.mdx`
+- [(без title)](/socionics-wiki/relations/слэ-иэи-дуальные-ито/) — `src/content/docs/relations/СЛЭ ИЭИ Дуальные ИТО.mdx`
+- [(без title)](/socionics-wiki/relations/эси-конфликт-ито-семантика/) — `src/content/docs/relations/ЭСИ Конфликт ИТО Семантика.mdx`
+- [(без title)](/socionics-wiki/services/) — `src/content/docs/services.mdx`
+- [(без title)](/socionics-wiki/signs/4-svezhak/) — `src/content/docs/signs/4-svezhak.md`
+- [(без title)](/socionics-wiki/signs/dihotomii-spravochnik/) — `src/content/docs/signs/dihotomii-spravochnik.md`
+- [(без title)](/socionics-wiki/signs/dualnye-tetrahotomii-sociona/) — `src/content/docs/signs/dualnye-tetrahotomii-sociona.md`
+- [(без title)](/socionics-wiki/signs/formuly-dihotomij-arp/) — `src/content/docs/signs/formuly-dihotomij-arp.md`
+- [(без title)](/socionics-wiki/signs/formuly-kratii/) — `src/content/docs/signs/formuly-kratii.md`
+- [(без title)](/socionics-wiki/signs/klassifikaciya-pravilnyh-razbienij-sociona/) — `src/content/docs/signs/klassifikaciya-pravilnyh-razbienij-sociona.md`
+- [(без title)](/socionics-wiki/signs/klassifikaciya-tetrahotomij-2022/) — `src/content/docs/signs/klassifikaciya-tetrahotomij-2022.md`
+- [(без title)](/socionics-wiki/signs/klassifikaciya-tetrahotomij-po-formulam/) — `src/content/docs/signs/klassifikaciya-tetrahotomij-po-formulam.md`
+- [(без title)](/socionics-wiki/signs/logicheskoe-postroenie-formul-arp/) — `src/content/docs/signs/logicheskoe-postroenie-formul-arp.md`
+- [(без title)](/socionics-wiki/signs/mehi-i-priznaki-funkcij/) — `src/content/docs/signs/mehi-i-priznaki-funkcij.md`
+- [(без title)](/socionics-wiki/signs/metapriznaki-2022/) — `src/content/docs/signs/metapriznaki-2022.md`
+- [(без title)](/socionics-wiki/signs/metapriznaki/) — `src/content/docs/signs/metapriznaki.md`
+- [(без title)](/socionics-wiki/signs/oktohotomii/) — `src/content/docs/signs/oktohotomii.md`
+- [(без title)](/socionics-wiki/signs/rejnin-ito-formuly/) — `src/content/docs/signs/rejnin-ito-formuly.md`
+- [(без title)](/socionics-wiki/signs/rejnin-oktohotomii-formuly/) — `src/content/docs/signs/rejnin-oktohotomii-formuly.md`
+- [(без title)](/socionics-wiki/signs/socionicheskie-sistemy-dihotomij-nyumana/) — `src/content/docs/signs/socionicheskie-sistemy-dihotomij-nyumana.md`
+- [(без title)](/socionics-wiki/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii/) — `src/content/docs/signs/socionika-i-psihologiya-vazhno-log-eht-dihotomii.md`
+- [(без title)](/socionics-wiki/signs/sootvetstvie-formul-arp-tmp/) — `src/content/docs/signs/sootvetstvie-formul-arp-tmp.md`
+- [(без title)](/socionics-wiki/signs/spisok-formul-arp/) — `src/content/docs/signs/spisok-formul-arp.md`
+- [(без title)](/socionics-wiki/signs/tm-sistema-priznaki-statya/) — `src/content/docs/signs/tm-sistema-priznaki-statya.md`
+- [(без title)](/socionics-wiki/test/) — `src/content/docs/test.mdx`
+- [(без title)](/socionics-wiki/thanks/) — `src/content/docs/thanks.mdx`
+- [(без title)](/socionics-wiki/theory/formal/cikly-perestanovok-modeli-a/) — `src/content/docs/theory/formal/cikly-perestanovok-modeli-a.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-donocentrizm/) — `src/content/docs/theory/formal/doklad-donocentrizm.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-dvojstvennost-churyumova-princip-sootvetsviya/) — `src/content/docs/theory/formal/doklad-dvojstvennost-churyumova-princip-sootvetsviya.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-formalnaya-socionika-fevral-2023/) — `src/content/docs/theory/formal/doklad-formalnaya-socionika-fevral-2023.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-formalnaya-socionika/) — `src/content/docs/theory/formal/doklad-formalnaya-socionika.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya-shemy/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya-shemy.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-teoriya-spleteniya/) — `src/content/docs/theory/formal/doklad-teoriya-spleteniya.md`
+- [(без title)](/socionics-wiki/theory/formal/doklad-yump/) — `src/content/docs/theory/formal/doklad-yump.md`
+- [(без title)](/socionics-wiki/theory/formal/donocentrizm/) — `src/content/docs/theory/formal/donocentrizm.md`
+- [(без title)](/socionics-wiki/theory/formal/ehkstensivnye-harakteristiki/) — `src/content/docs/theory/formal/ehkstensivnye-harakteristiki.md`
+- [(без title)](/socionics-wiki/theory/formal/fraktalnaya-logika-patternov-matricy-adamara/) — `src/content/docs/theory/formal/fraktalnaya-logika-patternov-matricy-adamara.md`
+- [(без title)](/socionics-wiki/theory/formal/fraktalnaya-socionika-2022/) — `src/content/docs/theory/formal/fraktalnaya-socionika-2022.md`
+- [(без title)](/socionics-wiki/theory/formal/fraktalnost-scn-diskursa/) — `src/content/docs/theory/formal/fraktalnost-scn-diskursa.md`
+- [(без title)](/socionics-wiki/theory/formal/giperkompleksnaya-socionika/) — `src/content/docs/theory/formal/giperkompleksnaya-socionika.md`
+- [(без title)](/socionics-wiki/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023/) — `src/content/docs/theory/formal/illyustracii-doklad-formalnaya-socionika-fevral-2023.md`
+- [(без title)](/socionics-wiki/theory/formal/istoriya-matematiki-v-socionike/) — `src/content/docs/theory/formal/istoriya-matematiki-v-socionike.md`
+- [(без title)](/socionics-wiki/theory/formal/logika-ehkvivalencii-i-razlicheniya/) — `src/content/docs/theory/formal/logika-ehkvivalencii-i-razlicheniya.md`
+- [(без title)](/socionics-wiki/theory/formal/markdown-tablicy/) — `src/content/docs/theory/formal/markdown-tablicy.md`
+- [(без title)](/socionics-wiki/theory/formal/matematika-gde-ona-v-socionike-i-chto-daet/) — `src/content/docs/theory/formal/matematika-gde-ona-v-socionike-i-chto-daet.md`
+- [(без title)](/socionics-wiki/theory/formal/metabon-struktura/) — `src/content/docs/theory/formal/metabon-struktura.md`
+- [(без title)](/socionics-wiki/theory/formal/metabon/) — `src/content/docs/theory/formal/metabon.md`
+- [(без title)](/socionics-wiki/theory/formal/polnaya-formalizaciya-socioniki/) — `src/content/docs/theory/formal/polnaya-formalizaciya-socioniki.md`
+- [(без title)](/socionics-wiki/theory/formal/poryadok-churyumova-novoe/) — `src/content/docs/theory/formal/poryadok-churyumova-novoe.md`
+- [(без title)](/socionics-wiki/theory/formal/poryadok-churyumova/) — `src/content/docs/theory/formal/poryadok-churyumova.md`
+- [(без title)](/socionics-wiki/theory/formal/seminar-mat-scn/) — `src/content/docs/theory/formal/seminar-mat-scn.md`
+- [(без title)](/socionics-wiki/theory/formal/simmetrii-i-raspredeleniya/) — `src/content/docs/theory/formal/simmetrii-i-raspredeleniya.md`
+- [(без title)](/socionics-wiki/theory/formal/sistemy-imprimitivnosti-v-socionike/) — `src/content/docs/theory/formal/sistemy-imprimitivnosti-v-socionike.md`
+- [(без title)](/socionics-wiki/theory/formal/sootvetstvie-churyumova/) — `src/content/docs/theory/formal/sootvetstvie-churyumova.md`
+- [(без title)](/socionics-wiki/theory/formal/spisok-pokoleniya-novoe/) — `src/content/docs/theory/formal/spisok-pokoleniya-novoe.md`
+- [(без title)](/socionics-wiki/theory/formal/spisok-pokoleniya/) — `src/content/docs/theory/formal/spisok-pokoleniya.md`
+- [(без title)](/socionics-wiki/theory/formal/svyaz-yumpov-i-pravo-levo/) — `src/content/docs/theory/formal/svyaz-yumpov-i-pravo-levo.md`
+- [(без title)](/socionics-wiki/theory/formal/teoriya-pokolenij/) — `src/content/docs/theory/formal/teoriya-pokolenij.md`
+- [(без title)](/socionics-wiki/theory/formal/teoriya-ritma/) — `src/content/docs/theory/formal/teoriya-ritma.md`
+- [(без title)](/socionics-wiki/theory/formal/teoriya-spleteniya/) — `src/content/docs/theory/formal/teoriya-spleteniya.md`
+- [(без title)](/socionics-wiki/theory/formal/vertnost-v-formalnoj-socionike/) — `src/content/docs/theory/formal/vertnost-v-formalnoj-socionike.md`
+- [(без title)](/socionics-wiki/theory/formal/zagadka-spletennosti/) — `src/content/docs/theory/formal/zagadka-spletennosti.md`
+- [(без title)](/socionics-wiki/theory/formal/zametki-iyul-2022-socionicheskaya-matematika/) — `src/content/docs/theory/formal/zametki-iyul-2022-socionicheskaya-matematika.md`
+- [(без title)](/socionics-wiki/theory/meta/aksioma-tozhdestva/) — `src/content/docs/theory/meta/aksioma-tozhdestva.md`
+- [(без title)](/socionics-wiki/theory/meta/aksiomatika-shanehri-2023/) — `src/content/docs/theory/meta/aksiomatika-shanehri-2023.md`
+- [(без title)](/socionics-wiki/theory/meta/aksiomatika-shanehri/) — `src/content/docs/theory/meta/aksiomatika-shanehri.md`
+- [(без title)](/socionics-wiki/theory/meta/deduktivnaya-socionika-likbez/) — `src/content/docs/theory/meta/deduktivnaya-socionika-likbez.md`
+- [(без title)](/socionics-wiki/theory/meta/dokazatelstvo-donocentrizma/) — `src/content/docs/theory/meta/dokazatelstvo-donocentrizma.md`
+- [(без title)](/socionics-wiki/theory/meta/doklad-bazis-churyumova/) — `src/content/docs/theory/meta/doklad-bazis-churyumova.md`
+- [(без title)](/socionics-wiki/theory/meta/doklad-granicy-primenimosti/) — `src/content/docs/theory/meta/doklad-granicy-primenimosti.md`
+- [(без title)](/socionics-wiki/theory/meta/doklad-ii-socionika/) — `src/content/docs/theory/meta/doklad-ii-socionika.md`
+- [(без title)](/socionics-wiki/theory/meta/filosofiya-socioniki-gemini/) — `src/content/docs/theory/meta/filosofiya-socioniki-gemini.md`
+- [(без title)](/socionics-wiki/theory/meta/gipoteza-churyumova-gemini/) — `src/content/docs/theory/meta/gipoteza-churyumova-gemini.md`
+- [(без title)](/socionics-wiki/theory/meta/granicy-primenimosti-socioniki/) — `src/content/docs/theory/meta/granicy-primenimosti-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/istoriya-nekotoryh-moih-otkrytij/) — `src/content/docs/theory/meta/istoriya-nekotoryh-moih-otkrytij.md`
+- [(без title)](/socionics-wiki/theory/meta/kvantovaya-socionika/) — `src/content/docs/theory/meta/kvantovaya-socionika.md`
+- [(без title)](/socionics-wiki/theory/meta/kvantovoe-tipirovanie-gemini/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie-gemini.md`
+- [(без title)](/socionics-wiki/theory/meta/kvantovoe-tipirovanie-novoe/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie-novoe.md`
+- [(без title)](/socionics-wiki/theory/meta/kvantovoe-tipirovanie/) — `src/content/docs/theory/meta/kvantovoe-tipirovanie.md`
+- [(без title)](/socionics-wiki/theory/meta/kvantovye-svojstva-socioniki/) — `src/content/docs/theory/meta/kvantovye-svojstva-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/lingvosocionika-2021/) — `src/content/docs/theory/meta/lingvosocionika-2021.md`
+- [(без title)](/socionics-wiki/theory/meta/metadologiya-socioniki-2022/) — `src/content/docs/theory/meta/metadologiya-socioniki-2022.md`
+- [(без title)](/socionics-wiki/theory/meta/metodologicheskie-problemy-socioniki/) — `src/content/docs/theory/meta/metodologicheskie-problemy-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/metodologiya-2017/) — `src/content/docs/theory/meta/metodologiya-2017.md`
+- [(без title)](/socionics-wiki/theory/meta/metodologiya-interpretacii-obryvki/) — `src/content/docs/theory/meta/metodologiya-interpretacii-obryvki.md`
+- [(без title)](/socionics-wiki/theory/meta/metodologiya-socioniki-2016/) — `src/content/docs/theory/meta/metodologiya-socioniki-2016.md`
+- [(без title)](/socionics-wiki/theory/meta/metodologiya-socioniku-2015/) — `src/content/docs/theory/meta/metodologiya-socioniku-2015.md`
+- [(без title)](/socionics-wiki/theory/meta/mnogomernost-bifurkacii-v-stanovlenii-novoe/) — `src/content/docs/theory/meta/mnogomernost-bifurkacii-v-stanovlenii-novoe.md`
+- [(без title)](/socionics-wiki/theory/meta/mnogomernost-bifurkacii-v-stanovlenii/) — `src/content/docs/theory/meta/mnogomernost-bifurkacii-v-stanovlenii.md`
+- [(без title)](/socionics-wiki/theory/meta/mnogourovnevaya-aksiomatika-2024/) — `src/content/docs/theory/meta/mnogourovnevaya-aksiomatika-2024.md`
+- [(без title)](/socionics-wiki/theory/meta/moj-put-v-socionike/) — `src/content/docs/theory/meta/moj-put-v-socionike.md`
+- [(без title)](/socionics-wiki/theory/meta/nabrosok-lsp-2017/) — `src/content/docs/theory/meta/nabrosok-lsp-2017.md`
+- [(без title)](/socionics-wiki/theory/meta/novatorstvo-fraktalnoj-socioniki/) — `src/content/docs/theory/meta/novatorstvo-fraktalnoj-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/pochemu-socionika-donkihotskaya-nauka/) — `src/content/docs/theory/meta/pochemu-socionika-donkihotskaya-nauka.md`
+- [(без title)](/socionics-wiki/theory/meta/semanticheskaya-socionika-doklad/) — `src/content/docs/theory/meta/semanticheskaya-socionika-doklad.md`
+- [(без title)](/socionics-wiki/theory/meta/socion-prostym-yazykom-2017/) — `src/content/docs/theory/meta/socion-prostym-yazykom-2017.md`
+- [(без title)](/socionics-wiki/theory/meta/socionika-i-otnosheniya-2018/) — `src/content/docs/theory/meta/socionika-i-otnosheniya-2018.md`
+- [(без title)](/socionics-wiki/theory/meta/spisok-otkrytij-churyumova/) — `src/content/docs/theory/meta/spisok-otkrytij-churyumova.md`
+- [(без title)](/socionics-wiki/theory/meta/spisok-otkrytij-shanehri/) — `src/content/docs/theory/meta/spisok-otkrytij-shanehri.md`
+- [(без title)](/socionics-wiki/theory/meta/tenser-istoriya-socioniki/) — `src/content/docs/theory/meta/tenser-istoriya-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/teoriya-grupp-na-primere-socioniki/) — `src/content/docs/theory/meta/teoriya-grupp-na-primere-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/terminosistema-socioniki/) — `src/content/docs/theory/meta/terminosistema-socioniki.md`
+- [(без title)](/socionics-wiki/theory/meta/vvedenie-na-sajt/) — `src/content/docs/theory/meta/vvedenie-na-sajt.md`
+- [(без title)](/socionics-wiki/types/bal-2-1-lajt/) — `src/content/docs/types/bal-2-1-lajt.md`
+- [(без title)](/socionics-wiki/types/es-klod/) — `src/content/docs/types/es-klod.md`
+- [(без title)](/socionics-wiki/types/gam-sonnet/) — `src/content/docs/types/gam-sonnet.md`
+- [Кратко обо всех типах](/socionics-wiki/types/kratko-obo-vseh-tipah/) — `src/content/docs/types/kratko-obo-vseh-tipah.mdx`
+- [(без title)](/socionics-wiki/types/lii-nerojnki/) — `src/content/docs/types/lii-nerojnki.md`
+- [Максим Горький (ЛСИ) кратко](/socionics-wiki/types/lsi-kratko/) — `src/content/docs/types/lsi-kratko.mdx`
+- [(без title)](/socionics-wiki/types/maksimus/) — `src/content/docs/types/maksimus.md`
+- [(без title)](/socionics-wiki/types/opisaniya-timov-ot-nejronok/) — `src/content/docs/types/opisaniya-timov-ot-nejronok.md`
+- [Наполеон (СЭЭ) кратко](/socionics-wiki/types/see-kratko/) — `src/content/docs/types/see-kratko.mdx`
+- [(без title)](/socionics-wiki/types/иэи-by-opus-4/) — `src/content/docs/types/ИЭИ by opus 4.md`
+- [(без title)](/socionics-wiki/types/роб-20/) — `src/content/docs/types/Роб 2.0.md`
+- [(без title)](/socionics-wiki/types/сли-by-gemini/) — `src/content/docs/types/СЛИ by GEmini.md`
+- [(без title)](/socionics-wiki/types/эиэ-опус/) — `src/content/docs/types/ЭИЭ опус.md`
+- [(без title)](/socionics-wiki/video/алгебраическая-связь-признаков-рейнина/) — `src/content/docs/video/алгебраическая-связь-признаков-рейнина.mdx`
+- [(без title)](/socionics-wiki/video/границы-применимости-соционики/) — `src/content/docs/video/границы-применимости-соционики.mdx`
+- [(без title)](/socionics-wiki/video/дон-кихот-рассказывает-о-боевой-бэ/) — `src/content/docs/video/дон-кихот-рассказывает-о-боевой-бэ.mdx`
+- [(без title)](/socionics-wiki/video/интуиция-в-терапии/) — `src/content/docs/video/интуиция-в-терапии.mdx`
+- [(без title)](/socionics-wiki/video/информационные-аспекты-материя-энергия-информация/) — `src/content/docs/video/информационные-аспекты-материя-энергия-информация.mdx`
+- [(без title)](/socionics-wiki/video/информационные-аспекты-по-семену-чурюмову/) — `src/content/docs/video/информационные-аспекты-по-семену-чурюмову.mdx`
+- [(без title)](/socionics-wiki/video/информационные-аспекты-шанэри/) — `src/content/docs/video/информационные-аспекты-шанэри.mdx`
+- [(без title)](/socionics-wiki/video/как-отличить-робеспьера-от-достоевского/) — `src/content/docs/video/как-отличить-робеспьера-от-достоевского.mdx`
+- [(без title)](/socionics-wiki/video/как-отличить-тимное-от-индивидуального/) — `src/content/docs/video/как-отличить-тимное-от-индивидуального.mdx`
+- [(без title)](/socionics-wiki/video/как-понимать-информационные-аспекты-в-соционике/) — `src/content/docs/video/как-понимать-информационные-аспекты-в-соционике.mdx`
+- [(без title)](/socionics-wiki/video/как-понять-предназначение/) — `src/content/docs/video/как-понять-предназначение.mdx`
+- [(без title)](/socionics-wiki/video/лингвосоционика-доклад-2021/) — `src/content/docs/video/лингвосоционика-доклад-2021.mdx`
+- [(без title)](/socionics-wiki/video/математическая-структура-соционики/) — `src/content/docs/video/математическая-структура-соционики.mdx`
+- [(без title)](/socionics-wiki/video/методика-исцеление-травм-души/) — `src/content/docs/video/методика-исцеление-травм-души.mdx`
+- [(без title)](/socionics-wiki/video/модель-а-соционика/) — `src/content/docs/video/модель-а-соционика.mdx`
+- [(без title)](/socionics-wiki/video/насколько-важна-интуиция-в-определении-типа/) — `src/content/docs/video/насколько-важна-интуиция-в-определении-типа.mdx`
+- [(без title)](/socionics-wiki/video/ответы-на-вопросы-по-белой-интуиции/) — `src/content/docs/video/ответы-на-вопросы-по-белой-интуиции.mdx`
+- [(без title)](/socionics-wiki/video/отличия-габена-от-бальзака/) — `src/content/docs/video/отличия-габена-от-бальзака.mdx`
+- [(без title)](/socionics-wiki/video/отличия-чувств-и-эмоций/) — `src/content/docs/video/отличия-чувств-и-эмоций.mdx`
+- [(без title)](/socionics-wiki/video/перетипирование-как-убедиться-в-своем-настоящем-тиме/) — `src/content/docs/video/перетипирование-как-убедиться-в-своем-настоящем-тиме.mdx`
+- [(без title)](/socionics-wiki/video/польза-систем-самопознания/) — `src/content/docs/video/польза-систем-самопознания.mdx`
+- [(без title)](/socionics-wiki/video/помогает-ли-соционика-в-личных-отношениях/) — `src/content/docs/video/помогает-ли-соционика-в-личных-отношениях.mdx`
+- [(без title)](/socionics-wiki/video/порядок-типов-и-периоды-развития/) — `src/content/docs/video/порядок-типов-и-периоды-развития.mdx`
+- [(без title)](/socionics-wiki/video/признаки-юнга-минаева/) — `src/content/docs/video/признаки-юнга-минаева.mdx`
+- [(без title)](/socionics-wiki/video/принцип-соответствия-типов-и-отношений/) — `src/content/docs/video/принцип-соответствия-типов-и-отношений.mdx`
+- [(без title)](/socionics-wiki/video/социальные-роли-типов/) — `src/content/docs/video/социальные-роли-типов.mdx`
+- [(без title)](/socionics-wiki/video/соционика-для-целителей/) — `src/content/docs/video/соционика-для-целителей.mdx`
+- [(без title)](/socionics-wiki/video/соционика-дон-кихотская-наука/) — `src/content/docs/video/соционика-дон-кихотская-наука.mdx`
+- [(без title)](/socionics-wiki/video/соционика-и-информатика/) — `src/content/docs/video/соционика-и-информатика.mdx`
+- [(без title)](/socionics-wiki/video/соционика-и-нейросети-большие-языковые-модели-llm/) — `src/content/docs/video/соционика-и-нейросети-большие-языковые-модели-llm.mdx`
+- [(без title)](/socionics-wiki/video/соционика-и-психотерапия/) — `src/content/docs/video/соционика-и-психотерапия.mdx`
+- [(без title)](/socionics-wiki/video/соционика-междисциплинарная-философия/) — `src/content/docs/video/соционика-междисциплинарная-философия.mdx`
+- [(без title)](/socionics-wiki/video/соционическое-колесо-баланса-коучинг/) — `src/content/docs/video/соционическое-колесо-баланса-коучинг.mdx`
+- [(без title)](/socionics-wiki/video/теория-поколений-передовой-подход-к-дихотомиям/) — `src/content/docs/video/теория-поколений-передовой-подход-к-дихотомиям.mdx`
+- [(без title)](/socionics-wiki/video/читаем-описание-дюмы-сэи-по-чурюмову/) — `src/content/docs/video/читаем-описание-дюмы-сэи-по-чурюмову.mdx`
+- [(без title)](/socionics-wiki/video/читаем-описания-бальзака-или-по-чурюмову/) — `src/content/docs/video/читаем-описания-бальзака-или-по-чурюмову.mdx`
+- [(без title)](/socionics-wiki/video/читаем-описания-типов-чурюмова-ч1/) — `src/content/docs/video/читаем-описания-типов-чурюмова-ч1.mdx`
+- [(без title)](/socionics-wiki/video/что-описывает-соционический-тип/) — `src/content/docs/video/что-описывает-соционический-тип.mdx`

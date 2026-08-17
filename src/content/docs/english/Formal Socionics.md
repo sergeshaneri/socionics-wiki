@@ -3,7 +3,6 @@ title: Formal Socionics
 description: Formal Socionics
 ---
 
-**
 
 Fundamental questions
 
@@ -265,35 +264,3 @@ Each level manifest the same structure with gets more detailed with the amount o
 ![](https://lh7-us.googleusercontent.com/aOHygXMe_vAszvbwOfKjhqU6I1wCz7_1n8GFjk1swQmr3S4e7ZY3GtzVaqbXfpa5WgXfOJGclQXCPyvxPWsKvK88BE4aPx6IOXkFUaYZ661qh6tVz1hjefTUpmORv7Wui3BKLp10ZGmn36aP4bQ7TV0)
 
 credit for image: Andrew Joyton and Kimani White
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-**
