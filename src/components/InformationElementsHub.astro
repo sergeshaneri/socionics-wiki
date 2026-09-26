@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const all = await getCollection('docs');
+const materials = all.filter((entry) => entry.id.startsWith('information-elements/'));
+const byId = new Map(materials.map((entry) => [entry.id, entry]));
+const featuredIds = new Set([
+  'information-elements/2026/chi',
+  'information-elements/2026/bi',
+  'information-elements/2026/chl',
+  'information-elements/2026/bl',
+  'information-elements/2026/che',
+  'information-elements/2026/be',
+  'information-elements/2026/chs',
+  'information-elements/2026/bs',
+]);
+const otherMaterials = materials
+  .filter((entry) => !featuredIds.has(entry.id) && !entry.data.categories?.includes('draft'))
+  .sort((a, b) => (a.data.title || a.id).localeCompare(b.data.title || b.id, 'ru'));
+const drafts = materials
+  .filter((entry) => entry.data.categories?.includes('draft'))
+  .sort((a, b) => (a.data.title || a.id).localeCompare(b.data.title || b.id, 'ru'));
+
+const groups = [
+  {
+    title: 'Интуиция',
+    description: 'Возможности и развитие событий.',
+    aspects: [
+      {
+        code: 'ЧИ', name: 'Чёрная интуиция', id: 'information-elements/2026/chi',
+        summary: 'Возможности, идеи, варианты и потенциал. В центре внимания — что может возникнуть из данной ситуации или особенности объекта.',
+        example: 'Например: увидеть несколько применений одной идеи или заметить ещё не реализованную возможность.',
+      },
+      {
+        code: 'БИ', name: 'Белая интуиция', id: 'information-elements/2026/bi',
+        summary: 'Время, изменение состояний, тенденции и перспектива. В центре внимания — как процесс разворачивается и когда действие уместно.',
+        example: 'Например: сопоставить текущий этап с вероятным продолжением или почувствовать, что момент для решения наступил.',
+      },
+    ],
+  },
+  {
+    title: 'Логика',
+    description: 'Устройство связей и практическое действие.',
+    aspects: [
+      {
+        code: 'ЧЛ', name: 'Чёрная логика', id: 'information-elements/2026/chl',
+        summary: 'Деятельность, методы, затраты и результат. В центре внимания — как выполнить задачу и получить работающий продукт.',
+        example: 'Например: сравнить способы работы по ресурсам, процессу и полученному результату.',
+      },
+      {
+        code: 'БЛ', name: 'Белая логика', id: 'information-elements/2026/bl',
+        summary: 'Понятия, структура, правила и соотношения. В центре внимания — как элементы связаны между собой в системе.',
+        example: 'Например: уточнить определение, выстроить классификацию или проверить последовательность рассуждения.',
+      },
+    ],
+  },
+  {
+    title: 'Этика',
+    description: 'Эмоциональные проявления и отношения.',
+    aspects: [
+      {
+        code: 'ЧЭ', name: 'Чёрная этика', id: 'information-elements/2026/che',
+        summary: 'Эмоции, выразительность, настроение и эмоциональное воздействие. В центре внимания — как переживание проявляется и меняет атмосферу.',
+        example: 'Например: различить эмоциональный тон разговора и его изменение в ходе общения.',
+      },
+      {
+        code: 'БЭ', name: 'Белая этика', id: 'information-elements/2026/be',
+        summary: 'Отношение к людям, доверие, близость и личные оценки. В центре внимания — качество и устойчивость отношений.',
+        example: 'Например: описать степень доверия, отношение к поступку или изменение дистанции между людьми.',
+      },
+    ],
+  },
+  {
+    title: 'Сенсорика',
+    description: 'Воздействие среды и телесное восприятие.',
+    aspects: [
+      {
+        code: 'ЧС', name: 'Чёрная сенсорика', id: 'information-elements/2026/chs',
+        summary: 'Сила, давление, сопротивление, границы и контроль пространства. В центре внимания — величина воздействия и способность ему противостоять.',
+        example: 'Например: оценить нагрузку, обозначить границу или выбрать соразмерное усилие.',
+      },
+      {
+        code: 'БС', name: 'Белая сенсорика', id: 'information-elements/2026/bs',
+        summary: 'Ощущения, самочувствие, потребности, комфорт и качество среды. В центре внимания — насколько условия подходят телу и восприятию.',
+        example: 'Например: различить усталость и голод, подобрать подходящий ресурс или описать ощущение удобства.',
+      },
+    ],
+  },
+];
+---
+
+<div class="aspects-hub">
+  {groups.map((group) => (
+    <section class="aspect-group">
+      <h2>{group.title}</h2>
+      <p class="group-description">{group.description}</p>
+      <div class="aspect-grid">
+        {group.aspects.map((aspect) => (
+          <article class="aspect-card">
+            <h3><span class="aspect-code">{aspect.code}</span> {aspect.name}</h3>
+            <p>{aspect.summary}</p>
+            <p class="aspect-example">{aspect.example}</p>
+            {byId.has(aspect.id) && (
+              <a class="aspect-link" href={`${base}/${aspect.id}/`}>Тезаурус 2026 и подробный разбор →</a>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <section class="materials-section">
+    <h2>Другие материалы об аспектах</h2>
+    <p>Статьи о семантике, лексико-семантических полях, восприятии аспектов и их применении. Отдельные тексты представляют разные версии и исследовательские подходы.</p>
+    <ul class="material-list">
+      {otherMaterials.map((entry) => (
+        <li><a href={`${base}/${entry.id}/`}>
+          <span>{entry.data.title}</span>
+          {entry.data.description && entry.data.description !== entry.data.title && <small>{entry.data.description}</small>}
+        </a></li>
+      ))}
+    </ul>
+  </section>
+  {drafts.length > 0 && (
+    <section class="materials-section">
+      <h2>Черновики</h2>
+      <ul class="material-list">
+        {drafts.map((entry) => (
+          <li><a href={`${base}/${entry.id}/`}><span>{entry.data.title}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+</div>
+
+<style>
+  .aspects-hub { margin-top: 1.5rem; }
+  .aspect-group, .materials-section { margin-top: 2.25rem; }
+  .aspect-group h2, .materials-section h2 { margin-bottom: 0.25rem; }
+  .group-description { color: var(--sl-color-text-weak); margin: 0 0 0.8rem; }
+  .aspect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 0.8rem; }
+  .aspect-card { padding: 1rem 1.1rem; border: 1px solid var(--sl-color-hairline); border-radius: 0.6rem; background: var(--sl-color-bg-sidebar); }
+  .aspect-card h3 { margin: 0 0 0.65rem; font-size: 1.06rem; line-height: 1.4; }
+  .aspect-code { color: var(--sl-color-accent-high); margin-right: 0.35rem; white-space: nowrap; }
+  .aspect-card p { margin: 0.55rem 0; line-height: 1.55; }
+  .aspect-example { color: var(--sl-color-text-weak); font-size: 0.92rem; }
+  .aspect-link { display: inline-block; margin-top: 0.55rem; font-weight: 500; }
+  .materials-section > p { color: var(--sl-color-text-weak); }
+  .material-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0.4rem 0.8rem; }
+  .material-list li { margin: 0; }
+  .material-list a { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.5rem 0.65rem; border-left: 2px solid transparent; text-decoration: none; }
+  .material-list a:hover, .material-list a:focus-visible { border-left-color: var(--sl-color-accent-high); background: var(--sl-color-bg-sidebar); }
+  .material-list small { color: var(--sl-color-text-weak); line-height: 1.45; }
+</style>
