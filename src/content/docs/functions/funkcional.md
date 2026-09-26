@@ -1,7 +1,7 @@
 ---
 title: Функцион
 description: Рабочее теоретическое описание семантики функций модели А
-categories: [formal, semantic]
+categories: [semantic, ai]
 ---
 
 # Функцион
