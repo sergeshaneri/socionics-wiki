@@ -37,21 +37,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 )}
 
 <style>
-  .updates-feed {
-    margin-block: 2.5rem;
-    padding: 1.5rem;
-    border: 1px solid var(--sl-color-hairline);
-    border-radius: 6px;
-    background: var(--sl-color-bg-sidebar);
-  }
-  h2 { margin: 0 0 1.1rem; font-size: 1.3rem; }
+  .updates-feed { margin-block: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--sl-color-hairline); font-family: var(--font-body); }
+  .updates-feed h2 { margin: 0 0 1rem; font-family: var(--font-body); font-size: 1rem !important; font-weight: 500 !important; line-height: 1.5 !important; letter-spacing: normal !important; color: var(--sl-color-text-strong); }
   ul { list-style: none; margin: 0; padding: 0; }
-  li + li { border-top: 1px solid var(--sl-color-hairline); margin-top: 0.9rem; padding-top: 0.9rem; }
-  time { display: block; font-size: 0.72rem; letter-spacing: 0.07em; color: var(--sl-color-gray-3); }
-  li a { display: block; margin-top: 0.25rem; color: var(--sl-color-white); text-decoration: none; line-height: 1.45; }
-  li a:hover, .updates-feed__all:hover { color: var(--sl-color-accent-high); }
-  .updates-feed__all { display: block; margin-top: 1.1rem; font-size: 0.8rem; color: var(--sl-color-gray-2); text-decoration: none; }
-  .updates-feed--compact { margin: 0; padding: 1rem 0 0; border: 0; border-top: 1px solid var(--sl-color-hairline); border-radius: 0; background: transparent; }
-  .updates-feed--compact h2 { margin-bottom: 0.75rem; font-size: var(--sl-text-h5); }
-  .updates-feed--compact li a { font-size: var(--sl-text-xs); }
+  li + li { border-top: 1px solid var(--sl-color-hairline); margin-top: .9rem; padding-top: .9rem; }
+  time { display: block; font-size: .8125rem; line-height: 1.5; color: var(--sl-color-text-weak); }
+  li a { display: block; margin-top: .3rem; color: var(--sl-color-text-strong); text-decoration: none; font-size: 1rem; line-height: 1.55; }
+  li a:hover, .updates-feed__all:hover { color: var(--sl-color-link); }
+  .updates-feed__all { display: inline-flex; align-items: center; min-height: 44px; margin-top: .7rem; font-size: .875rem; color: var(--sl-color-link); text-decoration: none; }
+  .updates-feed--compact { margin: 1.5rem 0 0; padding: 1rem 0 0; }
+  .updates-feed--compact h2 { margin-bottom: .9rem; font-size: .9375rem !important; }
+  .updates-feed--compact li a { font-size: .875rem; }
 </style>

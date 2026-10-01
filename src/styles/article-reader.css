@@ -1,0 +1,139 @@
+/* Reading typography for wiki articles only. Splash pages and landings are excluded. */
+@import '@fontsource-variable/inter';
+
+
+html:has(article.sl-markdown-content) {
+  --reader-font: 'Inter Variable', 'Segoe UI', sans-serif;
+  --reader-text: #d8d5df;
+  --reader-heading: #e5e2e9;
+  --reader-muted: #a7a2b0;
+  --reader-link: #bc9bea;
+  --reader-line: #302d38;
+}
+
+html[data-theme='light']:has(article.sl-markdown-content) {
+  --reader-text: #302c38;
+  --reader-heading: #211c2b;
+  --reader-muted: #625c6d;
+  --reader-link: #68359a;
+  --reader-line: #d8d2df;
+}
+
+html:has(article.sl-markdown-content) body {
+  background: var(--sl-color-bg) !important;
+}
+html:has(article.sl-markdown-content) body::before { display: none; }
+
+/* Reduce the stacked panel/container/meta gaps without changing navigation. */
+html:has(article.sl-markdown-content) .content-panel { padding-block: 1.25rem; }
+html:has(article.sl-markdown-content) .content-panel .sl-container { padding-top: 0; }
+html:has(article.sl-markdown-content) .page-meta { margin-bottom: 0; }
+html:has(article.sl-markdown-content) :is(.breadcrumbs, .page-meta) {
+  font-family: var(--reader-font);
+  letter-spacing: normal;
+}
+html:has(article.sl-markdown-content) :is(.reading-time, a.category-tag) {
+  font-family: var(--reader-font);
+  color: var(--reader-muted);
+  letter-spacing: normal;
+}
+
+article.sl-markdown-content {
+  font-family: var(--reader-font);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: normal;
+  color: var(--reader-text);
+  --sl-color-text: var(--reader-text);
+  --sl-color-text-strong: var(--reader-heading);
+  --sl-color-white: var(--reader-heading);
+  --sl-color-text-accent: var(--reader-link);
+  --sl-content-gap-y: 1.125rem;
+  --sl-text-h1: 1.75rem;
+  --sl-text-h2: 1.5rem;
+  --sl-text-h3: 1.25rem;
+  --sl-text-h4: 1.125rem;
+  --sl-text-h5: 1.125rem;
+  --sl-text-h6: 1.125rem;
+  overflow-wrap: anywhere;
+}
+
+article.sl-markdown-content > [itemprop='articleBody'] > :is(p, ul, ol, dl, blockquote) {
+  max-width: 70ch;
+}
+
+article.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--reader-font);
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  color: var(--reader-heading);
+  text-wrap: pretty;
+  padding-bottom: 0;
+}
+article.sl-markdown-content :is(h2, h3)::after,
+article.sl-markdown-content .sl-heading-wrapper.level-h2::after,
+article.sl-markdown-content .sl-heading-wrapper::after { display: none; }
+
+article.sl-markdown-content > [itemprop='articleBody'] > :is(h1, h2, h3, h4, h5, h6, .sl-heading-wrapper) {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+}
+article.sl-markdown-content > [itemprop='articleBody'] > .sl-heading-wrapper + * { margin-top: 0; }
+article.sl-markdown-content > [itemprop='articleBody'] > :first-child { margin-top: 0; }
+article.sl-markdown-content :is(strong, b) { font-weight: 600; }
+article.sl-markdown-content :is(ul, ol) { padding-inline-start: 1.4em; }
+/* Tight lists stay compact; paragraph-based lists retain a reading rhythm. */
+article.sl-markdown-content li + li { margin-top: 0.3em; }
+article.sl-markdown-content :is(ul, ol):has(> li > p) > li + li { margin-top: 0.75em; }
+article.sl-markdown-content li > :is(p, ul, ol) { margin-block: 0.45em 0; }
+article.sl-markdown-content li > p:first-child { margin-top: 0; }
+article.sl-markdown-content li > :last-child { margin-bottom: 0; }
+article.sl-markdown-content :is(ul, ol) :is(ul, ol) { padding-inline-start: 1.2em; }
+article.sl-markdown-content li::marker { color: var(--reader-muted); }
+article.sl-markdown-content a { color: var(--reader-link); }
+article.sl-markdown-content a:hover { color: var(--reader-heading); }
+
+article.sl-markdown-content table {
+  max-width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: normal;
+  font-variant-numeric: tabular-nums;
+}
+article.sl-markdown-content :is(th, td) {
+  border-color: var(--reader-line);
+  padding: 0.65rem 0.8rem;
+}
+/* Keep article navigation subordinate to the text; retain active-link cues. */
+html:has(article.sl-markdown-content) .sidebar :is(.group-label, .group-label .large) {
+  font-family: var(--reader-font);
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  text-transform: none;
+  color: var(--reader-muted) !important;
+}
+html:has(article.sl-markdown-content) #starlight__on-this-page {
+  font-family: var(--reader-font);
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  color: var(--reader-muted);
+}
+
+article.sl-markdown-content table :is(th, td)[align='center'] { text-align: center; }
+article.sl-markdown-content table :is(th, td)[align='right'] { text-align: right; }
+article.sl-markdown-content table :is(th, td)[align='left'] { text-align: left; }
+article.sl-markdown-content th { font-weight: 600; }
+article.sl-markdown-content hr {
+  margin: 2rem 0 !important;
+  background: var(--reader-line) !important;
+}
+article.sl-markdown-content blockquote {
+  color: var(--reader-muted);
+  border-left-color: var(--reader-line) !important;
+}

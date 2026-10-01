@@ -21,10 +21,16 @@ const imageUrl = `${base}images/applications/${image}.webp`;
 </figure>
 <style>
   .application-preview { margin: 1.5rem 0 2.5rem; }
-  .application-preview__image { display: block; border: 1px solid var(--sl-color-hairline); border-radius: 8px; overflow: hidden; background: #0a0a0f; }
+  .application-preview__image { display: block; border: 1px solid var(--sl-color-hairline); border-radius: 6px; overflow: hidden; background: #0a0a0f; }
   .application-preview__image img { display: block; width: 100%; height: auto; margin: 0; }
-  .application-preview figcaption { margin: .65rem 0 1rem; font-size: .85rem; line-height: 1.6; color: var(--sl-color-text-weak); }
-  .application-preview__launch { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 44px; padding: .6rem 1rem; border: 1px solid var(--sl-color-accent-high); border-radius: 5px; color: var(--sl-color-link); font-size: 1rem; font-weight: 400; text-decoration: none; }
-  .application-preview__launch:hover { background: var(--sl-color-bg-accent); }
+  .application-preview figcaption { margin: .75rem 0 1rem; font-size: .9375rem; line-height: 1.6; color: var(--sl-color-text-weak); }
+  .application-preview__launch {
+    display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem;
+    min-height: 48px; padding: .65rem 1.1rem; border: 1px solid var(--wiki-action-bg);
+    border-radius: 5px; color: var(--wiki-action-ink); background: var(--wiki-action-bg);
+    font-family: var(--font-body); font-size: .9375rem; font-weight: 500; text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease;
+  }
+  .application-preview__launch:hover { color: var(--wiki-action-ink); background: var(--wiki-action-hover); border-color: var(--wiki-action-hover); }
   .application-preview a:focus-visible { outline: 2px solid var(--sl-color-accent-high); outline-offset: 4px; }
 </style>

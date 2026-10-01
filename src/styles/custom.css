@@ -17,3 +17,5 @@
 @import './variants/variant-c.css';
 @import './themes/light.css';
 @import './responsive.css';
+@import './article-reader.css';
+@import './editorial.css';

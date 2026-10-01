@@ -1,0 +1,118 @@
+/* Editorial reading surface for the wiki. Standalone landings use their own CSS. */
+:root {
+  --font-body: 'Inter Variable', 'Segoe UI', sans-serif;
+  --lunar-body: #dedbe4;
+  --lunar-strong: #f2eff6;
+  --lunar-muted: #b4b0be;
+  --line-soft: #2c2934;
+  --line-strong: #45404f;
+  --sl-color-bg: #0b0b10;
+  --sl-color-bg-nav: #0e0e14;
+  --sl-color-bg-sidebar: #0e0e14;
+  --sl-color-text: var(--lunar-body);
+  --sl-color-text-strong: var(--lunar-strong);
+  --sl-color-text-weak: var(--lunar-muted);
+  --sl-color-white: var(--lunar-strong);
+  --sl-color-link: #d2b6ff;
+  --sl-color-link-hover: #ecdeff;
+  --sl-color-accent-high: #d2b6ff;
+  --sl-color-hairline: var(--line-soft);
+  --sl-color-hairline-light: #22202a;
+  --wiki-action-bg: #c9adf2;
+  --wiki-action-hover: #dec8ff;
+  --wiki-action-ink: #20132f;
+}
+:root[data-theme='light'] {
+  --lunar-body: #34303e;
+  --lunar-strong: #211b2c;
+  --lunar-muted: #635b70;
+  --line-soft: #d8d1e1;
+  --line-strong: #bcb2cb;
+  --sl-color-bg: #faf8fc;
+  --sl-color-bg-nav: #f3eff8;
+  --sl-color-bg-sidebar: #f3eff8;
+  --sl-color-text: var(--lunar-body);
+  --sl-color-text-strong: var(--lunar-strong);
+  --sl-color-text-weak: var(--lunar-muted);
+  --sl-color-white: var(--lunar-strong);
+  --sl-color-hairline: var(--line-soft);
+  --sl-color-link: #64318f;
+  --sl-color-link-hover: #422062;
+  --sl-color-accent-high: #64318f;
+  --sl-color-hairline-light: #e7e1ec;
+  --wiki-action-bg: #653a8f;
+  --wiki-action-hover: #503074;
+  --wiki-action-ink: #ffffff;
+}
+html:has(article.sl-markdown-content) {
+  --reader-text: var(--lunar-body);
+  --reader-heading: var(--lunar-strong);
+  --reader-muted: var(--lunar-muted);
+  --reader-link: var(--sl-color-link);
+  --reader-line: var(--line-soft);
+}
+html body { background: var(--sl-color-bg) !important; letter-spacing: normal; }
+html body::before { display: none; }
+:root[data-theme='light'] body { background: var(--sl-color-bg) !important; }
+:root[data-theme='light'] :is(.sidebar, .page-sidebar) { background: var(--sl-color-bg-sidebar) !important; border-color: var(--line-soft) !important; }
+html .header { background: var(--sl-color-bg-nav) !important; border-bottom-color: var(--line-soft) !important; }
+html :is(.sidebar, .page-sidebar) { background: var(--sl-color-bg-sidebar) !important; border-color: var(--line-soft) !important; }
+
+/* One serif family for editorial headings; one sans for text and controls. */
+html h1#_top { font-family: var(--font-heading); font-weight: 500 !important; letter-spacing: normal !important; color: var(--lunar-strong); }
+html article.sl-markdown-content { --sl-text-h2: clamp(1.75rem, 2vw, 2rem); }
+html article.sl-markdown-content h2 {
+  font-family: var(--font-heading);
+  font-size: var(--sl-text-h2) !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  color: var(--lunar-strong);
+}
+html article.sl-markdown-content :is(h3, h4, h5, h6) { font-weight: 500 !important; }
+html article.sl-markdown-content { font-size: 1.125rem; line-height: 1.75; }
+html .top-nav__link { font-family: var(--font-body); font-size: .875rem; font-weight: 400; letter-spacing: normal; }
+html .site-title { font-weight: 500; letter-spacing: .015em; }
+html site-search button[data-open-modal] { color: var(--lunar-muted); background: var(--sl-color-bg); border-color: var(--line-strong); box-shadow: none; }
+
+/* Navigation remains legible without competing with the article. */
+html .sidebar a,
+html:has(article.sl-markdown-content) .sidebar :is(.group-label, .group-label .large),
+html .sidebar :is(.group-label, .group-label .large) {
+  font-family: var(--font-body);
+  font-size: .9rem !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: var(--lunar-muted) !important;
+}
+html .sidebar a { padding-block: .5rem; border-radius: 4px; line-height: 1.45; }
+html .sidebar a:hover { background: var(--sl-color-bg-accent); color: var(--lunar-strong) !important; }
+html .sidebar a[aria-current='page'] { background: var(--sl-color-bg-accent); color: var(--lunar-strong) !important; font-weight: 500 !important; }
+html .sidebar summary { padding-block: .4rem; }
+html:has(article.sl-markdown-content) #starlight__on-this-page,
+html .right-sidebar-panel h2 {
+  font-family: var(--font-body);
+  font-size: .9375rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  color: var(--lunar-strong);
+}
+html .right-sidebar-panel a { font-family: var(--font-body); font-size: .875rem; line-height: 1.5; }
+html .right-sidebar-panel starlight-toc a { color: var(--lunar-muted); }
+html .right-sidebar-panel starlight-toc a[aria-current='true'] { color: var(--sl-color-link); }
+html .right-sidebar-panel starlight-toc a:hover { color: var(--lunar-strong); }
+html ::-webkit-scrollbar-thumb { background: #51495d; background-clip: padding-box; }
+html[data-theme='light'] ::-webkit-scrollbar-thumb { background: #b4a9c2; background-clip: padding-box; }
+html .sidebar-content, html .toc-scroll { scrollbar-color: #51495d transparent; scrollbar-width: thin; }
+html[data-theme='light'] .sidebar-content, html[data-theme='light'] .toc-scroll { scrollbar-color: #b4a9c2 transparent; }
+
+/* Keep primary-action ink independent of the article's link-color rules. */
+html article.sl-markdown-content a.application-preview__launch,
+html article.sl-markdown-content a.application-preview__launch:hover { color: var(--wiki-action-ink); }
+
+/* Neutral focus treatment is shared by navigation and content controls. */
+html :is(a, button, summary, select):focus-visible { outline: 2px solid var(--sl-color-accent-high); outline-offset: 4px; }
+@media (max-width: 49.9999rem) {
+  html .sidebar :is(a, summary) { min-height: 44px; }
+}
