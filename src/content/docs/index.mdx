@@ -28,6 +28,7 @@ sitemap:
 
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 import NoirCard from '../../components/NoirCard.astro';
+import UpdatesFeed from '../../components/UpdatesFeed.astro';
 
 ## О себе
 
@@ -106,6 +107,17 @@ import NoirCard from '../../components/NoirCard.astro';
 		]}
 	/>
 	<NoirCard
+		title="Приложения"
+		href="/socionics-wiki/applications/"
+		lead="Интерактивные инструменты для практики и изучения моделей"
+		items={[
+			'Соционическое колесо баланса и типировочный тест',
+			'Периодическая система по Чурюмову',
+			'Инварианты признаков Рейнина в модели А',
+			'Модель А как плоскость Фано',
+		]}
+	/>
+	<NoirCard
 		title="Методика типирования"
 		href="/socionics-wiki/applied/oprosnik-ehkspress-tipirovanie/"
 		lead="Авторская методика — доклад, конспект и транскрибация"
@@ -148,6 +160,8 @@ import NoirCard from '../../components/NoirCard.astro';
 		]}
 	/>
 </CardGrid>
+
+<UpdatesFeed limit={3} />
 
 ---
 

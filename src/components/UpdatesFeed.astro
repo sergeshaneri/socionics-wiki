@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  limit?: number;
+  compact?: boolean;
+  heading?: boolean;
+}
+
+const { limit, compact = false, heading = true } = Astro.props;
+const posts = (await getCollection('docs', ({ id, data }) =>
+  id.startsWith('updates/') && id !== 'updates/index' && !!data.updateDate && !data.draft
+))
+  .sort((a, b) => b.data.updateDate!.getTime() - a.data.updateDate!.getTime())
+  .slice(0, limit);
+const formatter = new Intl.DateTimeFormat('ru-RU', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+});
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+{posts.length > 0 && (
+  <section class:list={['updates-feed', { 'updates-feed--compact': compact }]} aria-label="Новое">
+    {heading && <h2>Новое</h2>}
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <time datetime={post.data.updateDate!.toISOString().slice(0, 10)}>
+            {formatter.format(post.data.updateDate!)}
+          </time>
+          <a href={`${base}${post.id}/`}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+    {limit && <a class="updates-feed__all" href={`${base}updates/`}>Все обновления →</a>}
+  </section>
+)}
+
+<style>
+  .updates-feed {
+    margin-block: 2.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    background: var(--sl-color-bg-sidebar);
+  }
+  h2 { margin: 0 0 1.1rem; font-size: 1.3rem; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li + li { border-top: 1px solid var(--sl-color-hairline); margin-top: 0.9rem; padding-top: 0.9rem; }
+  time { display: block; font-size: 0.72rem; letter-spacing: 0.07em; color: var(--sl-color-gray-3); }
+  li a { display: block; margin-top: 0.25rem; color: var(--sl-color-white); text-decoration: none; line-height: 1.45; }
+  li a:hover, .updates-feed__all:hover { color: var(--sl-color-accent-high); }
+  .updates-feed__all { display: block; margin-top: 1.1rem; font-size: 0.8rem; color: var(--sl-color-gray-2); text-decoration: none; }
+  .updates-feed--compact { margin: 0; padding: 1rem 0 0; border: 0; border-top: 1px solid var(--sl-color-hairline); border-radius: 0; background: transparent; }
+  .updates-feed--compact h2 { margin-bottom: 0.75rem; font-size: var(--sl-text-h5); }
+  .updates-feed--compact li a { font-size: var(--sl-text-xs); }
+</style>

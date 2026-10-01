@@ -15,6 +15,7 @@ export type SocionicsCategory = (typeof SOCIONICS_CATEGORIES)[number];
 
 const extendedSchema = z.object({
 	categories: z.array(z.enum(SOCIONICS_CATEGORIES)).optional(),
+	updateDate: z.coerce.date().optional(),
 });
 
 export const collections = {

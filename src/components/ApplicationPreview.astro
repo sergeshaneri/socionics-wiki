@@ -1,0 +1,30 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  caption: string;
+  href: string;
+  title: string;
+  width?: number;
+  height?: number;
+}
+const { image, alt, caption, href, title, width = 1440, height = 1000 } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const imageUrl = `${base}images/applications/${image}.webp`;
+---
+<figure class="application-preview">
+  <a class="application-preview__image" href={imageUrl} target="_blank" rel="noopener noreferrer" aria-label={`${title}: увеличить скриншот (новая вкладка)`}>
+    <img src={imageUrl} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+  </a>
+  <figcaption>{caption} Нажмите на изображение, чтобы увеличить.</figcaption>
+  <a class="application-preview__launch" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${title}: открыть приложение в новой вкладке`}>Открыть приложение <span aria-hidden="true">↗</span></a>
+</figure>
+<style>
+  .application-preview { margin: 1.5rem 0 2.5rem; }
+  .application-preview__image { display: block; border: 1px solid var(--sl-color-hairline); border-radius: 8px; overflow: hidden; background: #0a0a0f; }
+  .application-preview__image img { display: block; width: 100%; height: auto; margin: 0; }
+  .application-preview figcaption { margin: .65rem 0 1rem; font-size: .85rem; line-height: 1.6; color: var(--sl-color-text-weak); }
+  .application-preview__launch { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 44px; padding: .6rem 1rem; border: 1px solid var(--sl-color-accent-high); border-radius: 5px; color: var(--sl-color-link); font-size: 1rem; font-weight: 400; text-decoration: none; }
+  .application-preview__launch:hover { background: var(--sl-color-bg-accent); }
+  .application-preview a:focus-visible { outline: 2px solid var(--sl-color-accent-high); outline-offset: 4px; }
+</style>
