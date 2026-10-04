@@ -169,7 +169,8 @@ const { reviews, id } = Astro.props;
 
   /* Controls */
   .rc__controls {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
@@ -215,6 +216,8 @@ const { reviews, id } = Astro.props;
 
   .rc__dots {
     display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
     padding: 0 0.25rem;
@@ -224,6 +227,7 @@ const { reviews, id } = Astro.props;
      визуально остаётся 6×6. Видимая часть — через ::before. */
   .rc__dot {
     position: relative;
+    flex-shrink: 0;
     width: 28px;
     height: 28px;
     padding: 0;
@@ -275,6 +279,7 @@ const { reviews, id } = Astro.props;
       const slide = slides[i];
       if (!slide) return;
       track!.scrollTo({ left: slide.offsetLeft - track!.offsetLeft, behavior: 'smooth' });
+      if (!('IntersectionObserver' in window)) updateUI();
     }
 
     function updateUI() {
@@ -300,21 +305,23 @@ const { reviews, id } = Astro.props;
     });
 
     // Keep current in sync with manual scroll / swipe via IntersectionObserver
-    const io = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
-        const idx = Number((visible.target as HTMLElement).dataset.rcSlide);
-        if (!Number.isNaN(idx)) {
-          current = idx;
-          updateUI();
-        }
-      },
-      { root: track, threshold: 0.6 },
-    );
-    slides.forEach((s) => io.observe(s));
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (!visible) return;
+          const idx = Number((visible.target as HTMLElement).dataset.rcSlide);
+          if (!Number.isNaN(idx)) {
+            current = idx;
+            updateUI();
+          }
+        },
+        { root: track, threshold: 0.6 },
+      );
+      slides.forEach((s) => io.observe(s));
+    }
 
     // Keyboard nav when focus is in the track
     track.setAttribute('tabindex', '0');

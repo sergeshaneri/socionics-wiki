@@ -1,0 +1,68 @@
+{
+  "status": "proposed token pairs only; rendered gradient/compositing checks belong to VR02/VR12",
+  "pairs": [
+    {
+      "id": "dark-body",
+      "foreground": "#d8d5df",
+      "background": "#09070f",
+      "ratio": 13.827,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "dark-body-brightest",
+      "foreground": "#d8d5df",
+      "background": "#161020",
+      "ratio": 12.845,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "dark-muted",
+      "foreground": "#a7a2b0",
+      "background": "#161020",
+      "ratio": 7.473,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "dark-link",
+      "foreground": "#c5a7ed",
+      "background": "#161020",
+      "ratio": 8.967,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "light-body",
+      "foreground": "#302c38",
+      "background": "#faf8fc",
+      "ratio": 12.895,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "light-muted",
+      "foreground": "#625c6d",
+      "background": "#f3eff8",
+      "ratio": 5.66,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "light-link",
+      "foreground": "#68359a",
+      "background": "#faf8fc",
+      "ratio": 7.759,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "dark-action",
+      "foreground": "#20132f",
+      "background": "#c9adf2",
+      "ratio": 8.985,
+      "meets_project_4_5": true
+    },
+    {
+      "id": "light-action",
+      "foreground": "#ffffff",
+      "background": "#653a8f",
+      "ratio": 8.219,
+      "meets_project_4_5": true
+    }
+  ]
+}

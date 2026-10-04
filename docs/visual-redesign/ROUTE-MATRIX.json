@@ -1,0 +1,428 @@
+{
+  "base_path": "/socionics-wiki/",
+  "status": "source candidates; HTTP/rendered checks belong to VR00; no claim of passed browser QA",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 1024,
+      "height": 900
+    },
+    {
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "extra_checks": [
+    "200% zoom",
+    "text spacing override",
+    "narrow container widths 320/480/640 in wide viewport",
+    "reduced motion",
+    "cold font load",
+    "JavaScript disabled smoke"
+  ],
+  "routes": [
+    {
+      "id": "home",
+      "path": "",
+      "source": "src/content/docs/index.mdx",
+      "mode": "splash",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "long-reader",
+      "path": "relations/metodologiya-opisaniya-ito-po-churyumovu/",
+      "source": "src/content/docs/relations/metodologiya-opisaniya-ito-po-churyumovu.md",
+      "mode": "article",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "math-article",
+      "path": "theory/meta/gipoteza-churyumova-gemini/",
+      "source": "src/content/docs/theory/meta/gipoteza-churyumova-gemini.md",
+      "mode": "article-math-candidate",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "table-article",
+      "path": "english/markdown-tables/",
+      "source": "src/content/docs/english/markdown-tables.md",
+      "mode": "article-table",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "mirror",
+      "path": "relations/зеркальные-отношения/",
+      "source": "src/content/docs/relations/зеркальные-отношения.md",
+      "mode": "article",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "applications",
+      "path": "applications/",
+      "source": "src/content/docs/applications.mdx",
+      "mode": "special",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "category-types",
+      "path": "categories/tipy/",
+      "source": "src/content/docs/categories/tipy.mdx",
+      "mode": "hub",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "category-semantic",
+      "path": "categories/semanticheskaya-socionika/",
+      "source": "src/content/docs/categories/semanticheskaya-socionika.mdx",
+      "mode": "hub",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "aspects",
+      "path": "information-elements/",
+      "source": "src/content/docs/information-elements/index.mdx",
+      "mode": "hub",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "services",
+      "path": "services/",
+      "source": "src/content/docs/services.mdx",
+      "mode": "splash",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "contact",
+      "path": "contact/",
+      "source": "src/content/docs/contact.mdx",
+      "mode": "splash",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "thanks",
+      "path": "thanks/",
+      "source": "src/content/docs/thanks.mdx",
+      "mode": "special",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "updates",
+      "path": "updates/",
+      "source": "src/content/docs/updates/index.mdx",
+      "mode": "archive",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "not-found",
+      "path": "__visual-missing-route__/",
+      "source": "src/content/docs/404.mdx",
+      "mode": "error",
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "http_expected": 404,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "typing",
+      "path": "typing/",
+      "source": "src/pages/typing.astro",
+      "mode": "landing",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "therapy",
+      "path": "therapy/",
+      "source": "src/pages/therapy.astro",
+      "mode": "landing",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "teo",
+      "path": "teo/",
+      "source": "src/pages/teo.astro",
+      "mode": "landing",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "human-design",
+      "path": "human-design/",
+      "source": "src/pages/human-design.astro",
+      "mode": "landing",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "reviews",
+      "path": "reviews/",
+      "source": "src/pages/reviews.astro",
+      "mode": "landing",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "ai-materials",
+      "path": "ai-socionics/",
+      "source": "src/pages/ai-socionics.astro",
+      "mode": "custom-dark",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "duality",
+      "path": "duality/index.html",
+      "source": "public/duality/index.html",
+      "mode": "static",
+      "themes": [
+        "dark"
+      ],
+      "http_expected": 200,
+      "required_checks": [
+        "route-status",
+        "no-body-overflow",
+        "text-contrast",
+        "actual-font",
+        "visible-primary-content",
+        "screenshot-review"
+      ]
+    }
+  ]
+}

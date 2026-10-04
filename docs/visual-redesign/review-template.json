@@ -1,0 +1,9 @@
+{
+  "task_id": "VR00",
+  "reviewer": "independent-reviewer-id",
+  "decision": "changes",
+  "acceptance": {
+    "VR00-C1": {"passed": false, "evidence_ids": [], "note": "Populate EVERY criterion with an independent check"}
+  },
+  "notes": []
+}

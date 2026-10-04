@@ -21,7 +21,7 @@ const ogImageUrl = site
   : `${base}${ogImage ?? 'shaneri.jpg'}`;
 const canonicalUrl = canonical
   ? (site ? new URL(canonical, site).toString() : `${base}${canonical.replace(/^\//, '')}`)
-  : (site ? new URL(Astro.url.pathname.replace(/^\//, ''), site).toString() : Astro.url.pathname);
+  : (site ? new URL(Astro.url.pathname, site).toString() : Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -88,7 +88,7 @@ const canonicalUrl = canonical
     <script>
       // Universal scroll-reveal via IntersectionObserver (GPU-safe: transform + opacity + filter only)
       const reveals = document.querySelectorAll<HTMLElement>('[data-reveal]');
-      if (reveals.length > 0) {
+      if (reveals.length > 0 && 'IntersectionObserver' in window) {
         const io = new IntersectionObserver((entries) => {
           for (const entry of entries) {
             if (entry.isIntersecting) {
@@ -97,7 +97,10 @@ const canonicalUrl = canonical
             }
           }
         }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
-        reveals.forEach((el) => io.observe(el));
+        reveals.forEach((el) => {
+          io.observe(el);
+          el.classList.add('is-reveal-pending');
+        });
       }
     </script>
   </body>

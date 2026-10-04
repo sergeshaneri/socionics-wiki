@@ -1,0 +1,9 @@
+{
+  "task_id": "VR00",
+  "summary": "REPLACE with factual implementation and verification summary",
+  "acceptance": {
+    "VR00-C1": {"evidence_ids": [], "note": "Populate EVERY acceptance ID from packet; IDs are returned by the real CLI"}
+  },
+  "risks": [],
+  "next_task": "VR01"
+}

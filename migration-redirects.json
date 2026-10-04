@@ -1,8 +1,8 @@
 {
   "/typing-landing": "/socionics-wiki/typing/",
-  "/typing-landing/": "/socionics-wiki/typing/",
   "/human-design-landing": "/socionics-wiki/human-design/",
-  "/human-design-landing/": "/socionics-wiki/human-design/",
+  "/english/ili-2-1-machine-translate": "/english/ili-21-machine-translate/",
+  "/english/minaev-dichotomies-left-right": "/english/minaev-dichotomies---left-right/",
   "/articles/аксиома-тождества": "/theory/meta/aksioma-tozhdestva",
   "/articles/аксиоматика-шанэри-2023": "/theory/meta/aksiomatika-shanehri-2023",
   "/articles/аксиоматика-шанэри": "/theory/meta/aksiomatika-shanehri",
@@ -29,7 +29,7 @@
   "/articles/многоуровневая-аксиоматика-2024": "/theory/meta/mnogourovnevaya-aksiomatika-2024",
   "/articles/мой-путь-в-соционике": "/theory/meta/moj-put-v-socionike",
   "/articles/набросок-лсп-2017": "/theory/meta/nabrosok-lsp-2017",
-  "/articles/пост---соционика-карта-жизни": "/beginners/post-socionika-karta-zhizni",
+
   "/articles/связь-юмпов-и-право-лево": "/theory/formal/svyaz-yumpov-i-pravo-levo",
   "/articles/семантическая-соционика-доклад": "/theory/meta/semanticheskaya-socionika-doklad",
   "/articles/социон-простым-языком-2017": "/theory/meta/socion-prostym-yazykom-2017",
@@ -43,7 +43,7 @@
   "/articles/терминосистема-соционики": "/theory/meta/terminosistema-socioniki",
   "/articles/философия-соционики-gemini": "/theory/meta/filosofiya-socioniki-gemini",
   "/articles/экстенсивные-характеристики": "/theory/formal/ehkstensivnye-harakteristiki",
-  "/articles/юмпы": "/theory/formal/yumpy",
+
   "/новое/markdown-таблицы": "/theory/formal/markdown-tablicy",
   "/новое/доклад-базис-чурюмова": "/theory/meta/doklad-bazis-churyumova",
   "/новое/доклад-границы-применимости": "/theory/meta/doklad-granicy-primenimosti",
@@ -67,7 +67,7 @@
   "/articles/квантовое-типирование": "/theory/meta/kvantovoe-tipirovanie",
   "/articles/конспект-типирующие-дон": "/applied/konspekt-tipiruyushhie-don",
   "/articles/методика-типирования-new": "/applied/oprosnik-ehkspress-tipirovanie",
-  "/articles/польза-типирования": "/applied/polza-tipirovaniya",
+
   "/articles/разбор-урганта": "/applied/razbor-urganta",
   "/articles/семантика-для-типирования": "/information-elements/semantika-aspekton",
   "/новое/доклад-методика-типирования": "/applied/doklad-metodika-tipirovaniya",
@@ -179,7 +179,7 @@
   "/новое/описания-тимов-от-нейронок": "/types/opisaniya-timov-ot-nejronok",
   "/theory/meta/davajte-obshhatsya-o-socionike": "/beginners/davajte-obshhatsya-o-socionike",
   "/theory/meta/metodichka": "/beginners/metodichka",
-  "/theory/meta/post-socionika-karta-zhizni": "/beginners/post-socionika-karta-zhizni",
+
   "/theory/meta/socionika-vvedenie-2016": "/beginners/socionika-vvedenie-2016",
   "/theory/formal/vvedenie-vo-fraktalnuyu-socioniku": "/beginners/vvedenie-vo-fraktalnuyu-socioniku",
   "/theory/formal/zhil-byl-fraktal-2022": "/beginners/zhil-byl-fraktal-2022",
@@ -203,7 +203,7 @@
   "/theory/meta/teoriya-pokolenij": "/theory/formal/teoriya-pokolenij",
   "/theory/meta/teoriya-pokolenij-novoe": "/theory/formal/teoriya-pokolenij-novoe",
   "/theory/meta/teoriya-ritma": "/theory/formal/teoriya-ritma",
-  "/theory/meta/yumpy": "/theory/formal/yumpy",
+
   "/theory/formal/kvantovaya-socionika": "/theory/meta/kvantovaya-socionika",
   "/theory/formal/kvantovye-svojstva-socioniki": "/theory/meta/kvantovye-svojstva-socioniki",
   "/theory/formal/novatorstvo-fraktalnoj-socioniki": "/theory/meta/novatorstvo-fraktalnoj-socioniki",

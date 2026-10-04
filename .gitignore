@@ -29,3 +29,8 @@ migration-plan.json
 
 # Source screenshots used for OCR — extracted text lives in src/data/reviews-*.json
 public/photos/
+
+# Local multi-agent coordination and visual QA artifacts
+.harness/
+docs/visual-redesign/evidence/
+__pycache__/

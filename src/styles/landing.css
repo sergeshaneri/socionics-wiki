@@ -597,13 +597,16 @@ body.landing-body::after {
 /* ─── Scroll reveal ─── */
 
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(2.5rem);
-  filter: blur(8px);
   transition:
     opacity 1100ms var(--ln-ease-slow),
     transform 1100ms var(--ln-ease-slow),
     filter 1100ms var(--ln-ease-slow);
+}
+
+[data-reveal].is-reveal-pending {
+  opacity: 0;
+  transform: translateY(2.5rem);
+  filter: blur(8px);
   will-change: opacity, transform, filter;
 }
 
@@ -620,7 +623,8 @@ body.landing-body::after {
 [data-reveal-delay='5'] { transition-delay: 400ms; }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  [data-reveal],
+  [data-reveal].is-reveal-pending {
     opacity: 1;
     transform: none;
     filter: none;

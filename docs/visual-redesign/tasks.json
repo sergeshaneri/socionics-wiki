@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "campaign": "wiki-reading-experience",
+  "branch": "visual/reading-experience",
+  "baseline": "docs/visual-redesign/baseline.json",
+  "coordinators": [
+    "coordinator"
+  ],
+  "read_first": [
+    "CLAUDE.md",
+    "AGENTS.md",
+    "docs/visual-redesign/PLAN.md",
+    "docs/visual-redesign/DESIGN-SPEC.md",
+    "docs/visual-redesign/AGENT-CONTRACT.md",
+    "docs/visual-redesign/RUNBOOK.md"
+  ],
+  "tasks": [
+    {
+      "id": "VR00",
+      "title": "Базовый снимок и проверяемый маршрутный инвентарь",
+      "role": "baseline/QA",
+      "kind": "edit",
+      "depends_on": [],
+      "write_scope": [
+        "tests/visual/*",
+        "scripts/check-visual.py",
+        "docs/visual-redesign/ROUTE-MATRIX.json"
+      ],
+      "read_scope": [
+        "astro.config.mjs",
+        "src/content/docs/",
+        "src/components/MarkdownContent.astro",
+        "scripts/check-editorial.py",
+        "scripts/check-reader.py",
+        "docs/visual-redesign/baseline.json"
+      ],
+      "instructions": [
+        "Начать с guard и git status. Запустить loopback preview с base /socionics-wiki; прочитать реально выбранный порт, не подменять чужой процесс.",
+        "Снять before: home и long-reader на 1440x1000 и 390x844; сохранить оба исходных референса. Пройти ROUTE-MATRIX.json и отметить source_present, HTTP статус, фактический режим, наличие Katex/table/diagram.",
+        "Снять computed styles, CDP actual Cyrillic font names и сетевой список font-ресурсов; получить исходные font bytes и cold font-load layout shift. Не выдать вычисленный font-family за реально использованный шрифт.",
+        "Создать tests/visual/baseline-report.json только в evidence; общий исходный baseline.json не обновлять. Зафиксировать существующие баги и результаты прежних проверок отдельно."
+      ],
+      "acceptance": [
+        "VR00-C1",
+        "VR00-C2",
+        "VR00-C3",
+        "VR00-C4"
+      ],
+      "checks": {
+        "VR00-C1": "guard подтверждает ветку и неизменность protected/content digest",
+        "VR00-C2": "Каждый route id имеет реальную проверку ответа или явный blocker; ничего не пропущено",
+        "VR00-C3": "before screenshots, font identities и baseline budgets сохранены с evidence IDs",
+        "VR00-C4": "Предсуществующие сбои отделены от новых; существующие scripts не изменены"
+      },
+      "route_ids": [
+        "home",
+        "long-reader",
+        "applications"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR01",
+      "title": "Токены, кириллические шрифты и карта каскада",
+      "role": "design foundation",
+      "kind": "edit",
+      "depends_on": [
+        "VR00"
+      ],
+      "write_scope": [
+        "src/styles/visual-tokens.css",
+        "src/styles/fonts.css",
+        "docs/visual-redesign/decisions.md",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/styles/tokens.css",
+        "src/styles/editorial.css",
+        "src/styles/article-reader.css",
+        "src/styles/variants/variant-c.css",
+        "src/styles/themes/light.css",
+        "node_modules/@fontsource*/"
+      ],
+      "instructions": [
+        "Внести семантические --visual-* токены из DESIGN-SPEC.md в отдельный файл; пока не подключать глобально, чтобы foundation не менял весь сайт до пилота.",
+        "Inter Variable для кириллического body и Cormorant Garamond для display — исходные кандидаты, не идентифицированные со скриншота. Проверить unicode coverage и фактически отрисованные буквы. Показать 400/450 body, 500/600 display; не добавлять семейство без конкретного недостатка текущих.",
+        "Для light определить собственные значения, aliases --reader/--lunar/--sl не должны сохранять dark значения по специфичности.",
+        "Составить decisions.md: активные imports, конфликтующие selectors, какие !important снимаются и почему. Тест контраста токенов до production правок; заголовки wrapper/anchor включить в карту."
+      ],
+      "acceptance": [
+        "VR01-C1",
+        "VR01-C2",
+        "VR01-C3",
+        "VR01-C4"
+      ],
+      "checks": {
+        "VR01-C1": "Все обязательные токены определены отдельно для dark/light, контраст вычислен",
+        "VR01-C2": "Кириллица подтверждена CDP; нет случайного font fallback и новых remote font requests",
+        "VR01-C3": "Новый font budget не превышает baseline +15%; превышение с причиной блокирует расширение",
+        "VR01-C4": "Внешний вид не-пилотных страниц пока не изменён"
+      },
+      "route_ids": [
+        "home",
+        "long-reader"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR02",
+      "title": "Детерминированные browser-тесты редизайна",
+      "role": "test infrastructure",
+      "kind": "edit",
+      "depends_on": [
+        "VR00"
+      ],
+      "write_scope": [
+        "scripts/check-visual.py",
+        "tests/visual/*",
+        "package.json",
+        "package-lock.json"
+      ],
+      "read_scope": [
+        "scripts/check-editorial.py",
+        "tests/updates.test.mjs",
+        "tests/applications-updates.test.mjs",
+        "docs/visual-redesign/ROUTE-MATRIX.json"
+      ],
+      "instructions": [
+        "Применить TDD вертикальными срезами: selector/content coverage, viewport overflow, font identities, text sizes, focus, menu, theme, gradients; сначала показать целевой RED, затем минимальную проверку.",
+        "Использовать установленный uv/playwright путь; проектный npm playwright добавлять только при обосновании, не смешивать два runner. Base URL через WIKI_PREVIEW_URL, screenshots в evidence.",
+        "Проверки fail-closed: обязательный selector не найден -> failure. UI ошибки и failed internal assets -> failure. Отсутствующий настоящий Katex -> добавить isolated fixture, не объявлять покрытие выполненным.",
+        "Сохранять JSON с числом ожидаемых/пройденных/blocked cells, screenshot paths и browser version. Legacy tests fixed :4321 оставить, documented runner учитывать порт."
+      ],
+      "acceptance": [
+        "VR02-C1",
+        "VR02-C2",
+        "VR02-C3",
+        "VR02-C4"
+      ],
+      "checks": {
+        "VR02-C1": "Негативные сценарии тестов пойманы RED, новый runner воспроизводим",
+        "VR02-C2": "Число матричных cells вычисляется, пропуск не выглядит успехом",
+        "VR02-C3": "Проверки font/overflow/controls доступны отдельно от screenshot approval",
+        "VR02-C4": "Старые tests и scripts не переписаны ради зелёного результата"
+      },
+      "route_ids": [],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR03",
+      "title": "Пилот: главная и одна длинная статья",
+      "role": "visual pilot",
+      "kind": "edit",
+      "depends_on": [
+        "VR01",
+        "VR02"
+      ],
+      "write_scope": [
+        "src/styles/custom.css",
+        "src/styles/visual-pilot.css",
+        "src/styles/components/hero.css",
+        "src/styles/article-reader.css",
+        "src/styles/editorial.css",
+        "src/components/MarkdownContent.astro",
+        "src/lib/page-kind.mjs",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/content/docs/index.mdx",
+        "src/content/docs/relations/metodologiya-opisaniya-ito-po-churyumovu.md",
+        "src/styles/variants/variant-c.css",
+        "docs/visual-redesign/DESIGN-SPEC.md"
+      ],
+      "instructions": [
+        "Выполнить только home и long-reader. Сохранить текст, фото, ссылки и structured data. Page-kind helper тестировать до использования; не переклассифицировать schema Article без отдельного основания.",
+        "Home: антиква 48–72px desktop /32–44px mobile, непрозрачный subdued dark gradient, first-screen title + existing primary action. Без декоративного нового hero copy.",
+        "Article: 18px body/1.75/400, column 68–72ch with pixel ceiling; h1 serif 36–44px desktop, chapter h2 neutral sans 24–28px/500–600; service headings explicit 14–16px.",
+        "Предоставить 3 варианта на реальном контенте: A минимальное изменение, B нормативный основной, C более строгая титульная композиция. Варианты различаются типографикой/ритмом, не только цветом. Их можно показать отдельным ignored HTML comparison без switcher на продакшене.",
+        "До принятия VR04 не распространять на прочие routes. CSS contracts технически подтверждают изоляцию."
+      ],
+      "acceptance": [
+        "VR03-C1",
+        "VR03-C2",
+        "VR03-C3",
+        "VR03-C4"
+      ],
+      "checks": {
+        "VR03-C1": "home + article соответствуют численной типографике и soft-gradient спецификации",
+        "VR03-C2": "3 варианта представлены screenshot comparison с исходными before",
+        "VR03-C3": "Пилот проходит dark/light desktop/mobile и сохраняет весь исходный контент",
+        "VR03-C4": "Не-пилотные routes не изменились, main action/first paragraph видимы без перекрытия"
+      },
+      "route_ids": [
+        "home",
+        "long-reader"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR04",
+      "title": "Выбор пилотного направления пользователем",
+      "role": "design gate",
+      "kind": "read",
+      "depends_on": [
+        "VR03"
+      ],
+      "write_scope": [],
+      "read_scope": [
+        ".harness/handoffs/VR03.json",
+        "docs/visual-redesign/evidence/VR03/",
+        "docs/visual-redesign/DESIGN-SPEC.md"
+      ],
+      "instructions": [
+        "Независимо осмотреть screenshots и реальный длинный текст, повторить browser assertions на стабильном снимке.",
+        "Показать пользователю before/after, три варианта, предложить B как рабочую реконструкцию. Решение пользователя сохранить с дословным сообщением, не сочинять подтверждение.",
+        "Если нужен новый вариант: вернуть VR03 changes через координатора; не пропускать gate. Для accepted передать approval файл и конкретные выбранные values."
+      ],
+      "acceptance": [
+        "VR04-C1",
+        "VR04-C2",
+        "VR04-C3"
+      ],
+      "checks": {
+        "VR04-C1": "Независимые execution и screenshot evidence существуют",
+        "VR04-C2": "Пользователь явно выбрал направление; сохранён подлинный user_message",
+        "VR04-C3": "Список принятых токенов и отклонённых вариантов передан следующим исполнителям"
+      },
+      "route_ids": [
+        "home",
+        "long-reader"
+      ],
+      "human_gate": true,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR05",
+      "title": "Шапка, боковая навигация, TOC и поиск",
+      "role": "navigation",
+      "kind": "edit",
+      "depends_on": [
+        "VR04"
+      ],
+      "write_scope": [
+        "src/styles/components/header.css",
+        "src/styles/components/sidebar.css",
+        "src/styles/components/breadcrumbs.css",
+        "src/styles/responsive.css",
+        "src/styles/editorial.css",
+        "src/components/PageSidebar.astro",
+        "src/components/HeadingAnchors.astro",
+        "src/components/NoirEnhancements.astro",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/components/PageTitle.astro",
+        "src/components/SiteSocialIcons.astro",
+        "src/components/Breadcrumbs.astro",
+        "src/components/Head.astro"
+      ],
+      "instructions": [
+        "Сделать непрозрачные navigation surfaces 14–16px; subordinate muted text с реальным контрастом, активный route отличим не только цветом.",
+        "Название сайта и логотип оставить прежними. Обеспечить отсутствие обрезания названия при согласованном mobile layout, не заменять название аббревиатурой.",
+        "Search dialog, mobile menu, theme native options и TOC проверить отдельно в dark/light. CSS-only предпочтителен; интерактивные правки лишь при доказанном regression.",
+        "Сохранить anchors, copied link, keyboard Tab/Escape, hash scrolling и top-nav links. Focus не перекрывается sticky header; menu закрывается предсказуемо."
+      ],
+      "acceptance": [
+        "VR05-C1",
+        "VR05-C2",
+        "VR05-C3",
+        "VR05-C4"
+      ],
+      "checks": {
+        "VR05-C1": "Menu/search/theme/TOC interactions работают мышью и клавиатурой",
+        "VR05-C2": "Активная навигация и native options читаемы в обеих темах",
+        "VR05-C3": "44px основные touch targets, outline и focus visibility проверены",
+        "VR05-C4": "Логотип/название/URL/anchor IDs не изменены"
+      },
+      "route_ids": [
+        "home",
+        "long-reader",
+        "applications",
+        "category-types"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR06",
+      "title": "Статьи: цитаты, таблицы, формулы и медиа",
+      "role": "technical reading",
+      "kind": "edit",
+      "depends_on": [
+        "VR04"
+      ],
+      "write_scope": [
+        "src/styles/article-reader.css",
+        "src/styles/components/content.css",
+        "src/styles/katex.css",
+        "src/styles/editorial.css",
+        "src/components/MarkdownContent.astro",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/content/docs/theory/meta/gipoteza-churyumova-gemini.md",
+        "src/content/docs/english/markdown-tables.md",
+        "src/components/Backlinks.astro",
+        "src/components/Footer.astro"
+      ],
+      "instructions": [
+        "Распространить утверждённый reader только на содержательные articles. Списки с hanging indents, короткие markers subdued, blockquote без карточечной glow/лишней рамки.",
+        "Table и display math имеют свой local horizontal scrolling; никакого overflow-x:hidden на html/body ради зелёного теста. Inline math не переназначать Inter и не менять font metric Katex.",
+        "Картинки и схемы сохраняют пропорции/цвета/семантику; их радиусы зависят от класса, не от blanket img selector. Медиа frames fit container, captions 14–16px.",
+        "Backlinks, date, footer CTA, update feeds имеют служебную локальную типографику. Применить точный CTA ink после article a color; доказывать computed cascade."
+      ],
+      "acceptance": [
+        "VR06-C1",
+        "VR06-C2",
+        "VR06-C3",
+        "VR06-C4"
+      ],
+      "checks": {
+        "VR06-C1": "Long prose/list/table/math/media fixtures проходят проверки и осмотр",
+        "VR06-C2": "Нет обрезанных строк/формул; overflow локальный, вся страница fits",
+        "VR06-C3": "Служебные h2 подчинены статье, CTA text/fill имеет достаточный контраст",
+        "VR06-C4": "Content digest и scientific diagram semantics неизменны"
+      },
+      "route_ids": [
+        "long-reader",
+        "math-article",
+        "table-article",
+        "mirror",
+        "applications"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR07",
+      "title": "Каталоги типов, аспектов и категорий",
+      "role": "hubs",
+      "kind": "edit",
+      "depends_on": [
+        "VR05",
+        "VR06"
+      ],
+      "write_scope": [
+        "src/components/CategoryHub.astro",
+        "src/components/TaggedCategoryHub.astro",
+        "src/components/InformationElementsHub.astro",
+        "src/components/NoirCard.astro",
+        "src/styles/components/cards.css",
+        "src/styles/visual-hubs.css",
+        "src/styles/custom.css",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/components/TypesHub.astro",
+        "src/content/docs/categories/",
+        "src/content/docs/information-elements/index.mdx"
+      ],
+      "instructions": [
+        "Перенести family/spacing в hubs без превращения всех ссылок в одинаковые крупные SaaS карточки. Сохранить группы, порядок и категории.",
+        "TypesHub.astro защищён: читать можно, редактировать нельзя; допустимо внешнее narrowly-scoped CSS после анализа DOM. Нужен structural edit -> block и запрос пользователю, не обновлять baseline hash.",
+        "Оценить 320/390/768/1024/1440, narrow component container в широком viewport; длинные русские headings не режутся. Category filter/search states не изменяются.",
+        "Основной материал каталога предшествует supporting feeds; визуальные размеры служебных headings задать локально."
+      ],
+      "acceptance": [
+        "VR07-C1",
+        "VR07-C2",
+        "VR07-C3",
+        "VR07-C4"
+      ],
+      "checks": {
+        "VR07-C1": "Все 3 hub families сохранены по структуре/ссылкам/порядку",
+        "VR07-C2": "320px и narrow-container layouts не обрезают подписи",
+        "VR07-C3": "Protected TypesHub идентичен исходному",
+        "VR07-C4": "Focus/hover/selected states проверены в dark/light"
+      },
+      "route_ids": [
+        "category-types",
+        "category-semantic",
+        "aspects"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR08",
+      "title": "Приложения, услуги, контакты, благодарность, архив и 404",
+      "role": "wiki special pages",
+      "kind": "edit",
+      "depends_on": [
+        "VR05",
+        "VR06",
+        "VR07"
+      ],
+      "write_scope": [
+        "src/components/ApplicationPreview.astro",
+        "src/components/ServiceCardFeatured.astro",
+        "src/components/ContactChannel.astro",
+        "src/components/ThanksCards.astro",
+        "src/components/PricingCard.astro",
+        "src/components/UpdatesFeed.astro",
+        "src/components/Suggestions404.astro",
+        "src/components/Backlinks.astro",
+        "src/components/Footer.astro",
+        "src/styles/visual-specials.css",
+        "src/styles/custom.css",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/content/docs/applications.mdx",
+        "src/content/docs/services.mdx",
+        "src/content/docs/contact.mdx",
+        "src/content/docs/thanks.mdx",
+        "src/content/docs/404.mdx"
+      ],
+      "instructions": [
+        "Оформить все перечисленные page families в принятой системе без изменений текста/цен/каналов связи/данных.",
+        "ApplicationPreview retain 5 previews, исходные изображения/launch ссылки/dimensions. Не редизайнить внешний iframe/site приложений и не внедрять свой JS внутрь.",
+        "Services/contacts/thanks preserve реальные CTA и пользовательский выбор канала. Не добавлять прямые messenger CTA вместо установленной политики.",
+        "UpdatesFeed и Backlinks сервисные заголовки 14–16px; dates readable; error page search/suggestions контрастны."
+      ],
+      "acceptance": [
+        "VR08-C1",
+        "VR08-C2",
+        "VR08-C3",
+        "VR08-C4"
+      ],
+      "checks": {
+        "VR08-C1": "Все специальные routes и internal assets реально загружаются",
+        "VR08-C2": "5 application previews и launch links сохранены",
+        "VR08-C3": "Ни цены, ни контакты, ни update ordering не изменены",
+        "VR08-C4": "Legacy Node tests и component contrast checks зелёные"
+      },
+      "route_ids": [
+        "applications",
+        "services",
+        "contact",
+        "thanks",
+        "updates",
+        "not-found"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR09",
+      "title": "Четыре standalone услуги и отзывы",
+      "role": "standalone landings",
+      "kind": "edit",
+      "depends_on": [
+        "VR04",
+        "VR08"
+      ],
+      "write_scope": [
+        "src/styles/landing.css",
+        "src/styles/landing-visual.css",
+        "src/layouts/LandingLayout.astro",
+        "src/components/landing/LandingNav.astro",
+        "src/components/landing/LandingFooter.astro",
+        "src/components/landing/ReviewsCarousel.astro",
+        "src/components/landing/RelatedServices.astro",
+        "src/pages/typing.astro",
+        "src/pages/therapy.astro",
+        "src/pages/teo.astro",
+        "src/pages/human-design.astro",
+        "src/pages/reviews.astro",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/data/reviews-*.json",
+        "src/lib/structured-data.ts"
+      ],
+      "instructions": [
+        "Отдельный адаптер --ln-* к принятым semantic tokens, не импортировать custom.css/Starlight cascade. Эти пять страниц остаются dark-only.",
+        "Long body sections привести к 18px и устойчивому ритму, display Cormorant сохраняет editorial характер; убрать шумные яркие orbs/grain где мешают чтению. Непрозрачные реальные поверхности.",
+        "Сохранить все texts/prices/review data/filters/counters. Стиль может затронуть локальную разметку без изменения копирайта; доказать нормализованное равенство текста before/after.",
+        "Menu, review filters, carousel и anchor CTA проверить. reduced-motion и JS-disabled content не должны скрывать чтение; не заявлять zero repaint по CSS комментарию."
+      ],
+      "acceptance": [
+        "VR09-C1",
+        "VR09-C2",
+        "VR09-C3",
+        "VR09-C4"
+      ],
+      "checks": {
+        "VR09-C1": "Все четыре услуги и reviews имеют согласованную типографику",
+        "VR09-C2": "Content/text/data/price/SEO/canonical не изменились",
+        "VR09-C3": "Фильтры reviews, carousel, menu и CTA работают",
+        "VR09-C4": "Сохранена dark-only политика; motion и no-JS fallback проверены"
+      },
+      "route_ids": [
+        "typing",
+        "therapy",
+        "teo",
+        "human-design",
+        "reviews"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR10",
+      "title": "Индивидуальная страница материалов об ИИ",
+      "role": "custom page",
+      "kind": "edit",
+      "depends_on": [
+        "VR09"
+      ],
+      "write_scope": [
+        "src/pages/ai-socionics.astro",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "src/styles/landing.css",
+        "src/pages/ai-socionics.astro"
+      ],
+      "instructions": [
+        "ai-socionics импортирует landing.css, но имеет свои local --paper/--ink/gold и scoped styles: адаптировать их отдельно, не выдать покрытие landings за покрытие этой страницы.",
+        "Сохранить группировку материалов, featured links, QR и footer/reference copy. Apply body readability и сдержанный display без превращения ссылок в одинаковую сетку карточек.",
+        "Проверить QR asset resolution/base path, маленькие labels, длинные ссылки и mobile stacking."
+      ],
+      "acceptance": [
+        "VR10-C1",
+        "VR10-C2",
+        "VR10-C3"
+      ],
+      "checks": {
+        "VR10-C1": "Своя scoped palette/typography согласована с системой",
+        "VR10-C2": "Все ссылки/QR/разделы и text content сохранены",
+        "VR10-C3": "Desktop/mobile contrast и focus проверены"
+      },
+      "route_ids": [
+        "ai-materials"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR11",
+      "title": "Локальная static duality: граница и адаптер",
+      "role": "static boundary",
+      "kind": "edit",
+      "depends_on": [
+        "VR10"
+      ],
+      "write_scope": [
+        "public/duality/visual-theme.css",
+        "public/duality/index.html",
+        "tests/visual/*"
+      ],
+      "read_scope": [
+        "public/duality/index.html",
+        "src/content/docs/applications.mdx"
+      ],
+      "instructions": [
+        "Провести аудит public/duality/index.html: определить чужую/авторскую часть и наличие логики. Менять только CSS и подключение адаптера, не symbols/model/data/JS.",
+        "Если это собственный static entry, дать typography/surface adapter в принятой dark палитре. Если безопасно отделить CSS невозможно или права/смысл неясны — block и запрос пользователю; не молча объявлять весь сайт переделанным.",
+        "Внешние приложения проверить лишь на link contract. Документировать предел визуального контроля. Функциональные результаты static приложения before/after совпадают."
+      ],
+      "acceptance": [
+        "VR11-C1",
+        "VR11-C2",
+        "VR11-C3"
+      ],
+      "checks": {
+        "VR11-C1": "Локальный static entry либо проверенно адаптирован, либо явно blocked до решения",
+        "VR11-C2": "Domain JS и scientific colors/labels неизменны",
+        "VR11-C3": "External application boundaries явно отражены в handoff"
+      },
+      "route_ids": [
+        "duality"
+      ],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR12",
+      "title": "Консолидация CSS, доступность и измеримые бюджеты",
+      "role": "integration/accessibility",
+      "kind": "edit",
+      "depends_on": [
+        "VR05",
+        "VR06",
+        "VR07",
+        "VR08",
+        "VR09",
+        "VR10",
+        "VR11"
+      ],
+      "write_scope": [
+        "src/styles/tokens.css",
+        "src/styles/base.css",
+        "src/styles/editorial.css",
+        "src/styles/article-reader.css",
+        "src/styles/variants/variant-c.css",
+        "src/styles/themes/light.css",
+        "src/styles/responsive.css",
+        "src/styles/custom.css",
+        "src/styles/visual-*.css",
+        "src/styles/landing*.css",
+        "tests/visual/*",
+        "scripts/check-visual.py"
+      ],
+      "read_scope": [
+        "docs/visual-redesign/decisions.md",
+        "docs/visual-redesign/ROUTE-MATRIX.json"
+      ],
+      "instructions": [
+        "После утверждения убрать временные/мертвые конфликтующие typography declarations, не удаляя unrelated effects. Один владелец каждого semantic token, mode scales scoped; new !important только с точным documented legacy reason.",
+        "Прогнать text-spacing overrides и 200% zoom /320px reflow, contrast across real gradient underlays, focus not obscured, reduced motion, selections и native options.",
+        "Замерить font transfer и CLS тем же runner/profile/network baseline; font bytes <= baseline +15%, font-induced CLS <=0.05. Если увеличить budget нужно — block и запросить решение, не выдать число за достигнутое.",
+        "Build и browser screenshot suites последовательно; timeout under CPU load требует изолированного повторного запуска, а не ослабления asserts. Объяснить все existing warnings."
+      ],
+      "acceptance": [
+        "VR12-C1",
+        "VR12-C2",
+        "VR12-C3",
+        "VR12-C4"
+      ],
+      "checks": {
+        "VR12-C1": "All expected matrix cells выполнены или task blocked; skipped не accepted",
+        "VR12-C2": "Text/UI contrast, zoom/text spacing, focus и reduced motion проверены",
+        "VR12-C3": "Font budget/CLS измерены и соответствуют принятому порогу",
+        "VR12-C4": "Конфликтующие overrides сведены без content и semantics changes"
+      },
+      "route_ids": [],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR13",
+      "title": "Независимая регрессия и coverage audit",
+      "role": "independent QA",
+      "kind": "read",
+      "depends_on": [
+        "VR12"
+      ],
+      "write_scope": [],
+      "read_scope": [
+        ".harness/handoffs/",
+        "src/",
+        "public/",
+        "tests/",
+        "docs/visual-redesign/"
+      ],
+      "instructions": [
+        "Повторить полный build, Node tests, harness tests и visual runner на стабильном снимке, используя собственные evidence IDs. Не доверять только отчётам исполнителей.",
+        "Сопоставить actual CSS font rendered, screenshot layout и declared matrix counts; обязательный missing selector fail. Проверить нормализованные before/after texts standalone pages и весь content digest.",
+        "Обнаруженный regression возвращать соответствующему владельцу через coordinate changes, не править код самим. QA не обновляет screenshot golden ради результата.",
+        "Для каждой страницы дать status verified/blocked, evidence, число проверок и severity найденных defects. Проверить что выбранный home+reader сохраняют визуальный эффект референсов."
+      ],
+      "acceptance": [
+        "VR13-C1",
+        "VR13-C2",
+        "VR13-C3",
+        "VR13-C4"
+      ],
+      "checks": {
+        "VR13-C1": "Независимые реальные tests/build прошли, полный coverage accounting совпадает",
+        "VR13-C2": "Protected/content/texts/SEO/URLs и mathematical semantics сохранены",
+        "VR13-C3": "Нет открытых P0/P1 accessibility/function/reading regressions",
+        "VR13-C4": "Screenshots просмотрены, approvals не подменены машинными checks"
+      },
+      "route_ids": [],
+      "human_gate": false,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    },
+    {
+      "id": "VR14",
+      "title": "Передача пользователю и решение о публикации",
+      "role": "coordinator/release gate",
+      "kind": "read",
+      "depends_on": [
+        "VR13"
+      ],
+      "write_scope": [],
+      "read_scope": [
+        ".harness/reviews/",
+        "docs/visual-redesign/",
+        "git diff"
+      ],
+      "instructions": [
+        "Показать итоговую local URL, before/after главной/статьи/хаба/услуги, выбранные типографические values и список фактически проверенного.",
+        "Подготовить итоговый handoff с coverage totals, рисками, исключениями и планом отката только owned изменений. Пользовательские dirty files не включать в собственную будущую публикацию.",
+        "Получить явное одобрение визуального результата. Это не разрешение на commit/push: публикация требует отдельного запроса пользователя. Логотип остаётся отдельной последующей задачей."
+      ],
+      "acceptance": [
+        "VR14-C1",
+        "VR14-C2",
+        "VR14-C3"
+      ],
+      "checks": {
+        "VR14-C1": "Итоговые screenshots/metrics/reports переданы и пользователь подтвердил оформление",
+        "VR14-C2": "Diff сохраняет protected files, content и branch isolation",
+        "VR14-C3": "Никаких commit/push/deploy без отдельного разрешения; rollback boundaries описаны"
+      },
+      "route_ids": [],
+      "human_gate": true,
+      "deliverables": [
+        "handoff JSON with every acceptance key",
+        "real CLI-run evidence IDs",
+        "screenshots/metrics where visual work applies",
+        "risks and exact next task"
+      ],
+      "forbidden": [
+        "commit, push, deployment without explicit user authorization",
+        "edit source content or protected dirty files",
+        "change URLs, domain formulas or diagram color semantics",
+        "mark own work accepted"
+      ]
+    }
+  ]
+}

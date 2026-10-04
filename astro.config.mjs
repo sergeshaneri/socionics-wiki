@@ -7,7 +7,9 @@ import remarkMath from 'remark-math';
 import remarkWikiLink from 'remark-wiki-link';
 import { readFileSync } from 'node:fs';
 import { buildPermalinkMap, normalizeSlug } from './src/lib/wiki-links.mjs';
+import { withRedirectBase } from './src/lib/redirects.mjs';
 
+const base = '/socionics-wiki';
 const permalinkMap = buildPermalinkMap();
 
 // Редиректы со старых путей (articles/, новое/) на новые. См. migration-redirects.json
@@ -18,9 +20,9 @@ const migrationRedirects = JSON.parse(
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://sergeshaneri.github.io/socionics-wiki',
-	base: '/socionics-wiki',
+	base,
 	output: 'static',
-	redirects: migrationRedirects,
+	redirects: withRedirectBase(migrationRedirects, base),
 	markdown: {
 		remarkPlugins: [
 			remarkMath,

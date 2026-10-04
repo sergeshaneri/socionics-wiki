@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-03T04:33:22.972520+00:00",
+  "branch": "visual/reading-experience",
+  "base_commit": "0d0dd823369789af5f75ab758c32fdf77926431c",
+  "protected_files": {
+    "src/components/TypesHub.astro": "4142e69e47b1465820150c8ba76216b4979dd6b241340223422d9bb2eb17ff7d",
+    "src/content/docs/information-elements/aspekton-struktura.md": "fa529a500c2e926a3f3332e3c63622d252bb8ece6d2e86990d441c9c3c6e0dbd",
+    "scripts/check-reader.py": "66080aef6f15d703309bc9532490992979d7cee7f4bfd410719898d42fd559e1"
+  },
+  "content_tree_sha256": "7adca0fece5e1c7b0fbbb4486d61ff159868887064a12437fc303f3c1eccfb91",
+  "content_file_count": 406,
+  "content_hash_algorithm": "sorted native Path order; relative POSIX path + NUL + file SHA256 + LF; SHA256 of UTF8 concatenation"
+}

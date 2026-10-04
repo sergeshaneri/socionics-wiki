@@ -5,9 +5,7 @@ categories: [semantic]
 ---
 
 
-https://docs.google.com/document/d/1RotOTDvP-DR-OT9kK3X3MbO84092jWIZuFuxf1yNdPU/edit
-
-**
+[Исходный документ в Google Docs](https://docs.google.com/document/d/1RotOTDvP-DR-OT9kK3X3MbO84092jWIZuFuxf1yNdPU/edit)
 
 Аспектон - множество Информационных Аспектов имеет структуру Информациона 3 Уровня Информационного Метаболизма
 
@@ -15,9 +13,8 @@ https://docs.google.com/document/d/1RotOTDvP-DR-OT9kK3X3MbO84092jWIZuFuxf1yNdPU/
   
   
 
-|     |     |      |       |           |       |        |      |      |
-| --- | --- | ---- | ----- | --------- | ----- | ------ | ---- | ---- |
 |     | Сущ | Верт | дт/бт | отвл/вовл | аф/гм | -яв/яв | Наль | Таль |
+| :-- | :-: | :--: | :---: | :-------: | :---: | :----: | :--: | :--: |
 | ЧИ  | +   | +    | +     | +         | +     | +      | +    | +    |
 | БС  | +   | -    | +     | -         | +     | -      | +    | -    |
 | ЧЭ  | +   | +    | -     | -         | +     | +      | -    | -    |
@@ -810,6 +807,3 @@ https://docs.google.com/document/d/1RotOTDvP-DR-OT9kK3X3MbO84092jWIZuFuxf1yNdPU/
 2 - Нальность и Тальность
 
 3 - дт/бт  отв/ввл  аф/гм -яв/яв
-
-  
-**

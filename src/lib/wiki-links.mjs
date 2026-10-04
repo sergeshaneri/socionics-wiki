@@ -20,7 +20,7 @@ export function normalizeSlug(name) {
 function extractTitle(filepath) {
 	try {
 		const content = fs.readFileSync(filepath, 'utf8');
-		const fm = content.match(/^---\n([\s\S]*?)\n---/);
+		const fm = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 		if (!fm) return null;
 		const titleMatch = fm[1].match(/^title:\s*(.+)$/m);
 		if (!titleMatch) return null;

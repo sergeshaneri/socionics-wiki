@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-03T05:10:16.066736+00:00",
+  "status": "passed",
+  "branch": "visual/reading-experience",
+  "base_head_unchanged": true,
+  "tasks": 15,
+  "acceptance_criteria": 56,
+  "route_sources": 21,
+  "planned_visual_cells": 175,
+  "harness_tests": {
+    "command": "python tests/test_agent_harness.py -v",
+    "exit_code": 0,
+    "count": 26,
+    "stdout": "",
+    "stderr": "test_change_after_submission_invalidates_review (__main__.HarnessTests.test_change_after_submission_invalidates_review) ... ok\ntest_claim_and_wrong_owner (__main__.HarnessTests.test_claim_and_wrong_owner) ... ok\ntest_cli_exists (__main__.HarnessTests.test_cli_exists) ... ok\ntest_code_change_after_check_requires_fresh_evidence (__main__.HarnessTests.test_code_change_after_check_requires_fresh_evidence) ... ok\ntest_command_evidence_and_accepted_dependency (__main__.HarnessTests.test_command_evidence_and_accepted_dependency) ... ok\ntest_content_digest_blocks_silent_article_edits (__main__.HarnessTests.test_content_digest_blocks_silent_article_edits) ... ok\ntest_coordinator_transfers_incomplete_task_preserving_scope (__main__.HarnessTests.test_coordinator_transfers_incomplete_task_preserving_scope) ... ok\ntest_cycle_refused (__main__.HarnessTests.test_cycle_refused) ... ok\ntest_failed_evidence_is_not_accepted (__main__.HarnessTests.test_failed_evidence_is_not_accepted) ... ok\ntest_human_gate_cannot_be_auto_accepted (__main__.HarnessTests.test_human_gate_cannot_be_auto_accepted) ... ok\ntest_initial_status_and_dependencies (__main__.HarnessTests.test_initial_status_and_dependencies) ... ok\ntest_manifest_change_requires_explicit_reconciliation (__main__.HarnessTests.test_manifest_change_requires_explicit_reconciliation) ... ok\ntest_no_silent_reclaim_and_release_only_without_edits (__main__.HarnessTests.test_no_silent_reclaim_and_release_only_without_edits) ... ok\ntest_out_of_scope_change_blocks_submission (__main__.HarnessTests.test_out_of_scope_change_blocks_submission) ... ok\ntest_parallel_reader_can_submit_with_owned_foreign_changes (__main__.HarnessTests.test_parallel_reader_can_submit_with_owned_foreign_changes) ... ok\ntest_protected_file_change_blocks_submission (__main__.HarnessTests.test_protected_file_change_blocks_submission) ... ok\ntest_read_task_cannot_submit_code_edits (__main__.HarnessTests.test_read_task_cannot_submit_code_edits) ... ok\ntest_reopen_invalidates_accepted_descendants (__main__.HarnessTests.test_reopen_invalidates_accepted_descendants) ... ok\ntest_reopen_preserves_versioned_handoff_artifacts (__main__.HarnessTests.test_reopen_preserves_versioned_handoff_artifacts) ... ok\ntest_reopen_refuses_running_descendant (__main__.HarnessTests.test_reopen_refuses_running_descendant) ... ok\ntest_scope_escape_refused (__main__.HarnessTests.test_scope_escape_refused) ... ok\ntest_self_review_refused (__main__.HarnessTests.test_self_review_refused) ... ok\ntest_single_writer_and_parallel_reader (__main__.HarnessTests.test_single_writer_and_parallel_reader) ... ok\ntest_tampered_evidence_refused (__main__.HarnessTests.test_tampered_evidence_refused) ... ok\ntest_two_processes_cannot_claim_same_task (__main__.HarnessTests.test_two_processes_cannot_claim_same_task) ... ok\ntest_wrong_branch_refused (__main__.HarnessTests.test_wrong_branch_refused) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 23.144s\n\nOK\n"
+  },
+  "protected_scope_conflicts": 0,
+  "site_css_edited": false,
+  "browser_matrix_executed": false,
+  "build_executed": false,
+  "source_paths_verified": true,
+  "head": "0d0dd823369789af5f75ab758c32fdf77926431c",
+  "tool_warnings": "warning: in the working copy of 'src/components/TypesHub.astro', LF will be replaced by CRLF the next time Git touches it"
+}

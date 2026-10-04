@@ -49,6 +49,11 @@ description: Дедуктивная соционика Семена Иванов
 
 <iframe title="Открытия и вклад Семена Чурюмова в Соционику" src="https://www.podbean.com/player-v2/?i=5psb8-14eb30f-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=auto&amp;logo_link=episode_page&amp;btn-skin=7" width="100%" height="150" style="border: none;" loading="lazy" allow="autoplay"></iframe>
 
+### Читать также
+
+- [Введение во Фрактальную Соционику](/socionics-wiki/beginners/vvedenie-vo-fraktalnuyu-socioniku/)
+- [Дедуктивная Соционика ликбез](/socionics-wiki/theory/meta/deduktivnaya-socionika-likbez/)
+
 ## Книги
 
 Семен Иванович написал 2 массивные книги.

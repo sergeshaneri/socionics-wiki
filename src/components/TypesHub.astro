@@ -212,8 +212,14 @@ const href = (slug: string) => `${base}/${slug}/`;
           {quadra.types.map((type) => (
             <article class="type-card">
               <header class="type-card__header">
-                <span class="type-card__code">{type.code}</span>
-                <h3 class="type-card__name">{type.name}</h3>
+                <a
+                  class="type-card__main"
+                  href={href(type.primary.slug)}
+                  aria-label={`Основное описание типа ${type.name}`}
+                >
+                  <span class="type-card__code">{type.code}</span>
+                  <h3 class="type-card__name">{type.name}</h3>
+                </a>
               </header>
               <p class="type-card__summary">{type.summary}</p>
               <nav class="type-card__links" aria-label={`Материалы о типе ${type.name}`}>
@@ -278,6 +284,7 @@ const href = (slug: string) => `${base}/${slug}/`;
   }
 
   .type-card {
+    position: relative;
     display: flex;
     min-width: 0;
     min-height: 12.5rem;
@@ -303,13 +310,34 @@ const href = (slug: string) => `${base}/${slug}/`;
   }
 
   .type-card__header {
+    border: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  .type-card__main {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 0.65rem;
-    border: 0 !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .type-card__main::after {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    content: '';
+  }
+
+  .type-card__main:focus-visible {
+    outline: none;
+  }
+
+  .type-card__main:focus-visible::after {
+    outline: 2px solid var(--sl-color-accent-high);
+    outline-offset: 3px;
   }
 
   .type-card__code {
@@ -340,6 +368,8 @@ const href = (slug: string) => `${base}/${slug}/`;
   }
 
   .type-card__links {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem 0.65rem;
