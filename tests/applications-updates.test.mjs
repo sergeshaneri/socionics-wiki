@@ -9,10 +9,12 @@ async function page(path) {
   assert.equal(response.status, 200, path);
   return response.text();
 }
-test('new release appears first in home and archive feeds', async () => {
-  for (const path of ['/', '/updates/']) {
+test('archive keeps the October release ahead of the September release', async () => {
+  for (const path of ['/updates/']) {
     const html = await page(path);
-    const feed = html.match(/<section[^>]*aria-label="Новое"[\s\S]*?<\/section>/)?.[0];
+    const feeds = [...html.matchAll(/<section[^>]*aria-label="Новое"[\s\S]*?<\/section>/g)];
+    const feed = feeds.map(([section]) => section)
+      .find((section) => section.includes('/updates/2026-09-26-otnosheniya/'));
     assert.ok(feed);
     assert.ok(feed.includes(`href="/socionics-wiki${release}"`));
     assert.ok(feed.indexOf(release) < feed.indexOf('/updates/2026-09-26-otnosheniya/'));

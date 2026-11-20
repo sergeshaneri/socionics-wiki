@@ -27,7 +27,7 @@ categories: [formal]
 
   
 
-Более подробная информация про блок ЭГО: [https://docs.google.com/document/d/1Y7u4pULl-izhQYExqowvywKTRTM7t8ie6IirgW4Z6vs/edit?usp=sharing](https://docs.google.com/document/d/1Y7u4pULl-izhQYExqowvywKTRTM7t8ie6IirgW4Z6vs/edit?usp=sharing). 
+Более подробная информация про блок ЭГО: [Блок ЭГО](/socionics-wiki/functions/blok-ego/).
 
   
 
@@ -48,7 +48,7 @@ categories: [formal]
 
 Более подробная информация по блоку СУПЕРЭГО:
 
-[https://docs.google.com/document/d/1NBiaDaXFfsJMCaz3AuvVAXJpXYoDOSv0UxnRLcl9Qqo/edit?usp=sharing](https://docs.google.com/document/d/1NBiaDaXFfsJMCaz3AuvVAXJpXYoDOSv0UxnRLcl9Qqo/edit?usp=sharing)
+[Блок СУПЕРЭГО](/socionics-wiki/functions/blok-superego/)
 
   
   

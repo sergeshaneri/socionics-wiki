@@ -11,9 +11,9 @@ async function page(path) {
 
 test('home lists a dated release after the hub cards', async () => {
   const html = await page('/');
-  assert.ok(html.includes('Обновления 26 сентября: отношения, аспекты и ИИ'));
-  assert.ok(html.includes('/socionics-wiki/updates/2026-09-26-otnosheniya/'));
-  assert.ok(html.indexOf('Обновления 26 сентября: отношения, аспекты и ИИ') > html.indexOf('Методика типирования'));
+  assert.ok(html.includes('Обновления 20 ноября: блоки модели А и исправления опросника'));
+  assert.ok(html.includes('/socionics-wiki/updates/2026-11-20-bloki-i-oprosnik/'));
+  assert.ok(html.indexOf('Обновления 20 ноября: блоки модели А и исправления опросника') > html.indexOf('Методика типирования'));
 });
 
 test('article right sidebar links to the release', async () => {
@@ -64,4 +64,29 @@ test('release includes the other publications and the expanded hub', async () =>
 test('archive exposes the release', async () => {
   const html = await page('/updates/');
   assert.ok(html.includes('Обновления 26 сентября: отношения, аспекты и ИИ'));
+});
+
+test('November release leads the feeds and links to the corrected materials', async () => {
+  const release = '/updates/2026-11-20-bloki-i-oprosnik/';
+  for (const path of ['/', '/updates/']) {
+    const html = await page(path);
+    const feed = html.match(/<section[^>]*aria-label="Новое"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(feed, `updates feed on ${path}`);
+    const firstPost = feed.match(/<a\s+href="([^"]+)"/);
+    assert.equal(firstPost?.[1], `/socionics-wiki${release}`);
+  }
+  const html = await page(release);
+  assert.ok(html.includes('20 ноября 2026'));
+  for (const path of [
+    '/functions/blok-ego/',
+    '/functions/blok-superego/',
+    '/functions/blok-superid/',
+    '/functions/blok-id-semantika/',
+    '/functions/funkcional/',
+    '/functions/model-a-2016/',
+    '/applied/oprosnik-ehkspress-tipirovanie-novoe/',
+  ]) {
+    assert.ok(html.includes(`/socionics-wiki${path}`), `release link: ${path}`);
+    await page(path);
+  }
 });

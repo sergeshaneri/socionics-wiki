@@ -1,6 +1,6 @@
 ---
 title: Блок ИД Семантика
-description: Блок ИД Семантика
+description: Незавершённый авторский материал о семантике блока ИД
 categories: [formal, semantic]
 ---
 
@@ -52,3 +52,8 @@ categories: [formal, semantic]
   
 
 2 вектора обхода блока - зеркальные друг другу проявления
+
+## Связанные материалы
+
+- [Функцион](/socionics-wiki/functions/funkcional/)
+- [Семантическая соционика](/socionics-wiki/categories/semanticheskaya-socionika/)
