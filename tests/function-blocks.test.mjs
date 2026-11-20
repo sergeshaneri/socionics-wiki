@@ -47,9 +47,9 @@ test('the Functional links to all four block articles', () => {
   }
 });
 
-test('Model A 2016 points readers to the local EGO and SUPEREGO articles', () => {
+test('Model A 2016 points readers to the local EGO, SUPEREGO and SUPERID articles', () => {
   const markdown = source('model-a-2016');
-  for (const slug of ['blok-ego', 'blok-superego']) {
+  for (const slug of ['blok-ego', 'blok-superego', 'blok-superid']) {
     assert.ok(markdown.includes(`](${base}/functions/${slug}/)`), `missing block link: ${slug}`);
   }
 });
@@ -93,7 +93,7 @@ test('rendered Functional and Model A link to the local block articles', { skip:
     assert.ok(functional.includes(`href="${base}/functions/${slug}/"`), `Functional link: ${slug}`);
   }
   const model = article(await page('functions/model-a-2016'));
-  for (const slug of ['blok-ego', 'blok-superego']) {
+  for (const slug of ['blok-ego', 'blok-superego', 'blok-superid']) {
     assert.ok(model.includes(`href="${base}/functions/${slug}/"`), `Model A link: ${slug}`);
   }
 });
