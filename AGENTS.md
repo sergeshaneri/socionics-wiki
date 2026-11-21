@@ -2,13 +2,19 @@
 
 Read `CLAUDE.md` first; its scope and publishing constraints remain in force.
 
-For the visual-redesign campaign also read:
+Repository: `D:/Сережа/CODING/former-field`. Check the current local branch with
+`git branch --show-current`. Use `main` for routine site updates and publish
+them only with explicit user approval.
+
+## Visual-redesign campaign
+
+The campaign uses `visual/reading-experience`. Its harness and the review
+procedure below apply to campaign tasks. For campaign work, also read:
 1. `docs/visual-redesign/PLAN.md`
 2. `docs/visual-redesign/DESIGN-SPEC.md`
 3. `docs/visual-redesign/AGENT-CONTRACT.md`
 4. `docs/visual-redesign/RUNBOOK.md`
 
-Repository: `D:/Сережа/CODING/former-field`; branch: `visual/reading-experience`.
 Run `python scripts/agent-harness.py guard` and `status`; claim a task before edits.
 Use its packet, dependencies and write_scope. The SQLite harness is the shared
 live register. Do not invent a separate completion ledger.
