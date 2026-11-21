@@ -85,8 +85,8 @@ Wiki Сергея Шанэри (психолог, исследователь с�
 **1. Standalone landings — `src/pages/*.astro`**
 Чистые Astro-страницы, НЕ через Starlight. Используют `LandingLayout`, свой CSS (`src/styles/landing.css`), свою навигацию (`LandingNav`) и футер (`LandingFooter`).
 
-- `typing.astro` — соционическое типирование (от 3000 ₽)
-- `human-design.astro` — Дизайн Человека (от 3000 ₽)
+- `typing.astro` — соционическое типирование (от 3500 ₽)
+- `human-design.astro` — Дизайн Человека (от 3500 ₽)
 - `therapy.astro` — духовная психотерапия (от 1000 ₽)
 - `teo.astro` — групповая практика ТЭО (1000 ₽)
 - `reviews.astro` — все 121 отзывы с фильтром по 4 направлениям
